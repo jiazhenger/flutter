@@ -1,0 +1,12 @@
+import 'package:flutter_web/material.dart';
+class RouterParam extends StatefulWidget {
+	<em>// 声明变量</em>
+	<b>final String title;</b>	
+	<b>final String name;</b>	
+	<b>Map&lt;String, int&gt; map;</b>	
+	<em>// 声明传入参数</em>
+	RouterParam({ Key key, <b>this.title, this.name, this.map</b> }) : super(key: key);
+	<em>// 创建 state
+	@override</em>
+	_PageState createState() => _PageState();
+}

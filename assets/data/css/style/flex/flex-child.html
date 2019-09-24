@@ -1,0 +1,24 @@
+.child{
+	<em># 用整数值来定义排列顺序，数值小的排在前面。可以为负值</em>
+	<b>order</b> : 1
+	<em># 设置弹性元素自身在侧轴（纵轴）方向上的对齐方式</em>
+	<b>align-self</b> : 	<i>auto</i>			<em>// 默认，元素继承了它的父容器的 align-items 属性。如果没有父容器则为 stretch</em>
+				<i>flex-start</i>		<em>// 开始对齐</em>
+				<i>flex-end</i>			<em>// 结束对齐</em>
+				<i>center</i>			<em>// 居中对齐</em>
+				<i>baseline</i>			<em>// 基线对齐</em>
+				<i>stretch</i>			<em>// 将会伸展以占用剩余的空间</em>
+	<em># 指定弹性子元素如何分配空</em>
+	<b>flex</b> :  		<i>auto</i>			<em>// ==</em> <b>1 1 auto</b>
+				<i>initial</i>			<em>// ==</em> <b>0 1 auto</b>
+				<i>none</i>			<em>// ==</em> <b>0 0 auto</b>
+				<i>0 1 auto</i>			<em>// ==</em> <b>flex-grow flex-shrink flex-basis</b>
+				<i>inherit</i>			<em>// 从父元素继承</em>
+	<em># 定义弹性盒子元素的扩展比率</em>
+	<b>flex-grow</b> : <i>0</i>				<em>// 一个数字，规定项目将相对于其他灵活的项目进行扩展的量。默认值是 0</em>
+	<em># 定义弹性盒子元素的收缩比率</em>
+	<b>flex-shrink</b> : <i>1</i>				<em>// 一个数字，规定项目将相对于其他灵活的项目进行收缩的量。默认值是 1</em>
+	<em># 定义弹性盒子元素的默认基准值</em>
+	<b>flex-basis</b> : 	<i>auto</i>		<em>// 默认值。长度等于元素的长度。如果该项目未指定长度，则长度将根据内容决定</em>
+				<i>20%</i>			<em>// 一个长度单位或者一个百分比，规定元素的初始长度</em>
+}

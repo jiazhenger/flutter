@@ -1,0 +1,10 @@
+MaterialApp(
+	<em>// 第一个显示的路由名字，默认值为 Window.defaultRouteName</em>
+	<b>initialRoute</b>: '/',
+	<em>// 路由挂载处</em>
+	<em>// 路由名称要与跳转路由保持一致</em>
+	<b>routes</b>: &lt;String, WidgetBuilder&gt;{
+		'<b>/main</b>': (BuildContext context) => MainPage(title:'主页'), <em>// Navigator.pushNamed(context,'<b>/main</b>');</em>
+		'<b>login</b>': (BuildContext context) => LoginPage(title:'登录')  <em>// Navigator.pushNamed(context,'<b>login</b>');</em>
+	},
+)

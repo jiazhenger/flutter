@@ -1,0 +1,28 @@
+<b>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) =></b> RouterParam( title:'一个参数', name:'二个参数', map:{'a':0,'b':1} ))).<b>then((value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);	
+	setState(() { myText = value; });
+});
+<b>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)</b>{
+	return RouterParam( title:'接收第一个参数', name:'接收第二个参数', map:{'a':7,'b':8} ); 
+})).<b>then((dynamic value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);
+	setState(() { myText = value; });
+});
+<b>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)</b> => RouterParam( title:'一个参数', name:'二个参数', map:{'a':0,'b':1} ))).<b>then((dynamic value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);
+	setState(() { myText = value; });
+});
+<b>Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)</b>{ 
+	return RouterParam( title:'接收第一个参数', name:'接收第二个参数', map:｛'a':7,'b':8｝ ); 
+})).then(<b>(dynamic value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);
+	setState(() { myText = value; });
+});

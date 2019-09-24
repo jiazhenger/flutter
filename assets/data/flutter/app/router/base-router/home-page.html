@@ -1,0 +1,19 @@
+// package
+import 'package:flutter_web/material.dart';
+// Widget 有状态的控件
+class <b>HomePage</b> extends StatefulWidget {
+	final String title;
+	<b>HomePage</b>({ Key key, this.title }) : super(key: key);
+	@override
+	_PageState createState() => _PageState(); // === createState()  => _PageState();
+}
+// page
+class _PageState extends State&lt;<b>HomePage</b>&gt; {
+    @override
+    Widget build(BuildContext context) {
+		return Scaffold(
+			appBar: AppBar(),
+			body: Container()
+		);
+	}
+}

@@ -1,0 +1,13 @@
+<b>Navigator.of(context).pushNamed('/login').then((value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);
+	setState(() { myText = value; });
+});
+
+<b>Navigator.pushNamed(context,'/login').then((dynamic value)</b>{
+	<em>// 页面返回后执行</em>
+	<em>// value 为 Navigator.of(context).pop(value) 中返回携带的参数 value</em>
+	print(value);
+	setState(() { myText = value; });
+});
