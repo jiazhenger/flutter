@@ -1,0 +1,33 @@
+div{
+	<b>clear</b> : 	<i>none</i> 		<em>// 允许两边都可以有浮动对象，默认值</em>
+			<i>left</i> 			<em>// 不允许左边有浮动对象</em>
+			<i>right</i>  		<em>// 不允许右边有浮动对象</em>
+			<i>both</i>  		<em>// 不允许有浮动对象</em>
+}
+<em># 清除浮动四种方式</em>
+<em># 清除浮动第一种方式：父级添加样式 clearfix（此法通用，其它根据实际环境灵活运用）</em>
+<b>.clearfix</b><i>:after</i>{<i>content:''</i>;<i>display:table</i>;<i>clear:both</i>;}
+<b>.clearfix</b><i>:after</i>{<i>content:''</i>;<i>display:block</i>;<i>clear:both</i>;}
+&lt;div class='<b>clearfix</b>'&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+&lt;/div&gt;
+<em># 清除浮动第二种方式：父级设高（变通用法）</em>
+&lt;div style='<b>height:200px</b>'&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+&lt;/div&gt;
+<em># 清除浮动第三种方式：父级隐藏元素（变通用法）</em>
+&lt;div style='<b>overflow:hidden</b>'&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+&lt;/div&gt;
+<em># 清除浮动第四种方式：子级添加空元素占位清除（最基础用法）</em>
+<b>.clear</b>{<i>clear:both</i>;}
+&lt;div&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+	&lt;p style='float:left'&gt;&lt;/p&gt;
+	<b>&lt;div style='clear:both'&gt;&lt;/div&gt;</b>
+	<em>// 或</em>
+	<b>&lt;div class='clear'&gt;&lt;/div&gt;</b>
+&lt;/div&gt;
