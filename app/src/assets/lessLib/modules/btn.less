@@ -1,0 +1,22 @@
+﻿/* ================================ *** btn *** ================================ */
+// ================================================================ 初始化按钮
+[class^='btn-']{.tc;.ff(inherit);.nowrap;}
+button{.bor0}
+// ================================================================ 默认按钮
+.btn-1:extend(.cf,.f17,.w){.h50;.rpx(50);background-image: linear-gradient(146deg, #FF8B1F 0%, #FF6348 91%);
+    &:active{background-image: linear-gradient(146deg, #FF6348 0%,  #FF8B1F 91%);}
+    &.loading{background-image: linear-gradient(146deg, #FF8B1F 0%, #FF6348 91%)!important;.cf!important;.op(.7);}
+    &.small{.h40;.f15}
+    &.x-small{.h30;.f14;
+        .ico-loading{.ww(30)}
+    }
+}
+.btn-sendCode:extend(.r100px,.bcf,.f14,.g6,.h30,.plr10){.bor(#666);.mw(60);
+    &:active{.bc(#f2f2f2)}
+    &[disabled]{.bcf;.g9;.bor0;.bgv;.ar;}
+}
+// ================================================================ disabled
+.btn-1{
+    &[disabled]{.bi;.g9;.bgv;.bc(#f2f2f2);}
+}
+// ================================================================ 其它按钮

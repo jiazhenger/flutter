@@ -1,0 +1,14 @@
+<em># <strong>remove(value)</strong>：移除列表中匹配的第一个元素</em>
+list.<b>remove(3)</b>; 			<em>// 移除列表中第一个 value = 3 的元素</em>
+<em># <strong>removeAt(index)</strong>：移除列表中第几个元素</em>
+list.<b>removeAt(3)</b>; 			<em>// 移除列表中第 3 个的元素</em>
+<em># 移除列表中最后一个元素</em>
+list.<b>removeLast( )</b>;
+<em># 移除列表的所有元素</em>
+list.<b>clear( )</b>;
+<em># <strong>removeRange(startIndex,endIndex)</strong>：移除开始下标（不包括）至结束下标（包括）内的元素</em>
+list.<b>removeRange(0,4)</b>; 			<em>// 移除索引值 0~4 元素，</em>
+<em># 移除所有满足条件的元素，此为Dart的一种速写语法</em>
+list.<b>removeWhere((value) => value == 3)</b>;		<em>// =3 的移除，</em>
+<em># 移除所有不满足条件的元素，此为Dart的一种速写语法</em>
+list.<b>retainWhere((value) => value == 3)</b>;		<em>// !=3 的移除，只留 3</em>
