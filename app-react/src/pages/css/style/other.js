@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='resize' pro='允许用户调整元素大小' code={[ {path:'css/style/other/resize'} ]}>
+				<BoxComponent order={1} keyword='resize' pro='允许用户调整元素大小' code={[ {path:'css/style/other/resize'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ resize: v }) }
 						data={{
@@ -24,7 +24,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='appearance' pro='允许使元素看上去像标准的用户界面元素' code={[ {path:'css/style/other/appearance'} ]}>
+				<BoxComponent order={2} keyword='appearance' pro='允许使元素看上去像标准的用户界面元素' code={[ {path:'css/style/other/appearance'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ appearance: v }) }
 						data={{

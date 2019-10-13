@@ -18,9 +18,9 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='border-collapse' pro='边框独立与合并' code={[ {path:'css/style/table/border-collapse'} ]} />
-				<BoxComponent keyword='border-spacing' pro='相邻单元格的边框间的距离' code={[ {path:'css/style/table/border-spacing'} ]} />
-				<BoxComponent keyword='caption-side' isGray pro='相邻单元格的边框间的距离' code={[ {path:'css/style/table/caption-side'} ]} />
+				<BoxComponent order={1} keyword='border-collapse' pro='边框独立与合并' code={[ {path:'css/style/table/border-collapse'} ]} />
+				<BoxComponent order={2} keyword='border-spacing' pro='相邻单元格的边框间的距离' code={[ {path:'css/style/table/border-spacing'} ]} />
+				<BoxComponent order={3} keyword='caption-side' isGray pro='相邻单元格的边框间的距离' code={[ {path:'css/style/table/caption-side'} ]} />
 				<BoxComponent pro='示例'>
 					<div>
 						<table className='test-table' style={{borderCollapse:this.state.borderCollapse,borderSpacing:this.state.borderSpacing}}>

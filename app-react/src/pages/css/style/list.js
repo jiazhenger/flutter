@@ -16,9 +16,9 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='list-style-type' pro='列表样式' code={[ {path:'css/style/list/list-style-type'} ]} />
-				<BoxComponent keyword='list-style-position' pro='列表排列位置' code={[ {path:'css/style/list/list-style-position'} ]} />
-				<BoxComponent keyword='list-style-image' pro='列表图片' code={[ {path:'css/style/list/list-style-image'} ]} />
+				<BoxComponent order={1} keyword='list-style-type' pro='列表样式' code={[ {path:'css/style/list/list-style-type'} ]} />
+				<BoxComponent order={2} keyword='list-style-position' pro='列表排列位置' code={[ {path:'css/style/list/list-style-position'} ]} />
+				<BoxComponent order={3} keyword='list-style-image' pro='列表图片' code={[ {path:'css/style/list/list-style-image'} ]} />
 				<BoxComponent keyword='list-style' pro='[list-style-type] [list-style-position] [list-style-image]' code={[ {path:'css/style/list/list-style'} ]} />
 				
 				<BoxComponent pro='示例'>

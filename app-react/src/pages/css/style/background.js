@@ -18,7 +18,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='background-color' pro='背景颜色' code={[ {path:'css/style/background/base/background-color'} ]}>
+				<BoxComponent order={1} keyword='background-color' pro='背景颜色' code={[ {path:'css/style/background/base/background-color'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundColor: v }) }
 						data={{
@@ -33,7 +33,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-image' pro='背景图片' code={[ {path:'css/style/background/base/background-image'} ]}>
+				<BoxComponent order={2} keyword='background-image' pro='背景图片' code={[ {path:'css/style/background/base/background-image'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundImage: v === 'none' ? 'none' :  'url(' + TestImage + ')'}) }
 						data={{
@@ -43,7 +43,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-repeat' pro='背景图片平铺' code={[ {path:'css/style/background/base/background-repeat'} ]}>
+				<BoxComponent order={3} keyword='background-repeat' pro='背景图片平铺' code={[ {path:'css/style/background/base/background-repeat'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundRepeat: v }) }
 						data={{
@@ -53,7 +53,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-position' pro='背景图片位置' code={[ {path:'css/style/background/base/background-position'} ]}>
+				<BoxComponent order={4} keyword='background-position' pro='背景图片位置' code={[ {path:'css/style/background/base/background-position'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundPosition: v }) }
 						data={{
@@ -77,7 +77,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-attachment' pro='背景滚动' code={[ {path:'css/style/background/base/background-attachment'} ]}>
+				<BoxComponent order={5} keyword='background-attachment' pro='背景滚动' code={[ {path:'css/style/background/base/background-attachment'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundAttachment: v }) }
 						data={{
@@ -106,7 +106,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-size' pro='背景图片大小' code={[ {path:'css/style/background/promote/background-size'} ]}>
+				<BoxComponent order={6} keyword='background-size' pro='背景图片大小' code={[ {path:'css/style/background/promote/background-size'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundSize: v }) }
 						data={{
@@ -116,7 +116,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-clip' isGray pro='指定对象的背景图像向外裁剪的区域' code={[ {path:'css/style/background/promote/background-clip'} ]}>
+				<BoxComponent order={7} keyword='background-clip' isGray pro='指定对象的背景图像向外裁剪的区域' code={[ {path:'css/style/background/promote/background-clip'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundClip: v }) }
 						data={{
@@ -126,7 +126,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-origin' isGray pro='指定对象的背景图像向外裁剪的区域' code={[ {path:'css/style/background/promote/background-origin'} ]}>
+				<BoxComponent order={8} keyword='background-origin' isGray pro='指定对象的背景图像向外裁剪的区域' code={[ {path:'css/style/background/promote/background-origin'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ backgroundOrigin: v }) }
 						data={{
@@ -138,7 +138,7 @@ export default class Index extends React.Component{
 				
 				<BoxComponent keyword='background' 
 					pro='[background-color] background-image] [background-repeat] [background-position] [background-attachment] [background-clip] [background-origin]/[background-size]'
-					code={[ {path:'css/style/background/base/background'} ]} 
+					code={[ {path:'css/style/background/background'} ]} 
 				/>
 			</UbContent>
 		)

@@ -13,7 +13,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='font-family' pro='字体名称' code={[ {path:'css/style/font/font-family'} ]}>
+				<BoxComponent order={1} keyword='font-family' pro='字体名称' code={[ {path:'css/style/font/font-family'} ]}>
 					<CaseComponent
 						styleName='fontFamily'
 						data={{
@@ -22,11 +22,11 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='font-size' pro='字体大小' code={[ {path:'css/style/font/font-size'} ]} />
+				<BoxComponent order={2} keyword='font-size' pro='字体大小' code={[ {path:'css/style/font/font-size'} ]} />
 				
-				<BoxComponent keyword='font-style' pro='倾斜' code={[ {path:'css/style/font/font-style'} ]} />
+				<BoxComponent order={3} keyword='font-style' pro='倾斜' code={[ {path:'css/style/font/font-style'} ]} />
 				
-				<BoxComponent keyword='font-weight' pro='加粗' code={[ {path:'css/style/font/font-weight'} ]}>
+				<BoxComponent order={4} keyword='font-weight' pro='加粗' code={[ {path:'css/style/font/font-weight'} ]}>
 					<CaseComponent
 						styleName='fontWeight'
 						data={{
@@ -35,7 +35,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='font-variant' pro='将小写字母转为大写' code={[ {path:'css/style/font/font-variant'} ]}>
+				<BoxComponent order={5} keyword='font-variant' pro='将小写字母转为大写' code={[ {path:'css/style/font/font-variant'} ]}>
 					<CaseComponent
 						styleName='fontVariant'
 						data={{
@@ -44,7 +44,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='line-height' pro='行高' code={[ {path:'css/style/font/line-height'} ]}>
+				<BoxComponent order={6} keyword='line-height' pro='行高' code={[ {path:'css/style/font/line-height'} ]}>
 					<CaseComponent
 						styleName='lineHeight'
 						data={{

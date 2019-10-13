@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='border-width' pro='边框宽度' code={[ {path:'css/style/border/border/border-width'} ]}>
+				<BoxComponent order={1} keyword='border-width' pro='边框宽度' code={[ {path:'css/style/border/border/border-width'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ borderWidth: v }) }
 						data={{
@@ -24,7 +24,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='border-style' pro='边框样式' code={[ {path:'css/style/border/border/border-style'} ]}>
+				<BoxComponent order={2} keyword='border-style' pro='边框样式' code={[ {path:'css/style/border/border/border-style'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ borderStyle: v }) }
 						data={{
@@ -34,7 +34,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='border-color' pro='边框颜色' code={[ {path:'css/style/border/border/border-color'} ]}>
+				<BoxComponent order={3} keyword='border-color' pro='边框颜色' code={[ {path:'css/style/border/border/border-color'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ borderColor: v }) }
 						data={{

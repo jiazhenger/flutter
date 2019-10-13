@@ -14,8 +14,8 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='float' pro='浮动' code={[ {path:'css/style/float/float'} ]}/>
-				<BoxComponent keyword='clear' pro='清除浮动' code={[ {path:'css/style/float/clear'} ]}/>
+				<BoxComponent order={1} keyword='float' pro='浮动' code={[ {path:'css/style/float/float'} ]}/>
+				<BoxComponent order={2} keyword='clear' pro='清除浮动' code={[ {path:'css/style/float/clear'} ]}/>
 				<BoxComponent pro='示例'>
 					<div style={{height:'220px',border:'1px solid #666',boxSizing:'border-box'}}>
 						<div className={this.state.clearfix} style={{background:'red',overflow:this.state.overflow,height:this.state.height}}>

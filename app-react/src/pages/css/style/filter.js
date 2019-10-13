@@ -18,7 +18,7 @@ export default class Index extends React.Component{
 			<UbContent className='page-content'>
 				<h2 className='sub-title ptb10 c1 bbor1'>阴影:</h2>
 				
-				<BoxComponent keyword='box-shadow' pro='盒子阴影' code={[ {path:'css/style/filter/box-shadow'} ]}>
+				<BoxComponent order={1} keyword='box-shadow' pro='盒子阴影' code={[ {path:'css/style/filter/box-shadow'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ boxShadow: v }) }
 						data={{
@@ -32,7 +32,7 @@ export default class Index extends React.Component{
 				
 				<h2 className='sub-title ptb10 c1 bbor1'>渐变:</h2>
 				
-				<BoxComponent keyword='background-image:linear-gradient()' pro='线性渐变' code={[ {path:'css/style/filter/linear-gradient'} ]}>
+				<BoxComponent order={2} keyword='background-image:linear-gradient()' pro='线性渐变' code={[ {path:'css/style/filter/linear-gradient'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ linearGradient: 'linear-gradient(' + v + ')' }) }
 						data={{
@@ -46,7 +46,21 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='background-image:radial-gradient()' pro='放射性渐变' code={[ {path:'css/style/filter/radial-gradient'} ]}>
+				<BoxComponent order={3} keyword='background-image:repeating-linear-gradient()' pro='重复的线性渐变' code={[ {path:'css/style/filter/repeating-linear-gradient'} ]}>
+					<CaseComponent
+						getValue={ v=>this.setState({ repeatingLinearGradient: 'repeating-linear-gradient(' + v + ')' }) }
+						data={{
+							radio:['red, yellow, blue','to right,red,blue','to left,red,blue','to top,red,blue','to bottom,red,blue',
+								'to top left,red,blue','to top right,red,blue','to bottom left,red,blue','to bottom right,red,blue',
+								'45deg,red,blue','185deg,red,blue',
+								'146deg, red 0%, blue 50%','146deg, red 50%, blue 50%','146deg, red 100px, blue 50%'
+							]
+						}}>
+						<div style={{height:'50px',backgroundImage:this.state.repeatingLinearGradient}}></div>
+					</CaseComponent>
+				</BoxComponent>
+				
+				<BoxComponent order={4} keyword='background-image:radial-gradient()' pro='放射性渐变' code={[ {path:'css/style/filter/radial-gradient'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ radialGradient: 'radial-gradient(' + v + ')' }) }
 						data={{
@@ -64,9 +78,27 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
+				<BoxComponent order={5} keyword='background-image:repeating-radial-gradient()' pro='重复的放射性渐变' code={[ {path:'css/style/filter/repeating-radial-gradient'} ]}>
+					<CaseComponent
+						getValue={ v=>this.setState({ repeatingRadialGradient: 'repeating-radial-gradient(' + v + ')' }) }
+						data={{
+							radio:[
+								'red,yellow,blue',
+								'circle,red,yellow,green',
+								'red 5%,green 15%,yellow 60%',
+								'closest-side,blue,green,yellow,black',
+								'farthest-side,blue,green,yellow,black',
+								'closest-corner,blue,green,yellow,black',
+								'farthest-corner,blue,green,yellow,black'
+							]
+						}}>
+						<div style={{height:'50px',backgroundImage:this.state.repeatingRadialGradient}}></div>
+					</CaseComponent>
+				</BoxComponent>
+				
 				<h2 className='sub-title ptb10 c1 bbor1'>滤镜 filter:</h2>
 				
-				<BoxComponent keyword='filter:drop-shadow()' pro='阴影' code={[ {path:'css/style/filter/drop-shadow'} ]}>
+				<BoxComponent order={6} keyword='filter:drop-shadow()' pro='阴影' code={[ {path:'css/style/filter/drop-shadow'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ dropShadow: 'drop-shadow(' + v + ')' }) }
 						data={{
@@ -78,7 +110,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:opacity()' pro='透明度' code={[ {path:'css/style/filter/opacity'} ]}>
+				<BoxComponent order={7} keyword='filter:opacity()' pro='透明度' code={[ {path:'css/style/filter/opacity'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ opacity: 'opacity(' + v + ')' }) }
 						data={{
@@ -90,7 +122,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:blur()' pro='模糊' code={[ {path:'css/style/filter/blur'} ]}>
+				<BoxComponent order={8} keyword='filter:blur()' pro='模糊' code={[ {path:'css/style/filter/blur'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ blur: 'blur(' + v + ')' }) }
 						data={{
@@ -102,7 +134,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:grayscale()' pro='置灰' code={[ {path:'css/style/filter/grayscale'} ]}>
+				<BoxComponent order={9} keyword='filter:grayscale()' pro='置灰' code={[ {path:'css/style/filter/grayscale'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ grayscale: 'grayscale(' + v + ')' }) }
 						data={{
@@ -114,7 +146,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:brightness()' isGray pro='变暗' code={[ {path:'css/style/filter/brightness'} ]}>
+				<BoxComponent order={10} keyword='filter:brightness()' isGray pro='变暗' code={[ {path:'css/style/filter/brightness'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ brightness: 'brightness(' + v + ')' }) }
 						data={{
@@ -126,7 +158,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:contrast()' isGray pro='对比度' code={[ {path:'css/style/filter/contrast'} ]}>
+				<BoxComponent order={11} keyword='filter:contrast()' isGray pro='对比度' code={[ {path:'css/style/filter/contrast'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ contrast: 'contrast(' + v + ')' }) }
 						data={{
@@ -138,7 +170,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:hue-rotate()' isGray pro='给图像应用色相旋转' code={[ {path:'css/style/filter/hue-rotate'} ]}>
+				<BoxComponent order={12} keyword='filter:hue-rotate()' isGray pro='给图像应用色相旋转' code={[ {path:'css/style/filter/hue-rotate'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ hueRotate: 'hue-rotate(' + v + ')' }) }
 						data={{
@@ -150,7 +182,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:invert()' isGray pro='反转图像' code={[ {path:'css/style/filter/invert'} ]}>
+				<BoxComponent order={13} keyword='filter:invert()' isGray pro='反转图像' code={[ {path:'css/style/filter/invert'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ invert: 'invert(' + v + ')' }) }
 						data={{
@@ -162,7 +194,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:saturate()' isGray pro='转换图像饱和度' code={[ {path:'css/style/filter/saturate'} ]}>
+				<BoxComponent order={14} keyword='filter:saturate()' isGray pro='转换图像饱和度' code={[ {path:'css/style/filter/saturate'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ saturate: 'saturate(' + v + ')' }) }
 						data={{
@@ -174,7 +206,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:sepia()' isGray pro='将图像转换为深褐色' code={[ {path:'css/style/filter/sepia'} ]}>
+				<BoxComponent order={15} keyword='filter:sepia()' isGray pro='将图像转换为深褐色' code={[ {path:'css/style/filter/sepia'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ sepia: 'sepia(' + v + ')' }) }
 						data={{
@@ -186,7 +218,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='filter:url()' isGray pro='SVG滤镜' code={[ {path:'css/style/filter/url'} ]}/>
+				<BoxComponent order={16} keyword='filter:url()' isGray pro='SVG滤镜' code={[ {path:'css/style/filter/url'} ]}/>
 			</UbContent>
 		)
 	}

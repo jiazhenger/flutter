@@ -20,11 +20,11 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='transform' pro='应用于元素的2D或3D转换' code={[ {path:'css/style/transform/transform'} ]}/>
-				<BoxComponent keyword='transform-origin' pro='允许更改转换元素的位置' code={[ {path:'css/style/transform/transform-origin'} ]}/>
-				<BoxComponent keyword='transform-style' pro='使被转换的子元素保留其 3D 转换' code={[ {path:'css/style/transform/transform-style'} ]}/>
-				<BoxComponent keyword='perspective-origin' pro='允许改变 3D 元素的底部位置' code={[ {path:'css/style/transform/perspective-origin'} ]}/>
-				<BoxComponent keyword='backface-visibility' pro='指定嵌套元素是怎样在三维空间中呈现' code={[ {path:'css/style/transform/backface-visibility'} ]}/>
+				<BoxComponent order={1} keyword='transform' pro='应用于元素的2D或3D转换' code={[ {path:'css/style/transform/transform'} ]}/>
+				<BoxComponent order={2} keyword='transform-origin' pro='允许更改转换元素的位置' code={[ {path:'css/style/transform/transform-origin'} ]}/>
+				<BoxComponent order={3} keyword='transform-style' pro='使被转换的子元素保留其 3D 转换' code={[ {path:'css/style/transform/transform-style'} ]}/>
+				<BoxComponent order={4} keyword='perspective-origin' pro='允许改变 3D 元素的底部位置' code={[ {path:'css/style/transform/perspective-origin'} ]}/>
+				<BoxComponent order={5} keyword='backface-visibility' pro='指定嵌套元素是怎样在三维空间中呈现' code={[ {path:'css/style/transform/backface-visibility'} ]}/>
 				<BoxComponent pro='用例'>
 					<div style={{background:'yellow',margin:'0 50px'}}>
 						<div style={{

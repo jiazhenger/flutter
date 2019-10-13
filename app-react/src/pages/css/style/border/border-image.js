@@ -16,11 +16,11 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='border-image-source' pro='边框图片' isGray code={[ {path:'css/style/border/border-image/border-image-source'} ]}/>
-				<BoxComponent keyword='border-image-width' pro='图像边界的宽度' isGray code={[ {path:'css/style/border/border-image/border-image-width'} ]}/>
-				<BoxComponent keyword='border-image-repeat' pro='图像平铺方式' isGray code={[ {path:'css/style/border/border-image/border-image-repeat'} ]}/>
-				<BoxComponent keyword='border-image-slice' pro='用于指定在边框外部绘制 border-image-area 的量' isGray code={[ {path:'css/style/border/border-image/border-image-slice'} ]}/>
-				<BoxComponent keyword='border-image-outset' pro='图像边界向内偏移' isGray code={[ {path:'css/style/border/border-image/border-image-outset'} ]}/>
+				<BoxComponent order={1} keyword='border-image-source' pro='边框图片' isGray code={[ {path:'css/style/border/border-image/border-image-source'} ]}/>
+				<BoxComponent order={2} keyword='border-image-width' pro='图像边界的宽度' isGray code={[ {path:'css/style/border/border-image/border-image-width'} ]}/>
+				<BoxComponent order={3} keyword='border-image-repeat' pro='图像平铺方式' isGray code={[ {path:'css/style/border/border-image/border-image-repeat'} ]}/>
+				<BoxComponent order={4} keyword='border-image-slice' pro='用于指定在边框外部绘制 border-image-area 的量' isGray code={[ {path:'css/style/border/border-image/border-image-slice'} ]}/>
+				<BoxComponent order={5} keyword='border-image-outset' pro='图像边界向内偏移' isGray code={[ {path:'css/style/border/border-image/border-image-outset'} ]}/>
 				<BoxComponent keyword='border-image' isGray pro='[border-image-width] [border-image-source] [border-image-repeat] [border-image-slice] [border-image-outset]' code={[ {path:'css/style/border/border-image/border-image'} ]} />
 				
 				<BoxComponent pro='示例'>

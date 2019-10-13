@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='padding-top' pro='上边距' code={[ {path:'css/style/padding/padding-top'} ]}>
+				<BoxComponent order={1} keyword='padding-top' pro='上边距' code={[ {path:'css/style/padding/padding-top'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ paddingTop: v }) }
 						data={{
@@ -24,7 +24,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='padding-right' pro='右边距' code={[ {path:'css/style/padding/padding-right'} ]}>
+				<BoxComponent order={2} keyword='padding-right' pro='右边距' code={[ {path:'css/style/padding/padding-right'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ paddingRight: v }) }
 						data={{
@@ -34,7 +34,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='padding-bottom' pro='下边距' code={[ {path:'css/style/padding/padding-bottom'} ]}>
+				<BoxComponent order={3} keyword='padding-bottom' pro='下边距' code={[ {path:'css/style/padding/padding-bottom'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ paddingBottom: v }) }
 						data={{
@@ -44,7 +44,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='padding-left' pro='左边距' code={[ {path:'css/style/padding/padding-left'} ]}>
+				<BoxComponent order={4} keyword='padding-left' pro='左边距' code={[ {path:'css/style/padding/padding-left'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ paddingLeft: v }) }
 						data={{

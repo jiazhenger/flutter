@@ -1,0 +1,25 @@
+<em># <strong>pubspec.yaml</strong> 在本地字义字体</em>
+flutter:
+  fonts:
+    - family: <i>Raleway</i> 							<em>// 字体名称</em>
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf  			<em>// 导入字体</em>
+        - asset: fonts/Raleway-Medium.ttf
+        <em># 将包中的字体定义到本地</em>
+        <em>// 放置位置：<i>/my_package/lib/fonts/</i>Raleway-Medium.ttf</em>
+        - asset: packages/my_package/fonts/Raleway-Medium.ttf 		<em>// lib 不能放入路径中</em>
+          <em># 加样式</em>
+          weight: 500 								<em>// 加粗</em>
+          style: italic 								<em>// 倾斜</em>
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+          weight: 600 								<em>// 加粗</em>
+     - family: <i>Schyler</i>								<em>// 字体名称</em>
+       fonts:
+         - asset: fonts/Schyler-Regular.ttf
+         - asset: fonts/Schyler-Italic.ttf
+           style: italic 								<em>// 倾斜</em>
+<em># 使用在本地字义的字体</em>
+const TextStyle(<b>fontFamily</b>: '<i>Raleway</i>')
+const TextStyle(<b>fontFamily</b>: '<i>Schyler</i>')
+<em># 使用在包中字义的字体</em>
+const TextStyle(<b>fontFamily</b>: '<i>Raleway</i>', <b>package</b>: '<i>font_package</i>') 	<em>// 要使用包中定义的字体族，必须提供包参数</em>

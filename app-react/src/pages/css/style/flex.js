@@ -16,16 +16,16 @@ export default class Index extends React.Component{
 			<UbContent className='page-content'>
 				<h2 className='sub-title ptb10 c1 bbor1'>在父级使用的属性:</h2>
 				
-				<BoxComponent keyword='display' pro='定义弹性盒子' code={[ {path:'css/style/flex/display'} ]}/>
+				<BoxComponent order={1} keyword='display' pro='定义弹性盒子' code={[ {path:'css/style/flex/display'} ]}/>
 				<h2 className='sub-title ptb10 b bbor1'>排列方式:</h2>
-				<BoxComponent keyword='flex-direction' pro='指定弹性子元素在父容器中排列方式' code={[ {path:'css/style/flex/flex-direction'} ]}/>
-				<BoxComponent keyword='flex-wrap' pro='用于指定弹性盒子的子元素换行方式' code={[ {path:'css/style/flex/flex-wrap'} ]}/>
-				<BoxComponent keyword='flex-flow' pro='flex-direction 和 flex-wrap 属性的复合属性' code={[ {path:'css/style/flex/flex-flow'} ]}/>
+				<BoxComponent order={2} keyword='flex-direction' pro='指定弹性子元素在父容器中排列方式' code={[ {path:'css/style/flex/flex-direction'} ]}/>
+				<BoxComponent order={3} keyword='flex-wrap' pro='用于指定弹性盒子的子元素换行方式' code={[ {path:'css/style/flex/flex-wrap'} ]}/>
+				<BoxComponent order={4} keyword='flex-flow' pro='flex-direction 和 flex-wrap 属性的复合属性' code={[ {path:'css/style/flex/flex-flow'} ]}/>
 				<h2 className='sub-title ptb10 b bbor1'>水平或垂直对齐方式:</h2>
-				<BoxComponent keyword='justify-content' pro='弹性子元素在父容器中主轴上水平或垂直对齐方式' code={[ {path:'css/style/flex/justify-content'} ]}/>
-				<BoxComponent keyword='align-items' pro='弹性子元素在父容中器主轴上垂直或水平对齐方式' code={[ {path:'css/style/flex/align-items'} ]}/>
+				<BoxComponent order={5} keyword='justify-content' pro='弹性子元素在父容器中主轴上水平或垂直对齐方式' code={[ {path:'css/style/flex/justify-content'} ]}/>
+				<BoxComponent order={6} keyword='align-items' pro='弹性子元素在父容中器主轴上垂直或水平对齐方式' code={[ {path:'css/style/flex/align-items'} ]}/>
 				
-				<BoxComponent keyword='align-content' pro='在弹性容器内的各项没有占用交叉轴上所有可用的空间时垂直对齐容器内的各项' code={[ {path:'css/style/flex/align-content'} ]}/>
+				<BoxComponent order={7} keyword='align-content' pro='在弹性容器内的各项没有占用交叉轴上所有可用的空间时垂直对齐容器内的各项' code={[ {path:'css/style/flex/align-content'} ]}/>
 				<BoxComponent pro='示例'>
 					<div style={{
 						background:'red',
@@ -119,7 +119,7 @@ export default class Index extends React.Component{
 				
 				<h2 className='sub-title ptb10 c1 bbor1'>在子级中使用的属性:</h2>
 				
-				<BoxComponent keyword='align-self' pro='设置弹性元素自身在侧轴（纵轴）方向上的对齐方式' code={[ {path:'css/style/flex/align-self'} ]}>
+				<BoxComponent order={8} keyword='align-self' pro='设置弹性元素自身在侧轴（纵轴）方向上的对齐方式' code={[ {path:'css/style/flex/align-self'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ alignSelf: v }) }
 						data={{
@@ -147,7 +147,7 @@ export default class Index extends React.Component{
 						</div>
 					</CaseComponent>
 				</BoxComponent>
-				<BoxComponent keyword='order' pro='用整数值来定义排列顺序，数值小的排在前面。可以为负值' code={[ {path:'css/style/flex/order'} ]}>
+				<BoxComponent order={9} keyword='order' pro='用整数值来定义排列顺序，数值小的排在前面。可以为负值' code={[ {path:'css/style/flex/order'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ order: v }) }
 						data={{
@@ -171,9 +171,9 @@ export default class Index extends React.Component{
 				
 				<h2 className='sub-title ptb10 b bbor1'>分配空间方式:</h2>
 				
-				<BoxComponent keyword='flex-grow' pro='定义弹性盒子元素的扩展比率' code={[ {path:'css/style/flex/flex-grow'} ]}/>
-				<BoxComponent keyword='flex-shrink' pro='定义弹性盒子元素的收缩比率' code={[ {path:'css/style/flex/flex-shrink'} ]}/>
-				<BoxComponent keyword='flex-basis' pro='定义弹性盒子元素的默认基准值' code={[ {path:'css/style/flex/flex-basis'} ]}/>
+				<BoxComponent order={10} keyword='flex-grow' pro='定义弹性盒子元素的扩展比率' code={[ {path:'css/style/flex/flex-grow'} ]}/>
+				<BoxComponent order={11} keyword='flex-shrink' pro='定义弹性盒子元素的收缩比率' code={[ {path:'css/style/flex/flex-shrink'} ]}/>
+				<BoxComponent order={12} keyword='flex-basis' pro='定义弹性盒子元素的默认基准值' code={[ {path:'css/style/flex/flex-basis'} ]}/>
 				<BoxComponent pro='示例'>
 					<div style={{
 						background:'red',

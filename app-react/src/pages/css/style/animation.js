@@ -14,14 +14,14 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='animation-name' pro='动画名称' code={[ {path:'css/style/animation/animation-name'} ]}/>
-				<BoxComponent keyword='animation-duration' pro='播放一次需要的时间' code={[ {path:'css/style/animation/animation-duration'} ]}/>
-				<BoxComponent keyword='animation-delay' pro='延迟播放时间' code={[ {path:'css/style/animation/animation-delay'} ]}/>
-				<BoxComponent keyword='animation-timing-function' pro='过渡效果' code={[ {path:'css/style/animation/animation-timing-function'} ]}/>
-				<BoxComponent keyword='animation-iteration-count' pro='循环次数' code={[ {path:'css/style/animation/animation-iteration-count'} ]}/>
-				<BoxComponent keyword='animation-direction' pro='播放的方向' code={[ {path:'css/style/animation/animation-direction'} ]}/>
-				<BoxComponent keyword='animation-fill-mode' pro='播放完后的状态' code={[ {path:'css/style/animation/animation-fill-mode'} ]}/>
-				<BoxComponent keyword='animation-play-state' pro='播放状态' code={[ {path:'css/style/animation/animation-play-state'} ]}/>
+				<BoxComponent order={1} keyword='animation-name' pro='动画名称' code={[ {path:'css/style/animation/animation-name'} ]}/>
+				<BoxComponent order={2} keyword='animation-duration' pro='播放一次需要的时间' code={[ {path:'css/style/animation/animation-duration'} ]}/>
+				<BoxComponent order={3} keyword='animation-delay' pro='延迟播放时间' code={[ {path:'css/style/animation/animation-delay'} ]}/>
+				<BoxComponent order={4} keyword='animation-timing-function' pro='过渡效果' code={[ {path:'css/style/animation/animation-timing-function'} ]}/>
+				<BoxComponent order={5} keyword='animation-iteration-count' pro='循环次数' code={[ {path:'css/style/animation/animation-iteration-count'} ]}/>
+				<BoxComponent order={6} keyword='animation-direction' pro='播放的方向' code={[ {path:'css/style/animation/animation-direction'} ]}/>
+				<BoxComponent order={7} keyword='animation-fill-mode' pro='播放完后的状态' code={[ {path:'css/style/animation/animation-fill-mode'} ]}/>
+				<BoxComponent order={8} keyword='animation-play-state' pro='播放状态' code={[ {path:'css/style/animation/animation-play-state'} ]}/>
 				<BoxComponent keyword='animation' pro='复合属性' code={[ {path:'css/style/animation/animation'} ]}/>
 				<BoxComponent pro='用例'>
 					<div className='rel' style={{

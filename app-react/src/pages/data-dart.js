@@ -5,7 +5,7 @@
 			{
 				title: '声明变量',
 				children:[
-					{ title: '变通变量声明', path:'/dart/grammar/var/var' },
+					{ title: '变量声明', path:'/dart/grammar/var/var' },
 					{ title: '数据类型变量声明', path:'/dart/grammar/var/type' },
 				]
 			},

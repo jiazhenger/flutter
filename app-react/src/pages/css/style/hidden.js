@@ -18,7 +18,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='display' pro='规定元素应该生成的框的类型' code={[ {path:'css/style/hidden/display'} ]}>
+				<BoxComponent order={1} keyword='display' pro='规定元素应该生成的框的类型' code={[ {path:'css/style/hidden/display'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ display: v }) }
 						data={{
@@ -30,7 +30,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='visibility' pro='是否显示对象' code={[ {path:'css/style/hidden/visibility'} ]}>
+				<BoxComponent order={2} keyword='visibility' pro='是否显示对象' code={[ {path:'css/style/hidden/visibility'} ]}>
 					<div className='mt10'>
 						<div style={{width:'50px',height:'50px',background:'yellow'}}>1</div>
 						<div style={{width:'50px',height:'50px',background:'pink',visibility:this.state.visibility,display:this.state.displays}}>2</div>
@@ -52,7 +52,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				<h2 className='sub-title ptb10 b bbor1'>溢出/超出处理:</h2>
-				<BoxComponent keyword='overflow' pro='溢出/超出处理' code={[ {path:'css/style/hidden/overflow'} ]}>
+				<BoxComponent order={3} keyword='overflow' pro='溢出/超出处理' code={[ {path:'css/style/hidden/overflow'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ overflow: v }) }
 						data={{
@@ -67,10 +67,10 @@ export default class Index extends React.Component{
 						<div style={{height:'50px'}}></div>
 					</CaseComponent>
 				</BoxComponent>
-				<BoxComponent keyword='overflow-x' pro='横向溢出/超出处理' code={[ {path:'css/style/hidden/overflow-x'} ]}/>
-				<BoxComponent keyword='overflow-y' pro='横向溢出/超出处理' code={[ {path:'css/style/hidden/overflow-y'} ]}/>
+				<BoxComponent order={4} keyword='overflow-x' pro='横向溢出/超出处理' code={[ {path:'css/style/hidden/overflow-x'} ]}/>
+				<BoxComponent order={5} keyword='overflow-y' pro='横向溢出/超出处理' code={[ {path:'css/style/hidden/overflow-y'} ]}/>
 				<h2 className='sub-title ptb10 b bbor1'>裁剪:</h2>
-				<BoxComponent keyword='clip' pro='裁剪' isGray code={[ {path:'css/style/hidden/clip'} ]}>
+				<BoxComponent order={6} keyword='clip' pro='裁剪' isGray code={[ {path:'css/style/hidden/clip'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ clip: v }) }
 						data={{

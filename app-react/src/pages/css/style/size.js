@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='width' pro='宽度' code={[ {path:'css/style/size/width'} ]}>
+				<BoxComponent order={1} keyword='width' pro='宽度' code={[ {path:'css/style/size/width'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ width: v }) }
 						data={{
@@ -24,7 +24,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='min-width' pro='最小宽度' code={[ {path:'css/style/size/min-width'} ]}>
+				<BoxComponent order={2} keyword='min-width' pro='最小宽度' code={[ {path:'css/style/size/min-width'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ minWidth: v }) }
 						data={{
@@ -34,7 +34,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='max-width' pro='最大宽度' code={[ {path:'css/style/size/max-width'} ]}>
+				<BoxComponent order={3} keyword='max-width' pro='最大宽度' code={[ {path:'css/style/size/max-width'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ maxWidth: v }) }
 						data={{
@@ -44,9 +44,18 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='height' pro='高度' code={[ {path:'css/style/size/height'} ]} />
-				<BoxComponent keyword='min-height' pro='最小高度' code={[ {path:'css/style/size/min-height'} ]} />
-				<BoxComponent keyword='max-height' pro='最大高度' code={[ {path:'css/style/size/max-height'} ]} />
+				<BoxComponent order={4} keyword='height' pro='高度' code={[ {path:'css/style/size/height'} ]} />
+				<BoxComponent order={5} keyword='min-height' pro='最小高度' code={[ {path:'css/style/size/min-height'} ]} />
+				<BoxComponent order={6} keyword='max-height' pro='最大高度' code={[ {path:'css/style/size/max-height'} ]} />
+				<BoxComponent keyword='calc()' pro='响应式计算函数' code={[ {path:'css/style/size/calc'} ]}>
+					<CaseComponent
+						getValue={ v=>this.setState({ calc: 'calc(100% - ' + v + ')' }) }
+						data={{
+							radio:['100px','200px','300px','50%']
+						}}>
+						<div style={{height:'50px',background:'yellow',width:this.state.calc}}></div>
+					</CaseComponent>
+				</BoxComponent>
 			</UbContent>
 		)
 	}

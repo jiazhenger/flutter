@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='margin-top' pro='上边距' code={[ {path:'css/style/margin/margin-top'} ]}>
+				<BoxComponent order={1} keyword='margin-top' pro='上边距' code={[ {path:'css/style/margin/margin-top'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ marginTop: v }) }
 						data={{
@@ -25,7 +25,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='margin-right' pro='右边距' code={[ {path:'css/style/margin/margin-right'} ]}>
+				<BoxComponent order={2} keyword='margin-right' pro='右边距' code={[ {path:'css/style/margin/margin-right'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ marginRight: v }) }
 						data={{
@@ -35,7 +35,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='margin-bottom' pro='下边距' code={[ {path:'css/style/margin/margin-bottom'} ]}>
+				<BoxComponent order={3} keyword='margin-bottom' pro='下边距' code={[ {path:'css/style/margin/margin-bottom'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ marginBottom: v }) }
 						data={{
@@ -46,7 +46,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='margin-left' pro='左边距' code={[ {path:'css/style/margin/margin-left'} ]}>
+				<BoxComponent order={4} keyword='margin-left' pro='左边距' code={[ {path:'css/style/margin/margin-left'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ marginLeft: v }) }
 						data={{

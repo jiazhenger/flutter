@@ -14,10 +14,10 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='transition-property' pro='CSS属性' code={[ {path:'css/style/transition/transition-property'} ]}/>
-				<BoxComponent keyword='transition-duration' pro='过渡时间' code={[ {path:'css/style/transition/transition-duration'} ]}/>
-				<BoxComponent keyword='transition-delay' pro='延迟时间' code={[ {path:'css/style/transition/transition-delay'} ]}/>
-				<BoxComponent keyword='transition-timing-function' pro='过渡效果' code={[ {path:'css/style/transition/transition-timing-function'} ]}/>
+				<BoxComponent order={1} keyword='transition-property' pro='CSS属性' code={[ {path:'css/style/transition/transition-property'} ]}/>
+				<BoxComponent order={2} keyword='transition-duration' pro='过渡时间' code={[ {path:'css/style/transition/transition-duration'} ]}/>
+				<BoxComponent order={3} keyword='transition-delay' pro='延迟时间' code={[ {path:'css/style/transition/transition-delay'} ]}/>
+				<BoxComponent order={4} keyword='transition-timing-function' pro='过渡效果' code={[ {path:'css/style/transition/transition-timing-function'} ]}/>
 				<BoxComponent keyword='transition' pro='复合属性' code={[ {path:'css/style/transition/transition'} ]}/>
 				
 				<BoxComponent pro='用例'>

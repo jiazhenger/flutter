@@ -12,7 +12,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent title='变量声明' show={true} code={[ {path:'js/grammar/var/var'} ]} />
+				<BoxComponent pro='变量声明' show={true} code={[ {path:'js/grammar/var/var'} ]} />
 			</UbContent>
 		)
 	}

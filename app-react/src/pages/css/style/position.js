@@ -17,12 +17,12 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='position' pro='定位' code={[ {path:'css/style/position/position'} ]}/>
-				<BoxComponent keyword='left' pro='左移' code={[ {path:'css/style/position/left'} ]}/>
-				<BoxComponent keyword='top' pro='上移' code={[ {path:'css/style/position/top'} ]}/>
-				<BoxComponent keyword='right' pro='右移' code={[ {path:'css/style/position/right'} ]}/>
-				<BoxComponent keyword='bottom' pro='下移' code={[ {path:'css/style/position/bottom'} ]}/>
-				<BoxComponent keyword='z-index' pro='层叠顺序' code={[ {path:'css/style/position/z-index'} ]}/>
+				<BoxComponent order={1} keyword='position' pro='定位' code={[ {path:'css/style/position/position'} ]}/>
+				<BoxComponent order={2} keyword='left' pro='左移' code={[ {path:'css/style/position/left'} ]}/>
+				<BoxComponent order={3} keyword='top' pro='上移' code={[ {path:'css/style/position/top'} ]}/>
+				<BoxComponent order={4} keyword='right' pro='右移' code={[ {path:'css/style/position/right'} ]}/>
+				<BoxComponent order={5} keyword='bottom' pro='下移' code={[ {path:'css/style/position/bottom'} ]}/>
+				<BoxComponent order={6} keyword='z-index' pro='层叠顺序' code={[ {path:'css/style/position/z-index'} ]}/>
 				
 				<BoxComponent pro='用例'>
 					<div className='rel' style={{height:'100px',background:'red',border:'1px solid #666',boxSizing:'border-box'}}>

@@ -14,7 +14,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='outline-width' pro='边框宽度' code={[ {path:'css/style/border/outline/outline-width'} ]}>
+				<BoxComponent order={1} keyword='outline-width' pro='边框宽度' code={[ {path:'css/style/border/outline/outline-width'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ outlineWidth: v }) }
 						data={{
@@ -24,7 +24,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='outline-style' pro='边框样式' code={[ {path:'css/style/border/outline/outline-style'} ]}>
+				<BoxComponent order={2} keyword='outline-style' pro='边框样式' code={[ {path:'css/style/border/outline/outline-style'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ outlineStyle: v }) }
 						data={{
@@ -34,7 +34,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='outline-color' pro='边框颜色' code={[ {path:'css/style/border/outline/outline-color'} ]}>
+				<BoxComponent order={3} keyword='outline-color' pro='边框颜色' code={[ {path:'css/style/border/outline/outline-color'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ outlineColor: v }) }
 						data={{
@@ -46,7 +46,7 @@ export default class Index extends React.Component{
 				
 				<BoxComponent keyword='outline' pro='[outline-width] [outline-style] [outline-color] ' code={[ {path:'css/style/border/outline/outline'} ]} />
 				
-				<BoxComponent keyword='outline-offset' pro='定义轮廓距离容器的值' code={[ {path:'css/style/border/outline/outline-offset'} ]}>
+				<BoxComponent order={4} keyword='outline-offset' pro='定义轮廓距离容器的值' code={[ {path:'css/style/border/outline/outline-offset'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ outlineOffset: v }) }
 						data={{

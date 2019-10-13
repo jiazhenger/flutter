@@ -16,12 +16,11 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent keyword='color' pro='颜色' code={[ {path:'css/style/text/color'} ]} />
+				<BoxComponent order={1} keyword='color' pro='颜色' code={[ {path:'css/style/text/color'} ]} />
 				
-				<BoxComponent keyword='text-decoration' pro='文本的装饰' code={[ {path:'css/style/text/text-decoration'} ]} />
+				<BoxComponent order={2} keyword='text-decoration' pro='文本的装饰' code={[ {path:'css/style/text/text-decoration'} ]} />
 				
-				
-				<BoxComponent keyword='text-transform' pro='字母文本的大小写' code={[ {path:'css/style/text/text-transform'} ]}>
+				<BoxComponent order={3} keyword='text-transform' pro='字母文本的大小写' code={[ {path:'css/style/text/text-transform'} ]}>
 					<CaseComponent
 						styleName='textTransform'
 						data={{
@@ -31,13 +30,13 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='letter-spacing' pro='文字之间的间距' code={[ {path:'css/style/text/letter-spacing'} ]} />
+				<BoxComponent order={4} keyword='letter-spacing' pro='文字之间的间距' code={[ {path:'css/style/text/letter-spacing'} ]} />
 				
-				<BoxComponent keyword='word-spacing' pro='单词之间的间距' code={[ {path:'css/style/text/word-spacing'} ]} />
+				<BoxComponent order={5} keyword='word-spacing' pro='单词之间的间距' code={[ {path:'css/style/text/word-spacing'} ]} />
 				
-				<BoxComponent keyword='text-shadow' pro='文字阴影' code={[ {path:'css/style/text/text-shadow'} ]} />
+				<BoxComponent order={6} keyword='text-shadow' pro='文字阴影' code={[ {path:'css/style/text/text-shadow'} ]} />
 				
-				<BoxComponent keyword='text-indent' pro='首行缩进' code={[ {path:'css/style/text/text-indent'} ]}>
+				<BoxComponent order={7} keyword='text-indent' pro='首行缩进' code={[ {path:'css/style/text/text-indent'} ]}>
 					<CaseComponent
 						styleName='textIndent'
 						data={{
@@ -48,7 +47,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='text-align' pro='水平对齐方式' code={[ {path:'css/style/text/text-align'} ]}>
+				<BoxComponent order={8} keyword='text-align' pro='水平对齐方式' code={[ {path:'css/style/text/text-align'} ]}>
 					<CaseComponent
 						styleName='textAlign'
 						data={{
@@ -58,7 +57,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='vertical-align' pro='垂直对齐方式' code={[ {path:'css/style/text/vertical-align'} ]}>
+				<BoxComponent order={9} keyword='vertical-align' pro='垂直对齐方式' code={[ {path:'css/style/text/vertical-align'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ verticalAlign: v }) }
 						data={{
@@ -75,7 +74,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='white-space' pro='空格处理方式' code={[ {path:'css/style/text/white-space'} ]}>
+				<BoxComponent order={10} keyword='white-space' pro='空格处理方式' code={[ {path:'css/style/text/white-space'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ whiteSpace: v }) }
 						data={{
@@ -93,7 +92,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='word-wrap' pro='自动换行' code={[ {path:'css/style/text/word-wrap'} ]}>
+				<BoxComponent order={11} keyword='word-wrap' pro='自动换行' code={[ {path:'css/style/text/word-wrap'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ wordWrap: v }) }
 						data={{
@@ -109,7 +108,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='text-overflow' pro='溢出显示( ... )' code={[ {path:'css/style/text/text-overflow'} ]}>
+				<BoxComponent order={12} keyword='text-overflow' pro='溢出显示( ... )' code={[ {path:'css/style/text/text-overflow'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ textOverflow: v }) }
 						data={{
@@ -121,7 +120,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='-webkit-line-clamp' pro='第几行溢出显示( ... )' code={[ {path:'css/style/text/-webkit-line-clamp'} ]}>
+				<BoxComponent order={13} keyword='-webkit-line-clamp' pro='第几行溢出显示( ... )' code={[ {path:'css/style/text/-webkit-line-clamp'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ WebkitLineClamp: v }) }
 						data={{
@@ -133,7 +132,7 @@ export default class Index extends React.Component{
 					</CaseComponent>
 				</BoxComponent>
 				
-				<BoxComponent keyword='direction' isGray pro='文本流的方向'  code={[ {path:'css/style/text/direction'} ]}>
+				<BoxComponent order={14} keyword='direction' isGray pro='文本流的方向'  code={[ {path:'css/style/text/direction'} ]}>
 					<CaseComponent
 						getValue={ v=>this.setState({ textOverflow: v }) }
 						styleName='direction'
