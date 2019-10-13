@@ -3,40 +3,29 @@ import React from 'react'
 // ===================================================================== antd
 import TitleComponent from '@cpt/title.component'
 import CodeComponent from '@cpt/code.component'
+// ===================================================================== antd
+import { Button } from 'antd'
 // ===================================================================== 
 const $fn = window.$fn
 export default class Index extends React.Component{
-	state = {}
+	state = {
+		
+	}
 	
 	componentDidMount(){
-		this.setState({ show: this.props.show },()=>{
-			if(this.props.showPhone){
-				setTimeout(()=>{
-					$fn.showPhone(this.props.url)
-				},100)
-			}else{
-				$fn.hidePhone()
-			}
-		})
+		
 	}
 	
 	onClick = () => {
-		this.setState({ show: !this.state.show },()=>{
-			if(this.props.url){
-				if(this.state.show){
-					$fn.hidePhone()
-					setTimeout(()=>{
-						$fn.showPhone(this.props.url)
-					},100)
-				}
-			}else{
-				$fn.hidePhone()
-			}
-		})
+		this.setState({ show: !this.state.show })
+	}
+	
+	onShow = () =>　{
+		$fn.showPhone(this.props.url)
 	}
 	
 	render(){
-		const { title, children, pro, keyword, code, isGray } = this.props
+		const { title, children, pro, keyword, code, isGray, link, url } = this.props
 		const { show } = this.state
 		return (
 			<section>
@@ -54,7 +43,7 @@ export default class Index extends React.Component{
 						pro && <span className='g6 f13' key={1}>{pro}</span>
 					}
 				</TitleComponent>
-				<div className={show?'':'dn'} style={{padding:'10px 0'}}>
+				<div className={`rel ${show?'':'dn'}`} style={{padding:'10px 0'}}>
 					{
 						show !== undefined && $fn.hasArray(code) && code.map((v,i)=> (
 							<div key={i} className='sub-title-wrap'>
@@ -64,6 +53,14 @@ export default class Index extends React.Component{
 						))
 					}
 					{children}
+					{
+						(link || url) && (
+							<div className='abs' style={{right:'2px',top:'12px'}}>
+								{ link && <Button size='small' onClick={()=>this.props.history.push(link)} style={{fontSize:'12px'}}>关联</Button> }
+								{ url && <Button type='primary' size='small' onClick={this.onShow} style={{fontSize:'12px'}}>预览</Button> }
+							</div>
+						)
+					}
 				</div>
 			</section>
 		)

@@ -167,18 +167,14 @@ export default {
 	},
 	// 显示 phone
 	showPhone(path){
-		if(this.platform().isPc){
-			let url = 'http://192.168.5.70:8020/jia-flutter/flutter_web_study/app/build/index.html#/';
-			let iphone = document.querySelector('#iPhone');
-			iphone.style.display = 'block'
-			document.querySelector('#iframe').setAttribute('src',url + (path?path:''))
-		}
+		let url = 'http://192.168.5.70:8020/jia-flutter/flutter_web_study/app/build/index.html#/';
+		let iphone = document.querySelector('#iPhone');
+		iphone.style.display = 'flex'
+		document.querySelector('#iframe').setAttribute('src',url + (path?path:''))
 	},
 	// 隐藏 phone
 	hidePhone(){
-		if(this.platform().isPc){
-			document.querySelector('#iPhone').style.display = 'none'
-			document.querySelector('#iframe').removeAttribute('src')
-		}
+		document.querySelector('#iPhone').style.display = 'none'
+		document.querySelector('#iframe').removeAttribute('src')
 	}
 }

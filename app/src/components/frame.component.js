@@ -83,13 +83,26 @@ export default class Index extends React.Component{
 						<div className='h rel ex'>
 							{ Router && <Router {...this.props} /> }
 						</div>
-						<div className='p10 h dn' id='iPhone'>
-							<div className='rel' style={{width:'320px'}}>
-								<Image src={IPhone}/>
-								<div className='abs_lt bcf r5px' style={{top:'60px',left:'18px',right:'16px',bottom:'72px'}}>
-									<iframe id='iframe' className='wh' src='' title='iframe' name='iframe'></iframe>
-								</div>
-							</div>
+						<div className={`h fix_lt wh fxmc ${$fn.platform().isPc?'p10':''}`} style={{background:'rgba(0,0,0,.4)',display:'none'}} id='iPhone'
+							onClick={()=>{$fn.hidePhone()}}
+						>
+							{
+								$fn.platform().isPc ? (
+									<div className='rel' style={{width:'320px'}} onClick={$fn.stop}>
+										<Image src={IPhone}/>
+										<div className='abs_lt bcf r5px' style={{top:'60px',left:'18px',right:'16px',bottom:'72px'}}>
+											<iframe id='iframe' className='wh' src='' title='iframe' name='iframe'></iframe>
+										</div>
+									</div>
+								) : (
+									<div className='rel wh bcf'>
+										<iframe id='iframe' className='wh' src='' title='iframe' name='iframe'></iframe>
+									</div>
+								)
+							}
+							{
+								!$fn.platform.isPc && (<div className='abs rpx fxmc' style={{width:'30px',height:'30px',right:'5px',top:'10px',background:'rgba(0,0,0,.3)'}}><Icon type='close' style={{color:'#fff'}} /></div>)
+							}
 						</div>
 					</main>
 				</section>
