@@ -167,7 +167,8 @@ export default {
 	},
 	// 显示 phone
 	showPhone(path){
-		let url = 'http://192.168.5.70:8020/jia-flutter/flutter_web_study/app/build/index.html#/';
+		let url = process.env.NODE_ENV === 'development' ? 'http://192.168.5.70:8020/jia-flutter/flutter_web_study/app/build/index.html#/' :
+		'https://jiazhenger.github.io/flutter/app/#/'
 		let iphone = document.querySelector('#iPhone');
 		iphone.style.display = 'flex'
 		document.querySelector('#iframe').setAttribute('src',url + (path?path:''))

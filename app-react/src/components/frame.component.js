@@ -101,7 +101,7 @@ export default class Index extends React.Component{
 								)
 							}
 							{
-								!$fn.platform.isPc && (<div className='abs rpx fxmc' style={{width:'30px',height:'30px',right:'5px',top:'10px',background:'rgba(0,0,0,.3)'}}><Icon type='close' style={{color:'#fff'}} /></div>)
+								!$fn.platform().isPc && (<div className='abs rpx fxmc' style={{width:'30px',height:'30px',right:'5px',top:'10px',background:'rgba(0,0,0,.3)'}}><Icon type='close' style={{color:'#fff'}} /></div>)
 							}
 						</div>
 					</main>
