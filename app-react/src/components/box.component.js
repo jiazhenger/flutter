@@ -70,7 +70,7 @@ export default class Index extends React.Component{
 						$fn.hasArray(link) && (
 							<div className='mt10'>
 								{
-									link.map((v,i)=> <Button key={i} className='mr5 mb5' size='small' onClick={()=>this.props.history.push(v.url)} style={{fontSize:'12px'}}>关联 <span className='c0'>{v.title}</span></Button>)
+									link.map((v,i)=> <Button key={i} className='mr5 mb5' size='small' onClick={()=>this.props.history.push(v.url)} style={{fontSize:'12px'}}><span className='c0'>{v.title}</span></Button>)
 								}
 							</div>
 						)

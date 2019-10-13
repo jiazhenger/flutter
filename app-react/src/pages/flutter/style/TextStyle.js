@@ -5,20 +5,20 @@ import ListComponent from '@cpt/list.component'
 const data = {
 	title:'文本样式',
 	data:[
-		{ deviceTitle:'颜色设置', keyword:'color', type:'Color', pro:'文本颜色', code:[ {path:'flutter/style/TextStyle/color/color'} ], link:[{url:'/flutter/style/Colors'}] },
-		{ keyword:'backgroundColor', pro:'背景颜色', type:'Color', code:[ {path:'flutter/style/TextStyle/color/backgroundColor'} ], link:[{url:'/flutter/style/Colors'}] },
+		{ deviceTitle:'颜色设置', keyword:'color', type:'Color', pro:'文本颜色', code:[ {path:'flutter/style/TextStyle/color/color'} ], link:[{title:'Color',url:'/flutter/style/Colors'}] },
+		{ keyword:'backgroundColor', pro:'背景颜色', type:'Color', code:[ {path:'flutter/style/TextStyle/color/backgroundColor'} ], link:[{title:'Color',url:'/flutter/style/Colors'}] },
 		{ keyword:'foreground', type:'Paint', pro:'前景', code:[ {path:'flutter/style/TextStyle/color/foreground'} ], 
 			link:[
-				{title:'color',url:'/flutter/style/Colors'},
-				{title:'Paint()',url:'/flutter/style/Colors'},
-				{title:'ui.Gradient.linear()',url:'/flutter/style/Colors'},
+				{title:'Color',url:'/flutter/style/Colors'},
+				{title:'Paint( )',url:'/flutter/style/Colors'},
+				{title:'ui.Gradient.linear( )',url:'/flutter/style/Colors'},
 			]
 		},
 		{ keyword:'background', type:'Paint', pro:'背景', code:[ {path:'flutter/style/TextStyle/color/background'} ], 
 			link:[
-				{ title:'color',url:'/flutter/style/Colors' },
-				{ title:'Paint()',url:'/flutter/style/Colors' },
-				{ title:'ui.Gradient.linear()',url:'/flutter/style/Colors' },
+				{ title:'Color',url:'/flutter/style/Colors' },
+				{ title:'Paint( )',url:'/flutter/style/Colors' },
+				{ title:'ui.Gradient.linear( )',url:'/flutter/style/Colors' },
 			]
 		},
 		{ deviceTitle:'字体设置', type:'String', keyword:'fontFamily', pro:'字体', 
@@ -39,12 +39,12 @@ const data = {
 		{ keyword:'wordSpacing', type:'double', pro:'单词间距', code:[ {path:'flutter/style/TextStyle/spacing/letterSpacing'} ] },
 		
 		{ deviceTitle:'文本装饰', type:'TextDecoration', keyword:'decoration', pro:'装饰', code:[ {path:'flutter/style/TextStyle/decoration/decoration'} ] },
-		{ keyword:'decorationColor', type:'Color', pro:'装饰器颜色', code:[ {path:'flutter/style/TextStyle/decoration/decorationColor'} ], link:[{url:'/flutter/style/Colors'}] },
+		{ keyword:'decorationColor', type:'Color', pro:'装饰器颜色', code:[ {path:'flutter/style/TextStyle/decoration/decorationColor'} ], link:[{title:'Color',url:'/flutter/style/Colors'}] },
 		{ keyword:'decorationStyle', type:'TextDecorationStyle', pro:'装饰器样式', code:[ {path:'flutter/style/TextStyle/decoration/decorationStyle'} ] },
 		{ keyword:'decorationThickness', type:'double', pro:'装饰器厚度', code:[ {path:'flutter/style/TextStyle/decoration/decorationThickness'} ] },
 		
 		{ deviceTitle:'其它', type:'TextBaseline', keyword:'textBaseline', pro:'文本绘制基线', code:[ {path:'flutter/style/TextStyle/textBaseline'} ] },
-		{ keyword:'shadows', type:'List<Shadow>', pro:'阴影', code:[ {path:'flutter/style/TextStyle/shadows'} ], link:[{ title:'boxShadow()',url:'/flutter/style-common/boxShadow'}] },
+		{ keyword:'shadows', type:'List<Shadow>', pro:'阴影', code:[ {path:'flutter/style/TextStyle/shadows'} ], link:[{ title:'Shadow( )',url:'/flutter/style-common/Shadow'}] },
 		{ keyword:'locale', type:'Locale', pro:'语言', code:[ {path:'flutter/style/TextStyle/locale'} ] },
 		{ keyword:'inherit', type:'bool', pro:'继承', code:[ {path:'flutter/style/TextStyle/inherit'} ] },
 		{ keyword:'debugLabel', type:'String', pro:'文本样式的可读描述', code:[ {path:'flutter/style/TextStyle/debugLabel'} ] },
