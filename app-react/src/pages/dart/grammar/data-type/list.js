@@ -12,15 +12,16 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent pro='列表类型声明' code={[ {path:'dart/grammar/data-type/list/base'} ]} />
+				<BoxComponent pro='类型声明' code={[ {path:'dart/grammar/data-type/list/base'} ]} />
 				<BoxComponent pro='创建列表' code={[ {path:'dart/grammar/data-type/list/create'} ]} />
 				<BoxComponent pro='列表属性' code={[ {path:'dart/grammar/data-type/list/property'} ]} />
 				<BoxComponent pro='添加元素' code={[ {path:'dart/grammar/data-type/list/add'} ]} />
-				<BoxComponent pro='移除元素' code={[ {path:'dart/grammar/data-type/list/remove'} ]} />
+				<BoxComponent pro='删除元素' code={[ {path:'dart/grammar/data-type/list/remove'} ]} />
 				<BoxComponent pro='查询元素' code={[ {path:'dart/grammar/data-type/list/search'} ]} />
 				<BoxComponent pro='列表排序' code={[ {path:'dart/grammar/data-type/list/sort'} ]} />
 				<BoxComponent pro='替换元素' code={[ {path:'dart/grammar/data-type/list/replace'} ]} />
-				<BoxComponent pro='转为不同类型' code={[ {path:'dart/grammar/data-type/list/output-type'} ]} />
+				<BoxComponent pro='数据转换' code={[ {path:'dart/grammar/data-type/list/output-type'} ]} />
+				<BoxComponent pro='迭代循环' code={[ {path:'dart/grammar/data-type/list/for'} ]} />
 				<BoxComponent pro='其它' code={[ {path:'dart/grammar/data-type/list/other'} ]} />
 			</UbContent>
 		)

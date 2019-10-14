@@ -1,19 +1,19 @@
 ﻿import React from 'react'
 // ===================================================================== public component
-import UbContent from '@cpx/ub-content.component'
-import BoxComponent from '@cpt/box.component'
+import ListComponent from '@cpt/list.component'
 // ===================================================================== component
-const $fn = window.$fn
-export default class Index extends React.Component{
-	componentDidMount(){
-		$fn.setTitle('数据类型变量声明')
-		$fn.hidePhone()
-	}
-	render(){
-		return (
-			<UbContent className='page-content'>
-				<BoxComponent pro='数据类型变量声明(用法同 var)' code={[ {path:'dart/grammar/var/type'} ]} />
-			</UbContent>
-		)
-	}
+const data = {
+	title:'数据类型变量声明',
+	data:[
+		{ keyword:'num', pro:'数字类型', code:[ {path:'dart/grammar/var/type/num'} ]},
+		{ keyword:'String', pro:'字符串类型', code:[ {path:'dart/grammar/var/type/string'} ]},
+		{ keyword:'bool', pro:'布尔类型', code:[ {path:'dart/grammar/var/type/bool'} ]},
+		{ keyword:'List', pro:'列表类型', code:[ {path:'dart/grammar/var/type/list'} ]},
+		{ keyword:'Set', pro:'集合类型', code:[ {path:'dart/grammar/var/type/set'} ]},
+		{ keyword:'Map', pro:'映射类型', code:[ {path:'dart/grammar/var/type/map'} ]},
+		{ keyword:'dynamic', pro:'无类型', code:[ {path:'dart/grammar/var/type/dynamic'} ]},
+		{ keyword:'Object', pro:'通用类型', code:[ {path:'dart/grammar/var/type/object'} ]},
+		{ keyword:'Symbol', pro:'符号类型', code:[ {path:'dart/grammar/var/type/symbols'} ]},
+	]
 }
+export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

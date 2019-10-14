@@ -1,6 +1,12 @@
-<em>// 整数，整数值不大于64位，决于平台</em>
-<b>int</b> a = 0;
-<em>// 双精度浮点数字</em>
-<b>double</b> a = 1.2;
-<em>// 数字类型，包含以上两种</em>
-<b>num</b> a = 10;
+<em># 只声明类型</em>
+<b>Map</b> map = { };
+<b>Map</b> map = new Map( );
+<em># 任意改变的变量，不能声明数据类型</em>
+<b>var</b> map = {'a':1,'b':2};
+<b>var</b> map = new Map( );
+<em># 改变一次的变量</em>
+<b>final Map</b> map = {'a':1,'b':2};
+<b>final Map</b> map = new Map( );
+<em># 常量，不能声明 new Map()，这种可变的数据</em>
+<b>var</b> map = <b>const</b> {'a':1,'b':2};				<em>// 常量的列表</em>
+<b>const Map</b> map = {'a':1,'b':2};				<em>// 常量的列表</em>

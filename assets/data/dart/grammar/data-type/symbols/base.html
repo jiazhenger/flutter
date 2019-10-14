@@ -1,6 +1,27 @@
-<em>// 整数，整数值不大于64位，决于平台</em>
-<b>int</b> a = 0;
-<em>// 双精度浮点数字</em>
-<b>double</b> a = 1.2;
-<em>// 数字类型，包含以上两种</em>
-<b>num</b> a = 10;
+<em># 内置包</em>
+import 'dart:core'; 
+import 'dart:mirrors';
+<em># 引入自定包</em>
+import '<i>Foo</i>.dart';
+<em># 给库(library)或类(class)取别名</em>
+<b>Symbol</b> lib = <i>new Symbo(</i>'foo_lib'<i>)</i>;			<em>// 给库(library)取一个别名</em>
+String name_of_lib = <b>MirrorSystem.getName</b>(lib);				<em>// 获取 library 的原名 => foo_lib</em>
+<b>Symbol</b> clsToSearch = <i>new Symbo(</i>'Foo'<i>)</i>; 		<em>// 给类(class)取一个别名</em>
+<em># 检测类是否在指定包中</em>
+bool <s>checkIf_classAvailableInlibrary</s>(Symbol libraryName, Symbol className) { 
+	MirrorSystem mirrorSystem = <b>currentMirrorSystem</b>();				<em>// 获取 library 对象</em>
+	LibraryMirror libMirror = mirrorSystem.<b>findLibrary</b>(libraryName);  		<em>// 查找 library</em>
+	<em># 如果库查找成功</em>
+	if (libMirror != null) { 
+		print('${libMirror.<b>declarations.length</b>}'); 						<em>//  library 中的元素长度</em>
+		libMirror.declarations.forEach((s, d) => print(s));  					<em>// 循环 library 中的元素</em>
+		if (libMirror.declarations.containsKey(className)) return true;		<em>// 判断 class 是否在 library 中</em>
+		return false; 
+	} 
+}
+<em># 检测</em>
+if(<s>checkIf_classAvailableInlibrary</s>(lib, clsToSearch)){
+	<em>// 存在</em>
+}else{
+	<em>// 不存在</em>
+}

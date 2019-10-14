@@ -1,19 +1,13 @@
 ﻿import React from 'react'
 // ===================================================================== public component
-import UbContent from '@cpx/ub-content.component'
-import BoxComponent from '@cpt/box.component'
+import ListComponent from '@cpt/list.component'
 // ===================================================================== component
-const $fn = window.$fn
-export default class Index extends React.Component{
-	componentDidMount(){
-		$fn.setTitle('变通变量声明')
-		$fn.hidePhone()
-	}
-	render(){
-		return (
-			<UbContent className='page-content'>
-				<BoxComponent pro='变量声明，变量必须声明，不能省略(不能重复相同变量)' code={[ {path:'dart/grammar/var/var'} ]} />
-			</UbContent>
-		)
-	}
+const data = {
+	title:'变量声明',
+	data:[
+		{ keyword:'var', pro:'声明任意变量 （不能带数据类型）', code:[ {path:'dart/grammar/var/var/var'} ]},
+		{ keyword:'final', pro:'声明可改变一次的变量（必须初始化变量）', code:[ {path:'dart/grammar/var/var/final'} ]},
+		{ keyword:'const', pro:'声明常量，不可改变（必须初始化变量）', code:[ {path:'dart/grammar/var/var/const'} ]},
+	]
 }
+export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

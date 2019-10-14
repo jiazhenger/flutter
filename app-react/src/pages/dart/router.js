@@ -33,6 +33,7 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/dynamic`} 	component={ Import('dart/grammar/data-type/dynamic') } exact />
 							</Switch>
 						)} />
+						<Route path={`${match.url}/generic`} 	component={ Import('dart/grammar/generic') } exact />
 					</Switch>
 				)}/>
 				{/*  */}

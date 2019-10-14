@@ -19,7 +19,8 @@ export default class Index extends React.Component{
 						<BoxComponent 
 							key={'b'+i}
 							type={v.type}
-							order={i+1} 
+							order={i+1}
+							noOrder={v.noOrder}
 							keyword={v.keyword} 
 							pro={v.pro} 
 							code={v.code} 
