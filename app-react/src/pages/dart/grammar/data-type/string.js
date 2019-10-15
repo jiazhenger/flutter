@@ -12,7 +12,7 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent pro='字符串类型声明' code={[ {path:'dart/grammar/data-type/string/base'} ]} />
+				<BoxComponent pro='字符串类型声明' code={[ {path:'dart/grammar/var/type/string'} ]} />
 				
 				<BoxComponent pro='字符串拼接的4种方式' code={[ {path:'dart/grammar/data-type/string/joint'} ]} />
 				

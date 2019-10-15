@@ -33,6 +33,18 @@ export default class Index extends React.Component{
 						<div style={{height:'50px',WebkitAppearance:this.state.appearance}}></div>
 					</CaseComponent>
 				</BoxComponent>
+				
+				<BoxComponent order={3} keyword='user-select' pro='是否允许用户选中文本' code={[ {path:'css/style/other/user-select'} ]}>
+					<CaseComponent
+						getValue={ v=>this.setState({ userSelect: v }) }
+						data={{
+							radio:['text','none','element','all']
+						}}>
+						<div style={{height:'50px',userSelect:this.state.userSelect}}>
+							是否允许用户选中文本
+						</div>
+					</CaseComponent>
+				</BoxComponent>
 			</UbContent>
 		)
 	}

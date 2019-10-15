@@ -12,8 +12,8 @@ export default class Index extends React.Component{
 	render(){
 		return (
 			<UbContent className='page-content'>
-				<BoxComponent pro='符号类型声明' code={[ {path:'dart/grammar/var/type/symbols'} ]} />
-				<BoxComponent pro='符号类型使用' code={[ {path:'dart/grammar/data-type/symbols/base'} ]} />
+				<BoxComponent pro='类型声明' code={[ {path:'dart/grammar/var/type/symbols'} ]} />
+				<BoxComponent pro='获取取包信息' code={[ {path:'dart/grammar/data-type/symbols/base'} ]} />
 			</UbContent>
 		)
 	}

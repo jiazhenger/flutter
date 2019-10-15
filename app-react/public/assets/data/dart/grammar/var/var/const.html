@@ -1,3 +1,6 @@
-<b>const</b> a = 0;
-<b>var</b> list = <b>const</b> [1,2,3]
-<i>static</i> <b>const</b> a = 0;			<em>// 在 class 类中声明必须使用  <i>static</i></em>
+<em># const 最前面</em>
+<b>const</b> a = 1;
+<em># const 在等号后面</em>
+<b>var</b> a = <b>const</b> [1,2,3] 				<em>// 常量列表：列表的元素必须全部是常量</em>
+<b>final</b> a = <b>const</b> {1,2,3} 				<em>// 常量集合：集合的元素必须全部是常量</em>
+<b>const</b> a = <b>const</b> {'a':1,'b':2,'c':3} 		<em>// 常量映射：映射的元素必须全部是常量</em>

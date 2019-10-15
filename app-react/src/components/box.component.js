@@ -31,7 +31,7 @@ export default class Index extends React.Component{
 			<section>
 				<TitleComponent show={show} hasArrow={true} order={noOrder ? null : order} onClick={this.onClick}>
 					{
-						keyword && <span className={`title-keyword c0 ar f16 ${isGray ? 'gray' : ''}`} style={{cursor:'text'}}>{keyword}</span>
+						keyword && <span className={`title-keyword c0 ar f16 ${isGray ? 'gray' : ''}`}>{keyword}</span>
 					}
 					{
 						title && <span className='c0'>{title}</span>
@@ -49,7 +49,7 @@ export default class Index extends React.Component{
 						pro && <span className='g6 f13' key={2}>{pro}</span>
 					}
 				</TitleComponent>
-				<div className={`rel bbor1 ${show?'':'dn'}`} style={{padding:$fn.hasArray(link) ? '10px 0 5px' : '10px 0'}}>
+				<div className={`rel bbor1 ${show?'':'dn'}`} style={{padding:$fn.hasArray(link) ? '10px 0 5px' : '10px 0'}} onClick={$fn.stop}>
 					{
 						show !== undefined && $fn.hasArray(code) && code.map((v,i)=> (
 							<div key={i} className='sub-title-wrap'>

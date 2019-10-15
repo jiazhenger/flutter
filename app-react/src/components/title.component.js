@@ -4,7 +4,7 @@ import React from 'react'
 import { Icon } from 'antd'
 // ===================================================================== 
 export default ({children,hasArrow,show,order,onClick})=> (
-	<div className={`f14 bbor1 ptb10 fxmj ${hasArrow?'cp':''}`} onClick={onClick}>
+	<div className={`f14 bbor1 ptb10 fxmj ${hasArrow?'cp':''}`} style={{userSelect:'none'}} onClick={onClick}>
 		<div className='fxm'>
 			{
 				order ? <span>{order}、</span> : <Icon className='f14' type='share-alt'/>

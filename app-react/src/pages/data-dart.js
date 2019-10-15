@@ -6,7 +6,9 @@
 				title: '声明变量',
 				children:[
 					{ title: '变量声明', path:'/dart/grammar/var/var' },
-					{ title: '类型声明', path:'/dart/grammar/var/type' },
+					{ title: '数据类型', path:'/dart/grammar/var/type' },
+					{ title: '泛类型', path:'/dart/grammar/var/generic' },
+					{ title: '混合声明', path:'/dart/grammar/var/mix' },
 				]
 			},
 			{
@@ -23,7 +25,24 @@
 					{ title: '符号 symbols', path:'/dart/grammar/data-type/symbols' },
 				]
 			},
-			{ title: '泛类型', path:'/dart/grammar/generic'}
+			{
+				title: '数据类型管理',
+				children:[
+					{ title: '判断数据类型', path:'/dart/grammar/data-manage/judge' },
+				]
+			},
+			{
+				title: '函数',
+				children:[
+					{ title: '函数基础', path:'/dart/grammar/function/base' },
+				]
+			},
+			{
+				title: '类',
+				children:[
+					{ title: '类基础', path:'/dart/grammar/class/base' },
+				]
+			},
 		]
 	}
 ]

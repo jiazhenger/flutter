@@ -14,6 +14,7 @@ const data = {
 		{ keyword:'dynamic', pro:'无类型', code:[ {path:'dart/grammar/var/type/dynamic'} ]},
 		{ keyword:'Object', pro:'通用类型', code:[ {path:'dart/grammar/var/type/object'} ]},
 		{ keyword:'Symbol', pro:'符号类型', code:[ {path:'dart/grammar/var/type/symbols'} ]},
+		{ noOrder:true, pro:'通用', code:[ {path:'dart/grammar/var/type/all'} ]},
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

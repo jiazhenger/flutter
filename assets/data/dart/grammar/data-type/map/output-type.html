@@ -1,0 +1,10 @@
+<i>String</i> v = map.<b>toString()</b>; 	<em>// 转为字符串</em>
+<em># 将 List 转换为 Map</em>
+<em>// <strong>fromIterables(key, value)</strong>：第一个数组作为 key, 第二个数组作为值，转换为 Map</em>
+<i>Map</i> map = <b>new Map.fromIterables</b>(<b>[</b>'a','b','c'<b>]</b>, <b>[</b>1,2,3<b>]</b>); 	<em>// => {'a':1,'b':2,'c':3}</em>
+<em>// <strong>fromIterable(List, key:(item)=> value, value:(item)=> value)</strong></em>
+<i>Map</i> map = <b>new Map.fromIterable</b>(			<em>// => {'a0':0,'a1':1,'a2':2}</em>
+	<b>[</b>0,1,2<b>]</b>, 						<em>// List 列表</em>
+	<b>key</b>: (<i>item</i>) => 'a$<i>item</i>',			<em>// 设置键，item：List的value值</em>
+	<b>value</b>: (<i>item</i>) => <i>item</i> 			<em>// 设置值，item：List的value值</em>
+)
