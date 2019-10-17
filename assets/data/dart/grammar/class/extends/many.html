@@ -1,0 +1,18 @@
+class <i>A</i>{
+	int <s>a</s>  = 10;
+	void <s>start( )</s>{ }
+}
+class <i>B</i>{
+	int <s>a</s> = 100;
+	void <s>run( )</s>{ }
+}
+class MyClass <b>extends</b> <i>A</i> <b>with</b> <i>B</i>{
+	<em>// 可继承所有父类的公共方法及属性</em>
+	<em>// 如果继承类有属性或方法相同，则后后继承的会覆盖先继承的。即：后来优先</em>
+}
+<i>void</i>  <b>main</b>(){
+	<i>MyClass</i> my = <b>MyClass( )</b>;
+	var a = my.<s>a</s>;						<em>// 后来优先 => 100</em>
+	my.<s>start( )</s>;
+	my.<s>run( )</s>;
+}

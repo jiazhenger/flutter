@@ -53,7 +53,7 @@ export default class Index extends React.Component{
 					{
 						show !== undefined && $fn.hasArray(code) && code.map((v,i)=> (
 							<div key={i} className='sub-title-wrap'>
-								{ v.title && <h2 className='sub-title ptb10' key='title'>{v.title}: </h2> }
+								{ v.title && <h2 className='sub-title ptb10 b' key='title'>{v.title}: </h2> }
 								<CodeComponent type='text' url={v.path} />
 							</div>
 						))

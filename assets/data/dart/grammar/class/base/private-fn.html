@@ -1,5 +1,16 @@
-class MyClass{
+<i>class</i> <b>MyClass</b>{
+	<em># 定义私有方法</em>
 	<b>static</b> myFn( ){ }
 	<b>static</b> <i>void</i> myFn( ){ }
 	<b>static</b> <i>int</i> myFn( ){ <b>return</b> 10; }
+	<em># 在Dart中没有public private protected 修饰符，可以使用<b>_</b>来表示私有属性，dart 推荐使用</em>
+	<em>// 加  <b>_</b> 只是一种约定，实际上是公共方法</em>
+	<i>void</i> <b>_</b>myFn( ){ }
+	<em># 仅类内部使用</em>
+	void fn( ){
+		<b>myFn( )</b>;			<em>// 公共方法使用私有方法</em>
+	}
+	<i>static</i> void fn( ){
+		<b>myFn( )</b>;			<em>// 私有方法使用私有方法</em>
+	}
 }

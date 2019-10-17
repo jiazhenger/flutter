@@ -41,6 +41,10 @@
 				title: '类',
 				children:[
 					{ title: '类基础', path:'/dart/grammar/class/base' },
+					{ title: '构造函数', path:'/dart/grammar/class/constructor' },
+					{ title: '重写对象', path:'/dart/grammar/class/get-set' },
+					{ title: '继承', path:'/dart/grammar/class/extends' },
+					{ title: '重写成员', path:'/dart/grammar/class/override' },
 				]
 			},
 		]

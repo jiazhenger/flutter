@@ -1,11 +1,16 @@
 <em># 无参数类型传递参数</em>
-myFn(<b>a</b>,<b>b</b>){
-	print(a);
-	print(b);
-}
-<s>myFn(10,'some')</s>;		<em>// 使用</em>
+<b>myFn</b>(<b>a</b>,<b>b</b>){ }
+<b>myFn</b><s>(10,'some')</s>;
 <em># 定义传递参数类型</em>
-myFn(<i>int</i> <b>a</b>, <i>int</i> <b>b</b>){ 
-	print(a+b);
+<b>myFn</b>(<i>int</i> <b>a</b>, <i>int</i> <b>b</b>){ }
+<b>myFn</b><s>(10,20)</s>;
+<em># 可选参数</em>
+<b>myFn</b>(int a, int b, <b>[<i>int</i> c,<i>int</i> d,e]</b>){ }
+<em># 给可选参数设置默认认参数</em>
+<b>myFn</b>(int a, int b, <b>[<i>int</i> c=10,<i>int</i> d,e=20]</b>){ }
+<em># 无序传参、默认参数、可选参数</em>
+<b>myFn</b>(<b>{ </b><i>int</i> <b>a:10</b>, <i>int</i> <b>b</b>, <b>c:50  }</b>){
+	print(a + b);
 }
-<s>myFn(10,20)</s>;		<em>// 使用</em>
+<b>myFn</b>(<s>b:20</s>);				<em>// => 30</em>
+<b>myFn</b>(<s>b:20</s>,<s>a:30</s>); 			<em>// => 50</em>

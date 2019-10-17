@@ -1,0 +1,32 @@
+<em># 父类</em>
+class <i>Animal</i>{
+	<em># 公共属性</em>
+	String <b>name</b> = 'Animal';
+	<em># 私有属性不能被重写</em>
+	<del><i>static</i> String <b>color</b> = 'white';</del>
+	<em># 公共方法</em>
+	void <b>eat( )</b> {
+		print('Animal Eat');
+	}
+	<em># 私有方法不能被重写</em>
+	<del><i>static</i> void <b>run( )</b> { }</del>
+}
+<em># 子类</em>
+class <i>Cat</i> <b>extends</b> <i>Animal</i>{
+	<em># 重写父级的属性</em>
+	<b>@override</b>
+	String <b>name</b> = 'Cat';
+	<em># 重写父级的方法</em>
+	<b>@override</b>
+	void <b>eat( )</b> {
+		print('Cat Eat');
+	}
+}
+<i>void</i>  <b>main</b>(){
+	<i>Cat</i> cat = <b>Cat( )</b>
+	var name = cat.<b>name</b>;			<em>// => Cat</em>
+	cat.<b>eat()</b>;						<em>// => Cat Eat</em>
+	<em># 子类重写不影响父类</em>
+	<i>Animal</i> animal = <b>Animal( )</b>
+	animal.<b>eat()</b>;					<em>// => Animal Eat</em>
+}

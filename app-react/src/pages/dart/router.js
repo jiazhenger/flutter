@@ -48,10 +48,14 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/base`} 	component={ Import('dart/grammar/function/base') } exact />
 							</Switch>
 						)} />
-						{/* 函数 */}
+						{/* 类 */}
 						<Route path={`${match.url}/class`} render={ ({ match }) => (
 							<Switch>
 								<Route path={`${match.url}/base`} 	component={ Import('dart/grammar/class/base') } exact />
+								<Route path={`${match.url}/constructor`} 	component={ Import('dart/grammar/class/constructor') } exact />
+								<Route path={`${match.url}/get-set`} 	component={ Import('dart/grammar/class/get-set') } exact />
+								<Route path={`${match.url}/extends`} 	component={ Import('dart/grammar/class/extends') } exact />
+								<Route path={`${match.url}/override`} 	component={ Import('dart/grammar/class/override') } exact />
 							</Switch>
 						)} />
 					</Switch>

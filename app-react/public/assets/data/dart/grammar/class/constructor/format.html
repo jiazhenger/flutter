@@ -1,0 +1,15 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 构造函数名与类名必须相同，构造函数会默认执行</em>
+	<em>// 构造函数不是必须的</em>
+	<em>// 标准构造函数</em>
+	<b>MyClass</b>( ){  } 					<em>// 不传参</em>
+	<b>MyClass</b>(a,b){  }				<em>// 传参</em>
+	<em>// 静态构造函数</em>
+	<b>MyClass</b>( ); 					<em>// 不传参</em>
+	<b>MyClass</b>( <i>this.a</i>,<i>this.b</i> ); 		<em>// 有序参数</em>
+	<b>MyClass</b>(<b>{</b> <i>this.a</i>,<i>this.b</i> <b>}</b>); 		<em>// 无序参数</em>
+	<em>// 常量静态构造函数</em>
+	<i>const</i> <b>MyClass</b>( );
+	<em># 构造函数可以有多个，创建新的构造函数</em>
+	<b>MyClass</b>.<i>createInstance(Object value)</i>{ }
+}
