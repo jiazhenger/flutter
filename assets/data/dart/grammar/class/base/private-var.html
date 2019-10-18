@@ -1,5 +1,5 @@
 <i>class</i> <b>MyClass</b>{
-	<em># 定义私有属性</em>
+	<em># 定义私有成员属性</em>
 	<b>static</b> <i>var</i> a; 				<em>// => null</em>
 	<b>static</b> <i>final</i> a = 0;
 	<b>static</b> <i>const</i> a = 0;
@@ -8,7 +8,7 @@
 	<em>// 加  <b>_</b> 只是一种约定，实际上是公共属性</em>
 	<i>dynamic</i> <b>_</b>a = 0;					
 	<em># 仅类内部使用</em>
-	<i>void</i> x = <b>a</b>; 		<em>// 使用私有属性</em>
+	<i>var</i> x = <b>a</b>; 		<em>// 使用私有属性</em>
 	<i>void</i> fn(){
 		print(<b>a</b>); 		<em>// 使用私有属性</em>
 	}

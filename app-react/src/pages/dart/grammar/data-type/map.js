@@ -15,6 +15,7 @@ export default class Index extends React.Component{
 				<BoxComponent pro='类型声明' code={[ {path:'dart/grammar/var/type/map'} ]} />
 				<BoxComponent pro='创建映射' code={[ {path:'dart/grammar/data-type/map/create'} ]} />
 				<BoxComponent pro='集合属性' code={[ {path:'dart/grammar/data-type/map/property'} ]} />
+				<BoxComponent pro='读取元素' code={[ {path:'dart/grammar/data-type/map/read'} ]} />
 				<BoxComponent pro='添加元素' code={[ {path:'dart/grammar/data-type/map/add'} ]} />
 				<BoxComponent pro='删除元素' code={[ {path:'dart/grammar/data-type/map/remove'} ]} />
 				<BoxComponent pro='检索元素' code={[ {path:'dart/grammar/data-type/map/search'} ]} />

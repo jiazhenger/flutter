@@ -5,7 +5,8 @@ import ListComponent from '@cpt/list.component'
 const data = {
 	title:'函数基础',
 	data:[
-		{ keyword:'fn(){ }', pro:'声明', code:[ {path:'dart/grammar/function/base/format'} ]},
+		{ keyword:'fn( ){ }', pro:'声明', code:[ {path:'dart/grammar/function/base/format'} ]},
+		{ keyword:'fn( )=>', pro:'简写', code:[ {path:'dart/grammar/function/base/arrow'} ]},
 		{ keyword:'fn(a,b){ }', pro:'传参', code:[ {path:'dart/grammar/function/base/param'} ]},
 		{ keyword:'return', pro:'返回值', code:[ {path:'dart/grammar/function/base/return'} ]},
 	]

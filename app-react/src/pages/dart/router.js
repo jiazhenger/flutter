@@ -13,6 +13,10 @@ class AppRouter extends React.Component{
 				<Route 	path={ `${url}` }  component={ Import('dart/index') } exact />
 				<Route path={ `${url}/grammar` } render={ ({ match }) => (
 					<Switch>
+						{/* 顶级入口 */}
+						<Route 	path={ `${match.url}/main` }  component={ Import('dart/grammar/entrance/base') } exact />
+						{/* 测试输出 */}
+						<Route 	path={ `${match.url}/test` }  component={ Import('dart/grammar/test/base') } exact />
 						{/* 变量声明 */}
 						<Route path={`${match.url}/var`} render={ ({ match }) => (
 							<Switch>
@@ -42,6 +46,15 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/judge`} 	component={ Import('dart/grammar/data-manage/judge') } exact />
 							</Switch>
 						)} />
+						{/* 操作符 */}
+						<Route 	path={ `${match.url}/operator` }  component={ Import('dart/grammar/operator/base') } exact />
+						{/* 语句 */}
+						<Route path={`${match.url}/statement`} render={ ({ match }) => (
+							<Switch>
+								<Route path={`${match.url}/if`} 	component={ Import('dart/grammar/statement/if') } exact />
+								<Route path={`${match.url}/for`} 	component={ Import('dart/grammar/statement/for') } exact />
+							</Switch>
+						)} />
 						{/* 函数 */}
 						<Route path={`${match.url}/function`} render={ ({ match }) => (
 							<Switch>
@@ -56,8 +69,15 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/get-set`} 	component={ Import('dart/grammar/class/get-set') } exact />
 								<Route path={`${match.url}/extends`} 	component={ Import('dart/grammar/class/extends') } exact />
 								<Route path={`${match.url}/override`} 	component={ Import('dart/grammar/class/override') } exact />
+								<Route path={`${match.url}/interface`} 	component={ Import('dart/grammar/class/interface') } exact />
+								<Route path={`${match.url}/operator`} 	component={ Import('dart/grammar/class/operator') } exact />
+								<Route path={`${match.url}/enum`} 	component={ Import('dart/grammar/class/enum') } exact />
 							</Switch>
 						)} />
+						{/* 异步 */}
+						<Route 	path={ `${match.url}/async` }  component={ Import('dart/grammar/async/base') } exact />
+						{/* 错误处理 */}
+						<Route 	path={ `${match.url}/error` }  component={ Import('dart/grammar/error/base') } exact />
 					</Switch>
 				)}/>
 				{/*  */}

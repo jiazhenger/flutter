@@ -1,0 +1,10 @@
+<b>try</b> {
+	<b>try</b> {
+		
+	}<b>catch</b>(e, s){
+		print(e.runtimeType);		<em>// 抛出第一次异常</em>
+		<b>rethrow</b>; 					<em>// 允许继续抛出异常</em>
+	}
+}<b>catch</b>(e, s){ 	
+	print(e.runtimeType);			<em>// 抛出第二次异常</em>
+}

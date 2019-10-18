@@ -2,6 +2,8 @@
 	{ 
 		title: '基础语法',
 		children: [
+			{ title: '基础', path:'/dart/grammar/main' },
+			{ title: '测试输出', path:'/dart/grammar/test' },
 			{
 				title: '声明变量',
 				children:[
@@ -28,7 +30,15 @@
 			{
 				title: '数据类型管理',
 				children:[
-					{ title: '判断数据类型', path:'/dart/grammar/data-manage/judge' },
+					{ title: '类型测试操作符', path:'/dart/grammar/data-manage/judge' },
+				]
+			},
+			{ title: '操作符', path:'/dart/grammar/operator' },
+			{
+				title: '语句',
+				children:[
+					{ title: '判断语句', path:'/dart/grammar/statement/if' },
+					{ title: '循环语句', path:'/dart/grammar/statement/for' },
 				]
 			},
 			{
@@ -45,8 +55,13 @@
 					{ title: '重写对象', path:'/dart/grammar/class/get-set' },
 					{ title: '继承', path:'/dart/grammar/class/extends' },
 					{ title: '重写成员', path:'/dart/grammar/class/override' },
+					{ title: '接口', path:'/dart/grammar/class/interface' },
+					{ title: '重载操作符', path:'/dart/grammar/class/operator' },
+					{ title: '枚举类', path:'/dart/grammar/class/enum' },
 				]
 			},
+			{ title: '异步', path:'/dart/grammar/async' },
+			{ title: '错误处理', path:'/dart/grammar/error' },
 		]
 	}
 ]
