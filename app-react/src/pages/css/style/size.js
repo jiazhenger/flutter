@@ -28,7 +28,7 @@ export default class Index extends React.Component{
 					<CaseComponent
 						getValue={ v=>this.setState({ minWidth: v }) }
 						data={{
-							radio:['auto','100px','200px','50%','100%']
+							radio:['0','100px','200px','50%','100%']
 						}}>
 						<div style={{display:'inline-block',height:'50px',background:'yellow',minWidth:this.state.minWidth}}>最小宽度最小宽度最小宽度</div>
 					</CaseComponent>
@@ -38,7 +38,7 @@ export default class Index extends React.Component{
 					<CaseComponent
 						getValue={ v=>this.setState({ maxWidth: v }) }
 						data={{
-							radio:['100px','200px','50%','100%']
+							radio:['none','100px','200px','50%','100%']
 						}}>
 						<div style={{display:'inline-block',height:'50px',background:'yellow',maxWidth:this.state.maxWidth}}>最小宽度最小宽度最小宽度</div>
 					</CaseComponent>

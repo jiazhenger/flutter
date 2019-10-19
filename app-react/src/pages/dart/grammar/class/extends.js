@@ -6,7 +6,7 @@ const data = {
 	title:'继承',
 	data:[
 		{ keyword:'class A extends B { }', pro:'继承一个类', code:[{ path:'dart/grammar/class/extends/one' }]},
-		{ keyword:'class A extends B with C { }', pro:'继承多个类', code:[{ path:'dart/grammar/class/extends/many' }]},
+		{ keyword:'class A extends B with C,D,E { }', pro:'扩展类', code:[{ path:'dart/grammar/class/extends/many' }]},
 		{ keyword:'super', pro:'代表父类', code:[{ path:'dart/grammar/class/extends/super' }]}
 	]
 }

@@ -11,6 +11,7 @@ class AppRouter extends React.Component{
 		return (
 			<Switch>
 				<Route 	path={ `${url}` }  component={ Import('dart/index') } exact />
+				{/* 基础语法 */}
 				<Route path={ `${url}/grammar` } render={ ({ match }) => (
 					<Switch>
 						{/* 顶级入口 */}
@@ -78,8 +79,16 @@ class AppRouter extends React.Component{
 						<Route 	path={ `${match.url}/async` }  component={ Import('dart/grammar/async/base') } exact />
 						{/* 错误处理 */}
 						<Route 	path={ `${match.url}/error` }  component={ Import('dart/grammar/error/base') } exact />
+						{/* 元数据 */}
+						<Route 	path={ `${match.url}/metadata` }  component={ Import('dart/grammar/metadata/base') } exact />
 					</Switch>
 				)}/>
+				{/* 时间 */}
+				<Route 	path={ `${url}/time` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/DateTime`} 	component={ Import('dart/time/DateTime') } exact />
+					</Switch>
+				) }/>
 				{/*  */}
 				<Redirect from={url}		to={ `${url}` } 		exact />
 				<Route 	render = { () => <div>404</div> } exact />
