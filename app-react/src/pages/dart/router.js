@@ -87,6 +87,7 @@ class AppRouter extends React.Component{
 				<Route 	path={ `${url}/time` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/DateTime`} 	component={ Import('dart/time/DateTime') } exact />
+						<Route path={`${match.url}/Duration`} 	component={ Import('dart/time/Duration') } exact />
 					</Switch>
 				) }/>
 				{/*  */}

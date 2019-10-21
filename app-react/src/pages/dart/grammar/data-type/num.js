@@ -14,6 +14,8 @@ export default class Index extends React.Component{
 			<UbContent className='page-content'>
 				<BoxComponent pro='数字类型声明' code={[ {path:'dart/grammar/var/type/num'} ]} />
 				<BoxComponent pro='将字符串转为数字' code={[ {path:'dart/grammar/data-type/num/string-to-num'} ]} />
+				<BoxComponent pro='属性' code={[ {path:'dart/grammar/data-type/num/property'} ]} />
+				<BoxComponent pro='方法' code={[ {path:'dart/grammar/data-type/num/method'} ]} />
 			</UbContent>
 		)
 	}

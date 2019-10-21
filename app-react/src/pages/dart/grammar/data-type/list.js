@@ -23,7 +23,6 @@ export default class Index extends React.Component{
 				<BoxComponent pro='替换元素' code={[ {path:'dart/grammar/data-type/list/replace'} ]} />
 				<BoxComponent pro='数据转换' code={[ {path:'dart/grammar/data-type/list/output-type'} ]} />
 				<BoxComponent pro='迭代循环' code={[ {path:'dart/grammar/data-type/list/for'} ]} />
-				<BoxComponent pro='其它' code={[ {path:'dart/grammar/data-type/list/other'} ]} />
 			</UbContent>
 		)
 	}

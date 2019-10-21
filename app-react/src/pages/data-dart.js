@@ -69,6 +69,7 @@
 		title: '时间',
 		children:[
 			{ title: 'DateTime', path:'/dart/time/DateTime' },
+			{ title: 'Duration', path:'/dart/time/Duration' },
 		]
 	}
 ]

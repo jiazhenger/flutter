@@ -13,14 +13,11 @@ export default class Index extends React.Component{
 		return (
 			<UbContent className='page-content'>
 				<BoxComponent pro='字符串类型声明' code={[ {path:'dart/grammar/var/type/string'} ]} />
-				
 				<BoxComponent pro='字符串拼接的4种方式' code={[ {path:'dart/grammar/data-type/string/joint'} ]} />
-				
 				<BoxComponent pro='字符串插值的2种方式' code={[ {path:'dart/grammar/data-type/string/insert-value'} ]} />
-				
 				<BoxComponent pro='转义字符串' code={[ {path:'dart/grammar/data-type/string/unicode'} ]} />
-				
-				<BoxComponent keyword='toString()' pro='将其它数据类型转换为字符串' code={[ {path:'dart/grammar/data-type/string/var-to-string'} ]} />
+				<BoxComponent pro='属性' code={[ {path:'dart/grammar/data-type/string/property'} ]} />
+				<BoxComponent pro='方法' code={[ {path:'dart/grammar/data-type/string/method'} ]} />
 			</UbContent>
 		)
 	}

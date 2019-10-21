@@ -1,0 +1,45 @@
+<em># 转为正数</em>
+<i>num</i> v = <s>A</s>.<b>abs</b>( );
+<em># 转为整数</em>
+<i>int</i> v = <s>A</s>.<b>round</b>( ); 					<em>// 四舍五入</em>
+<i>double</i> v = <s>A</s>.<b>roundToDouble</b>( ); 		<em>// 四舍五入，并转为 double 类型</em>
+<i>int</i> v = <s>A</s>.<b>ceil</b>( );					<em>// 入</em>
+<i>double</i> v = <s>A</s>.<b>ceilToDouble</b>( );		<em>// 入，并转为 double 类型</em>
+<i>int</i> v = <s>A</s>.<b>floor</b>( );					<em>// 舍</em>
+<i>double</i> v = <s>A</s>.<b>floorToDouble</b>( );		<em>// 舍，并转换为 double 类型</em>
+<i>int</i> v = <s>A</s>.<b>truncate</b>( );				<em>// 舍， 丢弃小数位后返回一个整数</em>
+<i>double</i> v = <s>A</s>.<b>truncateToDouble</b>( );	<em>// 舍， 丢弃小数位后返回一个整数，并转换为 double 类型</em>
+<em># 转换数字类型</em>
+<i>double</i> v = <s>A</s>.<b>toDouble</b>( ); 			<em>// 转为  double 类型</em>
+<i>int</i> v = <s>A</s>.<b>toInt</b>( );					<em>// 转为  int 类型</em>
+<i>String</i> v = <s>A</s>.<b>toString</b>( );				<em>// 转为  String 类型</em>
+<em># 对比两个数字</em>
+<i>int</i> v = <s>A</s>.<b>compareTo</b>(B);			<em>// 返回值： A==B：0、A&lt;B：-1、A&gt;B: 1</em>
+<em># 返回下限与上限内的值 <strong>clamp(num lowerLimit, num upperLimit)</strong></em>
+<em>// lowerLimit: 下限值</em>
+<em>// upperLimit: 上限值</em>
+<i>int</i> v = <s>A</s>.<b>clamp</b>(8, 20) 				<em>// 返回值：v &gt;=8&&v&lt;=20：v；v&lt;8：8；v&gt;20：20</em>
+<em># 返回该整数和指定数的的最大公约数</em>
+<i>int</i> v = <s>A</s>.<b>gcd</b>(5) ;
+<em># 返回该整数的模乘的逆</em>
+<i>int</i> v = <s>A</s>.<b>modInverse</b>(int modulus) ;
+<em># 返回该整数的指数的乘方模量</em>
+<i>int</i> v = <s>A</s>.<b>modPow</b>(int exponent, int modulus) ;
+<em># 返回指数字符串</em>
+<i>String</i> v = <s>A</s>.<b>toStringAsExponential</b>( );			<em>// => 5e+0</em>
+<i>String</i> v = <s>A</s>.<b>toStringAsExponential</b>(1);		<em>// => 50e+0</em>
+<i>String</i> v = <s>A</s>.<b>toStringAsExponential</b>(2);		<em>// => 500e+0</em>
+<em># 返回保留指定位数的小数字符串 <strong>toStringAsFixed(int fractionDigits)</strong></em>
+<em>// fractionDigits: 小数位</em>
+<i>String</i> v = <s>A</s>.<b>toStringAsFixed</b>(2);				<em>// => 5.00</em>
+<em># 返回双精度字符串</em>
+<i>String</i> v = <s>A</s>.<b>toStringAsPrecision</b>(int precision);
+<em># 返回指定基数字符串</em>
+<i>String</i> v = <s>A</s>.<b>toRadixString</b>(int radix);
+<em># 返回该整数中最不重要的[width]位</em>
+<i>String</i> v = <s>A</s>.<b>toUnsigned</b>(int width);
+<em># 返回该整数中最不重要的[width]位</em>
+<i>String</i> v = <s>A</s>.<b>toSigned</b>(int width);
+<em># 返回余数，如：5/2 余 1；5/3 余 2 <strong>remainder(int fractionDigits)</strong></em>
+<em>// fractionDigits: A 除以的数</em>
+<i>String</i> v = <s>A</s>.<b>remainder</b>(2) </b>;
