@@ -1,16 +1,29 @@
-<em># <strong>list[index]=value</strong>：必须有长度，索引值必须存在</em>
-list<b>[0]</b> = 1
+<em># 必须有长度，索引值必须存在</em>
+<i>Object</i> <b>list[index]<b> = value
+list<q>[0]</q> = 1
+
 <em># 添加元素，固定长度列表不能使用</em>
-list.<b>add(1)</b>
-<em># <strong>filled(length, value)</strong>：为所有元素统一赋值 </em>
-List list = new List&lt;int&gt;.<b>filled</b>(5, 20);	 				<em>// length=5,value=20 => [20,20,20,20,20]</em>
-<em># <strong>generate(length, (int index)</strong>：length: 列表长度、index 列表索引值。用生成器给所有元素赋初始值。</em>
-final List&lt;int&gt; list = new List<int>.<b>generate</b>(4, (int index) {
-	<b>return</b> index * index;  		<em>// 返回列表 [0,1,4,9]</em>
-});
-<em># <strong>insert(index, value)</strong>：增加一个元素到指定下标 </em>
+<i>void</i> <b>add</b>(
+	<i>E</i> value 		<em>// 任意类型值</em>
+)
+list.<q>add</q>(1)
+
+<em># 添加元素，固定长度列表不能使用</em>
+<i>void</i> <b>addAll</b>(
+	<i>Iterable</i><i>&lt;E&gt;</i> iterable 	<em>// List</em>
+)
+list.<q>addAll</q>([4,5,6]);		<em>// => [0, 1, 2, 4, 5, 6]</em>
+
+<em># 增加一个元素到指定下标 </em>
+<i>void</i> <b>insert</b>(
+	<i>int</i> index,  		<em>// 索引值、下标值</em>
+	<i>E</i> element 		<em>// 添加值</em>
+)
 list.<b>insert(0,123)</b>;
-<em># <strong>insert(List)</strong>：增加一个列表到列表末尾 </em>
-list.<b>insert([30, 60])</b>;
-<em># <strong>insertAll(index,List)</strong>：增加一个列表到指定下标 </em>
-list.<b>insertAll(3,[40, 50])</b>
+
+<em># 增加一个列表到指定下标 </em>
+<i>void</i> <b>insertAll</b>(
+	<i>int</i> index,  				<em>// 索引值、下标值</em>
+	<i>Iterable</i><i>&lt;E&gt;</i> iterable 		<em>// List</em>
+)	
+list.<q>insertAll</q>(3,[40, 50])

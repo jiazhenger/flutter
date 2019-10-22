@@ -1,0 +1,70 @@
+<em># 替换所有匹配的字符串</em>
+<i>String</i> <b>replaceAll</b>(</em>
+	<i>Pattern</i> from, 		<em>// 匹配字符串，或正则表达式</em>
+	<i>String</i> replace		<em>// 替换字符串</em>
+)
+String v = n.<q>replaceAll</q>('1','abc'); 						<em>// => abc23456</em>
+String v = n.<q>replaceAll</q>(RegExp(r'[A-Z][a-z]'),'abc'); 		<em>// 正则匹配替换</em>
+
+<em># 自定义替换匹配全部</em>
+<i>String</i> <b>replaceAllMapped</b>(
+	<i>Pattern</i> from, 					<em>// 匹配字符串，或正则表达式</em>
+	<i>String</i>  replace(Match match)	<em>//  替换匹配</em>
+)
+String v = n.<q>replaceAllMapped</q>(		<em>// => abc3456</em>
+	'1',
+	(<u>Match m</u>){			
+		<q>return</q> 'abc';		
+	}
+);
+String v = n.<q>replaceAllMapped</q>('1',(<u>Match m</u>)=>'${m[2]}${m[1]}${m[1].isEmpty ? 'way' : 'ay'}');
+
+<em># 字符串中第一个出现的from替换为 to ，从 startIndex 开始</em>
+<i>String</i> <b>replaceFirst</b>(
+	<i>Pattern</i> from, 			<em>// 匹配字符串，或正则表达式</em>
+	<i>String</i> to, 			<em>// 替换字符串</em>
+	[<i>int</i> startIndex = 0] 		<em>// 开始位置，默认 0</em>
+)
+String v = n.<q>replaceFirst</q>('1','abc'); 					<em>// => abc23456</em>
+
+<em># 自定义替换匹配第一个出现的字符串</em>
+<i>String</i> <b>replaceFirstMapped</b>(
+	<i>Pattern</i> from, 					<em>// 匹配字符串，或正则表达式</em>
+	<i>String</i> replace(Match match), 	<em>// 替换匹配方法</em>
+	[<i>int</i> startIndex = 0] 			<em>// 开始位置</em>
+)
+String v = n.<q>replaceFirstMapped</q>('1',(<u>Match m</u>){
+	<q>return</q> 'abc';		
+});
+String v = n.<q>replaceFirstMapped</q>('1',(<u>Match m</u>)=>'${m[2]}${m[1]}${m[1].isEmpty ? 'way' : 'ay'}', 2);
+
+<em># 用 replacement 替换从 start到 end 的子字符串</em>
+<i>String</i> <b>replaceRange</b>(
+	<i>int</i> start, 				<em>// 开始位置</em>
+	<i>int</i> end,				<em>// 结束位置</em> 
+	<i>String</i> replacement 	<em>// 替换字符串</em>
+)
+String v = n.<q>replaceRange</q>(0,2,'abc'); 					<em>// => abc3456</em>
+
+<em># 分割字符串，转换成一个新的子符串</em>
+<i>String</i> <b>splitMapJoin</b>(
+	<i>Pattern</i> pattern,					<em>// 字符串或正则表达式</em>
+	<i>String</i> <u>onMatch</u>(Match match), 		<em>// 替换匹配的字符串</em>
+	<i>String</i> <u>onNonMatch</u>(String nonMatch)	<em>// 替换不匹配的字符串</em>
+)
+<em>// pattern: 字符串或正则表达式</em>
+String a = 'Eats shoots leaves shoots';
+String v = n.<q>splitMapJoin</q>(					<em>// => 0**shoots0**shoots0</em>
+	RegExp(r'shoots'),
+	<u>onMatch</u>: (Match m){
+		String input =  m.<s>input</s>;					<em>// 原字符串</em>
+		int start =  m.<s>start</s>;						<em>// 匹配字符串的开始位置</em>
+		int end =  m.<s>end</s>;						<em>// 匹配字符串的结束位置</em>
+		int group =  m.<s>group(0)</s>;				<em>// 获取匹配的字符串</em>
+		List&lt;String&gt;</i> groups =  m.<s>groups([0])</s>;		<em>//获取匹配的字符串</em>
+		int count =  m.<s>groupCount</s>;				<em>// group 的数量</em>
+		int pattern =  m.<s>pattern</s>;				<em>// 返回匹配的正则表达式</em>
+		<u>return</u> '**${m.group(0)}';
+	},
+	<u>onNonMatch</u>: (String n) => '0');
+)

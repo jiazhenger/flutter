@@ -1,29 +1,25 @@
 ﻿import React from 'react'
 // ===================================================================== public component
-import UbContent from '@cpx/ub-content.component'
-import BoxComponent from '@cpt/box.component'
+import ListComponent from '@cpt/list.component'
 // ===================================================================== component
-const $fn = window.$fn
-export default class Index extends React.Component{
-	componentDidMount(){
-		$fn.setTitle('列表类型')
-		$fn.hidePhone()
-	}
-	render(){
-		return (
-			<UbContent className='page-content'>
-				<BoxComponent pro='类型声明' code={[ {path:'dart/grammar/var/type/list'} ]} />
-				<BoxComponent pro='创建列表' code={[ {path:'dart/grammar/data-type/list/create'} ]} />
-				<BoxComponent pro='列表属性' code={[ {path:'dart/grammar/data-type/list/property'} ]} />
-				<BoxComponent pro='读取元素' code={[ {path:'dart/grammar/data-type/list/read'} ]} />
-				<BoxComponent pro='添加元素' code={[ {path:'dart/grammar/data-type/list/add'} ]} />
-				<BoxComponent pro='删除元素' code={[ {path:'dart/grammar/data-type/list/remove'} ]} />
-				<BoxComponent pro='检索元素' code={[ {path:'dart/grammar/data-type/list/search'} ]} />
-				<BoxComponent pro='列表排序' code={[ {path:'dart/grammar/data-type/list/sort'} ]} />
-				<BoxComponent pro='替换元素' code={[ {path:'dart/grammar/data-type/list/replace'} ]} />
-				<BoxComponent pro='数据转换' code={[ {path:'dart/grammar/data-type/list/output-type'} ]} />
-				<BoxComponent pro='迭代循环' code={[ {path:'dart/grammar/data-type/list/for'} ]} />
-			</UbContent>
-		)
-	}
+const data = {
+	title:'列表类型',
+	data:[
+		{ pro:'类型声明', code:[ {path:'dart/grammar/var/type/list'} ]},
+		{ pro:'创建列表', code:[ {path:'dart/grammar/data-type/list/create'} ]},
+		{ pro:'列表赋值', code:[ {path:'dart/grammar/data-type/list/write'} ]},
+		{ pro:'获取元素', code:[ {path:'dart/grammar/data-type/list/read'} ]},
+		{ pro:'添加元素', code:[ {path:'dart/grammar/data-type/list/add'} ]},
+		{ pro:'删除元素', code:[ {path:'dart/grammar/data-type/list/remove'} ]},
+		{ pro:'检索元素', code:[ {path:'dart/grammar/data-type/list/search'} ]},
+		{ pro:'列表排序', code:[ {path:'dart/grammar/data-type/list/sort'} ]},
+		{ pro:'替换元素', code:[ {path:'dart/grammar/data-type/list/replace'} ]},
+		{ pro:'数据转换', code:[ {path:'dart/grammar/data-type/list/output-type'} ]},
+		{ pro:'迭代循环', code:[ {path:'dart/grammar/data-type/list/for'} ]},
+		{ pro:'私有方法', code:[ {path:'dart/grammar/data-type/list/method'} ]},
+		{ pro:'私有属性', code:[ {path:'dart/grammar/data-type/list/property'} ]},
+		{ pro:'公共属性', code:[ {path:'dart/grammar/entrance/public-property'} ]},
+		{ pro:'公共方法', code:[ {path:'dart/grammar/entrance/public-method'} ]},
+	]
 }
+export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

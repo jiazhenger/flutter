@@ -1,14 +1,35 @@
-<em># <strong>remove(value)</strong>：删除列表中匹配的第一个元素</em>
-list.<b>remove(3)</b>; 			<em>// 删除列表中第一个 value = 3 的元素</em>
-<em># <strong>removeAt(index)</strong>：删除列表中第几个元素</em>
-list.<b>removeAt(3)</b>; 			<em>// 删除列表中第 3 个的元素</em>
-<em># 删除列表中最后一个元素</em>
-list.<b>removeLast( )</b>;
-<em># 删除列表的所有元素</em>
-list.<b>clear( )</b>;
-<em># <strong>removeRange(startIndex,endIndex)</strong>：删除开始下标（不包括）至结束下标（包括）内的元素</em>
-list.<b>removeRange(0,4)</b>; 			<em>// 删除索引值 0~4 元素，</em>
+<em># 删除列表中匹配的第一个元素，删除成功返回 true，反之，false</em>
+<i>bool</i> <b>remove</b>(
+	<i>Object</i> value 	<em>// 删除值</em>
+)
+bool v = list.<q>remove</q>(3); 			<em>// 删除列表中第一个 value = 3 的元素</em>
+
+<em># 删除列表中第几个元素，并返回被删除的元素</em>
+<i>E</i> <b>removeAt</b>(
+	<i>int</i> index 	<em>// 下标值</em>
+)
+E v = list.<q>removeAt</q>(3); 			<em>// 删除列表中第 3 个的元素</em>
+
+<em># 删除开始下标至结束下标内的元素</em>
+<i>void</i> <b>removeRange</b>(
+	<i>int</i> start, 		<em>// 开始下标，不包括</em>
+	<i>int</i> end 		<em>// 结束下标，包括</em>
+)
+list.<q>removeRange</q>(0,4); 			<em>// 删除索引值 0~4 元素，</em>
+
 <em># 删除所有满足条件的元素，此为Dart的一种速写语法</em>
-list.<b>removeWhere((value) => value == 3)</b>;		<em>// =3 的删除，</em>
+<i>void</i> <b>removeWhere</b>(
+	<i>bool</i> test(<i>E</i> element) 		<em>// (v)=>true、(v){ return true}</em>
+)
+list.<q>removeWhere</q>((value) => value == 3);		<em>// =3 的删除，</em>
+
 <em># 删除所有不满足条件的元素，此为Dart的一种速写语法</em>
-list.<b>retainWhere((value) => value == 3)</b>;		<em>// !=3 的删除，只留 3</em>
+<i>void</i> <b>retainWhere</b>(
+	<i>bool</i> test(<i>E</i> element) 		<em>// (v)=>true、(v){ return true}</em>
+)
+list.<q>retainWhere</q>((value) => value == 3);		<em>// !=3 的删除，只留 3</em>
+
+<em># 删除列表中最后一个元素，并返回被删除的元素</em>
+<i>E</i> v = list.<b>removeLast( )</b>;
+<em># 删除列表的所有元素</em>
+<i>void</i> list.<b>clear( )</b>;

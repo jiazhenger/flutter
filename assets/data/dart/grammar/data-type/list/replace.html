@@ -1,2 +1,31 @@
-<em># <strong>setAll(index,List)</strong>：从第几个元素开始覆盖原列表</em>
-bool v = list.<b>setAll(3,[0,1,2])</b>;
+<em># 从第 indx 个元素开始覆盖原列表</em>
+<i>void</i> <b>setAll</b>(
+	<i>int</i> index,  				<em>// 索引值、下标值</em>
+	<i>Iterable</i><i>&lt;E&gt;</i> iterable 		<em>// List</em>
+)
+list.<q>setAll</q>(3,[0,1,2]);
+
+<em># 复制对象到某个范围</em>
+<i>void</i> <b>replaceRange</b>(
+	<i>int</i> start,  					<em>// 开始下标，包含</em>
+	<i>int</i> end,  						<em>// 结束下标，不包含</em>
+	<i>Iterable</i><i>&lt;E&gt;</i> replacement, 		<em>// 替换 List</em>
+)
+list.<q>replaceRange</q>(0,2,['a','b']); 		<em>// => [a, b, 2]</em>
+
+<em># 复制对象到某个范围</em>
+<i>void</i> <b>setRange</b>(
+	<i>int</i> start,  				<em>// 开始下标，包含</em>
+	<i>int</i> end,  					<em>// 结束下标，不包含</em>
+	<i>Iterable</i><i>&lt;E&gt;</i> iterable, 		<em>// List</em>
+	[<i>int</i> skipCount = 0] 		<em>// 跳过</em>
+)
+list.<q>setRange</q>(0,2,['a','b']); 		<em>// => [a, b, 2]</em>
+
+<em># 填充对象到某个范围</em>
+<i>void</i> <b>fillRange</b>(
+	<i>int</i> start,  				<em>// 开始下标，包含</em>
+	<i>int</i> end,  					<em>// 结束下标，不包含</em>
+	[<i>E</i> fillValue] 				<em>// 填充值</em>
+)
+list.<q>fillRange</q>(0,2,'a'); 			<em>// => [a, a, 2]</em>

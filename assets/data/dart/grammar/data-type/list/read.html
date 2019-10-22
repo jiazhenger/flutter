@@ -1,1 +1,10 @@
-var x = <b>list[0]</b>;
+<em># 用下标读取列表元素</em>
+<i>E</i> x = <b>list[0]</b>;
+
+<em># 获取某个范围的迭代器</em>
+<i>Iterable&lt;E&gt;</i> <b>getRange</b>(
+	<i>int</i> start,  					<em>// 开始下标，包含</em>
+	<i>int</i> end,  						<em>// 结束下标，不包含</em>
+)
+Iterable v = list.<q>getRange</q>(0,2);		<em>// => (0, 1)</em>
+v.forEach((v)=>print(v))

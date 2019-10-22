@@ -1,14 +1,14 @@
 <em># 创建空列表</em>
 List list = <b>[ ]</b>;
-List list = <b>new List.from([ ])</b>;
-List list = <b>new List.unmodifiable([ ])</b>;
-List list = <b>new List( )</b>;
+List list = <em>new</em> <b>List.from([ ])</b>;
+List list = <em>new</em> <b>List.unmodifiable([ ])</b>;
+List list = <em>new</em> <b>List( )</b>;
 <em># 创建初始化的列表</em>
 List list = <b>[</b> 1,2,3 <b>]</b>; 							<em>// 创建包含所有元素的<s>可改变</s>长度列表</em>
-List list= <b>new List.from([</b> 1, 2, 3 <b>])</b>;			<em>// 创建包含所有元素的<s>可改变</s>长度列表</em>
-List list= <b>new List.unmodifiable([</b> 1, 2, 3 <b>])</b>;		<em>// 创建包含所有元素的<s>固定</s>长度列表。<i>不能添加元素，即不能使用：list.add()</i></em>
+List list= <em>new</em> <b>List.from([</b> 1, 2, 3 <b>])</b>;				<em>// 创建包含所有元素的<s>可改变</s>长度列表</em>
+List list= <em>new</em> <b>List.unmodifiable([</b> 1, 2, 3 <b>])</b>;		<em>// 创建包含所有元素的<s>固定</s>长度列表。<i>不能添加元素，即不能使用：list.add()</i></em>
 <em># 创建长度列表</em>
-List list = <b>new List()</b>						<em>// 创建<s>可改变</s>长度的列表，参数约定数组长度</em>
-List list = <b>new List(5)</b>						<em>// 创建<s>固定</s>长度的列表，参数约定数组长度。<i>不能添加元素，即不能使用：list.add()</i>	=> [null, null, null, null, null]</em>
-List list = <b>new List()..length = 5</b>				<em>// 创建可在固定范围内改变长度的列表  => [null, null, null, null, null]</em>
-List list = <b>new List()..length</b> 					<em>// 空列表  => []</em>
+List list = <em>new</em> <b>List( )</b>						<em>// 创建<s>可改变</s>长度的列表，参数约定数组长度</em>
+List list = <em>new</em> <b>List(5)</b>						<em>// 创建<s>固定</s>长度的列表，参数约定数组长度。<i>不能添加元素，即不能使用：list.add()</i>	=> [null, null, null, null, null]</em>
+List list = <em>new</em> <b>List( )..length = 5</b>				<em>// 创建可在固定范围内改变长度的列表  => [null, null, null, null, null]</em>
+List list = <em>new</em> <b>List( )..length</b> 					<em>// 空列表  => []</em>

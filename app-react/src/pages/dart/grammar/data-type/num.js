@@ -1,22 +1,19 @@
 ﻿import React from 'react'
 // ===================================================================== public component
-import UbContent from '@cpx/ub-content.component'
-import BoxComponent from '@cpt/box.component'
+import ListComponent from '@cpt/list.component'
 // ===================================================================== component
-const $fn = window.$fn
-export default class Index extends React.Component{
-	componentDidMount(){
-		$fn.setTitle('数字类型')
-		$fn.hidePhone()
-	}
-	render(){
-		return (
-			<UbContent className='page-content'>
-				<BoxComponent pro='数字类型声明' code={[ {path:'dart/grammar/var/type/num'} ]} />
-				<BoxComponent pro='将字符串转为数字' code={[ {path:'dart/grammar/data-type/num/string-to-num'} ]} />
-				<BoxComponent pro='属性' code={[ {path:'dart/grammar/data-type/num/property'} ]} />
-				<BoxComponent pro='方法' code={[ {path:'dart/grammar/data-type/num/method'} ]} />
-			</UbContent>
-		)
-	}
+const data = {
+	title:'数字类型',
+	data:[
+		{ pro:'类型声明', code:[ {path:'dart/grammar/var/type/num'} ]},
+		{ pro:'字符串转为数字', code:[ {path:'dart/grammar/data-type/num/toNum'} ]},
+		{ pro:'转为 int', code:[ {path:'dart/grammar/data-type/num/toInt'} ]},
+		{ pro:'转为 double', code:[ {path:'dart/grammar/data-type/num/toDouble'} ]},
+		{ pro:'常用方法', code:[ {path:'dart/grammar/data-type/num/common'} ]},
+		{ pro:'私有方法', code:[ {path:'dart/grammar/data-type/num/method'} ]},
+		{ pro:'私有属性', code:[ {path:'dart/grammar/data-type/num/property'} ]},
+		{ pro:'公共属性', code:[ {path:'dart/grammar/entrance/public-property'} ]},
+		{ pro:'公共方法', code:[ {path:'dart/grammar/entrance/public-method'} ]},
+	]
 }
+export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

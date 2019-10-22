@@ -1,57 +1,33 @@
-<i>String</i> <s>A</s> = '123456';
-<em># 查找字符串索引值 <strong>indexOf(Pattern pattern)</strong></em>
-<em>// pattern: 任意字符串，必选</em>
-<i>int</i> v = <s>A</s>.<b>indexOf</b>('1'); 				<em>// => 0</em>
-<em># 截取字符串<strong>startIndex(int startIndex, [int endIndex])</strong></em>
-<em>// startIndex: 开始索引值，必选。从 1 开始，不包含</em>
-<em>// endIndex: 线束索引值，可选。包含</em>
-<i>String</i> v = <s>A</s>.<b>startIndex</b>(1); 			<em>// => 456</em>
-<i>String</i> v = <s>A</s>.<b>startIndex</b>(1,3); 			<em>// => 23</em>
-<em># 将字符串转为 List <strong>split(Pattern pattern)</strong></em>
-<em>// pattern: 任意字符串，必选</em>
-<i>String</i> v = <s>A</s>.<b>split</b>('2'); 				<em>// => [1, 3456]</em>
-<em># 转换为小写</em>
-<i>String</i> v = <s>'ABC'</s>.<b>toLowerCase</b>(); 		<em>// => abc</em>
-<em># 转换为大写</em>
-<i>String</i> v = <s>'abc'</s>.<b>toUpperCase</b>(); 		<em>// => ABC</em>
-<em># 去空格</em>
-<i>String</i> v = <s>A</s>.<b>trim</b>(); 				<em>// 两侧</em>
-<i>String</i> v = <s>A</s>.<b>trimLeft</b>(); 				<em>// 左侧</em>
-<i>String</i> v = <s>A</s>.<b>trimRight</b>(); 			<em>// 右侧</em>
-<em># 返回给定 index 处的16位UTF-16代码单元 <strong>codeUnitAt(int index)</strong></em>
-<em>// index: 索引值</em>
-<i>int</i> v = <s>A</s>.<b>codeUnitAt</b>(1); 			<em> => 49</em>
-<em># 如果此字符串以匹配[pattern]开始，则返回true <strong>startsWith(Pattern pattern, [int index = 0])</strong></em>
-<em>// pattern: 匹配字符串，或正则表达式</em>
-<em>// index: 索引值，默认为 0</em>
-<i>bool</i> v = <s>A</s>.<b>startsWith</b>('1'); 					<em>// 以 1 开始 => true</em>
-<i>bool</i> v = <s>A</s>.<b>startsWith</b>('2',1); 					<em>// 在第1个，以2开始 => true</em>
-<i>bool</i> v = <s>A</s>.<b>startsWith</b>(RegExp(r'[A-Z][a-z]')); 	<em>// 正则表达式</em>
-<em># 如果此字符串以匹配[pattern]开始，则返回true <strong>endsWith(String other)</strong></em>
-<em>// other: 匹配字符串</em>
-<i>bool</i> v = <s>A</s>.<b>endsWith</b>('6'); 					<em>// 以 6 结束 => true</em>
-<em># 替换所有匹配的字符串 <strong>replaceAll(Pattern from, String replace)</strong></em>
-<em>// from: 匹配字符串，或正则表达式</em>
-<em>// replace: 替换字符串</em>
-<i>String</i> v = <s>A</s>.<b>replaceAll</b>('1','abc'); 					<em>// => abc23456</em>
-<i>String</i> v = <s>A</s>.<b>replaceAll</b>(RegExp(r'[A-Z][a-z]'),'abc'); 		<em>// 正则匹配替换</em>
-<em># 字符串中第一个出现的from替换为 to ，从 startIndex 开始 <strong>replaceFirst(Pattern from, String to, [int startIndex = 0]</strong></em>
-<em>// from: 匹配字符串，或正则表达式</em>
-<em>// to: 替换字符串</em>
-<em>// startIndex: 开始位置，默认 0</em>
-<i>String</i> v = <s>A</s>.<b>replaceFirst</b>('1','abc'); 					<em>// => abc23456</em>
-<em># 用 replacement 替换从 start到 end 的子字符串 <strong>replaceRange(int start, int end, String replacement)</strong></em>
-<em>// start: 开始位置</em>
-<em>// end: 结束位置</em>
-<em>// replacement: 替换字符串</em>
-<i>String</i> v = <s>A</s>.<b>replaceRange</b>(0,2,'abc'); 					<em>// => abc3456</em>
-<em># 自定义替换匹配 <strong>replaceAllMapped(Pattern from, String replace(Match match))</strong></em>
-<em>// from: 匹配字符串，或正则表达式</em>
-<em>// replace(Match match): 替换匹配</em>
-<i>String</i> v = <s>A</s>.<b>replaceAllMapped</b>('1',(<strong>Match m</strong>){			<em>// => abc3456</em>
-	<b>return</b> 'abc';		
-});
-<i>String</i> v = <s>A</s>.<b>replaceAllMapped</b>('1',(<strong>Match m</strong>)=>'${m[2]}${m[1]}${m[1].isEmpty ? 'way' : 'ay'}');
-
-
-
+<em># 返回给定 index 处的16位UTF-16代码单元</em>
+<i>int</i> <b>codeUnitAt</b>(
+	<i>int</i> index 		<em>// 索引值</em>
+)
+int v = n.<q>codeUnitAt</q>(1); 			<em> => 49</em>
+<em># 获取全匹配字符串</em>
+<i>Iterable &lt;Match&gt;</i> <b>allMatches</b>(
+	<i>String</i> string, 			<em>// 匹配字符串</em>
+	[<i>int</i> start = 0] 		<em>// 开始位置</em>
+)
+Iterable v = s.<q>allMatches</q>('123456');
+v.<u>forEach</u>((m){
+	String input =  m.<s>input</s>;					<em>// 原字符串 </em>
+	int start =  m.<s>start</s>;						<em>// 匹配字符串的开始位置</em>
+	int end =  m.<s>end</s>;						<em>//匹配字符串的结束位置</em>
+	int group =  m.<s>group(0)</s>;				<em>// 获取匹配的字符串 => 123456</em>
+	List&lt;String&gt;</i> groups =  m.<s>groups([0])</s>;		<em>//获取匹配的字符串</em>
+	int count =  m.<s>groupCount</s>;				<em>// group 的数量</em>
+	int pattern =  m.<s>pattern</s>;				<em>//返回匹配的正则表达式</em>
+})
+<em># 匹配字符串开头</em>
+<i>Match</i> <b>matchAsPrefix</b>(
+	<i>String</i> string, 			<em>// 匹配字符串</em>
+	[<i>int</i> start = 0] 		<em>// 开始位置</em>
+)
+Match v = s.<q>matchAsPrefix</q>('123456');
+String input =  v.<s>input</s>;					<em>// 原字符串 </em>
+int start =  v.<s>start</s>;						<em>// 匹配字符串的开始位置</em>
+int end =  v.<s>end</s>;						<em>//匹配字符串的结束位置</em>
+int group =  v.<s>group(0)</s>;					<em>// 获取匹配的字符串 => 123456</em>
+List&lt;String&gt;</i> groups =  v.<s>groups([0])</s>;		<em>//获取匹配的字符串</em>
+int count =  v.<s>groupCount</s>;				<em>// group 的数量</em>
+int pattern =  v.<s>pattern</s>;					<em>//返回匹配的正则表达式</em>
