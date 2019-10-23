@@ -1,4 +1,12 @@
-<em># <strong>add(value)</strong>：添加一个值</em>
-set.<b>add(0)</b>;
-<em># <strong>add(List)</strong>：添加多个值</em>
-set.<b>addAll([0, 1])</b>;
+<em># 添加一个值</em>
+<i>void</i> <b>add</b>(
+	<i>E</i> value 		<em>// 任意类型值</em>
+)
+set.<q>add</q>(1)
+
+<em># 添加多个值</em>
+<i>void</i> <b>addAll</b>(
+	<i>Iterable</i><i>&lt;E&gt;</i> iterable 	<em>// List、Set</em>
+)
+set.<q>addAll</q>( { 4,5,6 } );		<em>// => {0, 1, 2, 4, 5, 6}</em>
+set.<q>addAll</q>( [ 4,5,6 ] );		<em>// => {0, 1, 2, 4, 5, 6}</em>
