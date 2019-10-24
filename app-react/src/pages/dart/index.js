@@ -1,18 +1,12 @@
 ﻿import React from 'react'
 // ===================================================================== public component
-import UbContent from '@cpx/ub-content.component'
-import BoxComponent from '@cpt/box.component'
-import CodeComponent from '@cpt/code.component'
+import ListComponent from '@cpt/list.component'
 // ===================================================================== component
-export default class Index extends React.Component{
-	render(){
-		return (
-			<UbContent className='page-content'>
-				<BoxComponent title='Dart sdk 安装' show={true}>
-					<h2 className='sub-title pb10'>Windows: </h2>
-					<CodeComponent type='text' url='dart/install/windows-dart' />
-				</BoxComponent>
-			</UbContent>
-		)
-	}
+const data = {
+	title:'时间声明',
+	data:[
+		{ pro:'Dart sdk 安装', code:[ { title:'Windows', path:'dart/install/windows-dart'} ]},
+		{ pro:'安装 angular', code:[ { path:'dart/install/angular-dart'} ]},
+	]
 }
+export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

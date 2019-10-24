@@ -60,6 +60,7 @@ class AppRouter extends React.Component{
 						<Route path={`${match.url}/function`} render={ ({ match }) => (
 							<Switch>
 								<Route path={`${match.url}/base`} 	component={ Import('dart/grammar/function/base') } exact />
+								<Route path={`${match.url}/inner`} 	component={ Import('dart/grammar/function/inner') } exact />
 							</Switch>
 						)} />
 						{/* 类 */}
@@ -88,6 +89,20 @@ class AppRouter extends React.Component{
 					<Switch>
 						<Route path={`${match.url}/DateTime`} 	component={ Import('dart/time/DateTime') } exact />
 						<Route path={`${match.url}/Duration`} 	component={ Import('dart/time/Duration') } exact />
+					</Switch>
+				) }/>
+				{/* 包 */}
+				<Route 	path={ `${url}/package` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/convert`} 	component={ Import('dart/package/convert') } exact />
+						<Route path={`${match.url}/html`} 	component={ Import('dart/package/html') } exact />
+						<Route path={`${match.url}/math`} 	component={ Import('dart/package/math') } exact />
+					</Switch>
+				) }/>
+				{/* document */}
+				<Route 	path={ `${url}/document` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/dom`} 	component={ Import('dart/document/dom') } exact />
 					</Switch>
 				) }/>
 				{/*  */}

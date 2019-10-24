@@ -45,6 +45,7 @@
 				title: '函数',
 				children:[
 					{ title: '函数基础', path:'/dart/grammar/function/base' },
+					{ title: '内置函数', path:'/dart/grammar/function/inner' },
 				]
 			},
 			{
@@ -70,6 +71,20 @@
 		children:[
 			{ title: 'DateTime', path:'/dart/time/DateTime' },
 			{ title: 'Duration', path:'/dart/time/Duration' },
+		]
+	},
+	{
+		title: '内置包',
+		children:[
+			{ title: 'convert', path:'/dart/package/convert' },
+			{ title: 'html', path:'/dart/package/html' },
+			{ title: 'math', path:'/dart/package/math' },
+		]
+	},
+	{
+		title: 'document',
+		children:[
+			{ title: 'dom 操作', path:'/dart/document/dom' },
 		]
 	}
 ]
