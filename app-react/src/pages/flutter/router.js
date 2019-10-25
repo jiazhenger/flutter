@@ -29,8 +29,9 @@ class AppRouter extends React.Component{
 				{/* 样式 */}
 				<Route path={ `${url}/style` } render={ ({ match }) => (
 					<Switch>
-						<Route path={`${match.url}/Colors`} 	component={ Import('flutter/style/Colors') } exact />
-						<Route path={`${match.url}/TextStyle`} 	component={ Import('flutter/style/TextStyle') } exact />
+						<Route path={`${match.url}/Colors`} 			component={ Import('flutter/style/Colors') } exact />
+						<Route path={`${match.url}/TextStyle`} 			component={ Import('flutter/style/TextStyle') } exact />
+						<Route path={`${match.url}/EdgeInsets`} 		component={ Import('flutter/style/EdgeInsets') } exact />
 					</Switch>
 				)}/>
 				{/* http */}

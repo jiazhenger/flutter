@@ -18,7 +18,7 @@
 		children: [
 			{ title: '颜色', path:'/flutter/style/Colors' },
 			{ title: '文本样式', path:'/flutter/style/TextStyle' },
-			{ title: 'padding/margin' },
+			{ title: '四边偏移量', path:'/flutter/style/EdgeInsets' },
 			{ title: '对齐方式' },
 			{ title: '边框样式' },
 			{ title: '圆角' },

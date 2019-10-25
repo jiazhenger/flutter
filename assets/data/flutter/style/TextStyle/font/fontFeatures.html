@@ -1,14 +1,14 @@
 <em># 有些字体支持给定字符如何呈现的多种变体。例如，字体可能同时提供比例数字和表格数字，也可能提供带或不带斜杠的零位数字版本。FontFeatures可用于选择这些变体中哪些将用于呈现</em>
 TextStyle(
-		<b>fontFeatures</b>:		<i>List&lt;FontFeature&gt;</i>[
-							<i>FontFeature.disable('smcp')</i>, 			<em>// 使用给定的标记禁用该特性</em>
-							<i>FontFeature.enable('smcp')</i>,				<em>// 使用给定的标记启用该特性</em>
-							<i>FontFeature.enable('frac')</i>,
-							<i>FontFeature.stylisticSet(1)</i>,				<em>// 选择一个风格设置</em>
-							<i>FontFeature.oldstyleFigures( )</i>,			<em>// 使用oldstyle数据</em>
-							<i>FontFeature.proportionalFigures( )</i>,		<em>// 使用比例(变化宽度)图形</em>
-							<i>FontFeature.randomize( )</i>,				<em>// 随机选择文本中使用的替代表单</em>
-							<i>FontFeature.slashedZero( )</i>,				<em>// 使用大叉零</em>
-							<i>FontFeature.tabularFigures( )</i>,			<em>// 使用表格(单色)图形</em>
+		<b>fontFeatures</b>:		<em>List&lt;FontFeature&gt;</em>[
+							<q>FontFeature.</q> 	<i>disable('smcp')</i>, 			<em>// 使用给定的标记禁用该特性</em>
+										<i>enable</i>(<em>'smcp'</em>),			<em>// 使用给定的标记启用该特性</em>
+										<i>enable</i>(<em>'frac'</em>),
+										<i>stylisticSet</i>(<em>1</em>),				<em>// 选择一个风格设置</em>
+										<i>oldstyleFigures( )</i>,			<em>// 使用oldstyle数据</em>
+										<i>proportionalFigures( )</i>,		<em>// 使用比例(变化宽度)图形</em>
+										<i>randomize( )</i>,				<em>// 随机选择文本中使用的替代表单</em>
+										<i>slashedZero( )</i>,			<em>// 使用大叉零</em>
+										<i>tabularFigures( )</i>,			<em>// 使用表格(单色)图形</em>
 						]
 )
