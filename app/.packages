@@ -20,7 +20,6 @@ code_builder:packages/code_builder/
 collection:packages/collection/
 convert:packages/convert/
 crypto:packages/crypto/
-cupertino_icons:packages/cupertino_icons/
 dart_style:packages/dart_style/
 fixnum:packages/fixnum/
 flutter_web:packages/flutter_web/

@@ -12,6 +12,7 @@ export default class Index extends React.Component{
 				<BoxComponent pro='flutter 项目打包' code={[ {title:'Android',path:'flutter/install/windows-flutter-build'} ]} />
 				<BoxComponent pro='flutter 命令' code={[ {path:'flutter/install/flutter-order'} ]} />
 				<BoxComponent pro='flutter web 安装' code={[ {path:'flutter/install/flutter-web'} ]} />
+				<BoxComponent pro='flutter 资源' code={[ {path:'flutter/install/source'} ]} />
 			</UbContent>
 		)
 	}

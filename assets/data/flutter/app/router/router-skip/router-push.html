@@ -1,29 +1,27 @@
-<i>import './router-param.dart';</i> 	<em>// 一个 page， 声明 RouterParam 类 </em>
-<b>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) =></b> <i>RouterParam</i>( title:'一个参数', name:'二个参数', map:{'a':0,'b':1} ))).<b>then((value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);	
-	setState(() { myText = value; });
+<em># 一个 page， 声明 RouterParam 类 </em>
+import '<u>./router-param.dart</u>';	 	<em>// => RouterParam( )</em>
+<em># Navigator.of(context).push( )</em>
+<b>Navigator.of(context).push</b>(
+	<i>Route&lt;T&gt;</i> route 				<em>// MaterialPageRoute(builder: (BuildContext context) => RouterParam( ))</em>
+)<b>then</b>((<i>Object</i> <u>value</u>){ 				<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+	<em>setState(( ) { myText = value; });</em>
 });
-<b>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)</b>{
-	return <i>RouterParam</i>( title:'接收第一个参数', name:'接收第二个参数', map:{'a':7,'b':8} ); 
-})).<b>then((dynamic value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);
-	setState(() { myText = value; });
+<q>Navigator.of(context).push</q>(
+	<q>MaterialPageRoute(builder: (BuildContext context) =></q> <u>RouterParam</u>( <em>title:'一个参数', list:[1,2], map:{'a':1,'b':2}</em> ))
+)<q>then</q>((<i>Object</i> <u>value</u>){ 
+
 });
-<b>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)</b> => <i>RouterParam</i>( title:'一个参数', name:'二个参数', map:{'a':0,'b':1} ))).<b>then((dynamic value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);
-	setState(() { myText = value; });
+
+<em># Navigator.push(context, MaterialPageRoute( ))</em>
+<b>Navigator.push</b>(
+	<i>BuildContext</i> <u>context</u>,
+	<i>Route&lt;T&gt;</i> route 				<em>// MaterialPageRoute(builder: (BuildContext context) => RouterParam( ))</em>
+)<b>then</b>((<i>Object</i> <u>value</u>){ 				<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+	<em>setState(( ) { myText = value; });</em>
 });
-<b>Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)</b>{ 
-	return <i>RouterParam</i>( title:'接收第一个参数', name:'接收第二个参数', map:｛'a':7,'b':8｝ ); 
-})).then(<b>(dynamic value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);
-	setState(() { myText = value; });
+<q>Navigator.push</q>(
+	<q>context</q>,
+	<q>MaterialPageRoute(builder: (BuildContext context) =></q> <u>RouterParam</u>( <em>title:'一个参数', list:[1,2], map:{'a':1,'b':2}</em> ))
+)<q>then</q>((<i>Object</i> <u>value</u>){ 
+
 });

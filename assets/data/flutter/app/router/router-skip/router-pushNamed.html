@@ -1,13 +1,16 @@
-<b>Navigator.of(context).pushNamed('/login').then((value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);
-	setState(() { myText = value; });
+<em># Navigator.of(context).pushNamed('/login', arguments:{ a:1, b:2 }).then((value){		})</em>
+<b>Navigator.of(context).pushNamed</b>(
+	<i>String</i> routeName, 		<em>// 路由名称  => /login</em>
+	{ <i>Object</i> <u>arguments</u> }, 		<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+).<b>then</b>((<i>Object</i> <u>value</u>){ 			<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+	<em>setState(( ) { myText = value; });</em>
 });
 
-<b>Navigator.pushNamed(context,'/login').then((dynamic value)</b>{
-	<em># 页面返回后执行</em>
-	<em>// value 为 <i>Navigator.of(context).pop(value)</i> 中返回携带的参数 value</em>
-	print(value);
-	setState(() { myText = value; });
-});
+<em># Navigator.pushNamed(context,'/login', arguments:{ a:1, b:2 }).then((value){		})</em>
+<b>Navigator.pushNamed</b>(
+	<i>BuildContext</i> <u>context</u>,
+	<i>String</i> routeName,			<em>// 路由名称  => /login</em>
+	{ <i>Object</i> <u>arguments</u> }, 		<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+).<b>then</b>((<i>Object</i> <u>value</u>){ 			<em>// 用法同上</em>
+	
+})

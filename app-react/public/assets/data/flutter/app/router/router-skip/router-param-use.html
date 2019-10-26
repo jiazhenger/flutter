@@ -5,9 +5,9 @@ class _PageState extends State&lt;RouterParam&gt; {
 		    body: ListView(
 				padding:EdgeInsets.all(10.0),
 				children: <Widget>[
-					<em># widget = { title:--,name:--,map:--}</em>
+					<em># widget =  RouterParam(title:'',list:[ ],map:{ })</em>
 					Text(<b>widget</b>.title),
-					Text(<b>widget</b>.name),
+					Text(<b>widget</b>.list.toString()),
 					Text(<b>widget</b>.map.toString()),
 				],
 			)

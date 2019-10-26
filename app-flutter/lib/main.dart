@@ -28,7 +28,23 @@ class FlutterApp extends StatelessWidget {
             // 路由，定义应用中页面跳转规则
             routes: {...FlutterRouter().router,...DartRouter().router},
             // 生成路由的回调函数，当导航的命名路由的时候，会使用这个来生成界面
-//			onGenerateRoute:(){},
+            onGenerateRoute:(RouteSettings settings){
+                print('onGenerateRoute');
+                final String name = settings.name;
+                final Function pageContentBuilder = FlutterRouter().router[name];
+
+                if (pageContentBuilder != null) {
+                    final Route route = MaterialPageRoute(
+                        builder: (context) {
+                            //将RouteSettings中的arguments参数取出来，通过构造函数传入
+                            return pageContentBuilder(context, arguments: settings.arguments);
+                        },
+                        settings: settings,
+                    );
+                    return route;
+                }
+                return null;
+            },
             // 当系统修改语言的时候，会触发å这个回调
 //			onLocaleChanged:(){},
             // 应用 Navigator 的监听器

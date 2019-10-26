@@ -10,12 +10,9 @@ class ListOneWidget extends StatefulWidget { // 有状态的控件，控件的�
 	@override
 	_PageState createState() => _PageState();
 }
-const List list = [1,2,3];
-
 class _PageState extends State<ListOneWidget> {
 	@override
 	Widget build(BuildContext context) {
-		print(list);
 		return Wrap(
 			children: <Widget>[
 				widget.title != null ?
