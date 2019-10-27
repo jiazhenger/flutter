@@ -14,6 +14,9 @@ export default class Index extends React.Component{
 		return (
 			<UbContent className='page-content'>
 				{
+					this.props.data.keyword && <h2 className='b f16' style={{borderBottom:'2px solid red',padding:'10px 0'}}>{this.props.data.keyword}</h2>
+				}
+				{
 					$fn.hasArray(data) && data.map((v,i)=>[
 						v.deviceTitle ? <h2 key={'a'+i} className='sub-title ptb10 c1 bbor1'>{v.deviceTitle}:</h2>:null,
 						<BoxComponent 

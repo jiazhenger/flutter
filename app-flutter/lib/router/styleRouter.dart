@@ -16,6 +16,18 @@ import 'package:flutter_web_study.app/pages/flutter/style/Alignment/position.dar
 import 'package:flutter_web_study.app/pages/flutter/style/Alignment/xy.dart';
 import 'package:flutter_web_study.app/pages/flutter/style/Alignment/FractionalOffset.dart';
 import 'package:flutter_web_study.app/pages/flutter/style/Alignment/lerp.dart';
+// ======================================================================================================== Border 边样式
+import 'package:flutter_web_study.app/pages/flutter/style/Border/all.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/Border/BorderOne.dart';
+// ======================================================================================================== BorderSide 边样式
+import 'package:flutter_web_study.app/pages/flutter/style/BorderSide/BorderSide.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/BorderSide/merge.dart';
+// ======================================================================================================== BorderRadius 圆角
+import 'package:flutter_web_study.app/pages/flutter/style/BorderRadius/all.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/BorderRadius/circular.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/BorderRadius/horizontal.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/BorderRadius/vertical.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/BorderRadius/only.dart';
 // ======================================================================================================== 路由类
 class StyleRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -24,16 +36,29 @@ class StyleRouter{
 		'/Color16': (BuildContext context) => Color16(title:'十六进制颜色'),
 		'/Rgba': (BuildContext context) => Rgba(title:'rgba颜色'),
 		// ======================================================================================================== EdgeInsets 偏移量
-		'/EdgeInsetsAll': (BuildContext context) => EdgeInsetsAll(title:'四边补白'),
-		'/EdgeInsetsOnly': (BuildContext context) => EdgeInsetsOnly(title:'单边补白'),
-		'/EdgeInsetsSymmetric': (BuildContext context) => EdgeInsetsSymmetric(title:'水平垂直补白'),
-		'/EdgeInsetsFromLTRB': (BuildContext context) => EdgeInsetsFromLTRB(title:'四边补白'),
-		'/EdgeInsetsLerp': (BuildContext context) => EdgeInsetsLerp(title:'四边补白'),
-		'/EdgeInsetsFromWindowPadding': (BuildContext context) => EdgeInsetsFromWindowPadding(title:'根据机型屏幕尺寸定义'),
+		'/EdgeInsetsAll': (BuildContext context) => EdgeInsetsAll(title:'EdgeInsets.all()'),
+		'/EdgeInsetsOnly': (BuildContext context) => EdgeInsetsOnly(title:'EdgeInsets.only()'),
+		'/EdgeInsetsSymmetric': (BuildContext context) => EdgeInsetsSymmetric(title:'EdgeInsets.symmetric()'),
+		'/EdgeInsetsFromLTRB': (BuildContext context) => EdgeInsetsFromLTRB(title:'EdgeInsets.fromLTRB()'),
+		'/EdgeInsetsFromWindowPadding': (BuildContext context) => EdgeInsetsFromWindowPadding(title:'EdgeInsets.fromWindowPadding()'),
+		'/EdgeInsetsLerp': (BuildContext context) => EdgeInsetsLerp(title:'EdgeInsets.lerp()'),
 		// ======================================================================================================== Alignment 对齐方式
-		'/AlignmentPosition': (BuildContext context) => AlignmentPosition(title:'位置对齐'),
-		'/AlignmentXY': (BuildContext context) => AlignmentXY(title:'自定义对齐'),
-		'/AlignmentFractionalOffset': (BuildContext context) => AlignmentFractionalOffset(title:'按比例对齐'),
-		'/AlignmentLerp': (BuildContext context) => AlignmentLerp(title:'对齐'),
+		'/AlignmentPosition': (BuildContext context) => AlignmentPosition(title:'Alignment.x'),
+		'/AlignmentXY': (BuildContext context) => AlignmentXY(title:'Alignment(x,y)'),
+		'/AlignmentFractionalOffset': (BuildContext context) => AlignmentFractionalOffset(title:'AlignmentFractionalOffset(x,y)'),
+		'/AlignmentLerp': (BuildContext context) => AlignmentLerp(title:'Alignment.lerp()'),
+		// ======================================================================================================== Border 边样式
+		'/BorderAll': (BuildContext context) => BorderAll(title:'Border.all()'),
+		'/BorderOne': (BuildContext context) => BorderOne(title:'Border()'),
+		// ======================================================================================================== BorderSide 边样式
+		'/BorderSidePage': (BuildContext context) => BorderSidePage(title:'BorderSide()'),
+		'/BorderSideMerge': (BuildContext context) => BorderSideMerge(title:'BorderSide.merge()'),
+		// ======================================================================================================== BorderRadius 圆角
+		'/BorderRadiusAll': (BuildContext context) => BorderRadiusAll(title:'BorderRadius.all()'),
+		'/BorderRadiusCircular': (BuildContext context) => BorderRadiusCircular(title:'BorderRadius.circular()'),
+		'/BorderRadiusHorizontal': (BuildContext context) => BorderRadiusHorizontal(title:'BorderRadius.horizontal()'),
+		'/BorderRadiusVertical': (BuildContext context) => BorderRadiusVertical(title:'BorderRadius.vertical()'),
+		'/BorderRadiusOnly': (BuildContext context) => BorderRadiusOnly(title:'BorderRadius.only()'),
+
 	};
 }

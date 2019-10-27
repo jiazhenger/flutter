@@ -11,10 +11,10 @@ import 'package:flutter_web_study.app/pages/flutter/main/theme/get-theme.dart';
 class MainRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
 		// ======================================================================================================== 路由
-		'/RouterPushNamed': (BuildContext context) => RouterPushNamed(title:'跳转可返回'),
-		'/RouterPushReplacementNamed': (BuildContext context) => RouterPushReplacementNamed(title:'跳转不可返回'),
-		'/RouterPush': (BuildContext context) => RouterPush(title:'跳转并传参'),
-		'/RouterPop': (BuildContext context) => RouterPop(title:'返回跳转'),
+		'/RouterPushNamed': (BuildContext context) => RouterPushNamed(title:'pushNamed()'),
+		'/RouterPushReplacementNamed': (BuildContext context) => RouterPushReplacementNamed(title:'pushReplacementNamed()'),
+		'/RouterPush': (BuildContext context) => RouterPush(title:'push()'),
+		'/RouterPop': (BuildContext context) => RouterPop(title:'pop()'),
 		'/RouterParam': (BuildContext context) => RouterParam(title:'接收参数'),
 		// ======================================================================================================== 获取主题 Theme.of(context).x
 		'/get-theme': (BuildContext context) => GetTheme(title:'获取主题'),

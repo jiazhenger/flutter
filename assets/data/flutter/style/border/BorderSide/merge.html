@@ -1,0 +1,11 @@
+<em># 判断两个 BorderSide 是否可以使用 BorderSide.merge() 合并</em>
+<i>bool</i> <q>BorderSide</q>.<b>canMerge</b>(BorderSide a, BorderSide b, double t)
+final bool v = BorderSide.canMerge(
+    <em>BorderSide(width: 2.0, color: Colors.red, style: BorderStyle.solid)</em>,
+    <em>BorderSide(width: 3.0, color: Colors.blue, style: BorderStyle.solid)</em>
+);
+<em># 合并边</em>
+var border = v ? <q>BorderSide</q>.<b>merge</b>(
+		<em>BorderSide(<u>width:2.0</u>, color:Colors.red, style:BorderStyle.solid)</em>, 		<em>// color 与 style 必须一致，否则异常</em>
+		<em>BorderSide(<u>width:3.0</u>, color:Colors.red, style:BorderStyle.solid)</em>,
+) : <q>BorderSide</q>.none

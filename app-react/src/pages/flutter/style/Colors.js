@@ -4,6 +4,7 @@ import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
 	title:'颜色样式',
+	keyword:'Colors.x',
 	data:[
 		{ keyword:'Colors.red', pro:'内置颜色', code:[ {path:'flutter/style/Colors/Colors'} ], url:'Colors' },
 		{ keyword:'Color(0xffffff)', pro:'十六进制颜色', code:[ {path:'flutter/style/Colors/color16'} ], url:'Color16' },

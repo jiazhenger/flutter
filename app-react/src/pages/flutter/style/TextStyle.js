@@ -4,6 +4,7 @@ import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
 	title:'文本样式',
+	keyword:'TextStyle( )',
 	data:[
 		{ deviceTitle:'颜色设置', keyword:'color', type:'Color', pro:'文本颜色', code:[ {path:'flutter/style/TextStyle/color/color'} ], link:[{title:'Color',url:'/flutter/style/Colors'}] },
 		{ keyword:'backgroundColor', pro:'背景颜色', type:'Color', code:[ {path:'flutter/style/TextStyle/color/backgroundColor'} ], link:[{title:'Color',url:'/flutter/style/Colors'}] },
@@ -44,7 +45,7 @@ const data = {
 		{ keyword:'decorationThickness', type:'double', pro:'装饰器厚度', code:[ {path:'flutter/style/TextStyle/decoration/decorationThickness'} ] },
 		
 		{ deviceTitle:'其它', type:'TextBaseline', keyword:'textBaseline', pro:'文本绘制基线', code:[ {path:'flutter/style/TextStyle/textBaseline'} ] },
-		{ keyword:'shadows', type:'List<Shadow>', pro:'阴影', code:[ {path:'flutter/style/TextStyle/shadows'} ], link:[{ title:'Shadow( )',url:'/flutter/style-common/Shadow'}] },
+		{ keyword:'shadows', type:'List<Shadow>', pro:'阴影', code:[ {path:'flutter/style/TextStyle/shadows'} ], link:[{ title:'Shadow( )',url:'/flutter/style/Shadow'}] },
 		{ keyword:'locale', type:'Locale', pro:'语言', code:[ {path:'flutter/style/TextStyle/locale'} ] },
 		{ keyword:'inherit', type:'bool', pro:'继承', code:[ {path:'flutter/style/TextStyle/inherit'} ] },
 		{ keyword:'debugLabel', type:'String', pro:'文本样式的可读描述', code:[ {path:'flutter/style/TextStyle/debugLabel'} ] },

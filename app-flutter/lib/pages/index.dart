@@ -24,7 +24,7 @@ class _PageState extends State<IndexPage> {
                 padding: EdgeInsets.all(10.0),
                 children: <Widget>[
                     RaisedButton(child: Text('Button'),onPressed: (){
-                        Navigator.pushNamed(context,'/AlignmentLerp');
+                        Navigator.pushNamed(context,'/BorderRadiusOnly');
                     })
                 ]
             )

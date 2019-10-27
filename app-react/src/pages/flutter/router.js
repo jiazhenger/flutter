@@ -33,6 +33,20 @@ class AppRouter extends React.Component{
 						<Route path={`${match.url}/TextStyle`} 			component={ Import('flutter/style/TextStyle') } exact />
 						<Route path={`${match.url}/EdgeInsets`} 		component={ Import('flutter/style/EdgeInsets') } exact />
 						<Route path={`${match.url}/Alignment`} 			component={ Import('flutter/style/Alignment') } exact />
+						<Route path={`${match.url}/border`} render={ ({ match }) => (
+							<Switch>
+								<Route path={`${match.url}/BorderSide`} 	component={ Import('flutter/style/border/BorderSide') } exact />
+								<Route path={`${match.url}/Border`} 		component={ Import('flutter/style/border/Border') } exact />
+							</Switch>
+						)} />
+						<Route path={`${match.url}/borderRadius`} render={ ({ match }) => (
+							<Switch>
+								<Route path={`${match.url}/Radius`} 		component={ Import('flutter/style/borderRadius/Radius') } exact />
+								<Route path={`${match.url}/BorderRadius`} 		component={ Import('flutter/style/borderRadius/BorderRadius') } exact />
+							</Switch>
+						)} />
+						
+						<Route path={`${match.url}/BorderSide`} 		component={ Import('flutter/style/BoxShadow') } exact />
 					</Switch>
 				)}/>
 				{/* http */}

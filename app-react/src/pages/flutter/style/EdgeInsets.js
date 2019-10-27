@@ -4,6 +4,7 @@ import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
 	title:'四边偏移量',
+	keyword:'EdgeInsets.x',
 	data:[
 		{ keyword:'EdgeInsets.zero', type:'EdgeInsets', pro:'无', code:[ {path:'flutter/style/EdgeInsets/zero'} ] },
 		{ keyword:'EdgeInsets.all(double value)', type:'EdgeInsets', pro:'四边', code:[ {path:'flutter/style/EdgeInsets/all'} ],url:'EdgeInsetsAll' },

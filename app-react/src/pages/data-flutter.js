@@ -20,9 +20,21 @@
 			{ title: '文本样式', path:'/flutter/style/TextStyle' },
 			{ title: '四边偏移量', path:'/flutter/style/EdgeInsets' },
 			{ title: '对齐方式', path:'/flutter/style/Alignment' },
-			{ title: '边框样式' },
-			{ title: '圆角' },
-			{ title: '阴影' },
+			{ 
+				title: '边框',
+				children:[
+					{ title: '单边样式', path:'/flutter/style/border/BorderSide' },
+					{ title: '四边样式', path:'/flutter/style/border/Border' },
+				]
+			},
+			{ 
+				title: '圆角',
+				children:[
+					{ title: '圆角值', path:'/flutter/style/borderRadius/Radius' },
+					{ title: '圆角', path:'/flutter/style/borderRadius/BorderRadius' },
+				]
+			},
+			{ title: '阴影', path:'/flutter/style/BoxShadow'  },
 			{ 
 				title: '渐变',
 				children:[
