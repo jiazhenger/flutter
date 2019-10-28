@@ -8,7 +8,7 @@ import '<u>./router-param.dart</u>';	 	<em>// => RouterParam( )</em>
 });
 <q>Navigator.of(context).push</q>(
 	<q>MaterialPageRoute(builder: (BuildContext context) =></q> <u>RouterParam</u>( <em>title:'一个参数', list:[1,2], map:{'a':1,'b':2}</em> ))
-)<q>then</q>((<i>Object</i> <u>value</u>){ 
+).<q>then</q>((<i>Object</i> <u>value</u>){ 
 
 });
 
@@ -16,12 +16,12 @@ import '<u>./router-param.dart</u>';	 	<em>// => RouterParam( )</em>
 <b>Navigator.push</b>(
 	<i>BuildContext</i> <u>context</u>,
 	<i>Route&lt;T&gt;</i> route 				<em>// MaterialPageRoute(builder: (BuildContext context) => RouterParam( ))</em>
-)<b>then</b>((<i>Object</i> <u>value</u>){ 				<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+).<b>then</b>((<i>Object</i> <u>value</u>){ 				<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
 	<em>setState(( ) { myText = value; });</em>
 });
 <q>Navigator.push</q>(
 	<q>context</q>,
 	<q>MaterialPageRoute(builder: (BuildContext context) =></q> <u>RouterParam</u>( <em>title:'一个参数', list:[1,2], map:{'a':1,'b':2}</em> ))
-)<q>then</q>((<i>Object</i> <u>value</u>){ 
+).<q>then</q>((<i>Object</i> <u>value</u>){ 
 
 });
