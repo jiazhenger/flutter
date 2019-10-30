@@ -34,7 +34,7 @@ class _PageState extends State<FractionalOffsetFromOffsetAndSize> {
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[
-                    MyWidget(Offset.fromDirection(10,20),Size(10.0, 10.0)),
+                    MyWidget(Offset(0.0, 0.0),Size(20.0, 20.0)),
                 ],
             )
         );

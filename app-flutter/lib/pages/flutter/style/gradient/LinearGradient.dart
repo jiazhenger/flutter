@@ -21,7 +21,6 @@ class _PageState extends State<LinearGradientPage> {
                 colors: [Colors.red,Colors.yellow,Colors.blue],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                stops: [0.0,0.0,0.0],
                 tileMode:TileMode.clamp
             )
         ),

@@ -1,0 +1,19 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 定义公共成员方法</em>
+	myFn( ){ }
+	<i>void</i> myFn( ){ }
+	<i>int</i> myFn( ){ <b>return</b> 10; }
+	<em># 内部使用</em>
+	go( ){
+		<b>this.myFn()</b>;		<em>// 公共方法使用用公共方法</em>
+	}
+	<i>static</i> go(){
+		<em>// 私有方法不能使用公共方法</em>
+		<em>// 私有方法没有指向 <i>MyClass</i> 的 <i>this</i></em>
+	}
+}
+<em># 外部使用</em>
+<i>void</i> <b>main</b>( ){
+    <i>MyClass</i> my = <b>MyCalss( )</b>;
+    <b>my.myFn()</b>; 			<em>// 调用公共方法</em>
+}

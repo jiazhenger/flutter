@@ -1,0 +1,21 @@
+<em>/**</em>
+<em>一、概念：</em>
+<em> 1、Duration表示从一个时间点到另一个时间点的时间差，即：<strong>多少天</strong> ｜ <strong>多少小时</strong>｜<strong>多少分钟</strong>｜<strong>多少秒</strong>｜<strong>多少毫秒</strong>｜<strong>多少微秒</strong></em>
+<em> 2、如果是一个较晚的时间点和一个较早的时间点，Duration可能是负数</em>
+<em>*/</em>
+<em># 一起使用</em>
+<i>Duration</i> duration = <b>Duration</b>({
+	<i>int</i> <b>days</b>: 1,				<em>// 天数</em>
+	<i>int</i> <b>hours</b>: 1,				<em>// 小时数</em>
+	<i>int</i> <b>minutes</b>: 1,			<em>// 分钟数</em> 
+	<i>int</i> <b>seconds</b>: 1,			<em>// 秒数</em>						 
+	<i>int</i> <b>milliseconds</b>: 1,			<em>// 毫秒数</em>
+	<i>int</i> <b>microseconds</b>: 1,		<em>// 微秒数</em>
+})											<em>// => 25:01:01.001001</em>
+<em># 单独使用</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>days</b>: 1); 			<em>// => 24:00:00.000000</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>hours</b>: 1); 			<em>// => 1:00:00.000000</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>minutes</b>: 1); 			<em>// => 0:01:00.000000</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>seconds</b>: 1); 			<em>// => 0:00:01.000000</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>milliseconds</b>: 1); 		<em>// => 0:00:00.001000</em>
+<i>Duration</i> duration = <b>Duration</b>(<b>microseconds</b>: 1); 	<em>// => 0:00:00.000001</em>

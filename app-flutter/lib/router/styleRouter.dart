@@ -45,6 +45,10 @@ import 'package:flutter_web_study.app/pages/flutter/style/shape/CircleBorder.dar
 import 'package:flutter_web_study.app/pages/flutter/style/shape/RoundedRectangleBorder.dart';
 import 'package:flutter_web_study.app/pages/flutter/style/shape/StadiumBorder.dart';
 import 'package:flutter_web_study.app/pages/flutter/style/shape/UnderlineInputBorder.dart';
+// ======================================================================================================== 装饰器
+import 'package:flutter_web_study.app/pages/flutter/style/decoration/BoxDecoration.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/decoration/ShapeDecoration.dart';
+import 'package:flutter_web_study.app/pages/flutter/style/decoration/UnderlineTabIndicator.dart';
 // ======================================================================================================== 路由类
 class StyleRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -92,6 +96,10 @@ class StyleRouter{
 		'/CircleBorderPage': (BuildContext context) => CircleBorderPage(title:'CircleBorder()'),
 		'/RoundedRectangleBorderPage': (BuildContext context) => RoundedRectangleBorderPage(title:'RoundedRectangleBorder()'),
 		'/StadiumBorderPage': (BuildContext context) => StadiumBorderPage(title:'StadiumBorder()'),
-		'/UnderlineInputBorderPage': (BuildContext context) => UnderlineInputBorderPage(title:'UnderlineInputBorderPage()'),
+		'/UnderlineInputBorderPage': (BuildContext context) => UnderlineInputBorderPage(title:'UnderlineInputBorde()'),
+		// ======================================================================================================== 装饰器
+		'/BoxDecorationPage': (BuildContext context) => BoxDecorationPage(title:'BoxDecoration()'),
+		'/ShapeDecorationPage': (BuildContext context) => ShapeDecorationPage(title:'ShapeDecoration()'),
+		'/UnderlineTabIndicatorPage': (BuildContext context) => UnderlineTabIndicatorPage(title:'UnderlineTabIndicator()'),
 	};
 }

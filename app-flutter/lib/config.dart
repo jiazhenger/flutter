@@ -23,4 +23,7 @@ class Config {
 	// 判断平台
 	static bool isIos = defaultTargetPlatform == TargetPlatform.iOS;
 	static bool isAndroid = defaultTargetPlatform == TargetPlatform.android;
+	// 测试图片
+	static String imgUrl = 'https://jiazhenger.github.io/flutter/assets/images/test.png';
+	static String staticUrl = './images/test.png';
 }

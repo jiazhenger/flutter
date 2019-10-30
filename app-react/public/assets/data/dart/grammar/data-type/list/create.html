@@ -1,0 +1,83 @@
+<em># 定义列表 </em>
+<i>List</i> list = <b>[ ]</b>;
+<i>List</i> list = <b>[</b> 1,2,3 <b>]</b>;
+
+<em># 定义列表 </em>
+<i>factory</i> <b>List</b>(
+	[<i>int</i> length] 		<em>// 列表长度</em>
+)
+List list = <em>new</em> <q>List</q>( );			<em>// => [ ]</em>
+List list = <em>new</em> <q>List( )..length</q>		<em>// => [ ]</em>
+List list = <em>new</em> <q>List</q>(2); 			<em>// => [ null, null ]</em>
+List list = <em>new</em> <q>List( )..length = 2</q>	<em>// => [ null, null ]</em>
+
+<em># 创建一个包含所有元素的列表</em>
+<i>factory</i> <b>List.from</b>(
+	<i>Iterable</i> elements 			<em>// List、Set</em>
+	{<i>bool</i> growable = true} 		<em>// 默认可变长度 == (growable:true)</em>
+)
+List v = <q>List.from</q>([ ]); 			<em>// => [ ]</em>
+List v = <q>List.from</q>({ }); 			<em>// => { }</em>
+
+<em># 从元素创建一个列表</em>
+<i>factory</i> <b>List.of</b>(
+	<i>Iterable&lt;E&gt;</i> elements, 		<em>// List、Set</em>
+	{<i>bool</i> growable = true} 		<em>// 默认可变长度 == (growable:true)</em>
+)
+List v = <q>List.of</q>( [ 0,1,2 ] );  			<em>// => [0,1,2]</em>
+List v = <q>List.of</q>( { 0,1,2 } ); 			<em>// => [0,1,2]</em>
+
+<em># 创建一个包含所有元素的不可修改列表</em>
+<i>factory</i> <b>List.unmodifiable</b>(
+	<i>Iterable</i> elements 		<em>// List、Set</em>
+)
+List v = <q>List.unmodifiable</q>([ ]); 		<em>// => [ ]</em>
+List v = <q>List.unmodifiable</q>({ }); 		<em>// => [ ]</em>
+
+<em># 将 source 转为 List</em>
+<i>List&lt;T&gt;</i> <b>List.castFrom</b><i>&lt;S, T&gt;</i>(
+	<i>List&lt;S&gt;</i> source, 		<em>// List</em>
+)
+List list = <q>List.castFrom</q>([0,1,2]); 		<em>// => [0,1,2]</em>
+
+<em># 将一个 source 列表的范围复制到另一个 target 列表中</em>
+<i>void</i> <b>List.copyRange</b><i>&lt;T&gt;</i>(
+	<i>List&lt;T&gt;</i> target, 		<em>// 目标 List </em>
+	<i>int</i> at, 				<em>// 开始下标</em>
+	<i>List&lt;T&gt;</i> source,		<em>// 资源 List </em>
+	[
+		<i>int</i> start, 			<em>// 开始下标 </em>
+		<i>int</i> end 			<em>// 结束下标 </em>
+	]
+)
+List list = ['a','b','c']
+<q>List.copyRange</q>(list, 1, [1,2]);
+print(list);					<em>// [a, 1, 2]</em>
+
+<em># 将一个 source 列表写入 target 列表中</em>
+<i>void</i> <b>List.writeIterable</b><i>&lt;T&gt;</i>(
+	<i>List&lt;T&gt;</i> target, 		<em>// 目标 List </em>
+	<i>int</i> at, 				<em>// 开始下标</em>
+	<i>List&lt;T&gt;</i> source,		<em>// 资源 List </em>
+)
+List list = ['a','b','c']
+<q>List.writeIterable</q>(list, 1, [1,2]);
+print(list);					<em>// [a, 1, 2]</em>
+
+<em># 为所有元素统一赋值 </em>
+<i>factory</i> <b>List.filled</b>(
+	<i>int</i> length, 				<em>// 列表长度</em>
+	<i>E</i> fill, 					<em>// 任意类型值</em>
+	{<i>bool</i> growable = false} 		<em>// 默认固定长度 (growable:true)</em>
+)
+List list = <q>List&lt;int&gt;.filled</q>(5, 20);	 				<em>// length=5,fill=20 => [20,20,20,20,20]</em>
+
+<em># 用生成器给所有元素赋初始值。</em>
+<i>factory</i> <b>List.generate</b>(
+	<i>int</i> length, 				<em>// 列表长度</em>
+	<i>E</i> <u>generator(int index)</u>, 		<em>// 任意类型值</em>
+	{<i>bool</i> growable = false} 		<em>// 默认固定长度  == (growable:true)</em>
+)
+List&lt;int&gt; list = List&lt;int&gt;.<q>generate</q>(4, (int index) {
+	<q>return</q> index * index;  		<em>// 返回列表 [0,1,4,9]</em>
+});

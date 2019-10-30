@@ -1,0 +1,39 @@
+<em># 查找字符串索引值。找到返回 index 的位置；反之，返回 -1</em>
+<i>int</i> <b>indexOf</b>(
+	<i>Pattern</i> pattern,		<em>// 匹配字符串，或正则表达式</em>	
+	[<i>int</i> start] 			<em>// 开始位置</em>
+)
+int v = n.<q>indexOf</q>('1'); 					<em>// => 0</em>
+int v = n.<q>indexOf</q>('2',2); 					<em>// 从第2个位置开始查找字符串</em>
+int v = n.<q>indexOf</q>(RegExp(r'[A-Z][a-z]')); 	<em>// 正则表达式</em>
+bool v = n.<q>indexOf</q>('1') == -1; 			<em>// 未找到</em>
+bool v = n.<q>indexOf</q>('1') != -1; 				<em>// 找到</em>
+
+<em># 返回字符串中最后一个匹配 pattern 的位置。找到返回 index 的位置；反之，返回 -1</em>
+<i>int</i> <b>lastIndexOf</b>(
+	<i>Pattern</i> pattern,		<em>// 匹配字符串，或正则表达式</em>	
+	[<i>int</i> start] 			<em>// 开始位置</em>
+)
+int v = n.<q>lastIndexOf</q>('1');
+
+<em># 如果字符串以匹配 pattern 开始，则返回true </em>
+<i>bool</i> <b>startsWith</b>(
+	<i>Pattern</i> pattern,  		<em>// 匹配字符串，或正则表达式</em>	
+	[<i>int</i> index = 0] 		<em>// 索引值，默认为 0</em>
+)
+bool v = n.<q>startsWith</q>('1'); 					<em>// 以 1 开始 => true</em>
+bool v = n.<q>startsWith</q>('2',1); 					<em>// 在第1个，以2开始 => true</em>
+bool v = n.<q>startsWith</q>(RegExp(r'[A-Z][a-z]')); 		<em>// 正则表达式</em>
+
+<em># 如果字符串以匹配 pattern 结束，则返回true</em>
+<i>bool</i> <b>endsWith</b>(
+	<i>String</i> other 		<em>// 匹配字符串</em>
+)
+bool v = n.<q>endsWith</q>('6'); 					<em>// 以 6 结束 => true</em>
+
+<em># 如果字符串包含 pattern，则返回true</em>
+<i>bool</i> <b>contains</b>(
+	<i>Pattern</i> pattern,  		<em>// 匹配字符串，或正则表达式</em>
+	[<i>int</i> startIndex = 0]		<em>// 开始位置</em>
+)
+bool v = n.<q>contains</q>('6'); 					<em>// => true</em>
