@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 // ===================================================================== 异步加载
 import { Import } from '@common/bundle'
 // ===================================================================== 二级路由
-class StyleRouter extends React.Component{
+export default class StyleRouter extends React.Component{
 	render(){
 		const { match } = this.props
 		return (
@@ -80,5 +80,3 @@ class StyleRouter extends React.Component{
 		)
 	}
 }
-
-export default StyleRouter

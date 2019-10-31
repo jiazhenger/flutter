@@ -15,7 +15,7 @@ const data = {
 					keyword:'image', type:'ImageProvider<dynamic>', pro:'图片', 
 					code:[ {path:'flutter/image/image'} ],
 					link:[
-						{ title:'AssetImage', url:'/flutter/image/gradient/AssetImage' },
+						{ title:'AssetImage', url:'/flutter/image/AssetImage' },
 						{ title:'NetworkImage', url:'/flutter/image/NetworkImage' },
 					]
 				},
@@ -44,7 +44,7 @@ const data = {
 				},
 				{ 
 					keyword:'centerSlice', type:'Rect', pro:'拉伸',
-					code:[ {path:'flutter/image/style/DecorationImage/centerSlice'} ],
+					code:[ {path:'flutter/image/centerSlice'} ],
 					link:[
 						{ title:'Rect', url:'/flutter/style/Rect' },
 					]
@@ -58,7 +58,6 @@ const data = {
 					]
 				},
 				{ keyword:'matchTextDirection', type:'bool', pro:'是否在文本方向上绘制图像' },
-				
 			]
 		}
 	]

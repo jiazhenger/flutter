@@ -87,20 +87,34 @@
 		title: '图片',
 		children: [
 			{ 
-				title: 'widget',
+				title: 'Image widget',
 				children: [
-					{ title:'Image', path:'/flutter/image/Image' },
+					{ title:'Image( )', path:'/flutter/image/Image' },
+					{ title:'Image.asset( )', path:'/flutter/image/ImageAsset' },
+					{ title:'Image.network( )', path:'/flutter/image/ImageNetwork' },
+					{ title:'Image.file( )', path:'/flutter/image/ImageFile' },
+					{ title:'Image.memory', path:'/flutter/image/ImageMemory' },
 				]
 			},
-			
+			{ 
+				title: 'FadeInImage widget',
+				children: [
+					{ title:'FadeInImage( )', path:'/flutter/image/FadeInImage' },
+					{ title:'FadeInImage.assetNetwork( )', path:'/flutter/image/FadeInImageAssetNetwork' },
+					{ title:'FadeInImage.memoryNetwork( )', path:'/flutter/image/FadeInImageMemoryNetwork' },
+				]
+			},
 			{ 
 				title: 'style',
 				children: [
 					{ title: 'DecorationImage( )', path:'/flutter/image/DecorationImage' },
+					{ title: 'AssetImage( )', path:'/flutter/image/AssetImage' },
+					{ title: 'NetworkImage( )', path:'/flutter/image/NetworkImage' },
 					{ title:'BoxFit', path:'/flutter/image/BoxFit' },
 					{ title:'ImageRepeat', path:'/flutter/image/ImageRepeat' },
 					{ title:'BlendMode', path:'/flutter/image/BlendMode' },
 					{ title:'ColorFilter', path:'/flutter/image/ColorFilter' },
+					{ title:'FilterQuality', path:'/flutter/image/FilterQuality' },
 				]
 			},
 		]
@@ -172,6 +186,23 @@
 			{ title: 'Form' },
 			{ title: 'TextFormField' },
 			{ title: 'TextField' },
+		]
+	},
+	{
+		title: '时间',
+		children:[
+			{ title: 'Duration( )',  path:'/flutter/time/Duration' },
+		]
+	},
+	{
+		title: '动画',
+		children:[
+			{ 
+				title: 'x',
+				children: [
+					{ title: 'Curves.x', path:'/flutter/animation/Curves' },
+				]
+			},
 		]
 	},
 	{ 

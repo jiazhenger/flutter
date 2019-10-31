@@ -11,24 +11,18 @@ class ImagePage extends StatefulWidget { // 有状态的控件，控件的状态
 
 class _PageState extends State<ImagePage> {
     // 组件
-    Widget MyWidget (BoxFit fit) => Container(
+    Widget MyWidget () => Container(
         margin: EdgeInsets.only(bottom: 10.0),
-        child: Column(
-            children: <Widget>[
-                Text(fit.toString()),
-                Container(
-                    color: Colors.yellow,
-                    height: 150.0,
-                    width:150.0,
-                    margin: EdgeInsets.only(top:10.0),
-                    child: Image(
-                        width: double.infinity,
-                        image: AssetImage(Config.staticUrl),
-                        fit: fit
-                    ),
-                )
-            ],
-        ),
+        child: Container(
+            color: Colors.yellow,
+            height: 150.0,
+            margin: EdgeInsets.only(top:10.0),
+            child: Image(
+                width: double.infinity,
+                height: 50.0,
+                image: AssetImage(Config.staticUrl),
+            ),
+        )
     );
     // page
     @override
@@ -41,13 +35,7 @@ class _PageState extends State<ImagePage> {
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[
-                    MyWidget(BoxFit.none),
-                    MyWidget(BoxFit.scaleDown),
-                    MyWidget(BoxFit.contain),
-                    MyWidget(BoxFit.cover),
-                    MyWidget(BoxFit.fill),
-                    MyWidget(BoxFit.fitWidth),
-                    MyWidget(BoxFit.fitHeight ),
+                    MyWidget(),
                 ],
             )
         );

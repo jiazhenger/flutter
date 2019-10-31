@@ -11,11 +11,10 @@ class IndexPage extends StatefulWidget { // 有状态的控件，控件的状态
     @override
     _PageState createState() => _PageState(); // === createState()  => _PageState();
 }
-var x = double.negativeInfinity;
+
 class _PageState extends State<IndexPage> {
     @override
     Widget build(BuildContext context) {
-        print(x);
         return Scaffold(
             appBar: AppBar(
                 title:Config.appBar(widget.title),
@@ -25,7 +24,7 @@ class _PageState extends State<IndexPage> {
                 padding: EdgeInsets.all(10.0),
                 children: <Widget>[
                     RaisedButton(child: Text('Button'),onPressed: (){
-                        Navigator.pushNamed(context,'/ImagePage');
+                        Navigator.pushNamed(context,'/FadeInImagePage');
                     })
                 ]
             )

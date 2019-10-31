@@ -7,6 +7,8 @@ import { Import } from '@common/bundle'
 // ===================================================================== 异步加载
 import StyleRouter from './routers/styleRouter'
 import ImageRouter from './routers/imageRouter'
+import TimeRouter from './routers/timeRouter'
+import AnimationRouter from './routers/animationRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -33,6 +35,10 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/style` } render={ ({ match }) => <StyleRouter match={ match } /> } />
 				{/* 图片 */}
 				<Route path={ `${url}/image` } render={ ({ match }) => <ImageRouter match={ match } /> } />
+				{/* 时间 */}
+				<Route path={ `${url}/time` } render={ ({ match }) => <TimeRouter match={ match } /> } />
+				{/* 动画 */}
+				<Route path={ `${url}/animation` } render={ ({ match }) => <AnimationRouter match={ match } /> } />
 				
 				{/* http */}
 				<Route path={ `${url}/http` } render={ ({ match }) => (
