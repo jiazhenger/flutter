@@ -1,0 +1,92 @@
+<b>import 'dart:io'</b>;
+<b>import 'dart:convert'</b>;
+<b>import './config'</b>;
+<b>class Http</b>{
+	<b>httpRequest</b>(String url, String type, Map<String,dynamic> param) async{
+		String responseBody;
+		String api = Config.api + url
+		<em>// 创建 client</em>
+		HttpClient httpClient = <b>new HttpClient()</b>;
+		<em>// httpClient 配置</em>
+		<em>// 对应请求头中的keep-alive字段值，为了避免频繁建立连接，httpClient在请求结束后会保持连接一段时间，超过这个阈值后才会关闭连接</em>
+		httpClient.<b>idleTimeout</b> =  Duration(seconds: 10);
+		<em>// 和服务器建立连接的超时，如果超过这个值则会抛出SocketException异常</em>
+		httpClient.<b>connectionTimeout</b> =  Duration(seconds: 10);
+		<em>// 同一个host，同时允许建立连接的最大数量</em>
+		httpClient.<b>maxConnectionsPerHost</b> = 1;
+		<em>// 对应请求头中的Content-Encoding，如果设置为true，则请求头中Content-Encoding的值为当前HttpClient支持的压缩算法列表，目前只有"gzip"</em>
+		httpClient.<b>autoUncompress</b> = true;
+		<em>// 对应请求头中的User-Agent字段</em>
+		httpClient.<b>userAgent</b> = '';
+		<em>// 构建请求 uri  </em>
+		Uri uri = type === 'get' ? <b>Uri</b>(
+			<b>scheme</b>:Config.scheme,
+			<b>host</b>:Config.host,
+			<b>path</b>:url,
+			<b>query</b>:,
+			<b>userInfo</b>:'',
+			<b>port</b>:8081,
+			<b>fragment</b>:'#a',
+			<b>queryParameters</b>:param  <em>// 添加可选query参数  </em>
+		) : <b>Uri.parse</b>(api);
+		<em>// 打开Http连接</em>
+		HttpClientRequest request;
+		switch(type){
+			case 'get':
+				request = await httpClient.<b>getUrl</b>(uri);
+				break;
+			case 'post':
+				request = await httpClient.<b>postUrl</b>(uri);
+				<b>request.add(utf8.encode(json.encode(param)))</b>;	<em>// body 传参数</em>
+				<b>request.addStream(_inputStream)</b>;	<em>// 直接添加输入流</em>	
+				break;
+			case 'put':
+				request = await httpClient.<b>putUrl</b>(uri);
+				break;
+			case 'delete':
+				request = await httpClient.<b>deleteUrl</b>(uri);
+				break;
+		};
+		<em>// 设置请求头</em>
+		request.<b>headers.set</b>('content-type', 'application/json');
+		request.<b>headers.set</b>('token','token');
+		request.<b>headers.set</b>('useVersion', '3.1.0');
+		request.<b>headers.set</b>('device', 'ios');
+		<em>// 等待连接服务器（会将请求信息发送给服务器），请求成功后会返回 HttpClientResponse</em>
+		HttpClientResponse response = <b>await request.close()</b>;
+		<em>// 关闭client，通过该client发起的所有请求都会中止</em>
+		<b>httpClient.close()</b>;
+		<em>// 读取响应内容</em>
+		if (response.statusCode == 200) {
+			<em>// 读取响应内容</em>
+			responseBody = <b>await response.transform(utf8.decoder).join()</b>; <em>// 通过读取响应流来获取服务器返回的数据，在读取时我们可以设置编码格式，这里是utf8</em>
+			<em>// 将字符串转换json对象</em>
+			responseBody = <b>json.decode(responseBody)</b>;
+			<em>// 将响应body转为字符串</em>
+			print(responseBody.toString())
+			return responseBody;
+		}else{
+			print('error');
+		}
+	}
+	static <b>get</b>(String url, String type, Map<String,dynamic> param){
+		return this.httpRequest(url, 'get' , param)
+	}
+	static <b>post</b>(String url, String type, Map<String,dynamic> param){
+		return this.httpRequest(url, 'post' , param)
+	}
+}
+
+
+
+http('http://t.weather.sojson.com/api/weather/city/101030100').then((data){
+	setState(() {
+		_data = json.encode(data);	<em>// 将数据转换为 json 字符串</em>
+	});
+});
+
+request =  await httpClient.<b>getUrl</b>(uri) = await httpClient.<b>get</b>('localhost', 8081, '/login');
+request =  await httpClient.<b>postUrl</b>(uri) = await httpClient.<b>post</b>('localhost', 8081, '/login');
+request =  await httpClient.<b>putUrl</b>(uri) = await httpClient.<b>put</b>('localhost', 8081, '/login');
+request =  await httpClient.<b>deleteUrl</b>(uri) = await httpClient.<b>delete</b>('localhost', 8081, '/login');
+request =  await httpClient.<b>openUrl</b>(()=>{},uri) = await httpClient.<b>open</b>(()=>{},'localhost', 8081, '/login');

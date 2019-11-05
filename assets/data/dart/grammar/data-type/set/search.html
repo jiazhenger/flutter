@@ -1,0 +1,38 @@
+<em># 集合中是否包含指定元素，包含返回 true，反之 false</em>
+<i>bool</i> <b>contains</b>(
+	<i>Object</i> element 	<em>// 任意类型数据</em>	
+)
+bool v = set.<q>contains</q>(3);
+
+<em># 集合中是否包含指定元素，包含返回 true，反之 false</em>
+<i>bool</i> <b>containsAll</b>(
+	<i>Iterable&lt;Object&gt;</i> other 	<em>// List、Set</em>	
+)
+bool v = set.<q>containsAll</q>( { 0,1,2 } );
+bool v = set.<q>containsAll</q>( [ 0,1,2 ] );
+
+<em># 返回列表中的第几个元素</em>
+<i>E</i> <b>elementAt</b>(
+	<i>int</i> index 	<em>// 索引值、下标值</em>	
+)
+var v = set.<q>elementAt</q>;(3)
+
+<em># 返回多余元素集合</em>
+<i>Set&lt;E&gt;</i> <b>difference</b>(
+	<i>Set&lt;Object&gt;</i> other 		<em>// Set </em>
+)
+Set set = {1,2,3};
+Set v = set.<q>difference</q>({1,2});		<em>// => {3}</em>
+
+<em># 返回交叉元素集合</em>
+<i>Set&lt;E&gt;</i> <b>intersection</b>(
+	<i>Set&lt;Object&gt;</i> other 		<em>// Set </em>
+)
+Set set = {1,2,3};
+Set v = set.<q>intersection</q>({1,2});		<em>// => {1,2}</em>
+
+<em># 如果集合中有一个对象等于 object，则返回它</em>
+<i>E</i> <b>lookup</b>(
+	<i>Object&lt;Object&gt;</i> object 		<em>// 任意值 </em>
+)
+Object v = set.<q>lookup</q>(1);		<em>// => 1</em>

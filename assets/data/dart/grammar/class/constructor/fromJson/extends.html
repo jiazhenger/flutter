@@ -1,0 +1,16 @@
+<em># 父类</em>
+<i>class</i> <b>ParentClass</b>{
+	ParentClass.<b>fromJson</b>(Map data) {
+		print(data); 	<em>=> {'a':100}</em>
+	}
+}
+<i>class</i> MyClass <b>extends</b> ParentClass{
+	<i>MyClass</i>.<b>fromJson</b>(Map data) <s>:</s> <b>super.fromJson</b>(data){ <em>// <b>:</b> 调用父类中的构造函数</em>
+		print(data);	<em>=> {'a':100}</em>
+	}
+}
+<i>void</i> <b>main</b>( ){
+	<i>MyCalss</i> my = <i>MyCalss</i>.<b>fromJson</b>(<strong>{'a':100}</strong>);
+	<em>// 执行 ParentClass 构造函数  => {'a':100}</em>
+	<em>// 执行 MyClass 构造函数  => {'a':100}</em>
+}

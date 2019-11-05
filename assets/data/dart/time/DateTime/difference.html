@@ -1,0 +1,20 @@
+<em># 定义时间对象</em>
+<i>DateTime</i> A = <em>new</em> DateTime(2019, 10, 1);
+<i>DateTime</i> B = <em>new</em> DateTime(2019, 10, 10);
+<em># 获取时间差对象</em>
+<i>Duration</i> <s>D</s> = A.<b>difference</b>(B);			<em>// A 相比 B 相差对象 => -216:00:00.000000</em>
+<i>Duration</i> D2 = A.difference(B);
+<em># 获取具体时间数</em>
+<i>int</i> days = <s>D</s>.<b>inDays</b>;					<em>// 天数 => -9</em>
+<i>int</i> hours = <s>D</s>.<b>inHours</b>;					<em>// 小时数 => -216</em>
+<i>int</i> minutes = <s>D</s>.<b>inMinutes</b>;				<em>// 分钟数 => -12960</em>
+<i>int</i> seconds = <s>D</s>.<b>inSeconds</b>;				<em>// 秒数 => -777600</em>
+<i>int</i> milliseconds = <s>D</s>.<b>inMilliseconds</b>;		<em>// 毫秒数 => -777600000</em>
+<i>int</i> microseconds = <s>D</s>.<b>inMicroseconds</b>;	<em>// 微秒数 => -777600000000</em>
+<em># 其它属性</em>
+<i>String</i> str = <s>D</s>.<b>toString( )</b>;				<em>// 转为字符串 => -216:00:00.000000</em>
+<i>Duration</i> abs = <s>D</s>.<b>abs( )</b>;				<em>// 转为正数 => 216:00:00.000000</em>
+<i>bool</i> negative = <s>D</s>.<b>isNegative</b>;			<em>// 是否是负数 => true</em>
+<i>int</i> compare = <s>D</s>.<b>compareTo</b>(D2);			<em>// 判断两个 Duration 数据是否相等 => 相等：0，不相等：-1</em>
+<i>Type</i> type = <s>D</s>.<b>runtimeType</b>;				<em>// 数据类型 => Duration</em>
+<i>int</i> hash = <s>D</s>.<b>hashCode</b>;					<em>// hashCode => 150500584</em>

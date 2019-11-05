@@ -1,0 +1,19 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 定义公共成员属性</em>
+	<b>var</b> a; 				<em>// 可在外部改变 => null</em>
+	<b>final</b> a = 0; 			<em>// 常量，一次都不可在外部改变，只读属性，必须初始化</em>
+	<b>dynamic</b> a; 			<em>// 数据类型声明，可在外部改变 => null</em>
+	<em># 在内部使用</em>
+	void fn(){
+		var b = <b>this.a</b>; 		<em>// 使用公共属性</em>
+	}
+	<i>static</i> go(){
+		<em>// 私有方法不能使用公共属性</em>
+		<em>// 私有方法没有指向 <i>MyClass</i> 的 <i>this</i></em>
+	}
+}
+<em># 在外部使用</em>
+<i>void</i> <b>main</b>( ){
+    <i>MyClass</i> my = <b>MyCalss( )</b>;
+    print(<i>my.a</i>); 	<em>// 使用公共属性</em>
+}
