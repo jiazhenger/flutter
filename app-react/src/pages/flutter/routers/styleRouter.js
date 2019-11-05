@@ -12,6 +12,7 @@ export default class StyleRouter extends React.Component{
 				<Switch>
 					<Route path={`${match.url}/Colors`} 			component={ Import('flutter/style/Colors') } exact />
 					<Route path={`${match.url}/TextStyle`} 			component={ Import('flutter/style/TextStyle') } exact />
+					<Route path={`${match.url}/StrutStyle`} 			component={ Import('flutter/style/StrutStyle') } exact />
 					{/* 偏移量 */}
 					<Route path={`${match.url}/offset`} render={ ({ match }) => (
 						<Switch>
@@ -76,6 +77,8 @@ export default class StyleRouter extends React.Component{
 					{/* 其它 */}
 					<Route path={`${match.url}/Rect`} 			component={ Import('flutter/style/Rect') } exact />
 					<Route path={`${match.url}/Size`} 			component={ Import('flutter/style/Size') } exact />
+					<Route path={`${match.url}/Clip`} 			component={ Import('flutter/style/Clip') } exact />
+					<Route path={`${match.url}/BoxConstraints`} 			component={ Import('flutter/style/BoxConstraints') } exact />
 				</Switch>
 		)
 	}

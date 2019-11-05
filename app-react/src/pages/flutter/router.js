@@ -7,6 +7,7 @@ import { Import } from '@common/bundle'
 // ===================================================================== 异步加载
 import StyleRouter from './routers/styleRouter'
 import ImageRouter from './routers/imageRouter'
+import CircleRouter from './routers/circleRouter'
 import TimeRouter from './routers/timeRouter'
 import AnimationRouter from './routers/animationRouter'
 // ===================================================================== 二级路由
@@ -33,8 +34,10 @@ class AppRouter extends React.Component{
 				)}/>
 				{/* 样式 */}
 				<Route path={ `${url}/style` } render={ ({ match }) => <StyleRouter match={ match } /> } />
-				{/* 图片 */}
+				{/* ================================================= widget 控件 start =================================================*/}
 				<Route path={ `${url}/image` } render={ ({ match }) => <ImageRouter match={ match } /> } />
+				<Route path={ `${url}/circle` } render={ ({ match }) => <CircleRouter match={ match } /> } />
+				{/* ================================================= widget 控件 end =================================================*/}
 				{/* 时间 */}
 				<Route path={ `${url}/time` } render={ ({ match }) => <TimeRouter match={ match } /> } />
 				{/* 动画 */}

@@ -18,6 +18,7 @@
 		children: [
 			{ title: '颜色', path:'/flutter/style/Colors' },
 			{ title: '文本', path:'/flutter/style/TextStyle' },
+			{ title: '支撑', path:'/flutter/style/StrutStyle' },
 			{ 
 				title: '偏移',
 				children:[
@@ -81,27 +82,29 @@
 			},
 			{ title: 'Rect', path:'/flutter/style/Rect' },
 			{ title: 'Size', path:'/flutter/style/Size' },
+			{ title: 'Clip', path:'/flutter/style/Clip' },
+			{ title: 'BoxConstraints', path:'/flutter/style/BoxConstraints' },
 		]
 	},
 	{ 
-		title: '图片',
+		title: '图片 Widget',
 		children: [
 			{ 
-				title: 'Image widget',
+				title: 'Image Widget',
 				children: [
-					{ title:'Image( )', path:'/flutter/image/Image' },
-					{ title:'Image.asset( )', path:'/flutter/image/ImageAsset' },
-					{ title:'Image.network( )', path:'/flutter/image/ImageNetwork' },
-					{ title:'Image.file( )', path:'/flutter/image/ImageFile' },
-					{ title:'Image.memory', path:'/flutter/image/ImageMemory' },
+					{ title: 'Image( )', path:'/flutter/image/Image' },
+					{ title: 'Image.asset( )', path:'/flutter/image/ImageAsset' },
+					{ title: 'Image.network( )', path:'/flutter/image/ImageNetwork' },
+					{ title: 'Image.file( )', path:'/flutter/image/ImageFile' },
+					{ title: 'Image.memory( )', path:'/flutter/image/ImageMemory' },
 				]
 			},
 			{ 
-				title: 'FadeInImage widget',
+				title: 'FadeInImage Widget',
 				children: [
-					{ title:'FadeInImage( )', path:'/flutter/image/FadeInImage' },
-					{ title:'FadeInImage.assetNetwork( )', path:'/flutter/image/FadeInImageAssetNetwork' },
-					{ title:'FadeInImage.memoryNetwork( )', path:'/flutter/image/FadeInImageMemoryNetwork' },
+					{ title: 'FadeInImage( )', path:'/flutter/image/FadeInImage' },
+					{ title: 'FadeInImage.assetNetwork( )', path:'/flutter/image/FadeInImageAssetNetwork' },
+					{ title: 'FadeInImage.memoryNetwork( )', path:'/flutter/image/FadeInImageMemoryNetwork' },
 				]
 			},
 			{ 
@@ -110,13 +113,21 @@
 					{ title: 'DecorationImage( )', path:'/flutter/image/DecorationImage' },
 					{ title: 'AssetImage( )', path:'/flutter/image/AssetImage' },
 					{ title: 'NetworkImage( )', path:'/flutter/image/NetworkImage' },
-					{ title:'BoxFit', path:'/flutter/image/BoxFit' },
-					{ title:'ImageRepeat', path:'/flutter/image/ImageRepeat' },
-					{ title:'BlendMode', path:'/flutter/image/BlendMode' },
-					{ title:'ColorFilter', path:'/flutter/image/ColorFilter' },
-					{ title:'FilterQuality', path:'/flutter/image/FilterQuality' },
+					{ title: 'BoxFit', path:'/flutter/image/BoxFit' },
+					{ title: 'ImageRepeat', path:'/flutter/image/ImageRepeat' },
+					{ title: 'BlendMode', path:'/flutter/image/BlendMode' },
+					{ title: 'ColorFilter', path:'/flutter/image/ColorFilter' },
+					{ title: 'FilterQuality', path:'/flutter/image/FilterQuality' },
 				]
 			},
+		]
+	},
+	{
+		title: '形状 Widget',
+		children:[
+			{ title: 'CircleAvatar( )', path:'/flutter/circle/CircleAvatar' },
+			{ title: 'ClipOval( )', path:'/flutter/circle/ClipOval' },
+			{ title: 'ClipRRect( )', path:'/flutter/circle/ClipRRect' },
 		]
 	},
 	{ 
@@ -163,7 +174,7 @@
 		]
 	},
 	{
-		title: '文本 widget',
+		title: '文本 Widget',
 		children:[
 			{ title: 'Text()' },
 			{ title: 'Text.rich()' },
@@ -173,7 +184,7 @@
 		]
 	},
 	{
-		title: '表格',
+		title: '表格 Widget',
 		children:[
 			{ title: 'Table' },
 			{ title: 'TableRow' },
@@ -181,7 +192,7 @@
 		]
 	},
 	{
-		title: '表单',
+		title: '表单 Widget',
 		children:[
 			{ title: 'Form' },
 			{ title: 'TextFormField' },

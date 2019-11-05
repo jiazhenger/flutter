@@ -52,7 +52,7 @@ export default class Index extends React.Component{
 				</header>
 				
 				<section className='fx ex'>
-					<aside className='h rel' style={{width:'200px'}} id='nav'>
+					<aside className='h rel' style={{width:'250px'}} id='nav'>
 						<UbContent>
 							{
 								children ? <Menu className='h' mode='vertical'>{ children }</Menu> : (

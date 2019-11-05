@@ -20,7 +20,7 @@ class _PageState extends State<FadeInImageAssetNetworkPage> {
             child:FadeInImage.assetNetwork(
                 height: 100.0,
                 placeholder:Config.staticUrl,
-                image:Config.imgUrl
+                image:Config.imgUrl,
             ),
         )
     );

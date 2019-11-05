@@ -3,7 +3,7 @@ import 'package:flutter_web/material.dart';
 import 'package:flutter_web_study.app/router/mainRouter.dart';
 import 'package:flutter_web_study.app/router/styleRouter.dart';
 import 'package:flutter_web_study.app/router/imageRouter.dart';
-
+import 'package:flutter_web_study.app/router/circleRouter.dart';
 import 'package:flutter_web_study.app/router/httpRouter.dart';
 // ======================================================================================================== 路由类
 class FlutterRouter{
@@ -11,6 +11,7 @@ class FlutterRouter{
 		...MainRouter().router,
 		...StyleRouter().router,
 		...ImageRouter().router,
+		...CircleRouter().router,
 		...HttpRouter().router
 	};
 }
