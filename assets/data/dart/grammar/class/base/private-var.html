@@ -1,0 +1,19 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 定义私有成员属性</em>
+	<b>static</b> <i>var</i> a; 				<em>// => null</em>
+	<b>static</b> <i>final</i> a = 0;
+	<b>static</b> <i>const</i> a = 0;
+	<b>static</b> <i>dynamic</i> a = 0;
+	<em># 在Dart中没有public private protected 修饰符，可以使用<b>_</b>来表示私有属性，dart 推荐使用</em>
+	<em>// 加  <b>_</b> 只是一种约定，实际上是公共属性</em>
+	<i>dynamic</i> <b>_</b>a = 0;					
+	<em># 仅类内部使用</em>
+	<i>var</i> x = <b>a</b>; 		<em>// 使用私有属性</em>
+	<i>void</i> fn(){
+		print(<b>a</b>); 		<em>// 使用私有属性</em>
+	}
+}
+<em># 外部使用</em>
+<i>void</i> <b>main</b>( ){
+    var a = <b>MyCalss</b>.a; 		<em>// 使用类的私有属性</em>
+}

@@ -1,0 +1,43 @@
+<em># 返回下限与上限内的值</em>
+<i>int</i> <b>clamp</b>(
+	<i>num</i> lowerLimit,  		<em>// 下限值</em>
+	<i>num</i> upperLimit 		<em>// 上限值</em>
+)
+int v = n.<q>clamp</q>(8, 20) 				<em>// 返回值：v &gt;=8&&v&lt;=20：v；v&lt;8：8；v&gt;20：20</em>
+<em># 返回该整数和指定数的的最大公约数</em>
+<i>int</i> <b>gcd</b>(
+	<i>int</i> other
+)
+int v = n.<q>gcd</q>(5) ;
+<em># 返回该整数的模乘的逆</em>
+<i>int</i> <b>modInverse</b>(
+	<i>int</i> modulus
+)
+<em># 返回该整数的指数的乘方模量</em>
+<i>int</i> <b>modPow</b>(
+	<i>int</i> exponent,
+	<i>int</i> modulus
+)
+<em># 返回指数字符串</em>
+<i>String</i> <b>toStringAsExponential</b>(
+	[<i>int</i> fractionDigits]
+)
+String v = n.<q>toStringAsExponential</q>( );			<em>// => 5e+0</em>
+String v = n.<q>toStringAsExponential</q>(1);		<em>// => 50e+0</em>
+String v = n.<q>toStringAsExponential</q>(2);		<em>// => 500e+0</em>
+<em># 返回双精度字符串</em>
+<i>String</i> <b>toStringAsPrecision</b>(
+	<i>int</i> precision
+)
+<em># 返回指定基数字符串</em>
+<i>String</i> <b>toRadixString</b>(
+	<i>int</i> radix
+)
+<em># 返回该整数中最不重要的[width]位</em>
+<i>String</i> <b>toUnsigned</b>(
+	<i>int</i> width
+)
+<em># 返回该整数中最不重要的[width]位</em>
+<i>String</i> <b>toSigned</b>(
+	<i>int</i> width
+)

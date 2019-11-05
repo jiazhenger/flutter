@@ -1,0 +1,18 @@
+<i>class</i> <b>MyClass</b>{
+	<i>num</i> x = 10;
+	<em># 声明属性</em>
+	<i>num</i> <b>get</b> <strong>age</strong>{
+		x + <u class='b' style='color:brown;'>5</u>;		<em>// x + 5</em>
+	}
+	<em># 当设置 age 属性时调用</em>
+	<b>set</b> age(<i>num</i> <s>value</s>){
+		x = <s>value</s> + 100;		<em>// 相当于：x = <s>20</s> + 100</em>
+	}
+}
+<i>void</i>  <b>main</b>(){
+	<i>MyClass</i> my = <b>MyClass( )</b>
+	print(my.<strong>age</strong>);		<em>// 触发 <b>get</b> => age = 10 + 5 = 15 </em>
+	my.<strong>age</strong> = <s>20</s>;		<em>// value = 20，触发 <b>set</b>：=> x = <s>20</s> + 100 = 120；</em> 
+	print(my.<strong>age</strong>);		<em>// 触发 <b>set</b>： age = x + <u class='b' style='color:brown;'>5</u> => 125</em>
+	print(my.<strong>x</strong>);		<em>// x = <s>20</s> + 100 => 120 </em>
+}

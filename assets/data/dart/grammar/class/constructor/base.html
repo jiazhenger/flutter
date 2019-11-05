@@ -1,0 +1,34 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 只能用数据类型定义属性，不能使用 var/final/const 定义</em>
+	<i>int</i> <s>a</s>;
+	<i>int</i> <s>b</s>;
+	<em># 无参数</em>
+	<b>MyClass</b>( ){
+		<b>this</b>.<s>a</s> = 10;		<em>// 初始化赋值</em>
+		<b>this</b>.<s>b</s> = 20; 		<em>// 改变初始值</em>
+	}
+	<em># 有序参数</em>
+	<b>MyClass</b>( <i>int</i> <strong>a</strong>,<strong>b</strong> ){
+		<b>this</b>.<s>a</s> = <strong>a</strong>; 		<em>// 接收传递的参数并赋值</em>
+		<b>this</b>.<s>b</s> = <strong>b</strong>;		<em>// 接收传递的参数并赋值</em>
+	}
+	<em># 无序参数</em>
+	<b>MyClass</b>( <strong>{ <i>int</i> a,<i>int</i> b,c }</strong> ){
+		<b>this</b>.<s>a</s> = <strong>a</strong>; 		<em>// 接收传递的参数并赋值</em>
+		<b>this</b>.<s>b</s> = <strong>b</strong>;		<em>// 接收传递的参数并赋值</em>
+	}
+}
+<i>void</i> <b>main</b>( ){
+	<em># 无参数</em>
+	<i>MyCalss</i> my = <b>MyCalss( )</b>;
+	print(my.<s>a</s>);		<em>=> 10</em>
+	print(my.<s>b</s>);		<em>=> 20</em>
+	<em># 有序参数</em>
+	<i>MyCalss</i> my = <b>MyCalss( <strong>10</strong>,<strong>20</strong> )</b>; 	<em># 实参必须与形参个数顺序，保持高度一致</em>
+	print(my.<s>a</s>);		<em>=> 10</em>
+	print(my.<s>b</s>);		<em>=> 20</em>
+	<em># 无序参数</em>
+	<i>MyCalss</i> my = <b>MyCalss</b>( <strong>a:10</strong>,<strong>b:20</strong> )
+	print(my.<s>a</s>);		<em>=> 10</em>
+	print(my.<s>b</s>);		<em>=> 20</em>
+}

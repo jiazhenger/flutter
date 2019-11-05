@@ -1,0 +1,23 @@
+DateTime <s>date</s> = <em>new</em> <b>DateTime(</b>2019, 1, 1, 5, 45, 55, 1,1000<b>)</b>;
+<em># 年-月-日 时:分:秒:毫秒:微秒</em>
+<i>int</i> year = <s>date</s>.<b>year</b>;						<em>// 年 => 2019</em>
+<i>int</i> month = <s>date</s>.<b>month</b>;					<em>// 月 => 1</em>
+<i>int</i> day = <s>date</s>.<b>day</b>;							<em>// 日 => 1</em>
+<i>int</i> hour = <s>date</s>.<b>hour</b>;						<em>// 时 => 5</em>
+<i>int</i> minute = <s>date</s>.<b>minute</b>;					<em>// 分 => 45</em>
+<i>int</i> second = <s>date</s>.<b>second</b>;					<em>// 秒  => 55</em>
+<i>int</i> millisecond = <s>date</s>.<b>millisecond</b>;			<em>// 毫秒 => 0</em>
+<i>int</i> microsecond = <s>date</s>.<b>microsecond</b>;			<em>// 微秒 => 0</em>
+<em># 年-月-日 时:分:秒:毫秒:微秒</em>
+<i>String</i> year = <s>date</s>.<b>year.toString()</b>;									<em>// 年 => 2019</em>
+<i>String</i> month = <s>date</s>.<b>month.toString().padLeft(2,'0')</b>;					<em>// 月 => 01</em>
+<i>String</i> day = <s>date</s>.<b>day.toString().padLeft(2,'0')</b>;							<em>// 日 => 01</em>
+<i>String</i> hour = <s>date</s>.<b>hour.toString().padLeft(2,'0')</b>;						<em>// 时 => 05</em>
+<i>String</i> minute = <s>date</s>.<b>minute.toString().padLeft(2,'0')</b>;					<em>// 分 => 45</em>
+<i>String</i> second = <s>date</s>.<b>second.toString().padLeft(2,'0')</b>;					<em>// 秒  => 55</em>
+<i>String</i> millisecond = <s>date</s>.<b>millisecond.toString().padLeft(2,'0')</b>;				<em>// 毫秒 => 002</em>
+<i>String</i> microsecond = <s>date</s>.<b>microsecond.toString().padLeft(2,'0')</b>;			<em>// 微秒 => 002</em>
+<em># 星期几</em>
+<i>int</i> weekday = <s>date</s>.<b>weekday</b>;									<em>// => 1~7</em>
+<em># 格式化时间</em>
+<i>String</i> time = '${<strong>year</strong>}-${<strong>month</strong>}-${<strong>day</strong>} ${<strong>hour</strong>}:${<strong>minute</strong>}:${<strong>second</strong>}:${<strong>millisecond</strong>}:${<strong>microsecond</strong>}'

@@ -1,0 +1,19 @@
+<i>class</i> <i>MyClass</i>{
+	final int x;
+	final int y;
+	const <i>MyClass</i>(this.x, this.y);
+	<em>#　重写 +</em>
+	<i>MyClass</i> <b>operator</b> <b>+</b> (<i>MyClass</i> v) {
+		return <i>MyClass</i>(v.x + x, v.y + y); 	
+	}
+	<em>#　重写 －</em>
+	<i>MyClass</i> <b>operator</b> <b>－</b> (<i>MyClass</i> v) {
+		return <i>MyClass</i>(<b>v.x</b> － <b>x</b>, v.y － y); 		<em>// <em><b>v.x</b> => 第二个实例的参数; <b>x</b> => 第一个实例的参数</em>
+	}
+}
+<i>void</i> <b>main</b>( ){
+	MyClass　a = MyClass(10,20);
+	MyClass　b = MyClass(1,2);
+	var x = <b>(a + b)</b>.x;	<em>// => a.x + b.x = 10 + 1 = 11</em>
+	var x = <b>(a - b)</b>.x;	<em>// => b.x - a.x = 1 - 9 = -9</em>
+}

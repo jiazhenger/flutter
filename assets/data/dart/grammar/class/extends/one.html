@@ -1,0 +1,30 @@
+<em># 父类：被继承的类</em>
+class <i>Animal</i>{
+	<em># 继承公共属性</em>
+	String <b>name</b> = 'Animal';
+	<em># 私有属性不能被继承</em>
+	<del><i>static</i> String <b>color</b> = 'white';</del>
+	<em># 继承公共方法</em>
+	void <b>eat( )</b> {
+		print('Animal Eat');
+	}
+	<em># 私有方法不能被继承</em>
+	<del><i>static</i> void <b>run( )</b> { }</del>
+	<em># 构造函数不能被继承</em>
+	<del><b>Animal</b>( )</b> { }</del>
+}
+<em># 子类：继承的类</em>
+class <i>Cat</i> <b>extends</b> <i>Animal</i>{
+	String myName;
+	Cat(){
+		<em># super 代表父类</em>
+		this.myName = <b>super</b>.name; 		<em>// 直接访问父级类的公共属性</em>
+		<b>super</b>.eat();					<em>// 直接访问父级类的公共方法</em>
+	}
+}
+<i>void</i>  <b>main</b>(){
+	<i>Cat</i> cat = <b>Cat( )</b>
+	cat.<b>name</b>;			<em>// => Animal</em>
+	cat.<b>myName</b>;			<em>// => Animal</em>
+	cat.<b>eat()</b>;				<em>// => Animal Eat</em>
+}

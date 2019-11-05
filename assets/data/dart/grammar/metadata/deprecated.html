@@ -1,0 +1,20 @@
+<em>/**</em>
+<em>一、概念：</em>
+<em> 1、弃用还是可以用，只是不赞成使用</em>
+<em> 2、常用于库更新换代时使用</em>
+<em>*/</em>
+class <i>MyClass</i>{
+	<em># 弃用属性</em>
+	String name;
+	<b>@deprecated</b>
+	<em># 弃用方法</em>
+	<b>@deprecated</b>
+	void <b>run( )</b> {
+		
+	}
+}
+<i>void</i>  <b>main</b>(){
+	<i>MyClass</i> my = <b>MyClass( )</b>
+	my.<del>run</del>();
+	var name = my.<del>name</del>;
+}
