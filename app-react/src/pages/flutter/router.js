@@ -6,10 +6,12 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { Import } from '@common/bundle'
 // ===================================================================== 异步加载
 import StyleRouter from './routers/styleRouter'
-import ImageRouter from './routers/imageRouter'
-import CircleRouter from './routers/circleRouter'
 import TimeRouter from './routers/timeRouter'
 import AnimationRouter from './routers/animationRouter'
+// widget
+import ImageRouter from './routers/imageRouter'
+import CircleRouter from './routers/circleRouter'
+import TextRouter from './routers/textRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -37,6 +39,7 @@ class AppRouter extends React.Component{
 				{/* ================================================= widget 控件 start =================================================*/}
 				<Route path={ `${url}/image` } render={ ({ match }) => <ImageRouter match={ match } /> } />
 				<Route path={ `${url}/circle` } render={ ({ match }) => <CircleRouter match={ match } /> } />
+				<Route path={ `${url}/text` } render={ ({ match }) => <TextRouter match={ match } /> } />
 				{/* ================================================= widget 控件 end =================================================*/}
 				{/* 时间 */}
 				<Route path={ `${url}/time` } render={ ({ match }) => <TimeRouter match={ match } /> } />

@@ -176,11 +176,16 @@
 	{
 		title: '文本 Widget',
 		children:[
-			{ title: 'Text()' },
-			{ title: 'Text.rich()' },
-			{ title: 'RichText()' },
-			{ title: 'TextSpan()' },
-			{ title: 'Baseline()' },
+			{ title: 'Text( )', path:'/flutter/text/Text' },
+			{ title: 'RichText( )', path:'/flutter/text/RichText' },
+			{ title: 'Baseline( )', path:'/flutter/text/Baseline' },
+			{ 
+				title: 'style',
+				children: [
+					{ title: 'Text.rich( )', path:'/flutter/text/TextRich' },
+					{ title: 'TextSpan( )', path:'/flutter/text/TextSpan' },
+				]
+			},
 		]
 	},
 	{
