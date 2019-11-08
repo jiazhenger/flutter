@@ -1,0 +1,27 @@
+<em># 泛类型放置位置前后可有空格，也可无空格</em>
+<b>List</b><i>&lt;T&gt;</i>list = <i>&lt;T&gt;</i>[1,2,3]; 			<em>// 无空格</em>
+<b>List</b> <i>&lt;T,T&gt;</i> list = <i>&lt;T,T&gt;</i> [1,2,3]; 		<em>// 有空格</em>
+<em># var：不能带数据类型 </em>
+<b>var</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<em># final：可带数据类型</em>
+<em>// 泛类型可前可后，可同时声明</em>
+<b>final List</b> <i>&lt;T&gt;</i>list = [1,2,3]; 		
+<b>final List</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<b>final List</b> <i>&lt;T&gt;</i>list = <i>&lt;T&gt;</i>[1,2,3];
+<em># const：可带数据类型</em>
+<em>// 泛类型可前可后，可同时声明</em>
+<b>const List</b> <i>&lt;T&gt;</i>list = [1,2,3];
+<b>const List</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<b>const List</b> <i>&lt;T&gt;</i>list = <i>&lt;T&gt;</i>[1,2,3];
+<em># 声明不带数据类型的变量</em>
+<b>var</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<b>final</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<b>const</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<em># 数据类型声明变量</em>
+<b>List</b> <i>&lt;T&gt;</i> list = [1,2,3];
+<b>List</b> list = <i>&lt;T&gt;</i>[1,2,3];
+<b>List</b> <i>&lt;T&gt;</i>list = <i>&lt;T&gt;</i>[1,2,3];
+<em># new 的泛类型只能声明在 new List/Set/Map之后</em>
+<b>var</b> list = <b>new List</b><i>&lt;T&gt;</i>();
+<b>final Set</b> set = <b>new Set</b><i>&lt;T&gt;</i>();
+<b>Map</b> map = <b>new List</b><i>&lt;T,T&gt;</i>();

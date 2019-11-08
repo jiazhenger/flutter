@@ -1,0 +1,18 @@
+<em># 引入包</em>
+import '<u>dart:convert</u>';
+import '<u>dart:convert</u>' <b>as</b> <i>json</i>;
+
+<em># 字符串转换为 json 对象</em>
+<i>dynamic</i> <b>jsonDecode</b>(
+	<i>String</i> source, 			<em>// json 字符串</em>
+	{
+		Object <u>reviver</u>( 		<em>// 自定义返回值</em>
+			<i>Object</i> <u>key</u>, 		<em>// key </em>
+			<i>Object</i> <u>value</u> 		<em>// value </em>
+		)
+	}
+)
+dynamic v = json.<q>jsonDecode</q>(
+	'[1,2,3]',
+	<u>reviver</u>:(k,v)=> v
+);

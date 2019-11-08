@@ -1,0 +1,22 @@
+<em># 安装 flutter sdk</em>
+<em>// 方法一</em>
+<b><a style='color:red' class='tu' href='https://flutter.dev/docs/development/tools/sdk/releases?tab=windows#windows' target='_blank'>到flutter 官网下载</a></b>
+<em>// 方法二</em>
+<b>git clone -b stable https://github.com/flutter/flutter.git</b> 
+<em># 配置环境变量， 在用户变量的path中配置</em>
+D:\flutter-sdk\<b>flutter\bin</b>
+<em># 配置国内境像，在系统变量配置</em>
+<b>FLUTTER_STORAGE_BASE_URL</b> ======= <b>https://storage.flutter-io.cn</b>
+<b>PUB_HOSTED_URL</b> ======= <b>https://pub.flutter-io.cn</b>
+<em># npm 命令检测安装依赖，如果没有，则安装；反之，则显示依赖信息</em>
+&gt; <b>flutter doctor</b>
+<em># 运行到移动设备</em>
+&gt; <b>flutter run</b>
+<em># 开启 flutter web 支持</em>
+&gt; <b>flutter config --enable-web</b>
+<em># 为已存在的项目添加 flutter web 支持</em>
+&gt; <b>flutter create .</b>
+<em># 运行到浏览器</em>
+&gt; <b>flutter run -d chrome</b>
+<em># 打包成 fluuter web</em>
+&gt; <b>flutter build web</b>

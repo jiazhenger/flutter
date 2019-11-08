@@ -1,0 +1,21 @@
+<i>class</i> <b>MyClass</b>{
+	<em># 声明参数的4方式</em>
+	<i>var</i> <s>a</s>;
+	<i>final</i> <s>b</s>;
+	<i>int</i> <s>c</s>;
+	<i>final int</i> <s>d</s>;
+	<em># 空构造函数</em>
+	<b>MyClass</b>( );
+	<em># 有序参数：实例化的参数必须与构造参数保持一致</em>
+	<b>MyClass</b>(  <b>this</b>.<s>a</s>, <b>this</b>.<s>b</s>, <b>this</b>.<s>c</s>  );
+	<em># 无序参数：实例化的参数可以为空</em>
+	<b>MyClass</b>(<b>{</b> <b>this</b>.<s>a</s>, <b>this</b>.<s>b</s>, <b>this</b>.<s>c</s> <b>}</b>);
+}
+<i>void</i> <b>main</b>( ){
+	<em># 空构造函数</em>
+	<i>MyCalss</i> my = <b>MyCalss( )</b>;
+	<em># 有序参数</em>
+	<i>MyCalss</i> my = <b>MyCalss</b>( <strong>10</strong>,<strong>20</strong>,<strong>30</strong> );
+	<em># 无序参数</em>
+	<i>MyCalss</i> my = <b>MyCalss</b>( <strong>a:10</strong>, <strong>b:20</strong>,<strong>c:30</strong>, ); 	<em>// 注意 a,b,c属性名无引号包裹</em>
+}

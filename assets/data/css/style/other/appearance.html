@@ -1,0 +1,17 @@
+div{
+	<b>appearance</b> : 		<i>normal</i> 			<em>// 正常呈现元素</em>
+					<i>none</i> 			<em>// 无呈现</em>
+					<i>icon</i> 			<em>// 作为一个小图片的呈现元素</em>
+					<i>window</i> 			<em>// 作为一个视口呈现元素</em>
+					<i>button</i> 			<em>// 作为一个按钮，呈现元素</em>
+					<i>menu</i> 			<em>// 作为一个用户选项设定呈现元素选择</em>
+					<i>field</i> 			<em>// 作为一个输入字段呈现元素</em>
+	<b>-webkit-appearance</b> :  	<i>normal</i> 			<em>// Safari and Chrome </em>
+	<b>-moz-appearance</b> :  	<i>normal</i> 			<em>// Firefox </em>
+}
+<em> # 去除移动端苹果浏览器按钮的默认样式
+select,button,textarea,input,input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+	<b>-webkit-appearance:none</b>;
+	<b>-moz-appearance:none</b>;
+	<b>appearance:none</b>
+}

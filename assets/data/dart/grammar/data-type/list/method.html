@@ -1,0 +1,35 @@
+<em># 以[R]实例列表的形式返回此列表的视图</em>
+<i>List</i> v = list.<b>cast()</b>;
+
+<em># 将二维数组展开成一维数组</em>
+<i>Iterable&lt;T&gt;</i> <b>expand</b><i>&lt;T&gt;</i>(
+	<i>Iterable&lt;T&gt;</i> f(<i>E</i> <u>element</u>) 		<em>// element 一个 List == (v) => v </em>
+)
+List a = [[1,2],[3,4]]; 				<em>// 必须是二维数组 </em>
+Iterable v = a.<q>expand</q>((v) => v);		<em>// => (0, 5, 8, 9)</em>
+
+<em># 从第 count 个下标返回元素</em>
+<i>Iterable&lt;E&gt;</i> <b>skip</b>(
+	<i>int</i> count 	<em>// 从下标开始，包含 </em>
+)
+Iterable v = list.<q>skip</q>(1); 		<em>// => ( )</em>
+
+<em># 当符合条件时，它会跳过前导元素</em>
+<i>Iterable&lt;E&gt;</i> <b>skipWhile</b>(
+	<b>bool</b> test(<i>E</i> <u>value</u>) 	<em>// (value) => true </em>	
+)
+Iterable v = list.<q>skipWhile</q>((v)=> v==1 );
+
+<em># 返回循环次数的迭代器</em>
+<i>Iterable&lt;E&gt;</i> <b>take</b>(
+	<i>int</i> count 	<em>// 循环次数 </em>
+)
+Iterable v = list.<q>take</q>(1); 		<em>// => (0)</em>
+Iterable v = list.<q>take</q>(2); 		<em>// => (0,1)</em>
+
+<em># 当符合条件时，它会跳过前导元素</em>
+<i>Iterable&lt;E&gt;</i> <b>takeWhile</b>(
+	<b>bool</b> test(<i>E</i> <u>value</u>) 	<em>// (value) => true </em>	
+)
+Iterable v = list.<q>takeWhile</q>((v)=> v==0 ); 	<em>// => (0)</em>
+Iterable v = list.<q>takeWhile</q>((v)=> v<2 ); 	<em>// => (0,1)</em>

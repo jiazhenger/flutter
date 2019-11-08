@@ -1,0 +1,24 @@
+<em># 选择具有 href 属性的所有元素</em>
+<b>*[href]</b>{ } === <b>[href]</b>{ }			<em>// &lt;a <i>href</i>='#'&gt;&lt;/a&gt;</em>
+<em># 限制匹配指定 html 元素</em>
+<b>a[href]</b>	<em>// 匹配 a 标签</em>
+<b>div[attr]</b>	<em>// 匹配 div 标签</em> 
+<em># 选择具有 attr 属性且属性值等于 val 的元素</em>
+<b>[href='#']</b>{ }		<em>// &lt;a <i>href</i>='#'&gt;&lt;/a&gt;</em>
+<em># 选择具有 attr 属性且属性值等于 val 的元素</em>
+<b>[href='#']</b>{ }		<em>// &lt;a <i>href</i>='#'&gt;&lt;/a&gt;</em>
+<em># 选择具有 attr 属性且属性值为一用空格分隔的字词列表，其中一个<s>等于  a</s> 的 元素</em>
+<b>[attr~='a']</b>{ }		<em>// &lt;a <i>attr</i>='a b c'&gt;&lt;/a&gt;</em>
+<em># 选择具有 attr 属性且属性值为一用连字符分隔的字词列表，由 <s>a 开始</s>的元素</em>
+<b>[attr|='a']</b>{ }		<em>// &lt;a <i>attr</i>='a-b-c'&gt;&lt;/a&gt;</em>
+<em># 选匹配具有 attr 属性、且值以  <s>a 开头</s>的元素</em>
+<b>[attr^='a']</b>{ }		<em>// &lt;a <i>attr</i>='abc'&gt;&lt;/a&gt;</em>
+<em># 匹配具有 attr 属性、且值以 <s>a 结尾</a>的元素</em>
+<b>[attr$='a']</b>{ }		<em>// &lt;a <i>attr</i>='bca'&gt;&lt;/a&gt;</em>
+<em># 匹配具有 att 属性、且值中<s>含有a</s>的元素</em>
+<b>[attr*='a']</b>{ }		<em>// &lt;a <i>attr</i>='abc'&gt;&lt;/a&gt;</em>
+<em># 常用</em>
+<b>input[type='text']</b>{ }
+<b>input[type='password']</b>{ }
+<b>input[type='submit']</b>{ }
+<b>input[type='button']</b>{ }
