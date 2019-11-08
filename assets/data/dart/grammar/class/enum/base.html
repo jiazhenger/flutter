@@ -1,0 +1,21 @@
+<em>/**</em>
+<em>一、概念：</em>
+<em> 1、枚举类型是一种特殊的类，通常用来表示相同类型的一组常量。使用关键字 <b>enum</b> 定义枚举</em>
+<em> 2、枚举的每一个值都有一个  <b>index</b> 属性，index从0开始计数</em>
+<em> 3、举不能被继承，不能创建实例</em>
+<em>*/</em>
+<em># 定义固定数量的常量值</em>
+<b>enum</b> <i>Color</i>{
+	red,
+	yellow,
+	blue
+}
+<i>void</i> <b>main</b>( ){
+	<i>int</i> index = Color.red.<b>index</b>;					<em>// 枚举的索引值  => 1</em>
+	<i>Animal</i> red = Color.red;						<em>// 获取单个枚举值值  => Animal.red</em>
+	<i>List&lt;Animal&gt;</i> values = Color.<b>values</b>;			<em>// 获取所有枚举值 => [Animal.red, Animal.yellow, Animal.blue]</em>
+	<i>Animal</i> blue = values[2];					<em>// 获取列表值  => Animal.blue</em>
+	<em># 获取数据类型</em>
+	<i>dynamic</i> type = red.<b>runtimeType</b>;			<em>// Animal</em>
+	<i>dynamic</i> type = blue.<b>runtimeType</b>;			<em>// Animal</em>
+}

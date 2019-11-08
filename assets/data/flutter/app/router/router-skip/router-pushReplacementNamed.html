@@ -1,0 +1,22 @@
+<em># Navigator.of(context).pushReplacementNamed('/login',arguments:{'a':1,'b':2})</em>
+<b>Navigator.of(context).pushReplacementNamed</b>(
+	<i>String</i> routeName, 		<em>// 路由名称  => /login</em>
+	{ 
+		<i>TO</i> result 			<em>// 携带参数 => </em>
+		{ <i>Object</i> <u>arguments</u> }, 	<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+	}, 		
+).<b>then</b>((<i>Object</i> <u>value</u>){ 			<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+	
+});
+
+<em># Navigator.pushReplacementNamed(context,'/login',arguments:{'a':1,'b':2})</em>
+<b>Navigator.pushReplacementNamed</b>(
+	<i>BuildContext</i> <u>context</u>,
+	<i>String</i> routeName, 		<em>// 路由名称  => /login</em>
+	{ 
+		<i>TO</i> result 			<em>// 携带参数 => </em>
+		{ <i>Object</i> <u>arguments</u> }, 	<em>// 携带参数 => arguments:{ a:1, b:2 }</em>
+	}, 		
+).<b>then</b>((<i>Object</i> <u>value</u>){ 			<em>// 页面返回后执行  => value： <q>Navigator.of(context).pop(value)</q> 中返回携带的参数 value</em>
+	
+});

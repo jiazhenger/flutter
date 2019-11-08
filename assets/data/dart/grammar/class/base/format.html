@@ -1,0 +1,38 @@
+<i>class</i> <b>MyClass</b>{ 		<em>// MyClass：自定义类名，以大写开头</em>
+	<em># 当用户调用你定义的类中不存在的属性与方法时执行</em>
+	<b>@override</b>
+	void <b>noSuchMethod</b>(<i>Invocation</i> <b>invocation</b>){
+		print(<b>invocation.memberName</b>);
+	}
+}
+<em># 使用</em>
+<i>void</i> <b>main</b>( ){
+	<em># 两种写法，用类名定义类的类型</em>
+	<i>MyCalss</i> my = <b>new MyCalss( )</b> 		<em>// 完整写法</em>
+	<i>MyCalss</i> my = <b>MyCalss( )</b> 			<em>// 省略写法</em>
+	<em># 两种变量声明方式</em>
+	<i>var</i> my = <b>MyCalss( )</b> 
+	<i>final</i> my = <b>MyCalss( )</b> 
+	<em># 两种数据类型声明方式</em>
+	<i>dynamic</i> my = <b>MyCalss( )</b> 
+	<i>Object</i> my = <b>MyCalss( )</b> 
+	<em># 三种变量声明 + 数据类型声明方式</em>
+	<i>final MyCalss</i> my = <b>MyCalss( )</b> 
+	<i>final dynamic</i> my = <b>MyCalss( )</b> 
+	<i>final Object</i> my = <b>MyCalss( )</b>
+	<em># 带参数</em>
+	<i>MyCalss</i> my = <b>MyCalss</b> ( <strong>10, 20</strong> )				<em>// 有序参数</em>
+	<i>MyCalss</i> my = <b>MyCalss</b> ( <strong>'a':10, 'b':10</strong> )		<em>// 无序参数</em>
+	<em># 调用类中的属性</em>
+	var a = my.<b>a</b>;
+	<em># 调用类中的方法</em>
+	var b = my.<b>fn( )</b>;
+	<em># 级联调用</em>
+	my
+	<b>..</b>run()
+	<b>..</b>start()
+	<b>..</b>..name = 10
+	<b>..</b>go()
+	<em># 当对象不为空时，调用成员，为空时，跳过不调用</em>
+	my<b>?</b><strong>.name</strong> = 10
+}

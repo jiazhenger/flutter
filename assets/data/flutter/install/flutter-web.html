@@ -1,0 +1,38 @@
+<em># 安装 flutter sdk</em>
+<em># 安装flutter_web 的编译工具 webdev</em>
+&gt;<b>flutter pub global activate webdev</b>	<em>// 环境变量只配置了 flutter sdk 而没有配置 dart sdk</em>
+&gt;<b>pub global activate webdev</b>	<em>// 环境变量已经配置了 dart sdk</em>
+<em># webdev 配置环境变量</em>
+D:\jia-flutter-web\<b>flutter\.pub-cache\bin</b>	<em>// 手动配置</em>
+&gt;<b>flutter pub global run webdev</b>	<em>// 环境变量只配置了 flutter sdk 而没有配置 dart sdk</em>
+&gt;<b>pub global run webdev</b>	<em>// 环境变量已经配置了 dart sdk</em>
+<em class='b' style='color:green'># 创建项目方法一</em>
+<em># 安装 stagehand 工具</em>
+&gt;<b>flutter pub global activate stagehand</b>	<em>// 环境变量只配置了 flutter sdk 而没有配置 dart sdk</em>
+&gt;<b>pub global activate stagehand</b>	<em>// 环境变量已经配置了 dart sdk</em>
+<em># stagehand 创建模板项目</em>
+&gt;<b>flutter pub global run stagehand flutter-web-preview</b>	<em>// 环境变量只配置了 flutter sdk 而没有配置 dart sdk</em>
+&gt;<b>stagehand flutter-web-preview</b>	<em>// 环境变量已经配置了 dart sdk</em>
+	<em>// stagehand 模板</em>
+	console-full        - A command-line application sample.
+	flutter-web-preview - A simple Flutter Web app.
+	package-simple      - A starting point for Dart libraries or applications.
+	server-shelf        - A web server built using the shelf package.
+	web-angular         - A web app with material design components.
+	web-simple          - A web app that uses only core Dart libraries.
+	web-stagexl         - A starting point for 2D animation and games.
+<em class='b' style='color:green'># 创建项目方法二</em>
+<b>git clone https://github.com/flutter/flutter_web.git</b>
+<em># 启动项目</em>
+&gt; cd app
+&gt;<b>flutter pub upgrade</b>		<em>// 更新依赖</em>
+&gt;<b>pub upgrade</b>			<em>// 更新依赖</em>
+&gt;<b>flutter pub get</b>			<em>// 安装依赖</em>
+&gt;<b>pub get</b>				<em>// 安装依赖</em>
+<em># 启动本地服务</em>
+&gt;<b>flutter pub global run webdev serve</b>	<em>// 环境变量只配置了 flutter sdk 而没有配置 dart sdk</em>
+&gt;<b>webdev serve</b>	<em>// 环境变量已经配置了 dart sdk</em>
+<em># 打包成 js</em>
+&gt;<b>webdev build</b>	<em>// 环境变量已经配置了 dart sdk</em>
+<em># 清除编译缓存</em>
+&gt;<b>pub run build_runner clean</b>

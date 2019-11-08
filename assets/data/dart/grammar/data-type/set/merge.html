@@ -1,0 +1,16 @@
+<em># 扩展运算符合并列表</em>
+<i>List</i> v = { <b class='f16'>...</b>list, 3, 4, 5 }; 	<em>// => {0,1,2,3,4,5} </em>
+
+<em># 合并两个集合，返回一个新的集合</em>
+<i>Set&lt;E&gt;</i> <b>union</b>(
+	<i>Set&lt;E&gt;</i> other 		<em>// Set </em>
+)
+Set set = {1,2,3};
+Set v = set.<q>union</q>({4,5});		<em>// => {1,2,3,4,5}</em>
+
+<em># 合并两个数为一个迭代器</em>
+<i>Iterable&lt;E&gt;</i> <b>followedBy</b>(
+	<i>Iterable&lt;E&gt;</i> other 			<em>// List </em>
+)
+Iterable v = set.<q>followedBy</q>(['a','b','c']);	<em>// => (0,1,2,a,b,c) </em>
+

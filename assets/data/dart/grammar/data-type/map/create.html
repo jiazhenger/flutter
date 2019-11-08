@@ -1,0 +1,75 @@
+<em># 定义映射</em>
+<i>Map</i> map = <b>{ }</b>
+<i>Map</i> set = <b>{</b>'a':1,'b':2,'c':3<b>}</b> 		<em>// 属性值必须是字符串，否则，就是一个变量</em>
+
+<em># 定义一个空映射</em>
+<i>Map</i> map = <em>new</em> <b>Map( )</b>
+
+<em># 定义一个空映射</em>
+<i>Set</i> set = <em>new</em> <b>Map.identity( )</b>;
+
+<em># 创建一个包含所有元素的映射</em>
+<i>factory</i> <b>Map.from</b>(
+	<i>Map</i> other 	<em>// Map</em>
+)
+Set v = <q>Map.from</q>( {'a':1,'b':2} ); 		<em>// => {a:1,b:2}</em>
+
+<em># 从元素创建一个映射</em>
+<i>factory</i> <b>Map.of</b>(
+	<i>Map&lt;K, V&gt;</i> other, 		<em>// Map</em>
+)
+Map v = <q>Map.of</q>( {'a':1,'b':2} ); 		<em>// => {a:1,b:2}</em>
+
+<em># 创建一个不可修改的映射</em>
+<i>factory</i> <b>Map.unmodifiable</b>(
+	<i>Map</i> other 	<em>// Map</em>
+)
+Set v = <q>Map.unmodifiable</q>( {'a':1,'b':2} ); 		<em>// => {a:1,b:2}</em>
+
+<em># 将 source 转为 Map</em>
+<i>Map&lt;K2, V2&gt;</i> <b>castFrom</b><i>&lt;K, V, K2, V2&gt;</i>(
+	<i>Map&lt;K, V&gt;</i> source 		<em>// Map</em>
+)
+Map map = <q>Map.castFrom</q>({'a':1,'b':'2'}); 		<em>// => {a:1,b:2}</em>
+
+<em># 创建一个新映射并添加所有条目</em>
+<i>factory</i> <b>Map.fromEntries</b>(
+	<i>Iterable&lt;MapEntry&lt;K, V&gt;&gt;</i> entries 		<em>// Iterable</em>
+)
+<em>// 例1</em>
+List list = List<u>&lt;MapEntry&lt;String, int&gt;&gt;</u>();
+list.add(<u>MapEntry</u>('a',1));
+list.add(<u>MapEntry</u>('b',2));
+Iterable iterable = list.<u>take</u>(list.length);				<em>// (MapEntry(a: 1), MapEntry(b: 2))</em>
+Map map =  <q>Map.fromEntries</q>(iterable); 			<em>// => {a:1,b:2}</em>
+<em>// 例2</em>
+Map map =  <q>Map.fromEntries</q>( [MapEntry('a',1),MapEntry('b',2)] ); 	<em>// => {a:1,b:2}</em>
+<em>// 例3</em>
+List list = [MapEntry('a',1),MapEntry('b',2)]
+Map map =  <q>Map.fromEntries</q>( [...list] ); 	<em>// 不能直接使用 list => {a:1,b:2}</em>
+
+<em># 重新键和值，并创建一个新的映射</em>
+<i>factory</i> <b>Map.fromIterable</b>(
+	<i>Iterable</i> iterable 		<em>// List、Set</em> 
+	{ 
+		<i>K</i> <u>key(element)</u>,  		<em>// key:(element)=>element</em> 
+		<i>V</i> <u>value(element)</u> 		<em>// value:(element)=>element</em> 
+	}
+)
+Map map =  <q>Map.fromIterable</q>( 		<em>// => {a1: 10, a2: 20}</em>
+	[1,2],
+	<u>key</u>:(v) => 'a$v',
+	<u>value</u>:(v) => v*10
+);
+Map map =  <q>Map.fromIterable</q>(		<em>// => {a1: 10, a2: 20}</em>
+	{1,2},
+	<u>key</u>:(v) => 'a$v',
+	<u>value</u>:(v) => v*10
+);
+
+<em># 将两个 List 或 Set，合并成 Map</em>
+<i>factory</i> <b>Map.fromIterables</b>(
+	<i>Iterable&lt;K&gt;</i> keys,  		<em>// List、Set</em>
+	<i>Iterable&lt;V&gt;</i> values 		<em>// List、Set</em>
+)
+Map map =  <q>Map.fromIterables</q>({'a','b'},[1,2] );		<em>// => {a: 1, b: 2}</em>
