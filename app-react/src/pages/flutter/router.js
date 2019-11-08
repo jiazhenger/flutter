@@ -45,6 +45,7 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/event` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/TapGestureRecognizer`} 	component={ Import('flutter/event/TapGestureRecognizer') } exact />
+						<Route path={`${match.url}/FocusNode`} 	component={ Import('flutter/event/FocusNode') } exact />
 					</Switch>
 				)} />
 				{/* 时间 */}

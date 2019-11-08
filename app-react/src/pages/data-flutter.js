@@ -226,6 +226,7 @@
 		title: '事件',
 		children:[
 			{ title: 'TapGestureRecognizer( )',  path:'/flutter/event/TapGestureRecognizer' },
+			{ title: 'FocusNode( )',  path:'/flutter/event/FocusNode' },
 		]
 	},
 	{

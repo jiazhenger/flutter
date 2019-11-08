@@ -9,8 +9,8 @@ const data = {
 	data:[
 		{ keyword:'color', type:'Color', pro:'背景色，与 gradient 互斥', link:'/flutter/style/Colors' },
 		{ 
-			keyword:'shape', type:'ShapeBorder', pro:'圆角',
-			code:[ {path:'flutter/style/decoration/shape'} ],
+			keyword:'shape', type:'ShapeBorder', pro:'形状',
+			code:[ {path:'flutter/public/shape'} ],
 			link:[ 
 				{ title:'BeveledRectangleBorder', url:'/flutter/style/shape/BeveledRectangleBorder' },
 				{ title:'CircleBorder', url:'/flutter/style/shape/CircleBorder' },

@@ -1,7 +1,0 @@
-<em># 返回给定环境声明[name]的一个常量整数值。必须用 const 声明</em>
-(<i>const</i>) <i>int</i> <b>int.fromEnvironment</b>( 
-	<i>String</i> name, 				<em>// 名称</em>
-	{ <i>int</i> <u>defaultValue</u> } 		<em>// 默认值</em>
-)
-<b>const</b> int v = <q>int.fromEnvironment</q>('x');					<em>// => null</em>
-<b>const</b> int v = <q>int.fromEnvironment</q>('x', defaultValue:10);		<em>// => 10</em>
