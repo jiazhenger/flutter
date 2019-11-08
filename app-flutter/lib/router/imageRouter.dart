@@ -1,17 +1,17 @@
 import 'package:flutter_web/material.dart';
 // ======================================================================================================== 路由
 // ======================================================================================================== Image widget
-import 'package:flutter_web_study.app/pages/flutter/image/widget/Image.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/widget/ImageAsset.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/widget/ImageNetwork.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/widget/FadeInImage.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/widget/FadeInImage_assetNetwork.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/widget/Image.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/widget/ImageAsset.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/widget/ImageNetwork.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/widget/FadeInImage.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/widget/FadeInImage_assetNetwork.dart';
 // ======================================================================================================== x
-import 'package:flutter_web_study.app/pages/flutter/image/style/x/BoxFit.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/style/x/ImageRepeat.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/style/x/BlendMode.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/style/x/ColorFilter.dart';
-import 'package:flutter_web_study.app/pages/flutter/image/style/x/FilterQuality.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/style/x/BoxFit.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/style/x/ImageRepeat.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/style/x/BlendMode.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/style/x/ColorFilter.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/image/style/x/FilterQuality.dart';
 // ======================================================================================================== 路由类
 class ImageRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{

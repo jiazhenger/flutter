@@ -1,0 +1,21 @@
+<em># 导入包</em>
+import 'package:flutter_web/<u>gestures</u>.dart'; 		<em>// flutter_web</em>
+import 'package:flutter/<u>gestures</u>.dart'; 			<em>// flutter app</em>
+
+<em># 声明手势事件</em>
+<em>final</em> <i>TapGestureRecognizer</i> <s>recognizer</s> = <em>new</em> <b>TapGestureRecognizer( )</b>;
+
+<em># 手势事件监听器</em>
+<s>recognizer</s>.<b>onTap</b> 					= ( ) 						{ 	};		<em>// 点击事件</em>
+<s>recognizer</s>.<b>onTapUp</b> 				= ( <em>TapUpDetails</em> <u>details</u> ) 		{ 	};		<em>// 点击松开</em>
+<s>recognizer</s>.<b>onTapDown</b> 			= ( <em>TapDownDetails</em> <u>details</u> )	 	{ 	};		<em>// 点击按下</em>
+<s>recognizer</s>.<b>onTapCancel</b> 			= ( ) 						{ 	};		<em>// 取消</em>
+
+<s>recognizer</s>.<b>onSecondaryTapUp</b> 		= ( <em>TapUpDetails</em> <u>details</u> )		{ 	};		<em>// 点击松开，次要</em>
+<s>recognizer</s>.<b>onSecondaryTapDown</b> 	= ( <em>TapDownDetails</em> <u>details</u> )		{ 	};		<em>// 点击按下，次要</em>
+<s>recognizer</s>.<b>onSecondaryTapCancel</b> 	= ( ) 						{ 	};		<em>// 取消，次要</em>
+
+<em># 使用</em>
+<u>C</u>(
+	<b>recognizer</b>:	<s>recognizer</s>
+)

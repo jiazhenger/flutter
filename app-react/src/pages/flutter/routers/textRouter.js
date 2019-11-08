@@ -11,11 +11,11 @@ export default class TextRouter extends React.Component{
 		return (
 				<Switch>
 					<Route path={`${match.url}/Text`} 				component={ Import('flutter/widget/text/Text') } exact />
+					<Route path={`${match.url}/TextRich`} 			component={ Import('flutter/widget/text/TextRich') } exact />
 					<Route path={`${match.url}/RichText`} 			component={ Import('flutter/widget/text/RichText') } exact />
-					<Route path={`${match.url}/Baseline`} 			component={ Import('flutter/widget/circle/ClipRRect') } exact />
+					<Route path={`${match.url}/Baseline`} 			component={ Import('flutter/widget/text/Baseline') } exact />
 					{/* style */}
-					<Route path={`${match.url}/TextRich`} 			component={ Import('flutter/widget/circle/ClipRRect') } exact />
-					<Route path={`${match.url}/TextSpan`} 			component={ Import('flutter/widget/circle/ClipRRect') } exact />
+					<Route path={`${match.url}/TextSpan`} 			component={ Import('flutter/widget/text/x/TextSpan') } exact />
 				</Switch>
 		)
 	}

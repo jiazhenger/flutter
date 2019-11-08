@@ -1,9 +1,9 @@
 import 'package:flutter_web/material.dart';
 // ======================================================================================================== 路由
 // ======================================================================================================== Image widget
-import 'package:flutter_web_study.app/pages/flutter/Circle/CircleAvatar.dart';
-import 'package:flutter_web_study.app/pages/flutter/Circle/ClipOval.dart';
-import 'package:flutter_web_study.app/pages/flutter/Circle/ClipRRect.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/circle/CircleAvatar.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/circle/ClipOval.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/circle/ClipRRect.dart';
 // ======================================================================================================== x
 
 // ======================================================================================================== 路由类

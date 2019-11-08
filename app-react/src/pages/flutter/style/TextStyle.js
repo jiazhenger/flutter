@@ -44,7 +44,7 @@ const data = {
 		{ keyword:'decorationStyle', type:'TextDecorationStyle', pro:'装饰器样式', code:[ {path:'flutter/style/TextStyle/decoration/decorationStyle'} ] },
 		{ keyword:'decorationThickness', type:'double', pro:'装饰器厚度' },
 		
-		{ deviceTitle:'其它', type:'TextBaseline', keyword:'textBaseline', pro:'文本绘制基线', code:[ {path:'flutter/style/TextStyle/textBaseline'} ] },
+		{ deviceTitle:'其它', type:'TextBaseline', keyword:'textBaseline', pro:'文本绘制基线', code:[ {path:'flutter/public/TextBaseline'} ] },
 		{ 
 			keyword:'shadows', type:'List<Shadow/BoxShadow>', pro:'阴影',
 			code:[ {path:'/flutter/public/shadows'} ], 

@@ -86,6 +86,33 @@
 			{ title: 'BoxConstraints', path:'/flutter/style/BoxConstraints' },
 		]
 	},
+	{
+		title: '文本 Widget',
+		children:[
+			{ title: 'Text( )', path:'/flutter/text/Text' },
+			{ title: 'Text.rich( )', path:'/flutter/text/TextRich' },
+			{ title: 'RichText( )', path:'/flutter/text/RichText' },
+			{ title: 'Baseline( )', path:'/flutter/text/Baseline' },
+			{ 
+				title: 'style',
+				children: [
+					{ title: 'TextSpan( )', path:'/flutter/text/TextSpan' },
+				]
+			},
+		]
+	},
+	{
+		title: '按钮 Widget',
+		children:[
+			{ title: 'MaterialButton( )', path:'/flutter/button/MaterialButton' },
+			{ 
+				title: 'style',
+				children: [
+					{ title: 'TextSpan( )', path:'/flutter/text/TextSpan' },
+				]
+			},
+		]
+	},
 	{ 
 		title: '图片 Widget',
 		children: [
@@ -174,21 +201,6 @@
 		]
 	},
 	{
-		title: '文本 Widget',
-		children:[
-			{ title: 'Text( )', path:'/flutter/text/Text' },
-			{ title: 'RichText( )', path:'/flutter/text/RichText' },
-			{ title: 'Baseline( )', path:'/flutter/text/Baseline' },
-			{ 
-				title: 'style',
-				children: [
-					{ title: 'Text.rich( )', path:'/flutter/text/TextRich' },
-					{ title: 'TextSpan( )', path:'/flutter/text/TextSpan' },
-				]
-			},
-		]
-	},
-	{
 		title: '表格 Widget',
 		children:[
 			{ title: 'Table' },
@@ -208,6 +220,12 @@
 		title: '时间',
 		children:[
 			{ title: 'Duration( )',  path:'/flutter/time/Duration' },
+		]
+	},
+	{
+		title: '事件',
+		children:[
+			{ title: 'TapGestureRecognizer( )',  path:'/flutter/event/TapGestureRecognizer' },
 		]
 	},
 	{

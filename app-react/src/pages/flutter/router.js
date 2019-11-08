@@ -6,12 +6,12 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { Import } from '@common/bundle'
 // ===================================================================== 异步加载
 import StyleRouter from './routers/styleRouter'
-import TimeRouter from './routers/timeRouter'
 import AnimationRouter from './routers/animationRouter'
 // widget
 import ImageRouter from './routers/imageRouter'
 import CircleRouter from './routers/circleRouter'
 import TextRouter from './routers/textRouter'
+import ButtonRouter from './routers/buttonRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -36,13 +36,23 @@ class AppRouter extends React.Component{
 				)}/>
 				{/* 样式 */}
 				<Route path={ `${url}/style` } render={ ({ match }) => <StyleRouter match={ match } /> } />
-				{/* ================================================= widget 控件 start =================================================*/}
+				{/* 控件 */}
 				<Route path={ `${url}/image` } render={ ({ match }) => <ImageRouter match={ match } /> } />
 				<Route path={ `${url}/circle` } render={ ({ match }) => <CircleRouter match={ match } /> } />
 				<Route path={ `${url}/text` } render={ ({ match }) => <TextRouter match={ match } /> } />
-				{/* ================================================= widget 控件 end =================================================*/}
+				<Route path={ `${url}/button` } render={ ({ match }) => <ButtonRouter match={ match } /> } />
+				{/* 事件 */}
+				<Route path={ `${url}/event` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/TapGestureRecognizer`} 	component={ Import('flutter/event/TapGestureRecognizer') } exact />
+					</Switch>
+				)} />
 				{/* 时间 */}
-				<Route path={ `${url}/time` } render={ ({ match }) => <TimeRouter match={ match } /> } />
+				<Route path={ `${url}/time` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/Duration`} 			component={ Import('flutter/time/Duration') } exact />
+					</Switch>
+				)} />
 				{/* 动画 */}
 				<Route path={ `${url}/animation` } render={ ({ match }) => <AnimationRouter match={ match } /> } />
 				
