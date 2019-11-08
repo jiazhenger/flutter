@@ -58,11 +58,14 @@ const data = {
 		},
 		{ deviceTitle:'监听事件', keyword:'onPressed', type:'void Function( )', pro:'点击事件', code:[{path:'flutter/widget/button/onPressed'}] },
 		{ keyword:'onHighlightChanged', type:'void Function( bool )', pro:'高亮改变事件', code:[{path:'flutter/widget/button/onHighlightChanged'}] },
-		
+		{ 
+			keyword:'focusNode', type:'FocusNode', pro:'监听焦点改变事件',
+			code:[{path:'flutter/event/FocusNode/FocusNode'}],
+			link:[{ title:'FocusNode', url:'/flutter/event/FocusNode' },]
+		},
 		
 		{ deviceTitle:'其它',   keyword:'materialTapTargetSize', type:'MaterialTapTargetSize', pro:'按钮点击范围', code:[{path:'flutter/widget/button/MaterialTapTargetSize'}] },
-		{ keyword:'autofocus', type:'bool', pro:'是否自动聚焦' },
-		{ keyword:'focusNode', type:'FocusNode', pro:'监听焦点改变事件', code:[{path:'flutter/event/FocusNode/FocusNode'}] },
+		{ keyword:'autofocus', type:'bool', pro:'是否自动聚焦' }
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

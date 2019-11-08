@@ -18,12 +18,12 @@ const data = {
 			]
 		},
 		{
-			title:'焦点事件',
+			title:'焦点方法',
 			keyword:' FocusNode focusNode = new FocusNode(); focusNode.x( )',
 			type:'FocusNode',
 			data:[
-				{ keyword:'addListener', type:'void addListener(void Function() listener) ', pro:'监听焦点改变事件', code:[{path:'flutter/event/FocusNode/addListener'}] },
-				{ keyword:'unfocus', type:'void unfocus( void Function() )', pro:'失去焦点', code:[{path:'flutter/event/FocusNode/addListener'}] },
+				{ keyword:'addListener( )', type:'void addListener(void Function() listener) ', pro:'监听焦点改变事件', code:[{path:'flutter/event/FocusNode/addListener'}] },
+				{ keyword:'unfocus( )', type:'void unfocus( void Function() )', pro:'失去焦点', code:[{path:'flutter/event/FocusNode/addListener'}] },
 			]
 		},
 		{
@@ -31,7 +31,7 @@ const data = {
 			keyword:'FocusNode focusNode = new FocusNode(); focusNode.x',
 			type:'FocusNode',
 			data:[
-				{ keyword:'hasFocus', type:'bool', pro:'是有焦点' },
+				{ keyword:'hasFocus', type:'bool', pro:'是否有焦点' },
 				{ keyword:'context', type:'BuildContext', pro:'' },
 			]
 		}
