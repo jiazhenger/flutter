@@ -1,0 +1,10 @@
+var date = <b>new DateTime</b>(2019, 1, 1, 5, 45, 55, 1,1000); 	
+var date = <b>DateTime</b>(2019, 1, 1, 5, 45, 55, 1,1000);		<em>// 年，月，日，时，分，秒，毫秒，微秒 => 2019-01-01 05:45:55.002</em>
+var year = date.<b>year.toString()</b>;				<em>// 年 => 2019</em>
+var month = date.<b>month.toString().padLeft(2,'0')</b>;	<em>// 月 => 01</em>
+var day = date.<b>day.toString().padLeft(2,'0')</b>;	<em>// 日 => 01</em>
+var hour = date.<b>hour.toString().padLeft(2,'0')</b>;	<em>// 时 => 05</em>
+var minute = date.<b>minute.toString().padLeft(2,'0')</b>;	<em>// 分 => 45</em>
+var second = date.<b>second.toString().padLeft(2,'0')</b>;	<em>// 秒  => 55</em>
+var millisecond = date.<b>millisecond.toString().padLeft(2,'0')</b>;	<em>// 毫秒 => 002</em>
+var microsecond = date.<b>microsecond.toString().padLeft(2,'0')</b>;	<em>// 微秒 => 002</em>

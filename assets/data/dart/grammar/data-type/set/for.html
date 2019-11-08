@@ -1,0 +1,79 @@
+<em># 返回一个迭代器<em>
+<i>Iterable</i>  v = set.<b>whereType()</b>;
+v.forEach((v)=>print(v))
+
+<em># 循环输出<em>
+<b>for</b>(dynamic <u>value</u> <b>in</b> set) { 	}
+
+<em># 循环输出<em>
+<i>void</i> <b>forEach</b>(
+	<i>void</i> f(<i>E</i> <u>element</u>) 	<em>// == (dynamic element){ 	}</em>
+)
+set.<q>forEach</q>((dynamic value){ 	});
+
+<em># 循环输出，返回一个迭代器<em>
+<i>Iterable&lt;E&gt;</i> <b>map</b><i>&lt;T&gt;</i>(
+	<i>E</i> f(<i>E</i> <u>element</u>) 	<em>// == (element){  }</em>
+)
+Iterable v = set.<q>map</q>((v)=> v+1);
+
+<em># 过滤<em>
+<i>Iterable&lt;E&gt;</i> <b>where</b>(
+	<i>bool</i> test(<i>E</i> <u>element</u>) 	<em>// == (dynamic element){ return true }</em>
+)
+Iterable v = set.<q>where</q>((v) => v > 10);
+
+<em># 过滤首个满足条件的元素<em>
+<i>E</i> <b>firstWhere</b>(
+	<i>bool</i> test(<i>E</i> <u>element</u>), 		<em>// 满足首个元素的条件 == (dynamic element){ return true }</em>
+	{<i>E</i> <u>orElse( )</u>} 				<em>// 如果没有满足条件的元素，则执行此函数 == ( orElse:( ){	 } )</em> 	
+)
+E v = set.<q>firstWhere</q>(
+	(v) => v == 1,
+	<u>orElse</u>:( ){		}
+);
+
+<em># 返回满足条件的单个元素<em>
+<i>E</i> <b>singleWhere</b>(
+	<i>bool</i> test(<i>E</i> <u>element</u>), 		<em>// 满足条件 == (dynamic element){ return true }</em>
+	{<i>E</i> <u>orElse( )</u>} 				<em>// 如果没有满足条件的元素，则执行此函数 == ( orElse:( ){	 } )</em> 	
+)
+E v = set.<q>singleWhere</q>(
+	(v) => v == 1,
+	<u>orElse</u>:( ){		}
+);
+
+<em># 只要一个为真，返回 true，反之 alse<em>
+<i>bool</i> <b>any</b>(
+	<i>bool</i> test(<i>E</i> <u>element</u>) 	<em>// == (dynamic element){ return true }</em>
+)
+bool v = set.<q>any</q>((value)=> value == 8);
+
+<em># 全部为真，返回 true，反之 false<em>
+<i>bool</i> <b>every</b>(
+	<i>bool</i> test(<i>E</i> <u>element</u>) 	<em>// == (dynamic element){ return true }</em>
+)
+bool v = set.<q>every</q>((value)=> value == 8);
+
+<em># 迭加计算列表的值<em>
+<i>T</i>  <b>fold</b><i>&lt;T&gt;</i>(
+	<i>T</i> initialValue, 			<em>// 初始值</em>
+	<i>T</i> combine(			<em>// == (prev, element){ 	}</em>
+		<i>T</i> <u>previousValue</u>, 		<em>// 初始值 +或 - 每次循环的表达式计算后的值</em>
+		<i>E</i> <u>element</u>			<em>// List 值</em>
+	) 		
+)
+var set = {1,2,3};
+dynamic v = set.<q>fold</q>(10, (prev, element) => prev + element);	<em>// 10+1+2+3 => 6</em>
+dynamic v = set.<q>fold</q>(10, (prev, element) => prev - element);	<em>// 10-1-2-3 => 4</em>
+
+<em># 迭加计算列表的值<em>
+<i>E</i>  <b>reduce</b>(
+	<i>E</i> combine(			<em>// == (value, element){ 	}</em>
+		<i>E</i> <u>value</u>, 			<em>// 每次循环的表达式计算后的值</em>
+		<i>E</i> <u>element</u>		<em>// List 值</em>
+	) 		
+)
+var set = {1,2,3};
+dynamic v = set.<q>reduce</q>((value, element) => value + element);	<em>// 1+2+3 => 6</em>
+dynamic v = set.<q>reduce</q>((value, element) => value - element);	<em>// 1-2-3 => -4</em>

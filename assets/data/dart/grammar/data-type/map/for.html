@@ -1,0 +1,19 @@
+<em># 循环输出<em>
+<i>void</i> <b>forEach</b>(
+	<i>void</i> f(
+		<i>K</i> <u>key</u>,		<em>// key</em>
+		<i>K</i> <u>value</u> 		<em>// value</em>
+	) 	
+)
+map.<q>forEach</q>((Object key,Object value){ 	});
+
+<em># 循环输出，返回一个迭代<em>
+<i>Map&lt;K2, V2&gt;</i> <b>map</b><i>&lt;K2, V2&gt;</i>(
+	<i>MapEntry&lt;K2, V2&gt;</i> f(
+		<i>K</i> <u>key</u>,		<em>// key</em>
+		<i>K</i> <u>value</u> 		<em>// value</em>
+	)
+)
+Map v = map.<q>map</q>((Object key,Object value){ 
+	<q>return</q> <u>MapEntry</u>(k,v*10);
+});

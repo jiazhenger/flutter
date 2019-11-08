@@ -1,0 +1,16 @@
+<i>class</i> <b>MyClass</b>{
+	<i>int</i> <s>a</s>;
+	<i>int</i> <s>b</s>;
+	<em># 默认构造函数，可省略</em>
+	<b>MyClass</b>(  <b>this</b>.<s>a</s>, <b>this</b>.<s>b</s> );
+	<em># 命名构造函数</em>
+	<i>MyClass</i>.<b>fromJson</b>(Map data) {
+		<s>a</s> = data['<strong>a</strong>'];
+		<s>b</s> = data['<strong>b</strong>'];
+	}
+}
+<i>void</i> <b>main</b>( ){
+	<i>MyCalss</i> my = <i>MyCalss</i>.<b>fromJson</b>(<strong>{'a':10, 'b':20}</strong>);
+	print(my.<s>a</s>);		<em>=> 10</em>
+	print(my.<s>b</s>);		<em>=> 20</em>
+}
