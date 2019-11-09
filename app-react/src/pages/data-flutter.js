@@ -105,12 +105,11 @@
 		title: '按钮 Widget',
 		children:[
 			{ title: 'MaterialButton( )', path:'/flutter/button/MaterialButton' },
-			{ 
-				title: 'style',
-				children: [
-					{ title: 'TextSpan( )', path:'/flutter/text/TextSpan' },
-				]
-			},
+			{ title: 'RaisedButton( )', path:'/flutter/button/RaisedButton' },
+			{ title: 'OutlineButton( )', path:'/flutter/button/OutlineButton' },
+			{ title: 'FlatButton( )', path:'/flutter/button/FlatButton' },
+			{ title: 'FloatingActionButton( )', path:'/flutter/button/FloatingActionButton' },
+			{ title: 'DropdownButton( )', path:'/flutter/button/DropdownButton' },
 		]
 	},
 	{ 

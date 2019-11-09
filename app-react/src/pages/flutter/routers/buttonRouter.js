@@ -10,7 +10,9 @@ export default class ButtonRouter extends React.Component{
 		const { match } = this.props
 		return (
 				<Switch>
-					<Route path={`${match.url}/MaterialButton`} 				component={ Import('flutter/widget/button/MaterialButton') } exact />
+					<Route path={`${match.url}/MaterialButton`} 	component={ Import('flutter/widget/button/MaterialButton') } exact />
+					<Route path={`${match.url}/RaisedButton`} 		component={ Import('flutter/widget/button/RaisedButton') } exact />
+					<Route path={`${match.url}/OutlineButton`} 		component={ Import('flutter/widget/button/OutlineButton') } exact />
 				</Switch>
 		)
 	}
