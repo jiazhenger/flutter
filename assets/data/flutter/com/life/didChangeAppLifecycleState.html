@@ -1,0 +1,21 @@
+<em>/**</em>
+<em>* 监听生命周期</em>
+<em>* 1、<b>resumed</b>：界面可见</em>
+<em>* 2、<b>inactive</b>：界面退到后台或弹出对话框情况下， 即失去了焦点但仍可以执行drawframe回调</em>
+<em>* 3、<b>paused</b>：应用挂起，比如退到后台，失去了焦点且不会收到drawframe回调</em>
+<em>* 4、<b>suspending</b>： IOS 中没用，Android 里就是挂起，不会再执行drawframe回调</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em># 初次打开 widget 时，不执行 AppLifecycleState 的回调</em>
+	<i>void</i> <b>didChangeAppLifecycleState</b>(<iAppLifecycleState</i> <u>state</u>){
+		if( <u>state</u> == '<b>resumed</b>' ){
+			<em>从后台到前台</em>
+		}else if( <u>state</u> == '<b>inactive</b>' ){
+			<em>// 按 home 键或 Power 键</em>
+		}else if( <u>state</u> == '<b>paused</b>' ){
+			<em>// back 键退出应用</em>
+		}else if( <u>state</u> == '<b>suspending</b>' ){
+			<em>// IOS 中没用，Android 里就是挂起</em>
+		}
+	}
+}

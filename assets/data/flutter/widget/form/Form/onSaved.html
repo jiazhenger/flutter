@@ -1,0 +1,30 @@
+<em>final</em> <s>_formKey</s> = <i> GlobalKey</i><em>&lt;FormState&gt;</em>( ); 		<em>// 定义表单全局 key </em>
+<em>String</em> <s>_username</s>
+<q>Form</q>(
+	key:<s>_formKey</s>,
+	child:<q>Column</q>(
+		children:<em>&ltWidget&gt;</em>[
+			<q>TextFormField</q>(
+				<b>onSaved</b>: 	<i>null</i> 								<em>// 禁用</em>
+							<i>(</i> <em>String</em> <u>value</u> <i>)</i> {					<em>// 当输入发生改变时，只在此处把输入值预存给变量，还无法在别处使用</em>
+								<s>_username</s> = <u>value</u>
+							}
+			),
+			<em># 提交表单</em>
+			<q>RaisedButton</q>(
+				<u>onPressed</u>: ( ) {
+					<em> # 获取表单当前状态</em>
+					var <s>_form</s> = <s>_formKey</s>.<i>currentState</i>;
+					<em> # 如果验证通过</em>
+					if (<s>_form</s>.<i>validate( )</i>) {
+						<em># 保存表单值</em>
+						<s>_form</s>.<i>save( )</i>;
+						<em># 保存表单值后，预存变量才能够正常使用</em>
+						<em>print(<s>_username</s>);</em> 
+					}
+				},
+				child: <em>Text('Submit')</em>
+			),
+		]
+	)
+)
