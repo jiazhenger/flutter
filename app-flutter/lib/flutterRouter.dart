@@ -8,6 +8,8 @@ import 'package:flutter_web_study.app/router/imageRouter.dart';
 import 'package:flutter_web_study.app/router/circleRouter.dart';
 import 'package:flutter_web_study.app/router/textRouter.dart';
 import 'package:flutter_web_study.app/router/buttonRouter.dart';
+import 'package:flutter_web_study.app/router/iconRouter.dart';
+import 'package:flutter_web_study.app/router/formRouter.dart';
 // ======================================================================================================== 路由类
 class FlutterRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -19,5 +21,7 @@ class FlutterRouter{
 		...CircleRouter().router,
 		...TextRouter().router,
 		...ButtonRouter().router,
+		...IconRouter().router,
+		...FormRouter().router,
 	};
 }

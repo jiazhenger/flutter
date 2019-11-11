@@ -3,12 +3,13 @@
 import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
-	title:'RaisedButton 普通按钮',
-	keyword:'RaisedButton( )',
-	type:'RaisedButton',
-	url:'RaisedButtonPage',
+	title:'',
+	keyword:'final _key =  GlobalKey( ) ',
 	data:[
-		{ noOrder:true, pro:'同MaterialButton公有属性', link:'/flutter/button/MaterialButton' },
+		{ keyword:'_key.currentState', type:'state<StateFulWidget>', pro:'有状态的 state', code:[{path:'flutter/com/key/currentState'}] },
+		{ keyword:'_key.currentContext', type:'BuildContext', pro:''},
+		{ keyword:'_key.currentContext', type:'widget', pro:'当前 widget'},
+		
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

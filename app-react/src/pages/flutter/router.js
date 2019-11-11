@@ -12,6 +12,10 @@ import ImageRouter from './routers/imageRouter'
 import CircleRouter from './routers/circleRouter'
 import TextRouter from './routers/textRouter'
 import ButtonRouter from './routers/buttonRouter'
+import IconRouter from './routers/iconRouter'
+import FormRouter from './routers/formRouter'
+
+import WidgetOtherRouter from './routers/widgetOtherRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -41,6 +45,9 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/circle` } render={ ({ match }) => <CircleRouter match={ match } /> } />
 				<Route path={ `${url}/text` } render={ ({ match }) => <TextRouter match={ match } /> } />
 				<Route path={ `${url}/button` } render={ ({ match }) => <ButtonRouter match={ match } /> } />
+				<Route path={ `${url}/icon` } render={ ({ match }) => <IconRouter match={ match } /> } />
+				<Route path={ `${url}/form` } render={ ({ match }) => <FormRouter match={ match } /> } />
+				<Route path={ `${url}/widget-other` } render={ ({ match }) => <WidgetOtherRouter match={ match } /> } />
 				{/* 事件 */}
 				<Route path={ `${url}/event` } render={ ({ match }) => (
 					<Switch>
@@ -61,6 +68,12 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/http` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/http-client`} 	component={ Import('flutter/http/http-client') } exact />
+					</Switch>
+				)}/>
+				{/* 公共用法 */}
+				<Route path={ `${url}/com` } render={ ({ match }) => (
+					<Switch>
+						<Route path={`${match.url}/key`} 	component={ Import('flutter/com/key') } exact />
 					</Switch>
 				)}/>
 				{/*  */}

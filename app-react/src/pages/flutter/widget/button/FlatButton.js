@@ -3,26 +3,24 @@
 import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
-	title:'OutlineButton 镂空按钮',
-	keyword:'OutlineButton( )',
-	type:'OutlineButton',
-	url:'OutlineButtonPage',
+	title:'FlatButton 平坦按钮',
+	keyword:'FlatButton( )',
+	type:'FlatButton',
+	url:'FlatButtonPage',
 	data:[
-		{ deviceTitle:'边框', keyword:'borderSide', type:'BorderSide', pro:'边框', link:'/flutter/style/border/BorderSide' },
-		{ keyword:'highlightedBorderColor', type:'Color', pro:'高亮边框颜色', link:'/flutter/style/Colors' },
-		{ keyword:'disabledBorderColor', type:'Color', pro:'禁用边框颜色', link:'/flutter/style/Colors' },
-		{ deviceTitle:'文本颜色', title:'公有属性', keyword:'textColor', type:'Color', pro:'文本颜色', link:'/flutter/style/Colors' },
+		{ deviceTitle:'文本颜色', keyword:'textColor', type:'Color', pro:'文本颜色', link:'/flutter/style/Colors' },
 		{ keyword:'disabledTextColor', type:'Color', pro:'禁用文本颜色', link:'/flutter/style/Colors' },
 		{ keyword:'textTheme', type:'ButtonTextTheme', pro:'文本主题颜色', code:[{path:'flutter/widget/button/ButtonTextTheme'}] },
 		
 		{ deviceTitle:'背景颜色', keyword:'color', type:'Color', pro:'背景颜色', link:'/flutter/style/Colors' },
+		{ keyword:'disabledColor', type:'Color', pro:'禁用背景颜色', link:'/flutter/style/Colors' },
 		{ keyword:'splashColor', type:'Color', pro:'波纹颜色', link:'/flutter/style/Colors' },
 		
 		{ deviceTitle:'动态颜色',keyword:'highlightColor', type:'Color', pro:'点击颜色', link:'/flutter/style/Colors' },
 		{ keyword:'hoverColor', type:'Color', pro:'移入颜色', link:'/flutter/style/Colors' },
 		{ keyword:'focusColor', type:'Color', pro:'焦点颜色', link:'/flutter/style/Colors' },
 		
-		{ deviceTitle:'阴影', title:'私有属性', keyword:'highlightElevation', type:'double', pro:'按下阴影' },
+		{ deviceTitle:'亮度',keyword:'colorBrightness', type:'Brightness', pro:'亮度', code:[{path:'flutter/widget/button/Brightness'}] },
 		
 		{ deviceTitle:'通用', keyword:'child', type:'widget', pro:'子控件' },
 		{ keyword:'padding', type:'EdgeInsetsGeometry', pro:'补白', link:'/flutter/style/offset/EdgeInsets' },
@@ -45,12 +43,15 @@ const data = {
 			]
 		},
 		{ deviceTitle:'监听事件', keyword:'onPressed', type:'void Function( )', pro:'点击事件', code:[{path:'flutter/event/onPressed'}] },
+		{ keyword:'onHighlightChanged', type:'void Function( bool )', pro:'高亮改变事件', code:[{path:'flutter/event/onHighlightChanged'}] },
 		{ 
 			keyword:'focusNode', type:'FocusNode', pro:'监听焦点改变事件',
 			code:[{path:'flutter/event/FocusNode/FocusNode'}],
 			link:[{ title:'FocusNode', url:'/flutter/event/FocusNode' },]
 		},
+		{ keyword:'autofocus', type:'bool', pro:'是否自动聚焦' },
 		
+		{ deviceTitle:'其它',   keyword:'materialTapTargetSize', type:'MaterialTapTargetSize', pro:'按钮点击范围', code:[{path:'flutter/widget/button/MaterialTapTargetSize'}] },
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }
