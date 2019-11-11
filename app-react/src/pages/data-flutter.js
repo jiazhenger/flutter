@@ -1,6 +1,14 @@
 ﻿export default [
 	{ 
-		title: 'app 总配置',
+		title: '公共',
+		children: [
+			{ title: 'Widget 状态', path:'/flutter/com/widget-state' },
+			{ title: '生命周期', path:'/flutter/com/life' },
+			{ title: 'key', path:'/flutter/com/key' },
+		]
+	},
+	{
+		title: '入口',
 		children: [
 			{ title: 'MaterialApp()', path:'/flutter/app/MaterialApp' },
 			{ 
@@ -257,12 +265,6 @@
 		title: 'http',
 		children: [
 			{ title: 'HttpClient()', path:'/flutter/http/http-client' },
-		]
-	},
-	{ 
-		title: '公共用法',
-		children: [
-			{ title: 'key', path:'/flutter/com/key' },
 		]
 	},
 ]

@@ -1,0 +1,12 @@
+<em>/**</em>
+<em>* 在初始化 <s>initState( )</s> 后执行</em>
+<em>* 1、显示/关闭其它 widget</em>
+<em>* 2、可执行多次</em>
+<em>* 3、@override 可省略</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em>@override</em>
+	<i>void</i> <b>didChangeDependencies( )</b>{
+		<s>super</s>.<b>didChangeDependencies( )</b>; 		<em>// 执行父级的生命周期函数</em>
+	}
+}

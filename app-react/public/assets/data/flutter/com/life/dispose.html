@@ -1,0 +1,12 @@
+<em>/**</em>
+<em>* 卸载、销毁 widget 时执行</em>
+<em>* 1、在执行Navigator.pop后会调用该办法， 表示组件已销毁</em>
+<em>* 2、只执行一次</em>
+<em>* 3、@override 可省略</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em>@override</em>
+	<i>void</i> <b>dispose( )</b>{
+		<s>super</s>.<b>dispose( )</b>; 		<em>// 执行父级的生命周期函数</em>
+	}
+}

@@ -1,0 +1,12 @@
+<em>/**</em>
+<em>* 初始化执行</em>
+<em>* 1、插入到渲染树时调用</em>
+<em>* 2、只执行一次</em>
+<em>* 3、@override 可省略</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em>@override</em>
+	<i>void</i> <b>initState( )</b>{
+		<s>super</s>.<b>initState( )</b>; 		<em>// 执行父级的生命周期函数</em>
+	}
+}

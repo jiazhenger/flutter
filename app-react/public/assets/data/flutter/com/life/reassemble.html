@@ -1,0 +1,12 @@
+<em>/**</em>
+<em>* 点击闪电会执行</em>
+<em>* 1、只用于调试时的热重载(hot reload)</em>
+<em>* 2、release版本不会执行该函数</em>
+<em>* 3、@override 可省略</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em>@override</em>
+	<i>void</i> <b>reassemble( )</b>{
+		<s>super</s>.<b>reassemble( )</b>; 		<em>// 执行父级的生命周期函数</em>
+	}
+}

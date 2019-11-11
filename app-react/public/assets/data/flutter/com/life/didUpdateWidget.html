@@ -1,0 +1,11 @@
+<em>/**</em>
+<em>* 上级组件状态发生变化时会触发<u>子 widget</u> 执行 <b>didUpdateWidget</b> </em>
+<em>* 1、只执行一次</em>
+<em>* 2、@override 可省略</em>
+<em>*/</em>
+<em>class _PageState extends State&lt;Page&gt;</em>{
+	<em>@override</em>
+	<i>void</i> <b>didUpdateWidget</b>( <u>value</u> ){
+		<s>super</s>.<b>didUpdateWidget</b>( <u>value</u> ); 		<em>// 执行父级的生命周期函数</em>
+	}
+}

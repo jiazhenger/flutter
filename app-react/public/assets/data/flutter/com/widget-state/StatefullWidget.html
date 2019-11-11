@@ -1,0 +1,26 @@
+<em>/**</em>
+<em>* 有状态 Widget</em>
+<em>* 1、控件的状态、文字等属性存在变化的可能</em>
+<em>* 2、可传参、可接收参数</em>
+<em>* 3、有生命周期</em>
+<em>*/</em>
+<em># 声明一个有状态的 widget</em>
+class <q>Page</q> <em>extends</em> <b>StatefulWidget</b> {
+	<em># 声明变量</em>
+    final String <u>title</u>;
+    <em># 构造函数传参</em>
+    <q>Page</q>({ Key key, <u>this.title</u> }) : super(key: key);
+    <em># 创建界面</em>
+    @override
+    <i>_PageState</i> <s>createState( )</s> => <i>_PageState</i>( );
+}
+<em># 创建界面</em>
+class <i>_PageState</i> extends <b>State</b>&lt;<q>Page</q>&gt; {
+	<em># 创建 UI</em>
+	@override
+	Widget build(BuildContext context) {
+		return Scaffold(
+			body:Text(<u>widget.title</u>) 		<em>// 接收 Page(title:'') 传递的参数</em>
+		);
+	}
+}

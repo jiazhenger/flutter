@@ -73,6 +73,8 @@ class AppRouter extends React.Component{
 				{/* 公共用法 */}
 				<Route path={ `${url}/com` } render={ ({ match }) => (
 					<Switch>
+						<Route path={`${match.url}/widget-state`} 	component={ Import('flutter/com/widget-state') } exact />
+						<Route path={`${match.url}/life`} 	component={ Import('flutter/com/life') } exact />
 						<Route path={`${match.url}/key`} 	component={ Import('flutter/com/key') } exact />
 					</Switch>
 				)}/>
