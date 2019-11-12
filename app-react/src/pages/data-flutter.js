@@ -46,6 +46,8 @@
 				children:[
 					{ title: 'BorderSide', path:'/flutter/style/border/BorderSide' },
 					{ title: 'Border', path:'/flutter/style/border/Border' },
+					{ title: 'OutlineInputBorder( )', path:'/flutter/style/border/OutlineInputBorder' },
+					{ title: 'UnderlineInputBorder( )', path:'/flutter/style/border/UnderlineInputBorder' },
 				]
 			},
 			{ 
@@ -86,6 +88,7 @@
 					{ title: 'BoxDecoration( )', path:'/flutter/style/decoration/BoxDecoration' },
 					{ title: 'ShapeDecoration( )', path:'/flutter/style/decoration/ShapeDecoration' },
 					{ title: 'UnderlineTabIndicator( )', path:'/flutter/style/decoration/UnderlineTabIndicator' },
+					{ title: 'InputDecoration( )', path:'/flutter/style/decoration/InputDecoration' },
 				]
 			},
 			{ title: 'Rect', path:'/flutter/style/Rect' },

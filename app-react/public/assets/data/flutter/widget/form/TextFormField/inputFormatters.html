@@ -1,0 +1,7 @@
+TextFormField(
+	<b>inputFormatters</b>: [
+		<i>WhitelistingTextInputFormatter</i>(<b>RegExp</b>(<em>r'(^[0-9]*$)')</em>)),		<em>// 白名单校验，只允许输入符合规则的字符</em>
+		<i>BlacklistingTextInputFormatter</i>(<b>RegExp</b>(<em>r'[a-z]'</em>)),			<em>// 黑名单校验，除了规定的字符其他的都可以输入</em>
+		<i>LengthLimitingTextInputFormatter</i>(<em>5</em>),					<em>// 长度限制，跟 maxLength 作用类似</em>
+	]
+)

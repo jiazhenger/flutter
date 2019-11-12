@@ -53,7 +53,7 @@ export default class Index extends React.Component{
 						{
 							$fn.hasArray(data.data) && data.data.map((v,i)=>[
 								v.title ? <h2 key={'a'+i} className='sub-title ptb10 bbor1'>{v.title}:</h2>:null,
-								v.deviceTitle ? <h2 key={'a'+i} className='sub-title ptb10 c1 bbor1'>{v.deviceTitle}:</h2>:null,
+								v.deviceTitle ? <h2 key={'c'+i} className='sub-title ptb10 c1 bbor1'>{v.deviceTitle}:</h2>:null,
 								<BoxComponent 
 									key={'b'+i}
 									type={v.type}

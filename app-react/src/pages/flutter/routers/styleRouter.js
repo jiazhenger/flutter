@@ -32,6 +32,8 @@ export default class StyleRouter extends React.Component{
 						<Switch>
 							<Route path={`${match.url}/BorderSide`} 	component={ Import('flutter/style/border/BorderSide') } exact />
 							<Route path={`${match.url}/Border`} 		component={ Import('flutter/style/border/Border') } exact />
+							<Route path={`${match.url}/OutlineInputBorder`} 		component={ Import('flutter/style/border/OutlineInputBorder') } exact />
+							<Route path={`${match.url}/UnderlineInputBorder`} 		component={ Import('flutter/style/border/UnderlineInputBorder') } exact />
 						</Switch>
 					)} />
 					{/* 圆角 */}
@@ -72,6 +74,7 @@ export default class StyleRouter extends React.Component{
 							<Route path={`${match.url}/BoxDecoration`} 			component={ Import('flutter/style/decoration/BoxDecoration') } exact />
 							<Route path={`${match.url}/ShapeDecoration`} 		component={ Import('flutter/style/decoration/ShapeDecoration') } exact />
 							<Route path={`${match.url}/UnderlineTabIndicator`} 	component={ Import('flutter/style/decoration/UnderlineTabIndicator') } exact />
+							<Route path={`${match.url}/InputDecoration`} 	component={ Import('flutter/style/decoration/InputDecoration') } exact />
 						</Switch>
 					)} />
 					{/* 其它 */}

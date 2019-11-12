@@ -31,7 +31,7 @@ const data = {
 		{ deviceTitle:'焦点', keyword:'focusColor', type:'Color', pro:'焦点颜色', link:'/flutter/style/Colors' },
 		{ keyword:'focusElevation', type:'double', pro:'焦点阴影' },
 		
-		{ deviceTitle:'亮度',keyword:'colorBrightness', type:'Brightness', pro:'亮度', code:[{path:'flutter/widget/button/Brightness'}] },
+		{ deviceTitle:'亮度',keyword:'colorBrightness', type:'Brightness', pro:'亮度', code:[{path:'flutter/public/Brightness'}] },
 		
 		{ deviceTitle:'通用', keyword:'child', type:'widget', pro:'子控件' },
 		{ keyword:'padding', type:'EdgeInsetsGeometry', pro:'补白', link:'/flutter/style/offset/EdgeInsets' },

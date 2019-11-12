@@ -6,9 +6,10 @@ const data = {
 	title:'单边样式',
 	isGroup:true,
 	data:[
-		{ title:'无', keyword:'BorderSide.zero', type:'Offset' },
+		{ title:'无', grayText:'const', keyword:'BorderSide.zero', type:'Offset' },
 		{
 			title:'边样式',
+			grayText:'const',
 			keyword:'BorderSide( )',
 			type:'BorderSide',
 			url:'BorderSidePage',

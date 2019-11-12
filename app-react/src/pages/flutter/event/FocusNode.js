@@ -23,6 +23,7 @@ const data = {
 			type:'FocusNode',
 			data:[
 				{ keyword:'addListener( )', type:'void addListener(void Function() listener) ', pro:'监听焦点改变事件', code:[{path:'flutter/event/FocusNode/addListener'}] },
+				{ keyword:'removeListener( )', type:'void removeListener(void Function() listener) ', pro:'移出焦点改变事件', code:[{path:'flutter/event/FocusNode/removeListener'}] },
 				{ keyword:'unfocus( )', type:'void unfocus( void Function() )', pro:'失去焦点', code:[{path:'flutter/event/FocusNode/addListener'}] },
 			]
 		},
