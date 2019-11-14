@@ -3,7 +3,7 @@
 import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
-	title:'限制宽度',
+	title:'限制高宽',
 	keyword:'BoxConstraints( )',
 	data:[
 		{ keyword:'minWidth', type:'double', pro:'最小宽度' },

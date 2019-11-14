@@ -14,7 +14,8 @@ import TextRouter from './routers/textRouter'
 import ButtonRouter from './routers/buttonRouter'
 import IconRouter from './routers/iconRouter'
 import FormRouter from './routers/formRouter'
-
+import TableRouter from './routers/tableRouter'
+import LayoutRouter from './routers/layoutRouter'
 import WidgetOtherRouter from './routers/widgetOtherRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
@@ -47,6 +48,8 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/button` } render={ ({ match }) => <ButtonRouter match={ match } /> } />
 				<Route path={ `${url}/icon` } render={ ({ match }) => <IconRouter match={ match } /> } />
 				<Route path={ `${url}/form` } render={ ({ match }) => <FormRouter match={ match } /> } />
+				<Route path={ `${url}/table` } render={ ({ match }) => <TableRouter match={ match } /> } />
+				<Route path={ `${url}/layout` } render={ ({ match }) => <LayoutRouter match={ match } /> } />
 				<Route path={ `${url}/widget-other` } render={ ({ match }) => <WidgetOtherRouter match={ match } /> } />
 				{/* 事件 */}
 				<Route path={ `${url}/event` } render={ ({ match }) => (

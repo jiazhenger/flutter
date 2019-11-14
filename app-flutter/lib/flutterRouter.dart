@@ -10,6 +10,7 @@ import 'package:flutter_web_study.app/router/textRouter.dart';
 import 'package:flutter_web_study.app/router/buttonRouter.dart';
 import 'package:flutter_web_study.app/router/iconRouter.dart';
 import 'package:flutter_web_study.app/router/formRouter.dart';
+import 'package:flutter_web_study.app/router/tableRouter.dart';
 // ======================================================================================================== 路由类
 class FlutterRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -23,5 +24,6 @@ class FlutterRouter{
 		...ButtonRouter().router,
 		...IconRouter().router,
 		...FormRouter().router,
+		...TableRouter().router,
 	};
 }

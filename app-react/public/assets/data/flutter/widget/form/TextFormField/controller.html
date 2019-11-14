@@ -1,0 +1,33 @@
+<em>TextEditingController</em> <s>_controller</s> = <em>new</em> <b>TextEditingController( )</b>;
+
+TextFormField(
+	<b>controller</b>: <s>_controller</s>
+)
+<em># 使用 controller</em>
+RaisedButton(
+	onPressed: () {
+		<em>// 获取属性</em>
+		<em>String</em> v = <s>_controller</s>.<i>text</i>;						<em>// 获取输入字符串</em>
+		<em>TextEditingValue</em> v = <s>_controller</s>.<i>value</i>;				<em>// 获取输入值</em>
+		<em>bool</em> v = <s>_controller</s>.<i>hasListeners</i>;					<em>// 是否有监听函数</em>
+		
+		<em>// 设置属性</em>
+		<s>_controller</s>.<i>text</i> = ''; 							<em>// 设置输入框值</em>
+		<s>_controller</s>.<i>value</i> = <q>TextEditingValue</q>( ); 			<em>// 设置输入框值</em> 
+		<s>_controller</s>.<i>selection</i> = <q>TextSelection</q>.<em>collapsed</em>( ); 	<em>// 设置输入框值</em>	
+		<em>// 方法</em>
+		<em>void</em><s>_controller</s>.<i>dispose( )</i>;						<em>// 销毁</em>
+		<em>void</em><s>_controller</s>.<i>clear( )</i>;							<em>// 清除</em>
+		<em>void</em><s>_controller</s>.<i>clearComposing( )</i>;				<em>//</em>
+		<em>void</em><s>_controller</s>.<i>notifyListeners( )</i>;				<em>//</em>
+		<em>void</em> <s>_controller</s>.<i>addListener( ( ){ } )</i>;				<em>// 监听</em>
+		<em>void</em> <s>_controller</s>.<i>removeListener( ( ){ } )</i>;			<em>// 移除监听</em>
+		<em>void</em> <s>_controller</s>.<i>removeListener( ( ){ } )</i>;			<em>// 移除监听</em>
+		<em>TextSpan</em> <s>_controller</s>.<i>buildTextSpan</i>( 				<em>// 返回一个 TextSpan</em>
+			<em>TextStyle</em> <u>style</u>: 		<em>TextStyle(color:Colors.red)</em>, 
+			<em>bool</em> <u>withComposing</u>: 	<em>true</em> 
+		);		
+		
+	}
+	child: <em>Text('Submit')</em>,
+)

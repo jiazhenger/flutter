@@ -34,6 +34,7 @@ export default class StyleRouter extends React.Component{
 							<Route path={`${match.url}/Border`} 		component={ Import('flutter/style/border/Border') } exact />
 							<Route path={`${match.url}/OutlineInputBorder`} 		component={ Import('flutter/style/border/OutlineInputBorder') } exact />
 							<Route path={`${match.url}/UnderlineInputBorder`} 		component={ Import('flutter/style/border/UnderlineInputBorder') } exact />
+							<Route path={`${match.url}/TableBorder`} 		component={ Import('flutter/style/border/TableBorder') } exact />
 						</Switch>
 					)} />
 					{/* 圆角 */}

@@ -10,7 +10,7 @@
 	{
 		title: '入口',
 		children: [
-			{ title: 'MaterialApp()', path:'/flutter/app/MaterialApp' },
+			{ title: 'MaterialApp( )', path:'/flutter/app/MaterialApp' },
 			{ 
 				title: 'routes: 路由',
 				children: [
@@ -48,6 +48,7 @@
 					{ title: 'Border', path:'/flutter/style/border/Border' },
 					{ title: 'OutlineInputBorder( )', path:'/flutter/style/border/OutlineInputBorder' },
 					{ title: 'UnderlineInputBorder( )', path:'/flutter/style/border/UnderlineInputBorder' },
+					{ title: 'TableBorder( )', path:'/flutter/style/border/TableBorder' },
 				]
 			},
 			{ 
@@ -175,55 +176,18 @@
 			{ title: 'ClipRRect( )', path:'/flutter/circle/ClipRRect' },
 		]
 	},
-	{ 
-		title: '布局  Widget',
-		children:[
-			{ 
-				title: 'child:widget',
-				children: [
-					{ title: 'Container()' },
-					{ title: 'Padding()' },
-					{ title: 'Center()' },
-					{ title: 'Align()' },
-					{ title: 'FittedBox()' },
-					{ title: 'AspectRatio()' },
-					{ title: 'ConstrainedBox()' },
-					{ title: 'Baseline()' },
-					{ title: 'FractionallySizedBox()' },
-					{ title: 'IntrinsicHeight()' },
-					{ title: 'IntrinsicWidth()' },
-					{ title: 'LimitedBox()' },
-					{ title: 'Offstage()' },
-					{ title: 'OverflowBox()' },
-					{ title: 'SizedBox()' },
-					{ title: 'SizedOverflowBox()' },
-					{ title: 'Transform()' },
-					{ title: 'CustomSingleChildLayout()' },
-				]
-			},
-			{ 
-				title: 'children:<Widget>[]',
-				children: [
-					{ title: 'Row' },
-					{ title: 'Column' },
-					{ title: 'Stack' },
-					{ title: 'IndexedStack' },
-					{ title: 'Flow' },
-					{ title: 'Wrap' },
-					{ title: 'Flow' },
-					{ title: 'ListBody' },
-					{ title: 'ListView' },
-					{ title: 'CustomMultiChildLayout' },
-				]
-			},
-		]
-	},
 	{
 		title: '表格 Widget',
 		children:[
-			{ title: 'Table' },
-			{ title: 'TableRow' },
-			{ title: 'TableCell' },
+			{ title: 'Table', path:'/flutter/table/Table' },
+			{ title: 'TableRow', path:'/flutter/table/TableRow' },
+			{ title: 'TableCell', path:'/flutter/table/TableCell' },
+			{ 
+				title: 'style',
+				children: [
+					{ title: 'FixedColumnWidth( )', path:'/flutter/table/FixedColumnWidth' },
+				]
+			},
 		]
 	},
 	{
@@ -232,6 +196,56 @@
 			{ title: 'Form', path:'/flutter/form/Form' },
 			{ title: 'TextFormField', path:'/flutter/form/TextFormField' },
 			{ title: 'TextField', path:'/flutter/form/TextField' },
+			{ 
+				title: 'style',
+				children: [
+					{ title: 'TextEditingValue( )', path:'/flutter/form/TextEditingValue' },
+					{ title: 'TextRange( )', path:'/flutter/form/TextRange' },
+					{ title: 'TextSelection( )', path:'/flutter/form/TextSelection' },
+					{ title: 'TextPosition( )', path:'/flutter/form/TextPosition' },
+					{ title: 'ToolbarOptions( )', path:'/flutter/form/ToolbarOptions' },
+					{ title: 'ScrollController( )', path:'/flutter/form/ScrollController' },
+				]
+			},
+			
+		]
+	},
+	{ 
+		title: '布局  child',
+		children:[
+			{ title: 'Container( )', path:'/flutter/layout/Container' },
+			{ title: 'Padding( )', path:'/flutter/layout/Padding' },
+			{ title: 'Center( )', path:'/flutter/layout/Center' },
+			{ title: 'Align( )', path:'/flutter/layout/Align' },
+			{ title: 'FittedBox( )' },
+			{ title: 'AspectRatio( )' },
+			{ title: 'ConstrainedBox( )' },
+			{ title: 'Baseline( )' },
+			{ title: 'FractionallySizedBox( )' },
+			{ title: 'IntrinsicHeight( )' },
+			{ title: 'IntrinsicWidth( )' },
+			{ title: 'LimitedBox( )' },
+			{ title: 'Offstage( )' },
+			{ title: 'OverflowBox( )' },
+			{ title: 'SizedBox( )' },
+			{ title: 'SizedOverflowBox( )' },
+			{ title: 'Transform( )' },
+			{ title: 'CustomSingleChildLayout( )' }
+		]
+	},
+	{ 
+		title: '布局 children ',
+		children:[
+			{ title: 'Row' },
+			{ title: 'Column' },
+			{ title: 'Stack' },
+			{ title: 'IndexedStack' },
+			{ title: 'Flow' },
+			{ title: 'Wrap' },
+			{ title: 'Flow' },
+			{ title: 'ListBody' },
+			{ title: 'ListView' },
+			{ title: 'CustomMultiChildLayout' },
 		]
 	},
 	{
@@ -267,7 +281,7 @@
 	{ 
 		title: 'http',
 		children: [
-			{ title: 'HttpClient()', path:'/flutter/http/http-client' },
+			{ title: 'HttpClient( )', path:'/flutter/http/http-client' },
 		]
 	},
 ]

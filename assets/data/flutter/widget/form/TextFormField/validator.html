@@ -1,0 +1,14 @@
+TextFormField(
+	<b>validator</b>: (<u>value</u>) { 
+		return <u>value</u>.<i>isEmpty</i> ?  <em>'用户名不能为空' : null</em>;
+		<em># 匹配密码</em>
+		<em>RegExp</em> <s>exp</s> = <em>new</em> <q>RegExp</q>(<em>r'(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$'</em>);
+		return !<s>exp</s>.<i>hasMatch</i>(<u>value</u>) ? <em>'6~16位数字和字符组合' : null</em>;
+		<em>匹配电话</em>
+		<em>RegExp</em> <s>exp</s> = <em>new</em> <q>RegExp</q>(<em>r'1[0-9]\d{9}$'</em>);
+		return !<s>exp</s>.<i>hasMatch</i>(<u>value</u>) ? <em>'电话不合法' : null</em>;
+		<em>匹配邮箱</em>
+		<em>RegExp</em> <s>exp</s> = <em>new</em> <q>RegExp</q>(<em>r'^([0-9A-Za-z\-_]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$'</em>);
+		return !<s>exp</s>.<i>hasMatch</i>(<u>value</u>) ? <em>'邮箱不合法' : null</em>;
+	}
+)

@@ -13,6 +13,14 @@ export default class
 				<Switch>
 					<Route path={`${match.url}/Form`} 	component={ Import('flutter/widget/form/Form') } exact />
 					<Route path={`${match.url}/TextFormField`} 	component={ Import('flutter/widget/form/TextFormField') } exact />
+					<Route path={`${match.url}/TextField`} 	component={ Import('flutter/widget/form/TextField') } exact />
+					{/* style */}
+					<Route path={`${match.url}/TextEditingValue`} 	component={ Import('flutter/widget/form/x/TextEditingValue') } exact />
+					<Route path={`${match.url}/TextRange`} 	component={ Import('flutter/widget/form/x/TextRange') } exact />
+					<Route path={`${match.url}/TextSelection`} 	component={ Import('flutter/widget/form/x/TextSelection') } exact />
+					<Route path={`${match.url}/TextPosition`} 	component={ Import('flutter/widget/form/x/TextPosition') } exact />
+					<Route path={`${match.url}/ToolbarOptions`} 	component={ Import('flutter/widget/form/x/ToolbarOptions') } exact />
+					<Route path={`${match.url}/ScrollController`} 	component={ Import('flutter/widget/form/x/ScrollController') } exact />
 				</Switch>
 		)
 	}
