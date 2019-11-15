@@ -29,6 +29,12 @@ export default class
 					<Route path={`${match.url}/Flex`} 	component={ Import('flutter/widget/layout/flex/Flex') } exact />
 					<Route path={`${match.url}/Row`} 	component={ Import('flutter/widget/layout/flex/Row') } exact />
 					<Route path={`${match.url}/Column`} 	component={ Import('flutter/widget/layout/flex/Column') } exact />
+					{/* 滚动 */}
+					<Route path={`${match.url}/ListView`} 	component={ Import('flutter/widget/layout/scroll/ListView') } exact />
+					<Route path={`${match.url}/GridView`} 	component={ Import('flutter/widget/layout/scroll/GridView') } exact />
+					{/* 自定义控件 */}
+					<Route path={`${match.url}/CustomSingleChildLayout`} 	component={ Import('flutter/widget/layout/my-widget/CustomSingleChildLayout') } exact />
+					<Route path={`${match.url}/CustomMultiChildLayout`} 	component={ Import('flutter/widget/layout/my-widget/CustomMultiChildLayout') } exact />
 				</Switch>
 		)
 	}

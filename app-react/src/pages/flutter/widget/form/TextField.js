@@ -8,11 +8,11 @@ const data = {
 	type:'TextField',
 	url:'TextFieldPage',
 	data:[
-		{ keyword:'dragStartBehavior', type:'DragStartBehavior', pro:'拖动行为', code:[{ path:'flutter/widget/form/TextField/DragStartBehavior'}] },
-		{ keyword:'scrollPhysics', type:'ScrollPhysics', pro:'拖动行为', code:[{ path:'flutter/widget/form/TextField/ScrollPhysics'}] },
+		{ keyword:'dragStartBehavior', type:'DragStartBehavior', pro:'拖动行为', code:[{ path:'flutter/public/DragStartBehavior'}] },
+		{ keyword:'scrollPhysics', type:'ScrollPhysics', pro:'响应用户输入', code:[{ path:'flutter/public/ScrollPhysics'}] },
 		{ 
 			keyword:'scrollController', type:'ScrollController', pro:'滚动控件器', 
-			code:[{ path:'flutter/widget/form/TextField/ScrollController'}],
+			code:[{ path:'flutter/public/ScrollController'}],
 			link:[{ title:'ScrollController', url:'/flutter/form/ScrollController'}]
 		},
 		{ keyword:'textAlignVertical', type:'TextAlignVertical', pro:'垂直对齐方式', code:[{ path:'flutter/public/TextAlignVertical'}] },

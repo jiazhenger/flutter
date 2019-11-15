@@ -255,6 +255,8 @@
 					{ title: 'ListView( )', path:'/flutter/layout/ListView' },
 					{ title: 'GridView( )', path:'/flutter/layout/GridView' },
 					{ title: 'CustomScrollView( )', path:'/flutter/layout/CustomScrollView' },
+					{ title: 'SliverPadding( )', path:'/flutter/layout/SliverPadding' },
+					{ title: 'SliverList( )', path:'/flutter/layout/SliverList' },
 				]
 			},
 			{ 
@@ -265,18 +267,10 @@
 				]
 			},
 			{ 
-				title: '自定义滚动',
-				children: [
-					{ title: 'CustomScrollView( )', path:'/flutter/layout/CustomScrollView' },
-					{ title: 'SliverPadding( )', path:'/flutter/layout/SliverPadding' },
-					{ title: 'SliverList( )', path:'/flutter/layout/SliverList' },
-				]
-			},
-			{ 
 				title: '自定义控件',
 				children: [
-					{ title: 'CustomSingleChildLayout( )', path:'/flutter/layout/CustomScrollView' },
-					{ title: 'CustomMultiChildLayout( )', path:'/flutter/layout/SliverPadding' },
+					{ title: 'CustomSingleChildLayout( )', path:'/flutter/layout/CustomSingleChildLayout' },
+					{ title: 'CustomMultiChildLayout( )', path:'/flutter/layout/CustomMultiChildLayout' },
 				]
 			},
 			
