@@ -25,6 +25,7 @@ export default class StyleRouter extends React.Component{
 						<Switch>
 							<Route path={`${match.url}/Alignment`} 			component={ Import('flutter/style/align/Alignment') } exact />
 							<Route path={`${match.url}/FractionalOffset`} 	component={ Import('flutter/style/align/FractionalOffset') } exact />
+							<Route path={`${match.url}/AlignmentDirectional`} 	component={ Import('flutter/style/align/AlignmentDirectional') } exact />
 						</Switch>
 					)} />
 					{/* 边框 */}

@@ -39,6 +39,7 @@
 				children:[
 					{ title: 'Alignment', path:'/flutter/style/align/Alignment' },
 					{ title: 'FractionalOffset', path:'/flutter/style/align/FractionalOffset' },
+					{ title: 'AlignmentDirectional', path:'/flutter/style/align/AlignmentDirectional' },
 				]
 			},
 			{ 
@@ -169,14 +170,6 @@
 		]
 	},
 	{
-		title: '形状 Widget',
-		children:[
-			{ title: 'CircleAvatar( )', path:'/flutter/circle/CircleAvatar' },
-			{ title: 'ClipOval( )', path:'/flutter/circle/ClipOval' },
-			{ title: 'ClipRRect( )', path:'/flutter/circle/ClipRRect' },
-		]
-	},
-	{
 		title: '表格 Widget',
 		children:[
 			{ title: 'Table', path:'/flutter/table/Table' },
@@ -210,14 +203,83 @@
 			
 		]
 	},
-	{ 
-		title: '布局  child',
+	{
+		title: '形状 Widget',
 		children:[
-			{ title: 'Container( )', path:'/flutter/layout/Container' },
-			{ title: 'Padding( )', path:'/flutter/layout/Padding' },
-			{ title: 'Center( )', path:'/flutter/layout/Center' },
-			{ title: 'Align( )', path:'/flutter/layout/Align' },
-			{ title: 'FittedBox( )' },
+			{ title: 'CircleAvatar( )', path:'/flutter/circle/CircleAvatar' },
+			{ title: 'ClipOval( )', path:'/flutter/circle/ClipOval' },
+			{ title: 'ClipRRect( )', path:'/flutter/circle/ClipRRect' },
+		]
+	},
+	{ 
+		title: '布局  Widget',
+		children:[
+			{ 
+				title: '样式',
+				children: [
+					{ title: 'Container( )', path:'/flutter/layout/Container' },
+					{ title: 'Padding( )', path:'/flutter/layout/Padding' },
+					{ title: 'Center( )', path:'/flutter/layout/Center' },
+					{ title: 'Align( )', path:'/flutter/layout/Align' },
+					{ title: 'Opacity( )', path:'/flutter/layout/Opacity' },
+					{ title: 'FittedBox( )', path:'/flutter/layout/FittedBox' },
+					{ title: 'LayoutBuilder( )', path:'/flutter/layout/LayoutBuilder' },
+				]
+			},
+			{ 
+				title: '列表',
+				children: [
+					{ title: 'Wrap( )', path:'/flutter/layout/Wrap' },
+					{ title: 'Flow( )', path:'/flutter/layout/Flow' },
+					{ title: 'ListBody( )', path:'/flutter/layout/ListBody' },
+				]
+			},
+			{ 
+				title: '定位',
+				children: [
+					{ title: 'Stack( )', path:'/flutter/layout/Stack' },
+					{ title: 'Positioned( )', path:'/flutter/layout/Positioned' },
+				]
+			},
+			{ 
+				title: '弹性',
+				children: [
+					{ title: 'Flex( )', path:'/flutter/layout/Flex' },
+					{ title: 'Row( )', path:'/flutter/layout/Row' },
+					{ title: 'Column( )', path:'/flutter/layout/Column' },
+				]
+			},
+			{ 
+				title: '滚动',
+				children: [
+					{ title: 'ListView( )', path:'/flutter/layout/ListView' },
+					{ title: 'GridView( )', path:'/flutter/layout/GridView' },
+					{ title: 'CustomScrollView( )', path:'/flutter/layout/CustomScrollView' },
+				]
+			},
+			{ 
+				title: '标题',
+				children: [
+					{ title: 'ListTile( )', path:'/flutter/layout/ListTile' },
+					{ title: 'ExpansionTile( )', path:'/flutter/layout/ExpansionTile' },
+				]
+			},
+			{ 
+				title: '自定义滚动',
+				children: [
+					{ title: 'CustomScrollView( )', path:'/flutter/layout/CustomScrollView' },
+					{ title: 'SliverPadding( )', path:'/flutter/layout/SliverPadding' },
+					{ title: 'SliverList( )', path:'/flutter/layout/SliverList' },
+				]
+			},
+			{ 
+				title: '自定义控件',
+				children: [
+					{ title: 'CustomSingleChildLayout( )', path:'/flutter/layout/CustomScrollView' },
+					{ title: 'CustomMultiChildLayout( )', path:'/flutter/layout/SliverPadding' },
+				]
+			},
+			
 			{ title: 'AspectRatio( )' },
 			{ title: 'ConstrainedBox( )' },
 			{ title: 'Baseline( )' },
@@ -233,25 +295,16 @@
 			{ title: 'CustomSingleChildLayout( )' }
 		]
 	},
-	{ 
-		title: '布局 children ',
-		children:[
-			{ title: 'Row' },
-			{ title: 'Column' },
-			{ title: 'Stack' },
-			{ title: 'IndexedStack' },
-			{ title: 'Flow' },
-			{ title: 'Wrap' },
-			{ title: 'Flow' },
-			{ title: 'ListBody' },
-			{ title: 'ListView' },
-			{ title: 'CustomMultiChildLayout' },
-		]
-	},
 	{
 		title: '其它 Widget',
 		children:[
 			{ title: 'DropdownMenuItem( )', path:'/flutter/widget-other/DropdownMenuItem' },
+		]
+	},
+	{
+		title: 'UI Widget',
+		children:[
+			{ title: 'Card( )', path:'/flutter/ui/Card' },
 		]
 	},
 	{

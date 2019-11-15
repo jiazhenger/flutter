@@ -11,10 +11,24 @@ export default class
 		const { match } = this.props
 		return (
 				<Switch>
-					<Route path={`${match.url}/Container`} 	component={ Import('flutter/widget/layout/Container') } exact />
-					<Route path={`${match.url}/Padding`} 	component={ Import('flutter/widget/layout/Padding') } exact />
-					<Route path={`${match.url}/Center`} 	component={ Import('flutter/widget/layout/Center') } exact />
-					<Route path={`${match.url}/Align`} 	component={ Import('flutter/widget/layout/Align') } exact />
+					<Route path={`${match.url}/Container`} 	component={ Import('flutter/widget/layout/style/Container') } exact />
+					<Route path={`${match.url}/Padding`} 	component={ Import('flutter/widget/layout/style/Padding') } exact />
+					<Route path={`${match.url}/Center`} 	component={ Import('flutter/widget/layout/style/Center') } exact />
+					<Route path={`${match.url}/Align`} 	component={ Import('flutter/widget/layout/style/Align') } exact />
+					<Route path={`${match.url}/Opacity`} 	component={ Import('flutter/widget/layout/style/Opacity') } exact />
+					<Route path={`${match.url}/FittedBox`} 	component={ Import('flutter/widget/layout/style/FittedBox') } exact />
+					<Route path={`${match.url}/ListBody`} 	component={ Import('flutter/widget/layout/list/ListBody') } exact />
+					{/* 列表 */}
+					<Route path={`${match.url}/Wrap`} 	component={ Import('flutter/widget/layout/list/Wrap') } exact />
+					<Route path={`${match.url}/Flow`} 	component={ Import('flutter/widget/layout/list/Flow') } exact />
+					<Route path={`${match.url}/LayoutBuilder`} 	component={ Import('flutter/widget/layout/list/LayoutBuilder') } exact />
+					{/* 定位 */}
+					<Route path={`${match.url}/Stack`} 	component={ Import('flutter/widget/layout/position/Stack') } exact />
+					<Route path={`${match.url}/Positioned`} 	component={ Import('flutter/widget/layout/position/Positioned') } exact />
+					{/* 弹性 */}
+					<Route path={`${match.url}/Flex`} 	component={ Import('flutter/widget/layout/flex/Flex') } exact />
+					<Route path={`${match.url}/Row`} 	component={ Import('flutter/widget/layout/flex/Row') } exact />
+					<Route path={`${match.url}/Column`} 	component={ Import('flutter/widget/layout/flex/Column') } exact />
 				</Switch>
 		)
 	}

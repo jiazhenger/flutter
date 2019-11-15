@@ -16,6 +16,7 @@ import IconRouter from './routers/iconRouter'
 import FormRouter from './routers/formRouter'
 import TableRouter from './routers/tableRouter'
 import LayoutRouter from './routers/layoutRouter'
+import UiRouter from './routers/uiRouter'
 import WidgetOtherRouter from './routers/widgetOtherRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
@@ -51,6 +52,7 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/table` } render={ ({ match }) => <TableRouter match={ match } /> } />
 				<Route path={ `${url}/layout` } render={ ({ match }) => <LayoutRouter match={ match } /> } />
 				<Route path={ `${url}/widget-other` } render={ ({ match }) => <WidgetOtherRouter match={ match } /> } />
+				<Route path={ `${url}/ui` } render={ ({ match }) => <UiRouter match={ match } /> } />
 				{/* 事件 */}
 				<Route path={ `${url}/event` } render={ ({ match }) => (
 					<Switch>
