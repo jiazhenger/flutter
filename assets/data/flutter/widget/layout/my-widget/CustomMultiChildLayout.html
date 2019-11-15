@@ -1,0 +1,26 @@
+<em># 自定义</em>
+class _MyDelegate extends <b>MultiChildLayoutDelegate</b>{
+	_MyDelegate();
+	
+	static const String title = 'title';
+	static const String description = 'description';
+	
+	@override
+	void <i>performLayout</i>(Size <u>size</u>) {
+		final BoxConstraints constraints = <q>BoxConstraints</q>(maxWidth: <u>size</u>.width);
+		
+		final Size titleSize = <q>layoutChild</q>(title, constraints);
+		
+		positionChild(title, Offset(0.0, 0.0));
+		
+		final double descriptionY = titleSize.height;
+		<q>layoutChild</q>(description, constraints);
+		<q>positionChild</q>(description, Offset(0.0, descriptionY)); <em>// x、y 坐标</em>
+	}
+	
+	@override
+	bool <i>shouldRelayout</i>(TestLayoutDelegate <u>oldDelegate</u>) => false;
+<em># 使用</em>
+CustomMultiChildLayout(
+	<b>delegate</b>: <s>_MyDelegate</s>(<em>Size(200.0, 200.0)</em>)
+)

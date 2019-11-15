@@ -1,0 +1,23 @@
+<em># 自定义</em>
+class <s>_MyDelegate</s> extends <b>SingleChildLayoutDelegate</b> {
+	FixedSizeLayoutDelegate(this.size);
+	
+	final Size size;
+	
+	@override
+	Size <i>getSize</i>(BoxConstraints <u>constraints</u>) => size;
+	
+	@override
+	BoxConstraints <i>getConstraintsForChild</i>(BoxConstraints <u>constraints</u>) {
+		return new <q>BoxConstraints</q>.tight(size);
+	}
+	
+	@override
+	bool <i>shouldRelayout</i>(_MyDelegate <u>oldDelegate</u>) {
+		return size != <u>oldDelegate</u>.size;
+	}
+}
+<em># 使用</em>
+CustomSingleChildLayout(
+	<b>delegate</b>: <s>_MyDelegate</s>(<em>Size(200.0, 200.0)</em>)
+)
