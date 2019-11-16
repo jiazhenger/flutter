@@ -1,18 +1,16 @@
 import 'package:flutter_web/material.dart';
 // ======================================================================================================== 全局配置
-import '../config.dart';
-import 'dart:math' as math;
+import 'package:flutter_web_study.app/config.dart';
 // ======================================================================================================== Widget 控件
-class IndexPage extends StatefulWidget { // 有状态的控件，控件的状态、文字等属性存在变化的可能
+class ListTilePage extends StatefulWidget { // 有状态的控件，控件的状态、文字等属性存在变化的可能
     final String title;
-
-    IndexPage({ Key key, this.title }) : super(key: key);
-
+    ListTilePage({ Key key, this.title }) : super(key: key);
     @override
     _PageState createState() => _PageState(); // === createState()  => _PageState();
 }
 
-class _PageState extends State<IndexPage> {
+class _PageState extends State<ListTilePage> {
+    // page
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -21,12 +19,16 @@ class _PageState extends State<IndexPage> {
                 centerTitle:true,
             ),
             body: ListView(
-                padding: EdgeInsets.all(10.0),
+                padding:EdgeInsets.all(10.0),
                 children: <Widget>[
-                    RaisedButton(child: Text('Button'),onPressed: (){
-                        Navigator.pushNamed(context,'/ExpansionTilePage');
-                    })
-                ]
+                    ListTile(
+                        onTap:(){},
+                        leading: Text('leading'),
+                        title: Text('title'),
+                        subtitle: Text('subtitle'),
+                        trailing: Text('trailing')
+                    )
+                ],
             )
         );
     }

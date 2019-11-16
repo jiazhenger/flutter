@@ -79,11 +79,18 @@ export default class StyleRouter extends React.Component{
 							<Route path={`${match.url}/InputDecoration`} 	component={ Import('flutter/style/decoration/InputDecoration') } exact />
 						</Switch>
 					)} />
+					{/* 矩阵 */}
+					<Route path={`${match.url}/rotation`} 	  		component={ Import('flutter/style/Matrix4/rotation') } exact />
+					<Route path={`${match.url}/scale`} 	   			component={ Import('flutter/style/Matrix4/scale') } exact />
+					<Route path={`${match.url}/translation`} 		component={ Import('flutter/style/Matrix4/translation') } exact />
+					<Route path={`${match.url}/skew`}		component={ Import('flutter/style/Matrix4/skew') } exact />
+					<Route path={`${match.url}/solve`}		component={ Import('flutter/style/Matrix4/solve') } exact />
+					<Route path={`${match.url}/other`}		component={ Import('flutter/style/Matrix4/other') } exact />
 					{/* 其它 */}
 					<Route path={`${match.url}/Rect`} 			component={ Import('flutter/style/Rect') } exact />
 					<Route path={`${match.url}/Size`} 			component={ Import('flutter/style/Size') } exact />
 					<Route path={`${match.url}/Clip`} 			component={ Import('flutter/style/Clip') } exact />
-					<Route path={`${match.url}/BoxConstraints`} 			component={ Import('flutter/style/BoxConstraints') } exact />
+					<Route path={`${match.url}/BoxConstraints`} component={ Import('flutter/style/BoxConstraints') } exact />
 				</Switch>
 		)
 	}

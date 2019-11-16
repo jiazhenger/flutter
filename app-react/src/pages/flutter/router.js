@@ -16,8 +16,10 @@ import IconRouter from './routers/iconRouter'
 import FormRouter from './routers/formRouter'
 import TableRouter from './routers/tableRouter'
 import LayoutRouter from './routers/layoutRouter'
+import ScrollRouter from './routers/scrollRouter'
 import UiRouter from './routers/uiRouter'
 import WidgetOtherRouter from './routers/widgetOtherRouter'
+import VRouter from './routers/vRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -51,6 +53,7 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/form` } render={ ({ match }) => <FormRouter match={ match } /> } />
 				<Route path={ `${url}/table` } render={ ({ match }) => <TableRouter match={ match } /> } />
 				<Route path={ `${url}/layout` } render={ ({ match }) => <LayoutRouter match={ match } /> } />
+				<Route path={ `${url}/scroll` } render={ ({ match }) => <ScrollRouter match={ match } /> } />
 				<Route path={ `${url}/widget-other` } render={ ({ match }) => <WidgetOtherRouter match={ match } /> } />
 				<Route path={ `${url}/ui` } render={ ({ match }) => <UiRouter match={ match } /> } />
 				{/* 事件 */}
@@ -83,6 +86,8 @@ class AppRouter extends React.Component{
 						<Route path={`${match.url}/key`} 	component={ Import('flutter/com/key') } exact />
 					</Switch>
 				)}/>
+				{/* v 对象 */}
+				<Route path={ `${url}/v` } render={ ({ match }) => <VRouter match={ match } /> } />
 				{/*  */}
 				<Redirect from={url}		to={ `${url}` } 		exact />
 				<Route 	render = { () => <div>404</div> } exact />

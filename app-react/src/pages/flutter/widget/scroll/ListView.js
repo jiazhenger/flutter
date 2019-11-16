@@ -39,7 +39,7 @@ const data = {
 			type:'ListView',
 			data:[
 				{ keyword:'itemCount', type:'int', pro:'列表数量' },
-				{ keyword:'itemBuilder', type:'Widget Function(BuildContext, int)', pro:'返回一个 widget', code:[ {path:'flutter/public/widget-children'} ]  },
+				{ keyword:'itemBuilder', type:'Widget Function(BuildContext, int)', pro:'返回一个 widget', code:[ {path:'flutter/widget/scroll/ListView/itemBuilder'} ]  },
 				{ noOrder:true, pro:'ListView( ) 公共属性' },
 			]
 		},

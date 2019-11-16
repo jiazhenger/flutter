@@ -13,7 +13,7 @@ const data = {
 			url:'GridViewPage',
 			data:[
 				{ keyword:'cacheExtent', type:'double', pro:'缓存高度' },
-				{ keyword:'gridDelegate', type:'SliverGridDelegate', pro:'控制GridView参数', code:[ {path:'flutter/widget/layout/scroll/SliverGridDelegate'} ] },
+				{ keyword:'gridDelegate', type:'SliverGridDelegate', pro:'控制GridView参数', code:[ {path:'flutter/widget/scroll/GridView/SliverGridDelegate'} ] },
 				{ deviceTitle:'公共属性', keyword:'scrollDirection', type:'Axis', pro:'排列方向，垂直', code:[ {path:'flutter/widget/layout/list/Wrap/Axis'} ] },
 				{ keyword:'padding', type:'EdgeInsetsGeometry', pro:'补白', link:'/flutter/style/offset/EdgeInsets' },
 				{ keyword:'shrinkWrap', type:'bool', pro:'重新计算滚动长度' },
@@ -35,7 +35,8 @@ const data = {
 		{
 			title:'动态创建栅格化滚动',
 			keyword:'GridView.count( )',
-			type:'ListView',
+			type:'GridView',
+			url:'GridViewCountPage',
 			data:[
 				{ keyword:'dragStartBehavior', type:'DragStartBehavior', pro:'拖动行为', code:[{ path:'flutter/public/DragStartBehavior'}] },
 				{ keyword:'cacheExtent', type:'double', pro:'缓存高度' },
@@ -49,7 +50,8 @@ const data = {
 		{
 			title:'动态创建栅格化滚动',
 			keyword:'GridView.extent( )',
-			type:'ListView',
+			type:'GridView',
+			url:'GridViewExtendPage',
 			data:[
 				{ keyword:'dragStartBehavior', type:'DragStartBehavior', pro:'拖动行为', code:[{ path:'flutter/public/DragStartBehavior'}] },
 				{ deviceTitle:'SliverGridDelegateWithMaxCrossAxisExtent( ) 配置', keyword:'maxCrossAxisExtent', type:'double', pro:'子元素高度' },
