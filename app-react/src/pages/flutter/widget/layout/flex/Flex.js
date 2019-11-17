@@ -9,9 +9,9 @@ const data = {
 	url:'FlexPage',
 	data:[
 		{ keyword:'direction', type:'Axis', pro:'排列方向，默认水平', code:[ {path:'flutter/widget/layout/list/Wrap/Axis'} ] },
-		{ deviceTitle:'公共属性', keyword:'mainAxisAlignment', type:'MainAxisAlignment', pro:'主轴对齐方式', code:[ {path:'flutter/widget/layout/flex/MainAxisAlignment'} ] },
+		{ deviceTitle:'公共属性', keyword:'mainAxisAlignment', type:'MainAxisAlignment', pro:'主轴对齐方式', code:[ {path:'flutter/public/MainAxisAlignment'} ] },
 		{ keyword:'crossAxisAlignment', type:'CrossAxisAlignment', pro:'副轴对齐方式', code:[ {path:'flutter/widget/layout/flex/CrossAxisAlignment'} ] },
-		{ keyword:'mainAxisSize', type:'MainAxisSize', pro:'主轴尺寸', code:[ {path:'flutter/widget/layout/flex/MainAxisSize'} ] },
+		{ keyword:'mainAxisSize', type:'MainAxisSize', pro:'主轴尺寸', code:[ {path:'flutter/public/MainAxisSize'} ] },
 		{ keyword:'verticalDirection', type:'VerticalDirection', pro:'排列摆放顺序', code:[ {path:'flutter/widget/layout/list/Wrap/VerticalDirection'} ] },
 		{ keyword:'textBaseline', type:'TextBaseline', pro:'文本绘制基线', code:[ {path:'flutter/public/TextBaseline'} ] },
 		{ keyword:'textDirection', type:'TextDirection', pro:'排列顺序', code:[ {path:'flutter/widget/text/TextDirection'} ] },

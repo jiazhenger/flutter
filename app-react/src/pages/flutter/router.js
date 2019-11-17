@@ -17,8 +17,9 @@ import FormRouter from './routers/formRouter'
 import TableRouter from './routers/tableRouter'
 import LayoutRouter from './routers/layoutRouter'
 import ScrollRouter from './routers/scrollRouter'
+import PopoverRouter from './routers/popoverRouter'
 import UiRouter from './routers/uiRouter'
-import WidgetOtherRouter from './routers/widgetOtherRouter'
+import WidgetRouter from './routers/widgetRouter'
 import VRouter from './routers/vRouter'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
@@ -54,12 +55,14 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/table` } render={ ({ match }) => <TableRouter match={ match } /> } />
 				<Route path={ `${url}/layout` } render={ ({ match }) => <LayoutRouter match={ match } /> } />
 				<Route path={ `${url}/scroll` } render={ ({ match }) => <ScrollRouter match={ match } /> } />
-				<Route path={ `${url}/widget-other` } render={ ({ match }) => <WidgetOtherRouter match={ match } /> } />
+				<Route path={ `${url}/widget` } render={ ({ match }) => <WidgetRouter match={ match } /> } />
 				<Route path={ `${url}/ui` } render={ ({ match }) => <UiRouter match={ match } /> } />
+				<Route path={ `${url}/popover` } render={ ({ match }) => <PopoverRouter match={ match } /> } />
 				{/* 事件 */}
 				<Route path={ `${url}/event` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/TapGestureRecognizer`} 	component={ Import('flutter/event/TapGestureRecognizer') } exact />
+						<Route path={`${match.url}/RawKeyboardListener`} 	component={ Import('flutter/event/RawKeyboardListener') } exact />
 						<Route path={`${match.url}/FocusNode`} 	component={ Import('flutter/event/FocusNode') } exact />
 					</Switch>
 				)} />

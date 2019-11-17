@@ -13,7 +13,7 @@ const data = {
 			keyword:'items', type:'List<DropdownMenuItem<T>>', pro:'选择列表',
 			code:[{path:'flutter/widget/button/DropdownButton/items'}],
 			link:[
-				{ title:'DropdownMenuItem', url:'/flutter/widget-other/DropdownMenuItem'},
+				{ title:'DropdownMenuItem', url:'/flutter/widget/DropdownMenuItem'},
 				{ title:'map', url:'/dart/grammar/data-type/list'},
 				{ title:'toList', url:'/dart/grammar/data-type/list'}
 			]

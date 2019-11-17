@@ -51,7 +51,7 @@ const data = {
 		},
 		{ keyword:'autofocus', type:'bool', pro:'是否自动聚焦' },
 		
-		{ deviceTitle:'其它',   keyword:'materialTapTargetSize', type:'MaterialTapTargetSize', pro:'按钮点击范围', code:[{path:'flutter/widget/button/MaterialTapTargetSize'}] },
+		{ deviceTitle:'其它',   keyword:'materialTapTargetSize', type:'MaterialTapTargetSize', pro:'按钮点击范围', code:[{path:'flutter/public/MaterialTapTargetSize'}] },
 		{ keyword:'tooltip', type:'String', pro:'长按提示' },
 		{ keyword:'mini', type:'bool', pro:'长按提示' },
 		{ keyword:'isExtended', type:'bool', pro:'是否扩展' },

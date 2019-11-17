@@ -6,8 +6,6 @@ const data = {
 	title:'Size',
 	isGroup:true,
 	data:[
-		{ title:'无', keyword:'Size.zero', type:'Rect' },
-		{ title:'无限', keyword:'Size.infinite', type:'Rect' },
 		{
 			title:'尺寸', keyword:'Size( )',type:'Rect',
 			data:[
@@ -15,6 +13,8 @@ const data = {
 				{ keyword:'height', type:'double', pro:'高' },
 			]
 		},
+		{ title:'无', keyword:'Size.zero', type:'Rect' },
+		{ title:'无限', keyword:'Size.infinite', type:'Rect' },
 		{
 			title:'复制', keyword:'Size.copy( )',type:'Rect',
 			data:[

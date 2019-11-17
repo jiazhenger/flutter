@@ -109,6 +109,9 @@
 			{ title: 'Clip', path:'/flutter/style/Clip' },
 			{ title: 'BoxConstraints', path:'/flutter/style/BoxConstraints' },
 			{ title: 'IntrinsicColumnWidth', path:'/flutter/style/IntrinsicColumnWidth' },
+			{ title: 'Future( )', path:'/flutter/style/Future' },
+			{ title: 'Stream( )', path:'/flutter/style/Stream' },
+			{ title: 'StackTrace( )', path:'/flutter/style/StackTrace' },
 		]
 	},
 	{
@@ -135,6 +138,8 @@
 			{ title: 'OutlineButton( )', path:'/flutter/button/OutlineButton' },
 			{ title: 'FloatingActionButton( )', path:'/flutter/button/FloatingActionButton' },
 			{ title: 'DropdownButton( )', path:'/flutter/button/DropdownButton' },
+			{ title: 'IconButton( )', path:'/flutter/button/IconButton' },
+			{ title: 'ButtonBar( )', path:'/flutter/button/ButtonBar' },
 		]
 	},
 	{ 
@@ -178,7 +183,6 @@
 		children:[
 			{ title: 'Icon( )', path:'/flutter/icon/Icon' },
 			{ title: 'ImageIcon( )', path:'/flutter/icon/ImageIcon' },
-			{ title: 'IconButton( )', path:'/flutter/icon/IconButton' },
 		]
 	},
 	{
@@ -201,6 +205,11 @@
 			{ title: 'Form', path:'/flutter/form/Form' },
 			{ title: 'TextFormField', path:'/flutter/form/TextFormField' },
 			{ title: 'TextField', path:'/flutter/form/TextField' },
+			{ title: 'Checkbox', path:'/flutter/form/Checkbox' },
+			{ title: 'Radio', path:'/flutter/form/Radio' },
+			{ title: 'Switch', path:'/flutter/form/Switch' },
+			{ title: 'Slider', path:'/flutter/form/Switch' },
+			{ title: 'showDatePicker', path:'/flutter/form/showDatePicker' },
 			{ 
 				title: 'style',
 				children: [
@@ -309,9 +318,19 @@
 		]
 	},
 	{
-		title: '其它 Widget',
+		title: '异步 Widget',
 		children:[
-			{ title: 'DropdownMenuItem( )', path:'/flutter/widget-other/DropdownMenuItem' },
+			{ title: 'FutureBuilder( )', path:'/flutter/widget/FutureBuilder' },
+			{ title: 'StreamBuilder( )', path:'/flutter/widget/StreamBuilder' },
+		]
+	},
+	{
+		title: 'Widget',
+		children:[
+			{ title: 'AbsorbPointer( )', path:'/flutter/widget/AbsorbPointer' },
+			
+			{ title: 'Builder( )', path:'/flutter/widget/Builder' },
+			{ title: 'DropdownMenuItem( )', path:'/flutter/widget/DropdownMenuItem' },
 		]
 	},
 	{
@@ -328,6 +347,21 @@
 		]
 	},
 	{
+		title: '弹窗',
+		children:[
+			{ title: 'showModalBottomSheet( )', path:'/flutter/popover/showModalBottomSheet' },
+			{ title: 'SnackBar( )', path:'/flutter/popover/SnackBar' },
+			{ title: 'PopupMenuButton( )', path:'/flutter/popover/PopupMenuButton' },
+			{
+				title:'style',
+				children:[
+					{ title: 'SnackBarAction( )', path:'/flutter/popover/SnackBarAction' },
+					{ title: 'PopupMenuItem( )', path:'/flutter/popover/PopupMenuItem' },
+				]
+			}
+		]
+	},
+	{
 		title: '时间',
 		children:[
 			{ title: 'Duration( )',  path:'/flutter/time/Duration' },
@@ -337,6 +371,7 @@
 		title: '事件',
 		children:[
 			{ title: 'TapGestureRecognizer( )',  path:'/flutter/event/TapGestureRecognizer' },
+			{ title: 'RawKeyboardListener( )',  path:'/flutter/event/RawKeyboardListener' },
 			{ title: 'FocusNode( )',  path:'/flutter/event/FocusNode' },
 		]
 	},

@@ -6,6 +6,8 @@ import 'package:flutter_web_study.app/pages/flutter/widget/button/OutlineButton.
 import 'package:flutter_web_study.app/pages/flutter/widget/button/FlatButton.dart';
 import 'package:flutter_web_study.app/pages/flutter/widget/button/FloatingActionButton.dart';
 import 'package:flutter_web_study.app/pages/flutter/widget/button/DropdownButton.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/button/IconButton.dart';
+import 'package:flutter_web_study.app/pages/flutter/widget/button/ButtonBar.dart';
 // ======================================================================================================== 路由类
 class ButtonRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -15,5 +17,7 @@ class ButtonRouter{
 		'/FlatButtonPage': (BuildContext context) => FlatButtonPage(title:'FlatButton( )'),
 		'/FloatingActionButtonPage': (BuildContext context) => FloatingActionButtonPage(title:'FloatingActionButton( )'),
 		'/DropdownButtonPage': (BuildContext context) => DropdownButtonPage(title:'DropdownButton( )'),
+		'/IconButtonPage': (BuildContext context) => IconButtonPage(title:'IconButton( )'),
+		'/ButtonBarPage': (BuildContext context) => ButtonBarPage(title:'ButtonBar( )'),
 	};
 }

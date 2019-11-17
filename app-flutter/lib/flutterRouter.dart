@@ -15,6 +15,8 @@ import 'package:flutter_web_study.app/router/tableRouter.dart';
 import 'package:flutter_web_study.app/router/layoutRouter.dart';
 // ui widget
 import 'package:flutter_web_study.app/router/uiRouter.dart';
+// popover
+import 'package:flutter_web_study.app/router/popoverRouter.dart';
 // ======================================================================================================== 路由类
 class FlutterRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -33,5 +35,7 @@ class FlutterRouter{
 		...LayoutRouter().router,
 		// ui widget
 		...UiRouter().router,
+		// popover
+		...PopoverRouter().router,
 	};
 }

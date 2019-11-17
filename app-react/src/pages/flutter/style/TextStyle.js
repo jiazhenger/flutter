@@ -32,7 +32,7 @@ const data = {
 		{ keyword:'fontSize', type:'double', pro:'字体大小', code:[ {path:'flutter/style/TextStyle/font/fontSize'} ] },
 		{ keyword:'fontWeight', type:'FontWeight', pro:'加粗', code:[ {path:'flutter/style/TextStyle/font/fontWeight'} ] },
 		{ keyword:'fontStyle', type:'FontStyle', pro:'倾斜', code:[ {path:'flutter/style/TextStyle/font/fontStyle'} ] },
-		{ keyword:'height', type:'double', pro:'行高' },
+		{ keyword:'height', type:'double', pro:'倍数高度' },
 		{ keyword:'package', type:'String', pro:'引用字体包', code:[ {path:'flutter/style/TextStyle/font/package'} ] },
 		{ keyword:'fontFeatures', type:'List<FontFeature>', pro:'影响字体的字体特性列表', code:[ {path:'flutter/style/TextStyle/font/fontFeatures'} ] },
 		

@@ -14,6 +14,9 @@ export default class
 					<Route path={`${match.url}/Form`} 	component={ Import('flutter/widget/form/Form') } exact />
 					<Route path={`${match.url}/TextFormField`} 	component={ Import('flutter/widget/form/TextFormField') } exact />
 					<Route path={`${match.url}/TextField`} 	component={ Import('flutter/widget/form/TextField') } exact />
+					<Route path={`${match.url}/Checkbox`} 	component={ Import('flutter/widget/form/Checkbox') } exact />
+					<Route path={`${match.url}/Radio`} 	component={ Import('flutter/widget/form/Radio') } exact />
+					<Route path={`${match.url}/Switch`} 	component={ Import('flutter/widget/form/Switch') } exact />
 					{/* style */}
 					<Route path={`${match.url}/TextEditingValue`} 	component={ Import('flutter/widget/form/x/TextEditingValue') } exact />
 					<Route path={`${match.url}/TextRange`} 	component={ Import('flutter/widget/form/x/TextRange') } exact />

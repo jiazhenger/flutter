@@ -1,0 +1,18 @@
+<q>Builder</q>(
+	<i>builder</i>: (<em>BuildContext context</em>) {
+		return <q>Center</q>(
+			<em>child: </em><q>RaisedButton</q>(
+				<em>child: Text('Button'),</em>
+				<em>onPressed</em>: ( ) {
+					<s>Scaffold.of(context).showSnackBar</s>(<b>SnackBar</b>(
+						<i>content</i>: <em>'关闭'</em>
+						<i>action</i>: <q>SnackBarAction</q>(
+							<em>label: '关闭'</em>,
+							<em>onPressed: ( ) {	}</em>,
+						)
+					);
+				},
+			),
+		);
+	},
+)

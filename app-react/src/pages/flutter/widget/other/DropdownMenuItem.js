@@ -8,7 +8,7 @@ const data = {
 	type:'DropdownMenuItem<T>',
 	data:[
 		{ keyword:'value', type:'T', pro:'值，可选' },
-		{ keyword:'child', type:'Widget', pro:'列表控件，必填' },
+		{ keyword:'child', type:'Widget', pro:'控件' },
 		{ noOrder:true, pro:'示例', code:[{path:'flutter/widget/other/DropdownMenuItem'}] }
 	]
 }

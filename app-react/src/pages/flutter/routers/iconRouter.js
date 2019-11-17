@@ -13,7 +13,6 @@ export default class
 				<Switch>
 					<Route path={`${match.url}/Icon`} 	component={ Import('flutter/widget/icon/Icon') } exact />
 					<Route path={`${match.url}/ImageIcon`} 	component={ Import('flutter/widget/icon/ImageIcon') } exact />
-					<Route path={`${match.url}/IconButton`} 	component={ Import('flutter/widget/icon/IconButton') } exact />
 				</Switch>
 		)
 	}

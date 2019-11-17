@@ -92,6 +92,9 @@ export default class StyleRouter extends React.Component{
 					<Route path={`${match.url}/Clip`} 			component={ Import('flutter/style/Clip') } exact />
 					<Route path={`${match.url}/BoxConstraints`} component={ Import('flutter/style/BoxConstraints') } exact />
 					<Route path={`${match.url}/IntrinsicColumnWidth`} component={ Import('flutter/style/IntrinsicColumnWidth') } exact />
+					<Route path={`${match.url}/Future`} 	component={ Import('flutter/style/Future') } exact />
+					<Route path={`${match.url}/Stream`} 	component={ Import('flutter/style/Stream') } exact />
+					<Route path={`${match.url}/StackTrace`} 	component={ Import('flutter/style/StackTrace') } exact />
 				</Switch>
 		)
 	}
