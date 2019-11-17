@@ -108,6 +108,7 @@
 			{ title: 'Size', path:'/flutter/style/Size' },
 			{ title: 'Clip', path:'/flutter/style/Clip' },
 			{ title: 'BoxConstraints', path:'/flutter/style/BoxConstraints' },
+			{ title: 'IntrinsicColumnWidth', path:'/flutter/style/IntrinsicColumnWidth' },
 		]
 	},
 	{
@@ -234,8 +235,28 @@
 					{ title: 'Align( )', path:'/flutter/layout/Align' },
 					{ title: 'Opacity( )', path:'/flutter/layout/Opacity' },
 					{ title: 'FittedBox( )', path:'/flutter/layout/FittedBox' },
-					{ title: 'LayoutBuilder( )', path:'/flutter/layout/LayoutBuilder' },
 					{ title: 'Transform( )', path:'/flutter/layout/Transform' },
+					{ title: 'LayoutBuilder( )', path:'/flutter/layout/LayoutBuilder' },
+					{ title: 'AspectRatio( )', path:'/flutter/layout/AspectRatio' },
+					{ title: 'FractionallySizedBox( )', path:'/flutter/layout/FractionallySizedBox' },
+					{ title: 'IntrinsicWidth( )', path:'/flutter/layout/IntrinsicWidth' },
+					{ title: 'IntrinsicHeight( )', path:'/flutter/layout/IntrinsicHeight' },
+					{ title: 'Offstage( )', path:'/flutter/layout/Offstage' },
+				]
+			},
+			{ 
+				title: '设置大小',
+				children: [
+					{ title: 'SizedBox( )', path:'/flutter/layout/SizedBox' },
+					{ title: 'SizedOverflowBox( )', path:'/flutter/layout/SizedOverflowBox' },
+				]
+			},
+			{ 
+				title: '限制大小',
+				children: [
+					{ title: 'ConstrainedBox( )', path:'/flutter/layout/ConstrainedBox' },
+					{ title: 'LimitedBox( )', path:'/flutter/layout/LimitedBox' },
+					{ title: 'OverflowBox( )', path:'/flutter/layout/OverflowBox' },
 				]
 			},
 			{ 
@@ -244,6 +265,7 @@
 					{ title: 'Wrap( )', path:'/flutter/layout/Wrap' },
 					{ title: 'Flow( )', path:'/flutter/layout/Flow' },
 					{ title: 'ListBody( )', path:'/flutter/layout/ListBody' },
+					{ title: 'IndexedStack( )', path:'/flutter/layout/IndexedStack' },
 				]
 			},
 			{ 
@@ -262,31 +284,12 @@
 				]
 			},
 			{ 
-				title: '标题',
-				children: [
-					{ title: 'ListTile( )', path:'/flutter/layout/ListTile' },
-					{ title: 'ExpansionTile( )', path:'/flutter/layout/ExpansionTile' },
-				]
-			},
-			{ 
 				title: '自定义控件',
 				children: [
 					{ title: 'CustomSingleChildLayout( )', path:'/flutter/layout/CustomSingleChildLayout' },
 					{ title: 'CustomMultiChildLayout( )', path:'/flutter/layout/CustomMultiChildLayout' },
 				]
 			},
-			
-			{ title: 'AspectRatio( )' },
-			{ title: 'ConstrainedBox( )' },
-			{ title: 'Baseline( )' },
-			{ title: 'FractionallySizedBox( )' },
-			{ title: 'IntrinsicHeight( )' },
-			{ title: 'IntrinsicWidth( )' },
-			{ title: 'LimitedBox( )' },
-			{ title: 'Offstage( )' },
-			{ title: 'OverflowBox( )' },
-			{ title: 'SizedBox( )' },
-			{ title: 'SizedOverflowBox( )' },
 		]
 	},
 	{ 
@@ -314,6 +317,13 @@
 	{
 		title: 'UI Widget',
 		children:[
+			{ 
+				title: '标题',
+				children: [
+					{ title: 'ListTile( )', path:'/flutter/ui/ListTile' },
+					{ title: 'ExpansionTile( )', path:'/flutter/ui/ExpansionTile' },
+				]
+			},
 			{ title: 'Card( )', path:'/flutter/ui/Card' },
 		]
 	},

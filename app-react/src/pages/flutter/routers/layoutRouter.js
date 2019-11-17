@@ -19,10 +19,23 @@ export default class
 					<Route path={`${match.url}/FittedBox`} 	component={ Import('flutter/widget/layout/style/FittedBox') } exact />
 					<Route path={`${match.url}/Transform`} 	component={ Import('flutter/widget/layout/style/Transform') } exact />
 					<Route path={`${match.url}/LayoutBuilder`} 	component={ Import('flutter/widget/layout/style/LayoutBuilder') } exact />
+					<Route path={`${match.url}/AspectRatio`} 	component={ Import('flutter/widget/layout/style/AspectRatio') } exact />
+					<Route path={`${match.url}/FractionallySizedBox`} 	component={ Import('flutter/widget/layout/style/FractionallySizedBox') } exact />
+					<Route path={`${match.url}/IntrinsicWidth`} 	component={ Import('flutter/widget/layout/style/IntrinsicWidth') } exact />
+					<Route path={`${match.url}/IntrinsicHeight`} 	component={ Import('flutter/widget/layout/style/IntrinsicHeight') } exact />
+					<Route path={`${match.url}/Offstage`} 	component={ Import('flutter/widget/layout/style/Offstage') } exact />
+					{/* 设置盒子尺寸 */}
+					<Route path={`${match.url}/SizedBox`} 	component={ Import('flutter/widget/layout/setSize/SizedBox') } exact />
+					<Route path={`${match.url}/SizedOverflowBox`} 	component={ Import('flutter/widget/layout/setSize/SizedOverflowBox') } exact />
+					{/* 限制盒子尺寸 */}
+					<Route path={`${match.url}/ConstrainedBox`} 	component={ Import('flutter/widget/layout/limit/ConstrainedBox') } exact />
+					<Route path={`${match.url}/LimitedBox`} 	component={ Import('flutter/widget/layout/limit/LimitedBox') } exact />
+					<Route path={`${match.url}/OverflowBox`} 	component={ Import('flutter/widget/layout/limit/OverflowBox') } exact />
 					{/* 列表 */}
 					<Route path={`${match.url}/Wrap`} 	component={ Import('flutter/widget/layout/list/Wrap') } exact />
 					<Route path={`${match.url}/Flow`} 	component={ Import('flutter/widget/layout/list/Flow') } exact />
 					<Route path={`${match.url}/ListBody`} 	component={ Import('flutter/widget/layout/list/ListBody') } exact />
+					<Route path={`${match.url}/IndexedStack`} 	component={ Import('flutter/widget/layout/list/IndexedStack') } exact />
 					{/* 定位 */}
 					<Route path={`${match.url}/Stack`} 	component={ Import('flutter/widget/layout/position/Stack') } exact />
 					<Route path={`${match.url}/Positioned`} 	component={ Import('flutter/widget/layout/position/Positioned') } exact />
@@ -37,9 +50,6 @@ export default class
 					{/* 自定义控件 */}
 					<Route path={`${match.url}/CustomSingleChildLayout`} 	component={ Import('flutter/widget/layout/my-widget/CustomSingleChildLayout') } exact />
 					<Route path={`${match.url}/CustomMultiChildLayout`} 	component={ Import('flutter/widget/layout/my-widget/CustomMultiChildLayout') } exact />
-					{/* 标题 */}
-					<Route path={`${match.url}/ListTile`} 	component={ Import('flutter/widget/layout/title/ListTile') } exact />
-					<Route path={`${match.url}/ExpansionTile`} 	component={ Import('flutter/widget/layout/title/ExpansionTile') } exact />
 				</Switch>
 		)
 	}
