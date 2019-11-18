@@ -1,0 +1,33 @@
+<q>MaterialButton</q>(
+	<em>child: Text('弹窗按钮'),</em>
+	<em>onPressed</em>: ( ){
+		<b>showDialog</b>(
+			<i>context</i>: <em>context</em>,
+			<i>barrierDismissible</i>: <em>true</em>, 		<em>// 必须是 button 按钮</em>
+			<i>builder</i>: (<em>BuildContext</em> <u>context</u>) {
+				return 	<q>Container</q>(
+							<em>child</em>: <q>Align</q>(
+								<em>child</em>: <q>Container</q>(
+									<em>width: 200.0</em>,
+									<em>height: 50.0</em>,
+									<em>alignment: Alignment.center</em>,
+									<em>color: Colors.white</em>,
+									<em>child: MaterialButton</em>(
+										<em>child: Text('确定')</em>,
+										<em>onPressed</em>: (){
+											<b>Navigator.of</b>(<u>context</u>).<b>pop( )</b>;  	<em>// 关闭弹窗</em>
+										}
+									),
+								),
+							)
+						);
+			}
+		).<b>then</b>(( <em>dynamic</em> <u>value</b> ) {
+			<em>print</em>( <u>value</u> );			<em>// 关闭弹窗时执行</em>
+		},<u>onError</u>: (<em>dynamic</em> <u>err</u>){
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		}).<b>catchError</b>((<em>dynamic</em> <u>err</u>) {
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		});
+	},
+)

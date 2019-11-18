@@ -40,7 +40,8 @@ class AppRouter extends React.Component{
 							</Switch>
 						)} />
 						{/* 主题 */}
-						<Route path={`${match.url}/theme`} 	component={ Import('flutter/app/theme') } exact />
+						<Route path={`${match.url}/ThemeData`} 	component={ Import('flutter/theme/ThemeData') } exact />
+						<Route path={`${match.url}/Theme`} 	component={ Import('flutter/theme/Theme') } exact />
 					</Switch>
 				)}/>
 				{/* 样式 */}
@@ -70,6 +71,7 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/time` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/Duration`} 			component={ Import('flutter/time/Duration') } exact />
+						<Route path={`${match.url}/TimeOfDay`} 			component={ Import('flutter/time/TimeOfDay') } exact />
 					</Switch>
 				)} />
 				{/* 动画 */}

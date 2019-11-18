@@ -13,7 +13,7 @@ const data = {
 		{ keyword:'activeColor', type:'Color', pro:'选中时的背景颜色', link:'/flutter/style/Colors' },
 		{ keyword:'checkColor', type:'Color', pro:'勾的颜色', link:'/flutter/style/Colors' },
 		{ keyword:'materialTapTargetSize', type:'MaterialTapTargetSize', pro:'按钮点击范围', code:[{path:'flutter/public/MaterialTapTargetSize'}] },
-		{ keyword:'onChanged', type:'void Function( )', pro:'改变时执行', code:[ {path:'flutter/widget/Form/form/onChanged'} ] },
+		{ keyword:'onChanged', type:'void Function( bool )', pro:'改变时执行', code:[ {path:'flutter/widget/Form/Checkbox/onChanged'} ] },
 		{ noOrder:true, pro:'示例', code:[ {path:'flutter/widget/Form/Checkbox/Checkbox'} ] },
 	]
 }

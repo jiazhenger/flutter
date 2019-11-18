@@ -18,7 +18,13 @@
 					{ title: '路由跳转', path:'/flutter/app/router/router-skip' }
 				]
 			},
-			{ title: 'theme: 主题', path:'/flutter/app/theme' },
+		]
+	},
+	{ 
+		title: '主题',
+		children:[
+			{ title: 'ThemeData', path:'/flutter/app/ThemeData' },
+			{ title: 'Theme', path:'/flutter/app/Theme' },
 		]
 	},
 	{ 
@@ -208,8 +214,9 @@
 			{ title: 'Checkbox', path:'/flutter/form/Checkbox' },
 			{ title: 'Radio', path:'/flutter/form/Radio' },
 			{ title: 'Switch', path:'/flutter/form/Switch' },
-			{ title: 'Slider', path:'/flutter/form/Switch' },
+			{ title: 'Slider', path:'/flutter/form/Slider' },
 			{ title: 'showDatePicker', path:'/flutter/form/showDatePicker' },
+			{ title: 'showTimePicker', path:'/flutter/form/showTimePicker' },
 			{ 
 				title: 'style',
 				children: [
@@ -350,8 +357,13 @@
 		title: '弹窗',
 		children:[
 			{ title: 'showModalBottomSheet( )', path:'/flutter/popover/showModalBottomSheet' },
+			{ title: 'showBottomSheet( )', path:'/flutter/popover/showBottomSheet' },
 			{ title: 'SnackBar( )', path:'/flutter/popover/SnackBar' },
 			{ title: 'PopupMenuButton( )', path:'/flutter/popover/PopupMenuButton' },
+			{ title: 'showDialog( )', path:'/flutter/popover/showDialog' },
+			{ title: 'SimpleDialog( )', path:'/flutter/popover/SimpleDialog' },
+			{ title: 'AlertDialog( )', path:'/flutter/popover/AlertDialog' },
+			{ title: 'ExpansionPanel( )', path:'/flutter/popover/ExpansionPanel' },
 			{
 				title:'style',
 				children:[
@@ -365,6 +377,7 @@
 		title: '时间',
 		children:[
 			{ title: 'Duration( )',  path:'/flutter/time/Duration' },
+			{ title: 'TimeOfDay( )',  path:'/flutter/time/TimeOfDay' },
 		]
 	},
 	{

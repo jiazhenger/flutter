@@ -17,6 +17,9 @@ export default class
 					<Route path={`${match.url}/Checkbox`} 	component={ Import('flutter/widget/form/Checkbox') } exact />
 					<Route path={`${match.url}/Radio`} 	component={ Import('flutter/widget/form/Radio') } exact />
 					<Route path={`${match.url}/Switch`} 	component={ Import('flutter/widget/form/Switch') } exact />
+					<Route path={`${match.url}/Slider`} 	component={ Import('flutter/widget/form/Slider') } exact />
+					<Route path={`${match.url}/showDatePicker`} 	component={ Import('flutter/widget/form/showDatePicker') } exact />
+					<Route path={`${match.url}/showTimePicker`} 	component={ Import('flutter/widget/form/showTimePicker') } exact />
 					{/* style */}
 					<Route path={`${match.url}/TextEditingValue`} 	component={ Import('flutter/widget/form/x/TextEditingValue') } exact />
 					<Route path={`${match.url}/TextRange`} 	component={ Import('flutter/widget/form/x/TextRange') } exact />
