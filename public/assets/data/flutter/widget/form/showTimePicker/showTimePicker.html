@@ -1,0 +1,15 @@
+<q>RaisedButton</q>(
+	<em>child: Text('submit'),</em>
+	<i>onPressed</i>: ( ){
+		<b>showTimePicker</b>(
+			<i>context</i>: <em>context</em>,
+			<i>initialTime</i>: TimeOfDay.now(),
+		).<b>then</b>(( <em>TimeOfDay</em> <u>value</b> ) {
+			<em>print</em>( <u>value</u> );			<em>// 获取选择时间</em>
+		},<u>onError</u>: (<em>dynamic</em> <u>err</u>){
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		}).<b>catchError</b>((<em>dynamic</em> <u>err</u>) {
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		});
+	},
+)

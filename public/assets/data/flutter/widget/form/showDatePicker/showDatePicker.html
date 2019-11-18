@@ -1,0 +1,23 @@
+<q>RaisedButton</q>(
+	<em>child: Text('submit'),</em>
+	<i>onPressed</i>: ( ){
+		<b>showDatePicker</b>(
+			<i>context</i>: <em>context</em>,
+			<i>initialDate</i>: <q>DateTime</q>.now(),
+			<i>firstDate</i>: <q>DateTime</q>(2018),
+			<i>lastDate</i>: <q>DateTime</q>(2030),
+			<i>builder</i>: (<em>BuildContext</em> <u>context</u>, <em>Widget</em> <u>child</u>) {
+				return <q>Theme</q>(
+					<em>data: ThemeData.dark(),</em>
+					<em>child</em>: <u>child</u>,
+				);
+			},
+		).<b>then</b>(( <em>TimeOfDay</em> <u>value</b> ) {
+			<em>print</em>( <u>value</u> );			<em>// 获取选择时间</em>
+		},<u>onError</u>: (<em>dynamic</em> <u>err</u>){
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		}).<b>catchError</b>((<em>dynamic</em> <u>err</u>) {
+			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
+		});
+	},
+)
