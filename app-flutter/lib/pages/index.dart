@@ -23,8 +23,8 @@ class _PageState extends State<IndexPage> {
             body: ListView(
                 padding: EdgeInsets.all(10.0),
                 children: <Widget>[
-                    RaisedButton(child: Text('Button'),onPressed: (){
-                        Navigator.pushNamed(context,'/SliderPage');
+                    RaisedButton(child: Text('click'),onPressed: (){
+                        Navigator.pushNamed(context,'/ShowTimePickerPage');
                     }),
 
                 ]

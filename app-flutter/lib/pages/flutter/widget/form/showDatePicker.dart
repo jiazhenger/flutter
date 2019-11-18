@@ -21,10 +21,55 @@ class _PageState extends State<ShowDatePickerPage> {
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[
-                    ImageIcon(
-                        AssetImage(Config.staticUrl),
-                        color:Colors.blue
+                    MaterialButton(
+                        color: Colors.red,
+                        child: Text('弹出时间选择器', style: TextStyle(color:Colors.white),),
+                        onPressed: (){
+                            showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(2018),
+                                lastDate: DateTime(2030),
+                                builder: (BuildContext context, Widget child) {
+                                    return Theme(
+                                        data: ThemeData.dark(),
+                                        child: child,
+                                    );
+                                },
+                                selectableDayPredicate:(DateTime time){
+//                                    print(time);
+                                    return true;
+                                },
+                            ).then((DateTime val) {
+                                print(val);   // 2018-07-12 00:00:00.000
+                            }).catchError((err) {
+                                print(err);
+                            });
+                        },
                     ),
+                    MaterialButton(
+                        color: Colors.blue,
+                        child: Text('弹出时间选择器', style: TextStyle(color:Colors.white),),
+                        onPressed: (){
+                            showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(2018),
+                                lastDate: DateTime(2030),
+                                builder: (BuildContext context, Widget child) {
+                                    return Theme(
+                                        data: ThemeData.light(),
+                                        child: child,
+                                    );
+                                },
+                                initialDatePickerMode: DatePickerMode.year,
+                            ).then((DateTime val) {
+                                print(val);   // 2018-07-12 00:00:00.000
+                            }).catchError((err) {
+                                print(err);
+                            });
+                        },
+                    )
                 ],
             )
         );
