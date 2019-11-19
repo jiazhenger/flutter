@@ -118,6 +118,7 @@
 			{ title: 'Future( )', path:'/flutter/style/Future' },
 			{ title: 'Stream( )', path:'/flutter/style/Stream' },
 			{ title: 'StackTrace( )', path:'/flutter/style/StackTrace' },
+			{ title: 'Step( )', path:'/flutter/style/Step' },
 		]
 	},
 	{
@@ -332,15 +333,6 @@
 		]
 	},
 	{
-		title: 'Widget',
-		children:[
-			{ title: 'AbsorbPointer( )', path:'/flutter/widget/AbsorbPointer' },
-			
-			{ title: 'Builder( )', path:'/flutter/widget/Builder' },
-			{ title: 'DropdownMenuItem( )', path:'/flutter/widget/DropdownMenuItem' },
-		]
-	},
-	{
 		title: 'UI Widget',
 		children:[
 			{ 
@@ -350,25 +342,50 @@
 					{ title: 'ExpansionTile( )', path:'/flutter/ui/ExpansionTile' },
 				]
 			},
+			{ 
+				title: '进度条',
+				children: [
+					{ title: 'LinearProgressIndicator( )', path:'/flutter/ui/LinearProgressIndicator' },
+					{ title: 'CircularProgressIndicator( )', path:'/flutter/ui/CircularProgressIndicator' },
+				]
+			},
 			{ title: 'Card( )', path:'/flutter/ui/Card' },
+			{ title: 'Chip( )', path:'/flutter/ui/Chip' },
+			{ title: 'Tooltip( )', path:'/flutter/ui/Tooltip' },
+			{ title: 'DataTable( )', path:'/flutter/ui/DataTable' },
+			{ title: 'RefreshIndicator( )', path:'/flutter/ui/RefreshIndicator' },
+			{ title: 'Divider( )', path:'/flutter/ui/Divider' },
+			{ title: 'Stepper( )', path:'/flutter/ui/Stepper' },
+			{ title: 'Drawer( )', path:'/flutter/ui/Drawer' },
+		]
+	},
+	{
+		title: 'Widget',
+		children:[
+			{ title: 'AbsorbPointer( )', path:'/flutter/widget/AbsorbPointer' },
+			{ title: 'Builder( )', path:'/flutter/widget/Builder' },
+			{ title: 'DropdownMenuItem( )', path:'/flutter/widget/DropdownMenuItem' },
 		]
 	},
 	{
 		title: '弹窗',
 		children:[
+			{ title: 'BottomSheet( )', path:'/flutter/popover/BottomSheet' },
 			{ title: 'showModalBottomSheet( )', path:'/flutter/popover/showModalBottomSheet' },
 			{ title: 'showBottomSheet( )', path:'/flutter/popover/showBottomSheet' },
 			{ title: 'SnackBar( )', path:'/flutter/popover/SnackBar' },
 			{ title: 'PopupMenuButton( )', path:'/flutter/popover/PopupMenuButton' },
 			{ title: 'showDialog( )', path:'/flutter/popover/showDialog' },
-			{ title: 'SimpleDialog( )', path:'/flutter/popover/SimpleDialog' },
 			{ title: 'AlertDialog( )', path:'/flutter/popover/AlertDialog' },
-			{ title: 'ExpansionPanel( )', path:'/flutter/popover/ExpansionPanel' },
+			{ title: 'SimpleDialog( )', path:'/flutter/popover/SimpleDialog' },
+			{ title: 'ExpansionPanelList( )', path:'/flutter/popover/ExpansionPanelList' },
 			{
 				title:'style',
 				children:[
 					{ title: 'SnackBarAction( )', path:'/flutter/popover/SnackBarAction' },
 					{ title: 'PopupMenuItem( )', path:'/flutter/popover/PopupMenuItem' },
+					{ title: 'SimpleDialogOption( )', path:'/flutter/popover/SimpleDialogOption' },
+					{ title: 'ExpansionPanel( )', path:'/flutter/popover/ExpansionPanel' },
 				]
 			}
 		]
@@ -395,6 +412,8 @@
 				title: 'x',
 				children: [
 					{ title: 'Curves.x', path:'/flutter/animation/Curves' },
+					{ title: 'AlwaysStoppedAnimation', path:'/flutter/animation/AlwaysStoppedAnimation' },
+					{ title: 'AnimationController', path:'/flutter/animation/AnimationController' },
 				]
 			},
 		]

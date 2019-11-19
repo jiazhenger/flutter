@@ -1,0 +1,8 @@
+<em>bool</em> <s>_isExpanded</s> = <em>false</em>;		<em>// 关闭</em>
+ExpansionPanelList(
+	<b>expansionCallback</b>: (<em>int</em> <u>index</u>, <em>bool</em> <u>isExpanded</u>) {
+		<em>setState</em>(( ) {
+			<s>_isExpanded</s> = !<u>isExpanded</u>; 	<em>// 控制展开收缩</em>
+		});
+	}
+)

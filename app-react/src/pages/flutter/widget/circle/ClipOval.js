@@ -13,7 +13,6 @@ const data = {
 			keyword:'clipBehavior', type:'Clip', pro:'裁剪方式',
 			code:[ {path:'flutter/style/Clip/Clip'} ],
 			link:[{ title:'Clip', url:'/flutter/style/Clip' } ]
-		
 		},
 		{ keyword:'child', type:'Widget', pro:'子控件' },
 	]

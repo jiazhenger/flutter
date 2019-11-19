@@ -11,6 +11,8 @@ export default class AnimationRouter extends React.Component{
 		return (
 				<Switch>
 					<Route path={`${match.url}/Curves`} 			component={ Import('flutter/animation/x/Curves') } exact />
+					<Route path={`${match.url}/AlwaysStoppedAnimation`} 			component={ Import('flutter/animation/x/AlwaysStoppedAnimation') } exact />
+					<Route path={`${match.url}/AnimationController`} 			component={ Import('flutter/animation/x/AnimationController') } exact />
 				</Switch>
 		)
 	}

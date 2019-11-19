@@ -15,7 +15,7 @@
 									<em>child: MaterialButton</em>(
 										<em>child: Text('确定')</em>,
 										<em>onPressed</em>: (){
-											<b>Navigator.of</b>(<u>context</u>).<b>pop( )</b>;  	<em>// 关闭弹窗</em>
+											<b>Navigator.of</b>(<u>context</u>).<b>pop('100')</b>;  	<em>// 关闭弹窗， 此处参数在 then 中用 value 获取</em>
 										}
 									),
 								),
@@ -23,7 +23,7 @@
 						);
 			}
 		).<b>then</b>(( <em>dynamic</em> <u>value</b> ) {
-			<em>print</em>( <u>value</u> );			<em>// 关闭弹窗时执行</em>
+			<em>print</em>( <u>value</u> );			<em>// 关闭弹窗时执行，获取 Navigator.pop 传递的参数，即 value = 100</em>
 		},<u>onError</u>: (<em>dynamic</em> <u>err</u>){
 			<em> print</em>(<u>err</u>); 			<em>// 出错时执行</em>
 		}).<b>catchError</b>((<em>dynamic</em> <u>err</u>) {

@@ -18,7 +18,7 @@ const data = {
 		{
 			title:'复制', keyword:'Size.copy( )',type:'Rect',
 			data:[
-				{ keyword:'source', type:'Size', pro:'', isValue:true,  code:[ {path:'flutter/style/Size/copy'} ] },
+				{ keyword:'source', type:'Size', pro:'', isValue:true, code:[ {path:'flutter/style/Size/copy'} ] },
 			]
 		},
 		{

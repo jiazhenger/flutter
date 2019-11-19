@@ -10,6 +10,7 @@ class ShowDialogPage extends StatefulWidget { // 有状态的控件，控件的�
 }
 
 class _PageState extends State<ShowDialogPage> {
+    String _s = '选择';
     // page
     @override
     Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class _PageState extends State<ShowDialogPage> {
                                                 child: MaterialButton(
                                                     child: Text('确定'),
                                                     onPressed: (){
-                                                        Navigator.of(context).pop( );
+                                                        Navigator.of(context).pop('100');
                                                     }
                                                 ),
                                             ),
@@ -48,11 +49,17 @@ class _PageState extends State<ShowDialogPage> {
                                 },
                             ).then((dynamic value){
                                 print(value);
+                                if(value is String){
+                                    setState(() {
+                                        _s = value;
+                                    });
+                                }
                             },onError: (dynamic err){
 
                             });
                         },
-                    )
+                    ),
+                    Text(_s)
                 ],
             )
         );
