@@ -14,10 +14,7 @@ class _PageState extends State<CircularProgressIndicatorPage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: Container(
                 alignment: Alignment.center,
                 child: SizedBox(

@@ -14,10 +14,7 @@ class _PageState extends State<BottomSheetPage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[
@@ -41,10 +38,6 @@ class _PageState extends State<BottomSheetPage> {
                                         onClosing: (){
                                             print('弹窗关闭了');
                                         },
-                                        animationController: AnimationController(
-                                            animationBehavior:AnimationBehavior.preserve,
-                                            vsync:TickerProviderStateMixin()
-                                        ),
                                     );
                                 },
                             );

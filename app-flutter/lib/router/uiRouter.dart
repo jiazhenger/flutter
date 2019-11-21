@@ -9,7 +9,16 @@ import 'package:flutter_web_study.app/pages/flutter/ui/CircularProgressIndicator
 import 'package:flutter_web_study.app/pages/flutter/ui/RefreshIndicator.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/Divider.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/Stepper.dart';
-
+import 'package:flutter_web_study.app/pages/flutter/ui/UserAccountsDrawerHeader.dart';
+// 标题
+import 'package:flutter_web_study.app/pages/flutter/ui/title/Title.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/title/ListTile.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/title/ExpansionTile.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/title/AboutListTile.dart';
+// tab
+import 'package:flutter_web_study.app/pages/flutter/ui/tab/BottomNavigationBar.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/tab/TabBar.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/tab/TabBarView.dart';
 // ======================================================================================================== x
 
 // ======================================================================================================== 路由类
@@ -24,5 +33,15 @@ class UiRouter{
 		'/RefreshIndicatorPage': (BuildContext context) => RefreshIndicatorPage(title:'RefreshIndicator( )'),
 		'/DividerPage': (BuildContext context) => DividerPage(title:'Divider( )'),
 		'/StepperPage': (BuildContext context) => StepperPage(title:'Stepper( )'),
+		'/UserAccountsDrawerHeaderPage': (BuildContext context) => UserAccountsDrawerHeaderPage(title:'UserAccountsDrawerHeader( )'),
+		// 标题
+		'/TitlePage': (BuildContext context) => TitlePage(title:'Title( )'),
+		'/ListTilePage': (BuildContext context) => ListTilePage(title:'ListTile( )'),
+		'/ExpansionTilePage': (BuildContext context) => ExpansionTilePage(title:'ExpansionTile( )'),
+		'/AboutListTilePage': (BuildContext context) => AboutListTilePage(title:'AboutListTile( )'),
+		// tab
+		'/BottomNavigationBarPage': (BuildContext context) => BottomNavigationBarPage(title:'BottomNavigationBar( )'),
+		'/TabBarPage': (BuildContext context) => TabBarPage(title:'TabBar( )'),
+		'/TabBarViewPage': (BuildContext context) => TabBarViewPage(title:'TabBarView( )'),
 	};
 }

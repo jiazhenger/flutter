@@ -20,6 +20,7 @@ export default class
 					<Route path={`${match.url}/SimpleDialog`} 	component={ Import('flutter/popover/SimpleDialog') } exact />
 					<Route path={`${match.url}/AlertDialog`} 	component={ Import('flutter/popover/AlertDialog') } exact />
 					<Route path={`${match.url}/ExpansionPanelList`} 	component={ Import('flutter/popover/ExpansionPanelList') } exact />
+					<Route path={`${match.url}/Drawer`} 	component={ Import('flutter/popover/Drawer') } exact />
 					{/* x */}
 					<Route path={`${match.url}/SnackBarAction`} 	component={ Import('flutter/popover/x/SnackBarAction') } exact />
 					<Route path={`${match.url}/PopupMenuItem`} 	component={ Import('flutter/popover/x/PopupMenuItem') } exact />

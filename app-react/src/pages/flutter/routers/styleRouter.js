@@ -86,6 +86,10 @@ export default class StyleRouter extends React.Component{
 					<Route path={`${match.url}/skew`}		component={ Import('flutter/style/Matrix4/skew') } exact />
 					<Route path={`${match.url}/solve`}		component={ Import('flutter/style/Matrix4/solve') } exact />
 					<Route path={`${match.url}/other`}		component={ Import('flutter/style/Matrix4/other') } exact />
+					{/* 主题 */}
+					<Route path={`${match.url}/ThemeData`} 	component={ Import('flutter/theme/ThemeData') } exact />
+					<Route path={`${match.url}/Theme`} 	component={ Import('flutter/theme/Theme') } exact />
+					<Route path={`${match.url}/IconThemeData`} 	component={ Import('flutter/theme/IconThemeData') } exact />
 					{/* 其它 */}
 					<Route path={`${match.url}/Rect`} 			component={ Import('flutter/style/Rect') } exact />
 					<Route path={`${match.url}/Size`} 			component={ Import('flutter/style/Size') } exact />
@@ -96,6 +100,8 @@ export default class StyleRouter extends React.Component{
 					<Route path={`${match.url}/Stream`} 	component={ Import('flutter/style/Stream') } exact />
 					<Route path={`${match.url}/StackTrace`} 	component={ Import('flutter/style/StackTrace') } exact />
 					<Route path={`${match.url}/Step`} 	component={ Import('flutter/style/Step') } exact />
+					<Route path={`${match.url}/BottomNavigationBarItem`} 	component={ Import('flutter/style/BottomNavigationBarItem') } exact />
+					<Route path={`${match.url}/TabController`} 	component={ Import('flutter/style/TabController') } exact />
 				</Switch>
 		)
 	}

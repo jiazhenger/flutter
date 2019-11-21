@@ -24,10 +24,7 @@ class _PageState extends State<IconPage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: GridView.count(
                 crossAxisCount: 2,
                 mainAxisSpacing: 2.0,

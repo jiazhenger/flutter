@@ -14,14 +14,10 @@ class _PageState extends State<AlertDialogPage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[
-
                     MaterialButton(
                         child: Text('点击弹出弹窗'),
                         onPressed: (){

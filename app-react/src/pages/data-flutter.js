@@ -23,8 +23,9 @@
 	{ 
 		title: '主题',
 		children:[
-			{ title: 'ThemeData', path:'/flutter/app/ThemeData' },
-			{ title: 'Theme', path:'/flutter/app/Theme' },
+			{ title: 'ThemeData', path:'/flutter/style/ThemeData' },
+			{ title: 'Theme', path:'/flutter/style/Theme' },
+			{ title: 'IconThemeData', path:'/flutter/style/IconThemeData' },
 		]
 	},
 	{ 
@@ -119,6 +120,8 @@
 			{ title: 'Stream( )', path:'/flutter/style/Stream' },
 			{ title: 'StackTrace( )', path:'/flutter/style/StackTrace' },
 			{ title: 'Step( )', path:'/flutter/style/Step' },
+			{ title: 'BottomNavigationBarItem( )', path:'/flutter/style/BottomNavigationBarItem' },
+			{ title: 'TabController( )', path:'/flutter/style/TabController' },
 		]
 	},
 	{
@@ -298,6 +301,7 @@
 					{ title: 'Flex( )', path:'/flutter/layout/Flex' },
 					{ title: 'Row( )', path:'/flutter/layout/Row' },
 					{ title: 'Column( )', path:'/flutter/layout/Column' },
+					{ title: 'Expanded( )', path:'/flutter/layout/Expanded' },
 				]
 			},
 			{ 
@@ -338,8 +342,19 @@
 			{ 
 				title: '标题',
 				children: [
+					{ title: 'Title( )', path:'/flutter/ui/Title' },
 					{ title: 'ListTile( )', path:'/flutter/ui/ListTile' },
 					{ title: 'ExpansionTile( )', path:'/flutter/ui/ExpansionTile' },
+					{ title: 'AboutListTile( )', path:'/flutter/ui/AboutListTile' },
+				]
+			},
+			{ 
+				title: 'tab',
+				children: [
+					{ title: 'BottomNavigationBar( )', path:'/flutter/ui/BottomNavigationBar' },
+					{ title: 'TabBar( )', path:'/flutter/ui/TabBar' },
+					{ title: 'Tab( )', path:'/flutter/ui/Tab' },
+					{ title: 'TabBarView( )', path:'/flutter/ui/TabBarView' },
 				]
 			},
 			{ 
@@ -349,6 +364,7 @@
 					{ title: 'CircularProgressIndicator( )', path:'/flutter/ui/CircularProgressIndicator' },
 				]
 			},
+			
 			{ title: 'Card( )', path:'/flutter/ui/Card' },
 			{ title: 'Chip( )', path:'/flutter/ui/Chip' },
 			{ title: 'Tooltip( )', path:'/flutter/ui/Tooltip' },
@@ -356,7 +372,7 @@
 			{ title: 'RefreshIndicator( )', path:'/flutter/ui/RefreshIndicator' },
 			{ title: 'Divider( )', path:'/flutter/ui/Divider' },
 			{ title: 'Stepper( )', path:'/flutter/ui/Stepper' },
-			{ title: 'Drawer( )', path:'/flutter/ui/Drawer' },
+			{ title: 'UserAccountsDrawerHeader( )', path:'/flutter/ui/UserAccountsDrawerHeader' },
 		]
 	},
 	{
@@ -379,6 +395,7 @@
 			{ title: 'AlertDialog( )', path:'/flutter/popover/AlertDialog' },
 			{ title: 'SimpleDialog( )', path:'/flutter/popover/SimpleDialog' },
 			{ title: 'ExpansionPanelList( )', path:'/flutter/popover/ExpansionPanelList' },
+			{ title: 'Drawer( )', path:'/flutter/popover/Drawer' },
 			{
 				title:'style',
 				children:[
@@ -409,7 +426,7 @@
 		title: '动画',
 		children:[
 			{ 
-				title: 'x',
+				title: 'style',
 				children: [
 					{ title: 'Curves.x', path:'/flutter/animation/Curves' },
 					{ title: 'AlwaysStoppedAnimation', path:'/flutter/animation/AlwaysStoppedAnimation' },

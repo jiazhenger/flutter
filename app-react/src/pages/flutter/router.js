@@ -39,9 +39,6 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/router-skip`} 	component={ Import('flutter/app/router/router-skip') } exact />
 							</Switch>
 						)} />
-						{/* 主题 */}
-						<Route path={`${match.url}/ThemeData`} 	component={ Import('flutter/theme/ThemeData') } exact />
-						<Route path={`${match.url}/Theme`} 	component={ Import('flutter/theme/Theme') } exact />
 					</Switch>
 				)}/>
 				{/* 样式 */}

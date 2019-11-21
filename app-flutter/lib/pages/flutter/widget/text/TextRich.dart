@@ -26,10 +26,7 @@ class _PageState extends State<RichTextPage> {
 
         };
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[

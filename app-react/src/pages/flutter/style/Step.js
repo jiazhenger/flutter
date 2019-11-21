@@ -3,7 +3,9 @@
 import ListComponent from '@cpt/list.component'
 // ===================================================================== component
 const data = {
-	title:'步骤', keyword:'Step( )', type:'Step',
+	title:'步骤', 
+	keyword:'Step( )', 
+	type:'Step',
 	data:[
 		{ keyword:'title', type:'Widget',  pro:'标题' },
 		{ keyword:'subtitle', type:'Widget',  pro:'副标题' },

@@ -1,0 +1,27 @@
+<em>class _PageState extends State&lt;TabBarViewPage&gt; with TickerProviderStateMixin</em>{
+	<em>Widget build(BuildContext context)</em> {
+		<em>TabController</em> <s>_controller</s> = <b>TabController</b>(<em>vsync: this, length: 3</em>);
+		<em>#　设置</em>
+		<s>_controller</s>.<i>index</i> = 1; 	<em>// 设置选中第几个 tab</em>
+		<em># fn</em>
+		<u>void</u> <b>_fn</b>( ){
+			<u>int</u> <em>v</em> = <s>_controller</s>.<i>index</i>;							<em>// 获取当前 index</em>
+			<u>int</u> <em>v</em> = <s>_controller</s>.<i>previousIndex</i>; 					<em>// 获取上一个 index</em>
+			<u>int</u> <em>v</em> = <s>_controller</s>.<i>length</i>; 							<em>// 获取tab 长度</em>
+			<u>bool</u> <em>v</em> = <s>_controller</s>.<i>hasListeners</i>; 					<em>// 获取是否有监听器</em>
+			<u>bool</u> <em>v</em> = <s>_controller</s>.<i>indexIsChanging</i>; 				<em>// 获取 index 是否有改变</em>
+			<u>Animation&lt;double&gt;</u> <em>v</em> = <s>_controller</s>.<i>animation</i>; 		<em>// 获取 AnimationController</em>
+		}
+		<u>var</u> <b>_fn</b> = ( ){ }
+		<em>#　监听控制器</em>
+		<u>void</u> <s>_controller</s>.<i>addListener</i>(<b>_fn</b>);
+		<em>#　移出监听控制器</em>
+		<u>void</u> <s>_controller</s>.<i>removeListener</i>(<b>_fn</b>);
+		<em># 销毁控件器</em>
+		<u>void</u> <s>_controller</s>.<i>dispose( )</i>; 
+		<em># 通知监听，常用于测试</em>
+		<u>void</u> <s>_controller</s>.<i>notifyListeners( )</i>;
+		<em># 动画滚动到指定索引位置</em>
+		<u>void</u> <s>_controller</s>.<i>animateTo</i>(<em>int</em> <u>value</u>,{ <u>duration</u>: <q>Duration</q>, <u>curve</u>: <q>Curves</q>} ); 	<em>// _controller.animateTo(2,duration:,curve:)</em>
+	}
+}

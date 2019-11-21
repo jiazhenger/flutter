@@ -14,7 +14,7 @@ const data = {
 		{ keyword:'duration', type:'Duration', pro:'过渡时间', link:'/flutter/time/Duration' },
 		{ keyword:'reverseDuration', type:'Duration', pro:'反转过渡时间', link:'/flutter/time/Duration' },
 		{ keyword:'animationBehavior', type:'AnimationBehavior', pro:'动画行为', code:[{path:'flutter/animation/AnimationBehavior'}] },
-		{ keyword:'vsync', type:'TickerProvider', pro:'' }
+		{ keyword:'vsync', type:'TickerProvider', pro:'垂直同步', code:[{path:'flutter/public/vsync'}] }
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

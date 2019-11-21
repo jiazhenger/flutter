@@ -3,13 +3,13 @@ import 'package:flutter_web/material.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/BottomSheet.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/showModalBottomSheet.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/showBottomSheet.dart';
-
 import 'package:flutter_web_study.app/pages/flutter/popover/SnackBar.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/PopupMenuButton.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/showDialog.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/AlertDialog.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/SimpleDialog.dart';
 import 'package:flutter_web_study.app/pages/flutter/popover/ExpansionPanelList.dart';
+import 'package:flutter_web_study.app/pages/flutter/popover/Drawer.dart';
 // ======================================================================================================== x
 
 // ======================================================================================================== 路由类
@@ -24,7 +24,7 @@ class PopoverRouter{
 		'/AlertDialogPage': (BuildContext context) => AlertDialogPage(title:'AlertDialog( )'),
 		'/SimpleDialogPage': (BuildContext context) => SimpleDialogPage(title:'SimpleDialog( )'),
 		'/ExpansionPanelListPagePage': (BuildContext context) => ExpansionPanelListPagePage(title:'ExpansionPanelList( )'),
-
+		'/DrawerPage': (BuildContext context) => DrawerPage(title:'Drawer( )'),
 
 	};
 }

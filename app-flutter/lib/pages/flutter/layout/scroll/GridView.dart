@@ -15,10 +15,7 @@ class _PageState extends State<GridViewPage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: AppBar(
-                title:Config.appBar(widget.title),
-                centerTitle:true,
-            ),
+            appBar: Config.appBar(widget.title),
             body: GridView(
                 padding:EdgeInsets.all(10.0),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

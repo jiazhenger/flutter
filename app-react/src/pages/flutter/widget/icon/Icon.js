@@ -13,6 +13,7 @@ const data = {
 		{ keyword:'size', type:'double', pro:'尺寸' },
 		{ keyword:'textDirection', type:'TextDirection', pro:'排列顺序', code:[ {path:'flutter/widget/text/TextDirection'} ] },
 		{ keyword:'semanticsLabel', type:'String', pro:'icon 的语义描述', code:[ {path:'flutter/public/semanticsLabel'} ]},
+		{ noOrder:true, pro:'web 端 Material Icon 配置', code:[ {path:'flutter/widget/icon/set'} ] },
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }
