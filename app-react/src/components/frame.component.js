@@ -13,22 +13,18 @@ const { SubMenu, Item } = Menu
 const $fn = window.$fn
 export default class Index extends React.Component{
 	state = {
-		defaultOpenKeys:[],
-		selectedKeys:[]
+		defaultOpenKeys:this.getKey(),
+		selectedKeys:this.getKey()
 	}
 	componentDidMount(){
 		$fn.setTitle(this.props.title)
 	}
-
- 	handleClick = e => {
-    	sessionStorage.setItem('selectedKeys',e.key)
-    	sessionStorage.setItem('defaultOpenKeys',e.keyPath)
+	handleClick = v => {
+    	sessionStorage.setItem('defaultOpenKeys',v.keyPath)
   	}
-	go = (path) => {
-		if(path){
-//			document.querySelector('#nav').style.display = 'none'
-			this.props.history.push(path);
-		}
+	onSelect = v => {
+		this.props.history.push(v.key);
+		this.setState({ selectedKeys: this.getKey(),defaultOpenKeys:v.keyPath })
 	}
 	onShow = () => {
 		let nav = document.querySelector('#nav')
@@ -38,11 +34,18 @@ export default class Index extends React.Component{
 			nav.style.display = 'none'
 		}
 	}
+	// 从路由获取 key 值
+	getKey(){
+		let hash = window.location.hash
+		hash = hash.replace('#','')
+		
+		return [ hash ]
+	}
 	render(){
 		const { children, data, Router, logo, logoWidth  } = this.props
-		let selectedKeys = sessionStorage.getItem('selectedKeys')			// 选中 key
+		const { selectedKeys } = this.state
 		let defaultOpenKeys =  sessionStorage.getItem('defaultOpenKeys')	// 默认打开 key
-		if(selectedKeys){ selectedKeys = [selectedKeys] }
+		
 		if(defaultOpenKeys){ defaultOpenKeys = defaultOpenKeys.split(',') }
 		return (
 			<UbContent scrollY={false} className='fv'>
@@ -56,7 +59,7 @@ export default class Index extends React.Component{
 						<UbContent>
 							{
 								children ? <Menu className='h' mode='vertical'>{ children }</Menu> : (
-									<Menu mode='inline' className='h' onClick={this.handleClick} selectedKeys={selectedKeys} defaultOpenKeys={defaultOpenKeys}>
+									<Menu mode='inline' className='h' onClick={this.handleClick} selectedKeys={selectedKeys} defaultOpenKeys={defaultOpenKeys} onSelect={this.onSelect}>
 										{
 											$fn.hasArray(data) && data.map((v,i)=>(
 												<SubMenu key={i} title={<span><Icon type='appstore' /><span>{v.title}</span></span>}>
@@ -65,10 +68,10 @@ export default class Index extends React.Component{
 															return $fn.hasArray(p.children) ? (
 																<SubMenu key={i + '-' + k } title={p.title}>
 																	{
-																		$fn.hasArray(p.children) ? p.children.map((m,j)=> <Item key={i + '-' + k + '-' + j} onClick={e=>{this.go(m.path)}}>{m.title}</Item> ) : null
+																		$fn.hasArray(p.children) ? p.children.map((m,j)=> <Item key={m.path}>{m.title}</Item> ) : null
 																	}
 																</SubMenu>
-															): <Item key={i + '-' + k + 'a'} onClick={e=>{this.go(p.path)}}>{p.title}</Item>
+															): <Item key={p.path}>{p.title}</Item>
 														}) : <Item key={i}>{v.title}</Item>
 													}
 												</SubMenu>

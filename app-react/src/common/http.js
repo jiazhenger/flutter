@@ -243,7 +243,7 @@ const ajax = (_this,api,option)=>{
 // ===================================================== 分页
 const getText = (url,option)=>{
 	let opt = {
-		api : (Config.env ? 'http://localhost:3000/' : 'https://jiazhenger.github.io/flutter/') + 'assets/data/',
+		api : (Config.env ? 'http://localhost:3001/' : 'https://jiazhenger.github.io/flutter/') + 'assets/data/',
 		...option
 	}
 	return new Promise((resolve, reject) => {
