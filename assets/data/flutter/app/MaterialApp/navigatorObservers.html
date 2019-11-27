@@ -1,0 +1,10 @@
+<em>class</em> <s>MyObserver</s> <em>extends</em> <u>NavigatorObserver</u>{
+	<em>@override</em>
+	<em>void</em> <em>didPush</em>(<q>Route</q> <u>route</u>, <q>Route</q> <u>previousRoute</u>) {
+	<em>super</em>.<em>didPush</em>(<u>route</u>, <u>previousRoute</u>); 		<em>// 当调用Navigator.push时回调</em>
+		<em><u>RouteSettings</u> v</em> = <u>route</u>.<q>settings</q>;
+	}
+}
+MaterialApp(
+	<b>navigatorObservers</b>: 	[ <s>MyObserver</s>( ) ]
+)

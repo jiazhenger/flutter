@@ -23,7 +23,11 @@ const data = {
 			url:'RouterPush'
 		},
 		{ keyword:'pop( )', pro:'返回上一个页面', code:[ {path:'flutter/app/router/router-skip/router-pop'} ], url:'RouterPop' },
-		{ noOrder:true, pro:'获取页面参数', code:[ {path:'flutter/app/router/router-skip/get-param'} ]},
+		{ 
+			noOrder:true,pro:'获取页面参数', 
+			code:[ {path:'flutter/app/router/router-skip/get-param'} ],
+			link:[{ title:'settings', url:'/flutter/app/router/settings' }]
+		},
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

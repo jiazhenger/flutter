@@ -122,24 +122,24 @@ export default {
 //	val(v){return this.isValid(v) ? v : '--'},
 //	nan(v){return !isNaN(v) ? v : '--'},
 	// ======================================================================== 获取 url 参数
-	getQuery(id){
-		var hash = window.location.search || window.location.hash;
-		var stack = {}
-		if(hash.indexOf('?') !== -1){
-			var search = hash.split('?');
-			search = search[1].split('&');
-			search.forEach(function(v,i){
-				var s = v.split('=');
-				stack[s[0]] = s[1]
-			})
-		}
-		if(id){
-			return stack[id];
-		}
-		return stack;
-	},
+	// getQuery(id){
+	// 	var hash = window.location.search || window.location.hash;
+	// 	var stack = {}
+	// 	if(hash.indexOf('?') !== -1){
+	// 		var search = hash.split('?');
+	// 		search = search[1].split('&');
+	// 		search.forEach(function(v,i){
+	// 			var s = v.split('=');
+	// 			stack[s[0]] = s[1]
+	// 		})
+	// 	}
+	// 	if(id){
+	// 		return stack[id];
+	// 	}
+	// 	return stack;
+	// },
 	// 设置浏览器 title
-	setTitle(text){ document.title = text },
+	setTitle(text){ if(text) document.title = text; },
 	// 判断平台
 	platform(androidCallback,iosCallback,pcCallback){
 		let u = navigator.userAgent;

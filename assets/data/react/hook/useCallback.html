@@ -1,0 +1,13 @@
+<em>/**</em>
+<em> 1、副作用： 在组件中执行过数据获取、订阅或者手动修改过 DOM</em>
+<em>*/</em>
+<em>import React</em>, { <b>useCallback</b> } <em>from 'react'</em>;
+
+<em>const</em> Component = ( <s>props</s> ) => {
+	<em>// 只执行一次</em>
+	<em>const</em> <s>clickCallback</s> = <b>useCallback</b>(( ) => {
+		
+	}, [ ]);
+	
+	return <em>&lt;button</em> onClick={ <s>clickCallback</s> }&gt;<em>Click</em><em>&lt;button/&gt;</em>
+}

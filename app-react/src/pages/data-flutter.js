@@ -15,7 +15,10 @@
 				title: 'routes: 路由',
 				children: [
 					{ title: '挂载路由', path:'/flutter/app/router/base-router' },
-					{ title: '路由跳转', path:'/flutter/app/router/router-skip' }
+					{ title: '路由跳转', path:'/flutter/app/router/router-skip' },
+					{ title: 'settings', path:'/flutter/app/router/settings' },
+					{ title: 'Route', path:'/flutter/app/router/Route' },
+					{ title: 'navigator', path:'/flutter/app/router/navigator' }
 				]
 			},
 		]
@@ -98,6 +101,13 @@
 					{ title: 'ShapeDecoration( )', path:'/flutter/style/decoration/ShapeDecoration' },
 					{ title: 'UnderlineTabIndicator( )', path:'/flutter/style/decoration/UnderlineTabIndicator' },
 					{ title: 'InputDecoration( )', path:'/flutter/style/decoration/InputDecoration' },
+				]
+			},
+			{ 
+				title: '地区',
+				children:[
+					{ title: 'Locale( )', path:'/flutter/style/locale/Locale' },
+					{ title: 'MaterialLocalizations( )', path:'/flutter/style/locale/MaterialLocalizations' },
 				]
 			},
 			{ 

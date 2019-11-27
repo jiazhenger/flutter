@@ -24,3 +24,5 @@ import App from './App'
 ReactDOM.render((<App/>),document.getElementById('app-root'))	// 普通启动
 // ======================================================== 注册服务
 serviceWorker.unregister();
+
+document.querySelector('#app-loading').style.display = 'none'

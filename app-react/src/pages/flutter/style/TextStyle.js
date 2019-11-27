@@ -53,7 +53,7 @@ const data = {
 				{ title:'BoxShadow',url:'/flutter/style/shadow/BoxShadow'}
 			]
 		},
-		{ keyword:'locale', type:'Locale', pro:'语言', code:[ {path:'flutter/public/locale'} ] },
+		{ keyword:'locale', type:'Locale', pro:'语言', link:'/flutter/style/locale/Locale' },
 		{ keyword:'inherit', type:'bool', pro:'继承', code:[ {path:'flutter/public/inherit'} ] },
 		{ keyword:'debugLabel', type:'String', pro:'文本样式的可读描述', code:[ {path:'flutter/public/debugLabel'} ] },
 	]

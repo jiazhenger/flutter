@@ -1,0 +1,17 @@
+<em>/**</em>
+<em> 1、用来处理路由，可以在里面定义路由映射，所以一般返回非空值</em>
+<em>*/</em>
+MaterialApp(
+	<b>onGenerateRoute</b>: ( <em>RouteSettings</em> <q>settings</q> ){ 
+		<em>final String</em> <u>name</u> = <q>settings</q>.<i>name</i>;
+		<em>final Function</em> <s>pageBuilder</s> = <em>FlutterRouter( ).router</em>[<u>name</u>];
+		if (<s>pageBuilder</s> <em>!= null</em>){
+			if (<q>settings</q>.<i>arguments</i> != null) {		<em>// 如果传了参数</em>
+				return <q>MaterialPageRoute</q>( <em>builder: (context) => </em><s>pageBuilder</s>(<em>context, arguments:</em> <q>settings</q>.<i>arguments</i>) );
+			} else { 	<em>// 没有传参数</em>
+				return <q>MaterialPageRoute</q>( <em>builder: (context) => </em> <s>pageBuilder</s>(<em>context</em>) );
+			}
+		}
+		return 	<q>MaterialPageRoute</q>( <em>builder: (context) => NotFoundPage( )</em> );
+	}
+)

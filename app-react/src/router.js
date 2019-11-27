@@ -1,13 +1,15 @@
-﻿/* ====================================== 模块子路由配置  ====================================== */
+/* ====================================== 模块子路由配置  ====================================== */
 import React from 'react'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 // ===================================================================== 异步加载
 import { Import } from '@common/bundle'
-// ===================================================================== 同步路由（父路由必须是同步路由、否则，子路由切换，会刷新父路由）
-import Css from '@pages/css/main'
-import JavaScript from '@pages/js/main'
-import Flutter from '@pages/flutter/main'
-import Dart from '@pages/dart/main'
+// ===================================================================== 同步路由
+import Css 			from '@pages/css/main'
+import JavaScript 	from '@pages/js/main'
+import Reactjs 		from '@pages/react/main'
+import Vue 			from '@pages/vue/main'
+import Flutter 		from '@pages/flutter/main'
+import Dart 		from '@pages/dart/main'
 // ===================================================================== 二级路由
 class AppRouter extends React.Component{
 	render(){
@@ -16,6 +18,8 @@ class AppRouter extends React.Component{
 				<Route 	path='/' 		component={ Import('index') } exact />
 				<Route 	path='/css' 	component={ Css }  />
 				<Route 	path='/js' 		component={ JavaScript }  />
+				<Route 	path='/react' 	component={ Reactjs }  />
+				<Route 	path='/vue' 	component={ Vue }  />
 				<Route 	path='/dart' 	component={ Dart }  />
 				<Route 	path='/flutter' component={ Flutter }  />
 				{/*  */}

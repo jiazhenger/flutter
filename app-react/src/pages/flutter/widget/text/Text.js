@@ -19,7 +19,7 @@ const data = {
 		{ keyword:'textDirection', type:'TextDirection', pro:'排列顺序', code:[ {path:'flutter/widget/text/TextDirection'} ] },
 		{ keyword:'textWidthBasis', type:'TextWidthBasis', pro:'文本长依据', code:[ {path:'flutter/widget/text/TextWidthBasis'} ] },
 		{ keyword:'semanticsLabel', type:'String', pro:'文本的语义描述', code:[ {path:'flutter/public/semanticsLabel'} ] },
-		{ keyword:'locale', type:'Locale', pro:'语言', code:[ {path:'flutter/public/locale'} ] },
+		{ keyword:'locale', type:'Locale', pro:'语言', link:'/flutter/style/locale/Locale' },
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }

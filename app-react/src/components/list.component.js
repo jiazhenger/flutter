@@ -1,10 +1,11 @@
-﻿/* ====================================== 滚动条  ====================================== */
+/* ====================================== 滚动条  ====================================== */
 import React from 'react'
 // ===================================================================== public component
 import UbContent from '@cpx/ub-content.component'
 import BoxComponent from '@cpt/box.component'
 // ===================================================================== antd
-import { Button, Icon } from 'antd'
+import { Button  } from 'antd'
+import { ArrowRight } from '@ant-design/icons'
 // ===================================================================== 
 const $fn = window.$fn
 export default class Index extends React.Component{
@@ -36,7 +37,7 @@ export default class Index extends React.Component{
 								<h2 className='b f16 mr10' style={{margin:0}}>{data.keyword}</h2>
 								{
 									(data.type && data.keyword) && [
-										<Icon key='arrow' className='ml10' type='arrow-right' style={{color:'#999',fontSize:'12px'}} />,
+										<ArrowRight key='arrow' className='ml10' style={{color:'#999',fontSize:'12px'}} />,
 										<span key='type' className='f14 mlr10 c0' style={{color:'pink'}}>{data.type}</span>
 									]
 								}

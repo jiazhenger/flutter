@@ -1,0 +1,33 @@
+const { <u>override</u>, <u>fixBabelImports</u>, <u>addLessLoader</u>, <u>addWebpackAlias</u> } = require('customize-cra')
+const resolve = dir => require('path').join(__dirname,dir)
+<em># 关闭 css sourceMap 打包</em>
+process.env.GENERATE_SOURCEMAP = false;
+<em># 重写 webpack</em>
+module.exports = override(
+	<em># 自定义目录访问</em>
+	<u>addWebpackAlias</u>({
+		['<b>@</b>'] 		: resolve('src'),
+	  	['<b>@common</b>'] 	: resolve('src/common'),
+	  	['<b>@cpt</b>'] 		: resolve('src/components'),
+	  	['<b>@cpx</b>'] 		: resolve('src/components-x'),
+	  	
+	  	['<b>@assets</b>'] 	: resolve('src/assets'),
+	  	['<b>@css</b>'] 		: resolve('src/assets/css'),
+	  	['<b>@images</b>'] 	: resolve('src/assets/images'),
+	  	['<b>@js</b>'] 		: resolve('src/assets/js'),
+	  	['<b>@pages</b>'] 	: resolve('src/pages'),
+	  	
+		['<b>@redux</b>'] 	: resolve('src/redux')
+	}),
+	<em># 异步引入 antd 配置</em>
+	<u>fixBabelImports</u>('import', {
+		libraryName: 'antd',
+		libraryDirectory: 'es',
+		style: 'css',
+	}),
+	<em># 自定义 antd 主题</em>
+	<u>addLessLoader</u>({
+		javascriptEnabled: true,
+		modifyVars: { '@primary-color': '#4da1ff' }, 	<em>// 主题颜色</em>
+	})
+)

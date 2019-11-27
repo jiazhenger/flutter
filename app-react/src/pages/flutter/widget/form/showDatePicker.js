@@ -20,7 +20,7 @@ const data = {
 			link:[{ title:'Theme', url:'/flutter/app/Theme' }]
 		},
 		
-		{ keyword:'locale', type:'Locale', pro:'语言', code:[ {path:'flutter/public/locale'} ] },
+		{ keyword:'locale', type:'Locale', pro:'语言', link:'/flutter/style/locale/Locale' },
 		{ keyword:'textDirection', type:'TextDirection', pro:'排列顺序', code:[ {path:'flutter/widget/text/TextDirection'} ] },
 		
 		{ keyword:'selectableDayPredicate', type:'bool Function( DateTime )', pro:'可选择的时间', code:[{path:'flutter/widget/Form/showDatePicker/selectableDayPredicate'}] },

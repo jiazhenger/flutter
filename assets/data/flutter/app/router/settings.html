@@ -1,0 +1,14 @@
+<em>x</em>.<b>settings</b>. 	<i>arguments</i>		<em>// arguments 参数，即：通过路由传递的参数  <u>Object</u> => {'a':1,'b':2}</em>
+			<i>name</i> 			<em>// 路由名称 <u>String</u> => /login</em>
+			<i>isInitialRoute</i>		<em>// 是否是初始化路由 <u>bool</u> => 第一次进入的路由，返回 true，反之 false</em>
+			
+			<em># 复制路由  <u>RouteSettings</u> => RouteSettings('/RouterPop',[1,2,3])</em></em>
+			<i>copyWith</i>(
+				<q>arguments</q>:　	<em>[1,2,3]</em> 			<em>// == arguments</em>
+				<q>name</q>:　		<em>'/RouterPop'</em>, 		<em>// == name</em>
+				<q>isInitialRoute</q>:　<em>true</em>, 			<em>// == isInitialRoute</em>
+			) 		
+			<em>#　</em>
+			<i>toString( )</i> 		<em>// <u>String</u> => RouteSettings('/login',{'a':1,'b':2})</em>
+			<i>runtimeType</i> 		<em>// <u>Type</u> => RouteSettings</em>
+			<i>hashCode</i> 		<em>// <u>int</u> => 847448285</em>

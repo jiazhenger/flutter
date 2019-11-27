@@ -1,0 +1,17 @@
+<em>class Page extends React.Component</em>{
+	<b>render</b>( ){
+		return 
+				<em># 第一种：必须用 html 元素包裹</em>
+				<i>(</i><em>&lt;div&gt; &lt;/div&gt;</em><i>)</i>
+				<em># 第二种：数组，必须设key值</em>
+				<i>[</i>
+					<em>&lt;div key={1}&gt; &lt;/div&gt;</em>,
+					<em>&lt;div key={2}&gt; &lt;/div&gt;</em>
+				<i>]</i>
+				<em># 第三种：空标签</em>
+				<i>&lt;&gt;</i>
+					<em>&lt;div&gt; &lt;/div&gt;</em>
+					<em>&lt;div&gt; &lt;/div&gt;</em>
+				<i>&lt;/&gt;</i>
+	}
+}

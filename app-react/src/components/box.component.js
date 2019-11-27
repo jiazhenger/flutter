@@ -1,10 +1,11 @@
-﻿/* ====================================== 滚动条  ====================================== */
+/* ====================================== 滚动条  ====================================== */
 import React from 'react'
 // ===================================================================== antd
 import TitleComponent from '@cpt/title.component'
 import CodeComponent from '@cpt/code.component'
 // ===================================================================== antd
-import { Button, Icon } from 'antd'
+import { Button } from 'antd'
+import { ArrowRight } from '@ant-design/icons'
 // ===================================================================== 
 const $fn = window.$fn
 export default class Index extends React.Component{
@@ -49,7 +50,7 @@ export default class Index extends React.Component{
 					}
 					{
 						(type && keyword) && [
-							<Icon key='arrow' type='arrow-right' style={{color:'#999',fontSize:'12px'}} />,
+							<ArrowRight key='arrow' type='arrow-right' style={{color:'#999',fontSize:'12px'}} />,
 							<span key='type' className='f14 mlr10 c0' style={{color:'pink'}}>{type}</span>
 						]
 					}
