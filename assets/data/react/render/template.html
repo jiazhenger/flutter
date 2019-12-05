@@ -8,7 +8,12 @@
 					<em>&lt;div key={1}&gt; &lt;/div&gt;</em>,
 					<em>&lt;div key={2}&gt; &lt;/div&gt;</em>
 				<i>]</i>
-				<em># 第三种：空标签</em>
+				<em># 第三种：聚合一个子元素列表，并且不在DOM中增加额外节点，可有 key 值</em>
+				<i>&lt;React.Fragment&gt;</i>
+					<em>&lt;div&gt; &lt;/div&gt;</em>
+					<em>&lt;div&gt; &lt;/div&gt;</em>
+				<i>&lt;/React.Fragment&gt;</i>
+				<em># 第四种：React.Fragment 的语法糖，不能接受键值或属性</em>
 				<i>&lt;&gt;</i>
 					<em>&lt;div&gt; &lt;/div&gt;</em>
 					<em>&lt;div&gt; &lt;/div&gt;</em>
