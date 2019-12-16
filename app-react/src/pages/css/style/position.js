@@ -57,7 +57,7 @@ export default class Index extends React.Component{
 					<CaseComponent
 						getValue={ v=>this.setState({ position: v }) }
 						data={{
-							radio:['static','relative','absolute','fixed']
+							radio:['static','relative','absolute','fixed','sticky']
 						}}>
 						<b className='c1'>position:</b>
 					</CaseComponent>
@@ -88,6 +88,7 @@ export default class Index extends React.Component{
 						}}>
 						<b className='c1'>z-index:</b>
 					</CaseComponent>
+					<div style={{height:'500px'}}></div>
 				</BoxComponent>
 			</UbContent>
 		)

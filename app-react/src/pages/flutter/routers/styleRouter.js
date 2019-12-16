@@ -90,6 +90,7 @@ export default class StyleRouter extends React.Component{
 					<Route path={`${match.url}/ThemeData`} 	component={ Import('flutter/theme/ThemeData') } exact />
 					<Route path={`${match.url}/Theme`} 	component={ Import('flutter/theme/Theme') } exact />
 					<Route path={`${match.url}/IconThemeData`} 	component={ Import('flutter/theme/IconThemeData') } exact />
+					<Route path={`${match.url}/TextTheme`} 	component={ Import('flutter/theme/TextTheme') } exact />
 					{/* 地区 */}
 					<Route path={`${match.url}/locale`} render={ ({ match }) => (
 						<Switch>

@@ -32,6 +32,8 @@ class AppRouter extends React.Component{
 				<Route path={ `${url}/app` } render={ ({ match }) => (
 					<Switch>
 						<Route path={`${match.url}/MaterialApp`} 	component={ Import('flutter/app/MaterialApp') } exact />
+						<Route path={`${match.url}/Scaffold`} 		component={ Import('flutter/app/Scaffold') } exact />
+						<Route path={`${match.url}/AppBar`} 		component={ Import('flutter/app/AppBar') } exact />
 						{/* 路由 */}
 						<Route path={`${match.url}/router`} render={ ({ match }) => (
 							<Switch>

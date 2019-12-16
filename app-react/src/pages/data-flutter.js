@@ -11,6 +11,8 @@
 		title: '入口',
 		children: [
 			{ title: 'MaterialApp( )', path:'/flutter/app/MaterialApp' },
+			{ title: 'Scaffold( )', path:'/flutter/app/Scaffold' },
+			{ title: 'AppBar( )', path:'/flutter/app/AppBar' },
 			{ 
 				title: 'routes: 路由',
 				children: [
@@ -29,6 +31,7 @@
 			{ title: 'ThemeData', path:'/flutter/style/ThemeData' },
 			{ title: 'Theme', path:'/flutter/style/Theme' },
 			{ title: 'IconThemeData', path:'/flutter/style/IconThemeData' },
+			{ title: 'TextTheme', path:'/flutter/style/TextTheme' },
 		]
 	},
 	{ 
