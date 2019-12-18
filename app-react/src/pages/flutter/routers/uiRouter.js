@@ -19,6 +19,8 @@ export default class
 					<Route path={`${match.url}/Divider`} 	component={ Import('flutter/ui/Divider') } exact />
 					<Route path={`${match.url}/Stepper`} 	component={ Import('flutter/ui/Stepper') } exact />
 					<Route path={`${match.url}/UserAccountsDrawerHeader`} 	component={ Import('flutter/ui/UserAccountsDrawerHeader') } exact />
+					<Route path={`${match.url}/FlutterLogo`} 	component={ Import('flutter/ui/FlutterLogo') } exact />
+					<Route path={`${match.url}/Placeholder`} 	component={ Import('flutter/ui/Placeholder') } exact />
 					{/* 标题  */}
 					<Route path={`${match.url}/Title`} 	component={ Import('flutter/ui/title/Title') } exact />
 					<Route path={`${match.url}/ListTile`} 	component={ Import('flutter/ui/title/ListTile') } exact />

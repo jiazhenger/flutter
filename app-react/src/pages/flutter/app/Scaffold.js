@@ -9,7 +9,7 @@ const data = {
 	data:[
 		{ keyword:'appBar', type:'PreferredSizeWidget', pro:'头部', link:'/flutter/app/appBar' },
 		{ keyword:'body', type:'Widget', pro:'主体内容 wiget', code:[ {path:'flutter/app/MaterialApp/home'} ] },
-		{ keyword:'backgroundColor', type:'Color', pro:'背景颜色', link:'/flutter/style/Color' },
+		{ keyword:'backgroundColor', type:'Color', pro:'背景颜色', link:'/flutter/style/Colors' },
 		{ keyword:'bottomNavigationBar', type:'Widget', pro:'底部导航控件' },
 		{ keyword:'bottomSheet', type:'Widget', pro:'底部展示控件', link:'/flutter/popover/BottomSheet' },
 		{ keyword:'persistentFooterButtons', type:' List<Widget>', pro:'显示在支架底部的一组按钮'},

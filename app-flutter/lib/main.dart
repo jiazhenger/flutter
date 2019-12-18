@@ -9,9 +9,21 @@ import 'pages/index.dart';
 // ======================================================================================================== 启动 app, 不能命令为 App
 void main() { runApp(FlutterApp());}
 // ======================================================================================================== 入口组件
+class MyObserver extends NavigatorObserver{
+    @override
+    void didPush(Route route, Route previousRoute) {
+        // 当调用Navigator.push时回调
+        super.didPush(route, previousRoute);
+        //可通过route.settings获取路由相关内容
+        //route.currentResult获取返回内容
+        //....等等
+        route.navigator.toDiagnosticsNode();
+    }
+}
 class FlutterApp extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
+        GlobalKey<NavigatorState> _navigatorKey = new GlobalKey();
         return MaterialApp(
             // 在任务管理窗口中所显示的应用名字
             title: 'Flutter 教程',
@@ -29,36 +41,31 @@ class FlutterApp extends StatelessWidget {
             routes: {...FlutterRouter().router,...DartRouter().router},
             // 生成路由的回调函数，当导航的命名路由的时候，会使用这个来生成界面
             onGenerateRoute:(RouteSettings settings){
-                print('onGenerateRoute');
-                final String name = settings.name;
-                final Function pageContentBuilder = FlutterRouter().router[name];
-
-                if (pageContentBuilder != null) {
-                    final Route route = MaterialPageRoute(
-                        builder: (context) {
-                            //将RouteSettings中的arguments参数取出来，通过构造函数传入
-                            return pageContentBuilder(context, arguments: settings.arguments);
-                        },
-                        settings: settings,
-                    );
-                    return route;
-                }
-                return null;
+                return MaterialPageRoute(builder: (context) => IndexPage(title:'Flutter 实例教程4564'));
             },
-            // 当系统修改语言的时候，会触发å这个回调
-//			onLocaleChanged:(){},
+//            builder:(BuildContext context, Widget widget ){
+//                return MediaQuery(
+//                    data: MediaQuery.of(context).copyWith(
+//                        //字体大小
+//                        textScaleFactor: 1.4,
+//                    ),
+//                    child: Text('13213'),
+//                );
+//            },
+            navigatorObservers:[
+                MyObserver()
+            ],
             // 应用 Navigator 的监听器
 //			navigatorObservers:
-
+            navigatorKey: _navigatorKey,
             // 是否显示 纸墨设计 基础布局网格，用来调试 UI 的工具
-//			debugShowMaterialGrid:
-
+//			debugShowMaterialGrid:true,
             // 显示性能标签
-//			showPerformanceOverlay:
+			showPerformanceOverlay:true,
             // 各种调试开关
             debugShowCheckedModeBanner: false, // 是否显示debug 图标, 默认显示 true
-//			checkerboardRasterCacheImages: true,
-//			showSemanticsDebugger: true,
+			checkerboardRasterCacheImages: true,
+			showSemanticsDebugger: false,
             // 语言配置
 //            localizationsDelegates: [ GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate ],
             supportedLocales: [ const Locale('zh', 'CH'),const Locale('en', 'US') ],

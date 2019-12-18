@@ -44,6 +44,7 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/navigator`} 	component={ Import('flutter/app/router/navigator') } exact />
 							</Switch>
 						)} />
+						<Route path={`${match.url}/WidgetsApp`} 		component={ Import('flutter/app/WidgetsApp') } exact />
 					</Switch>
 				)}/>
 				{/* 样式 */}

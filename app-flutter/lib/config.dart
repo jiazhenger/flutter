@@ -17,6 +17,9 @@ class Config {
 		return AppBar(
 			title: Text(title, style:TextStyle(fontSize: 13.0)),
 			centerTitle:true,
+			textTheme: TextTheme(
+				display1: TextStyle()
+			),
 //			leading: BackButton(color: Colors.white)
 		);
 	}

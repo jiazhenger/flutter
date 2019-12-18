@@ -23,6 +23,7 @@
 					{ title: 'navigator', path:'/flutter/app/router/navigator' }
 				]
 			},
+			{ title: 'WidgetsApp( )', path:'/flutter/app/WidgetsApp' },
 		]
 	},
 	{ 
@@ -386,6 +387,8 @@
 			{ title: 'Divider( )', path:'/flutter/ui/Divider' },
 			{ title: 'Stepper( )', path:'/flutter/ui/Stepper' },
 			{ title: 'UserAccountsDrawerHeader( )', path:'/flutter/ui/UserAccountsDrawerHeader' },
+			{ title: 'FlutterLogo( )', path:'/flutter/ui/FlutterLogo' },
+			{ title: 'Placeholder( )', path:'/flutter/ui/Placeholder' },
 		]
 	},
 	{

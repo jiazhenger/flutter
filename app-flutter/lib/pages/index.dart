@@ -21,7 +21,7 @@ class _PageState extends State<IndexPage> {
                 padding: EdgeInsets.all(10.0),
                 children: <Widget>[
                     RaisedButton(child: Text('click'),onPressed: (){
-                        Navigator.pushNamed(context,'/TabBarViewPage');
+                        Navigator.pushNamed(context,'/PlaceholderPage');
                     }),
                 ]
             ),

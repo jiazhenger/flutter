@@ -10,6 +10,8 @@ import 'package:flutter_web_study.app/pages/flutter/ui/RefreshIndicator.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/Divider.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/Stepper.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/UserAccountsDrawerHeader.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/FlutterLogo.dart';
+import 'package:flutter_web_study.app/pages/flutter/ui/Placeholder.dart';
 // 标题
 import 'package:flutter_web_study.app/pages/flutter/ui/title/Title.dart';
 import 'package:flutter_web_study.app/pages/flutter/ui/title/ListTile.dart';
@@ -34,6 +36,8 @@ class UiRouter{
 		'/DividerPage': (BuildContext context) => DividerPage(title:'Divider( )'),
 		'/StepperPage': (BuildContext context) => StepperPage(title:'Stepper( )'),
 		'/UserAccountsDrawerHeaderPage': (BuildContext context) => UserAccountsDrawerHeaderPage(title:'UserAccountsDrawerHeader( )'),
+		'/FlutterLogoPage': (BuildContext context) => FlutterLogoPage(title:'FlutterLogo( )'),
+		'/PlaceholderPage': (BuildContext context) => PlaceholderPage(title:'Placeholder( )'),
 		// 标题
 		'/TitlePage': (BuildContext context) => TitlePage(title:'Title( )'),
 		'/ListTilePage': (BuildContext context) => ListTilePage(title:'ListTile( )'),
