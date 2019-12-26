@@ -1,0 +1,47 @@
+import React from 'react'
+import <b>ReactDOM</b> from 'react-dom'
+
+export default class Pop extends React.Component{
+	<em># 挂载时执行</em>
+	<q>componentDidMount</q>( ){
+		if(!this.props.isUpdate){ this.<s>renderSubtree</s>( ) }
+	}
+	<em># 更新时执行</em>
+	<q>componentDidUpdate</q>( ){
+		if(this.props.isUpdate){ this.<s>renderSubtree</s>( ) }
+	}
+	<em># 将要销毁时执行</em>
+	<q>componentWillUnmount</q>( ){
+		<u>this.popNode</u> && document.body.removeChild(<u>this.popNode</u>) 	<em>// 移出节点</em>
+	}
+	<em># 添加节点</em>
+	retContainer = ( ) =>{
+		if(!<u>this.popNode</u>){
+			const popNode = document.createElement('div')
+			popNode.setAttribute(this.props.name,new Date().getTime()) 		<em>// 设置节点属性</em>
+			<u>this.popNode</u> = popNode
+			document.body.appendChild(<u>this.popNode</u>)
+		}
+		return <u>this.popNode</u>
+	}
+	<em># 添加子组件内容</em>
+	retContent = ( ) => {
+		return <>{this.props.children}</>
+	}
+	<em># 渲染到节点</em>
+	<s>renderSubtree</s> = ( ) => {
+		<b>ReactDOM</b>.<i>unstable_renderSubtreeIntoContainer</i>(
+			this,
+			this.retContent( ),
+			this.retContainer( ),
+		)
+	}
+	
+	render( ){
+		return null
+	}
+}
+<em># 使用</em>
+&lt;Pop&gt;
+	&lt;div&gt;&lt;div&gt;
+&lt;/Pop&gt;

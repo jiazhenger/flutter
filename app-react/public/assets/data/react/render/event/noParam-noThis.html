@@ -1,0 +1,31 @@
+<em>import React from 'react'</em>
+
+<em>class Index extends React.Component</em>{
+	state = { }
+	
+	<s>onStart</s>( ){ 
+		<em>alert(0)</em>
+	}
+	
+	<s>onEnd</s> = ( ) => {
+		<em>alert(1)</em>
+	}
+	
+	<em>render( )</em>{
+		
+		const <s>onPlay</s> = ( ) => { }
+		
+		<em>return</em> (
+			<i>&lt;&gt;</i>
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> <s>this.onStart</s> <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> ( )=>{ <s>this.onStart( )</s> } <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> <s>this.onEnd</s> <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> ( )=>{ <s>this.onEnd( )</s> } <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> <s>onPlay</s> <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onClick</b>=<b>{</b> ( )=>{ <s>onPlay( )</s> } <b>}</b> <em>&gt;&lt;/div&gt;</em>
+			<i>&lt;/&gt;</i>
+		)
+	}
+}

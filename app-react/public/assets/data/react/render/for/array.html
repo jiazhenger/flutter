@@ -1,0 +1,16 @@
+<em>import React from 'react'</em>
+
+<em>class Index extends React.Component</em>{
+	state={
+		<s>data</s>:[<em>{ a:0 },{ a:1 },{ a:2 }</em>]
+	}
+	<em>render( )</em>{
+		<em>return</em> (
+			<i>&lt;&gt;</i>
+				<b>{</b>
+					<s>this.state.data</s>.<b>map</b>((v,i) => <em>&lt;div</em> <i>key</i>={i} <em>&gt;</em>{v.a}<em>&lt;/div&gt;</em> )
+				<b>}</b>
+			<i>&lt;/&gt;</i>
+		)
+	}
+}

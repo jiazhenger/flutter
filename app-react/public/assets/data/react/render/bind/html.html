@@ -1,0 +1,15 @@
+<em>import React from 'react'</em>
+
+<em>class Index extends React.Component</em>{
+	state={
+		<s>html</s>: <b>{__html:</b> <em>'&lt;strong&gt;&lt;/strong&gt;'</em> <b>}</b>
+	}
+	<em>render( )</em>{
+		<em>return</em> (
+			<i>&lt;&gt;</i>
+				<em>&lt;div <b>dangerouslySetInnerHTML = {{__html:</b> '&lt;b&gt;&lt;/b&gt;'<b>}}</b>&gt; &lt;/div&gt;</em>
+				<em>&lt;div <b>dangerouslySetInnerHTML = {</b> <s>this.state.html</s> <b>}</b>&gt; &lt;/div&gt;</em>
+			<i>&lt;/&gt;</i>
+		)
+	}
+}
