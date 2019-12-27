@@ -11,28 +11,27 @@ export default [
 		]
 	},
 	{
-		title: '组件', 
+		title: 'component', 
 		children: [
 			{
 				title: '有状态组件',
 				children: [
 					{ title: '创建方式', path:'/react/component/state/create' },
-					{ title: '生命周期', path:'/react/component/lifeCycle' },
+					{ title: '生命周期', path:'/react/component/state/lifeCycle' },
+					{ title: 'state', path:'/react/component/state/state' },
+					{ title: 'props', path:'/react/component/state/props' },
+					{ title: 'ref', path:'/react/component/state/ref' },
 				]
 			},
 			{
 				title: '无状态组件',
 				children: [
 					{ title: '创建方式', path:'/react/component/noState/create' },
-					{ title: 'Hook', path:'/react/hook/base' },
+					{ title: 'Hook', path:'/react/component/noState/hook' },
+					{ title: 'props', path:'/react/component/noState/props' },
+					{ title: 'ref', path:'/react/component/noState/ref' },
 				]
 			},
-		]
-	},
-	{
-		title: 'Hook', 
-		children: [
-			{ title: '基础 Hook', path:'/react/hook/base' },
 		]
 	},
 	{
@@ -41,4 +40,11 @@ export default [
 			{ title: '弹窗', path:'/react/ReactDOM/pop' },
 		]
 	},
+	{
+		title: 'Hook', 
+		children: [
+			{ title: '基础 Hook', path:'/react/hook/base' },
+		]
+	},
+	
 ]

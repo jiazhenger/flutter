@@ -24,9 +24,23 @@ const AppRouter = () => {
 			{/* 组件 */}
 			<Route path={ `${url}/component` } render={ ({ match }) => (
 				<Switch>
-					<Route path={`${match.url}/lifeCycle`} 	component={ Import('react/component/lifeCycle') } exact />
-					<Route path={`${match.url}/state/create`} 	component={ Import('react/component/state/create') } exact />
-					<Route path={`${match.url}/noState/create`} 	component={ Import('react/component/noState/create') } exact />
+					<Route path={ `${match.url}/state` } render={ ({ match }) => (
+						<Switch>
+							<Route path={`${match.url}/create`} 		component={ Import('react/component/state/create') } exact />
+							<Route path={`${match.url}/lifeCycle`} 	component={ Import('react/component/state/lifeCycle') } exact />
+							<Route path={`${match.url}/state`} 	component={ Import('react/component/state/state') } exact />
+							<Route path={`${match.url}/props`} 	component={ Import('react/component/state/props') } exact />
+							<Route path={`${match.url}/ref`} 	component={ Import('react/component/state/ref') } exact />
+						</Switch>
+					)}/>
+					<Route path={ `${match.url}/noState` } render={ ({ match }) => (
+						<Switch>
+							<Route path={`${match.url}/create`} 	component={ Import('react/component/noState/create') } exact />
+							<Route path={`${match.url}/hook`} 	component={ Import('react/component/noState/hook') } exact />
+							<Route path={`${match.url}/props`} 	component={ Import('react/component/noState/props') } exact />
+							<Route path={`${match.url}/ref`} 	component={ Import('react/component/noState/ref') } exact />
+						</Switch>
+					)}/>
 				</Switch>
 			)}/>
 			{/* Hook */}

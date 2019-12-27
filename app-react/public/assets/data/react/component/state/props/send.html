@@ -1,0 +1,43 @@
+<em>import React from 'react'</em>
+
+<em>const</em> <s>Footer</s> = ( ) => <em>&lt;footer&gt;&lt;/footer&gt;</em>
+<em>const</em> <s>Icon</s> = ( ) => <em>&lt;label&gt;&lt;/label&gt;</em>
+
+<em>export default class Index extends React.Component</em>{
+	state = {
+		<s>name</s>: <em>'react'</em>
+	}
+	<s>onSearch</s>( a, b ){ 
+		<em>console.log(a + b)</em>
+	}
+	<em>render( )</em>{
+		<em>return </em> (
+			<em>&lt;&gt;</em>
+				<em>&lt;PopComponent</em> 
+					<b>name</b>		= <i>{</i> <s>this.state.name</s> <i>}</i>  				<em>// 传入变量</em>
+					
+					<b>a</b>			= <em>'flutter'</em>							<em>// 传入字符串</em>
+					<b>a</b> 			= <i>{</i> <em>'flutter'</em> <i>}</i> 						<em>// 传入字符串</em>
+					
+					<b>b</b> 			= <i>{</i> <s>{ }</s> <i>}</i> 							<em>// 传入对象</em>
+					<b>c</b> 			= <i>{</i> <s>[ ]</s> <i>}</i> 							<em>// 传入数组</em>
+					<b>d</b> 			= <i>{</i> <s>true</s> <i>}</i> 						<em>// 传入布尔值</em>
+					
+					<b>header</b> 		= <i>{</i> <s>&lt;div&gt;&lt;/div&gt;</s> <i>}</i> 					<em>// 传入 html</em>
+					<b>footer</b> 		= <i>{</i> <s>&lt;Footer /&gt;</s> <i>}</i> 					<em>// 传入组件</em>
+					
+					<b>icon</b> 		= <i>{</i> <s>Icon.bind(this)</s> <i>}</i> 				<em>// 传入方法组件</em>
+					<b>icon</b> 		= <i>{</i> <s>( ) => Icon( )</s> <i>}</i> 					<em>// 传入方法组件</em>
+					
+					<b>onSearch</b> 	= <i>{</i> <s>this.onSearch</s> <i>}</i> 				<em>// 传入方法，带默认参数</em>
+					<b>onSearch</b> 	= <i>{</i> <s>this.onSearch.bind(this)</s> <i>}</i> 		<em>// 传入方法，带默认参数</em>
+					<b>onSearch</b> 	= <i>{</i> <s>( a, b ) => this.onSearch( a, b )</s> <i>}</i>  	<em>// 传入方法，带可见参数</em>
+					
+					<b>prefix</b> 		= <i>{</i> <s>null</s> <i>}</i> 						<em>// 传入空</em>
+				<em>&gt;</em>
+					<s>&lt;div&gt;children&lt;/div&gt;</s>
+				<em>&lt;/PopComponent</em><em>&gt;</em>
+			<em>&lt;/&gt;</em>
+		)
+	}
+}

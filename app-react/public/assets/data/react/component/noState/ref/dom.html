@@ -1,0 +1,16 @@
+<em>import React from 'react'</em>
+
+<em>export default ( ) =></em>{
+	
+	<em>const</em> <i>myRef</i> = <b>React.createRef( )</b> 	<em>// 获取 ref</em>
+	
+	<em>const</em> <s>onClick</s> = () => {
+		<i>myRef.current</i>.<u>style.color</u> = <em>'red'</em>
+	}
+	
+	<em>render( )</em>{
+		&lt;&gt;
+			<em>&lt;button</em> <u>onClick</u>={<s>onClick</s>}<em>&gt;click&lt;/button&gt;</em>
+		&lt;/&gt;
+	}
+}

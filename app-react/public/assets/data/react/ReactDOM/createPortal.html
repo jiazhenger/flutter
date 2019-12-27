@@ -1,0 +1,32 @@
+<em>import React from 'react'</em>
+<em>import <b>ReactDOM</b> from 'react-dom'</em>
+
+<em>export default class Index extends React.Component</em>{
+	<q>constructor</q>(<em>...arg</em>){
+		<em>super(...arg)</em>
+		<i>this.el</i> = <b>document.createElement('div')</b> 		<em>// 创建一个 dom</em>
+	}
+	<em># 获取指定 dom</em>
+	<s>getNode</s> = ( ) => {
+		<em>const</em> { <u>el</u> } = <u>this.props</u>
+		<em>return </em> <u>el</u> ? <em>document.querySelector</em>( <u>el</u> ) : <b>document.body</b>
+	}
+	<em># 挂载时执行</em>
+	<q>componentDidMount</q>( ){
+		<s>this.getNode( )</s>.<b>appendChild</b>(<i>this.el</i>)
+	}
+	<em># 将要销毁时执行</em>
+	<q>componentWillUnmount</q>( ){
+		<s>this.getNode( )</s>.<b>removeChild</b>(<i>this.el</i>)
+	}
+	<q>render</q>( ){
+		<em>return</em> <b>ReactDOM.createPortal</b>(
+			<u>this.props.children</u>,
+			<i>this.el</i>
+		)
+	}
+}
+<em># 使用</em>
+&lt;Pop&gt;
+	<em>&lt;div&gt;&lt;div&gt;</em>
+&lt;/Pop&gt;

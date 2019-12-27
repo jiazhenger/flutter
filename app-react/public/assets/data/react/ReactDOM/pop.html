@@ -1,47 +1,48 @@
-import React from 'react'
-import <b>ReactDOM</b> from 'react-dom'
+<em>import React from 'react'</em>
+<em>import <b>ReactDOM</b> from 'react-dom'</em>
 
-export default class Pop extends React.Component{
+<em>export default class Index extends React.Component</em>{
 	<em># 挂载时执行</em>
 	<q>componentDidMount</q>( ){
-		if(!this.props.isUpdate){ this.<s>renderSubtree</s>( ) }
+		<em>if</em>(<b>!this.props.isUpdate</b>){ <s>this.renderSubtree</s>( ) }
+	}
+	<em># 获取指定 dom</em>
+	<s>getNode</s> = ( ) => {
+		<em>const</em> { <u>el</u> } = <u>this.props</u>
+		<em>return </em> <u>el</u> ? <em>document.querySelector</em>( <u>el</u> ) : <b>document.body</b>
 	}
 	<em># 更新时执行</em>
 	<q>componentDidUpdate</q>( ){
-		if(this.props.isUpdate){ this.<s>renderSubtree</s>( ) }
+		<em>if</em>(<b>this.props.isUpdate</b>){ <s>this.renderSubtree</s>( ) }
 	}
 	<em># 将要销毁时执行</em>
 	<q>componentWillUnmount</q>( ){
-		<u>this.popNode</u> && document.body.removeChild(<u>this.popNode</u>) 	<em>// 移出节点</em>
+		<u>this.el</u> && <s>this.getNode( )</s>.<b>removeChild</b>(<u>this.el</u>) 	<em>// 移出节点</em>
 	}
 	<em># 添加节点</em>
-	retContainer = ( ) =>{
-		if(!<u>this.popNode</u>){
-			const popNode = document.createElement('div')
-			popNode.setAttribute(this.props.name,new Date().getTime()) 		<em>// 设置节点属性</em>
-			<u>this.popNode</u> = popNode
-			document.body.appendChild(<u>this.popNode</u>)
+	<i>retContainer</i> = ( ) =>{
+		if(!<u>this.el</u>){
+			<em>const node</em> = <b>document.createElement('div')</b>
+			<em>node.setAttribute(this.props.name,new Date().getTime())</em> 		<em>// 设置节点属性</em>
+			<u>this.el</u> = <em>node</em>
+			<s>this.getNode( )</s>.<b>appendChild</b>(<u>this.el</u>)
 		}
-		return <u>this.popNode</u>
+		<em>return</em> <u>this.el</u>
 	}
-	<em># 添加子组件内容</em>
-	retContent = ( ) => {
-		return <>{this.props.children}</>
-	}
+	<em># 获取 children 内容</em>
+	<i>retContent</i> = ( ) =>  &lt;&gt;{ <u>this.props.children</u> }&lt;/&gt;
 	<em># 渲染到节点</em>
 	<s>renderSubtree</s> = ( ) => {
-		<b>ReactDOM</b>.<i>unstable_renderSubtreeIntoContainer</i>(
-			this,
-			this.retContent( ),
-			this.retContainer( ),
+		<b>ReactDOM.unstable_renderSubtreeIntoContainer</b>(
+			<i>this</i>,
+			<i>this.retContent( )</i>,
+			<i>this.retContainer( )</i>,
 		)
 	}
 	
-	render( ){
-		return null
-	}
+	<b>render( ){ return null }</b>
 }
 <em># 使用</em>
 &lt;Pop&gt;
-	&lt;div&gt;&lt;div&gt;
+	<em>&lt;div&gt;&lt;div&gt;</em>
 &lt;/Pop&gt;

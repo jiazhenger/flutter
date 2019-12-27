@@ -1,0 +1,26 @@
+<em>import React from 'react'</em>
+
+<em>export default class Index extends React.Component</em>{
+	
+	<b>state</b> = { <u>name</u><em>:'react'</em>, <u>title</u><em>:'flutter'</em> } 	<em>// 方式 1</em>
+	
+	<q>constructor</q>( <em>props</em> ){
+		<em>super(props)</em>		
+		
+		<b>this.state</b> = {  } 		<em>// 方式 2</em>
+	}
+	
+	<em>onClick( )</em>{
+		<em>const name</em> = <b>this.state</b>.<u>name</u>
+	}
+	
+	<em>render( )</em>{
+		<em>const</em> { <u>name</u> } = <b>this.state</b>
+		<em>return </em> (
+			&lt;&gt;
+				<em>&lt;div</em> <em>&gt;</em>{ <u>name</u> }<em>&lt;/div&gt;</em>
+				<em>&lt;div</em> <em>&gt;</em>{ <b>this.state</b>.<u>title</u> }<em>&lt;/div&gt;</em>
+			&lt;/&gt;
+		)
+	}
+}
