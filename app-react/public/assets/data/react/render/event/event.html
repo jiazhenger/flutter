@@ -1,6 +1,6 @@
 <em>import React from 'react'</em>
 <em>class Index extends React.Component</em>{
-	<s>onStart</s>( ){  <em>alert(0)</em> }
+	<s>onStart</s>( <u>event</u> ){  <em>alert(0)</em> }
 	<em>render( )</em>{
 		<em>return</em> (
 			<i>&lt;&gt;</i>
@@ -48,11 +48,11 @@
 				<em>&lt;div</em> <b>onPaste</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;粘贴&lt;/div&gt;</em>
 				
 				<em># 表单事件</em>
-				<em>&lt;div</em> <b>onChange</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听改变&lt;/div&gt;</em>
-				<em>&lt;div</em> <b>onInput</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听输入&lt;/div&gt;</em>
-				<em>&lt;div</em> <b>onFocus</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;集中焦点&lt;/div&gt;</em>
-				<em>&lt;div</em> <b>onBlur</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;失去焦点&lt;/div&gt;</em>
-				<em>&lt;div</em> <b>onSubmit</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听提交&lt;/div&gt;</em>
+				<em>&lt;input</em> <b>onChange</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;监听改变
+				<em>&lt;input</em> <b>onInput</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;监听输入
+				<em>&lt;input</em> <b>onFocus</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;集中焦点
+				<em>&lt;input</em> <b>onBlur</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;失去焦点
+				<em>&lt;form</em> <b>onSubmit</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听提交&lt;/form&gt;</em>
 				
 				<em># 其它事件</em>
 				<em>&lt;div</em> <b>onScroll</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听元素滚动&lt;/div&gt;</em>
