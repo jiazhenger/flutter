@@ -39,6 +39,15 @@ export default [
 		children: [
 			{ title: '路由模式', path:'/react/router/Router' },
 			{ title: '路由配置', path:'/react/router/config' },
+			{ 
+				title: '路由 props',
+				children: [
+					{ title: 'history', path:'/react/router/props/history' },
+					{ title: 'location', path:'/react/router/props/location' },
+					{ title: 'match', path:'/react/router/props/match' },
+					{ title: 'staticContext', path:'/react/router/props/staticContext' },
+				]
+			},
 		]
 	},
 	{

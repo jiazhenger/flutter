@@ -1,6 +1,6 @@
 /* ====================================== 模块子路由配置  ====================================== */
 import React from 'react'
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 // ===================================================================== 异步加载
 import { Import } from '@common/bundle'
 // ===================================================================== 同步路由
@@ -26,4 +26,4 @@ const AppRouter = () => (
 	</Switch>
 )
 
-export default withRouter(AppRouter)
+export default AppRouter

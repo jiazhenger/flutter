@@ -1,38 +1,45 @@
 <em>import React from 'react'</em>
 <em>import {  HashRouter, Switch, <q>Route</q> } from 'react-router-dom'</em>
 
-<em># 每个路由组件都有 props </em>	
 <em>const Index</em> = ( <s>props</s> ) => <em>&lt;div&gt;{</em> <s>props.match.params.username</s> <em>}&lt;/div&gt;</em>
 
 <em>export default ( ) =></em> (
 	<em>&lt;HashRouter&gt;</em>
 		<em>&lt;Switch&gt;</em>
-			&lt;<q>Route</q>
-				<b>path</b> 		= 	<em>'/index'</em> 			<em>// 访问路由</em>
+			<q>&lt;Route</q>
+				<em># 访问路由，当一个 Route 没有 path 时，它会匹配一切路径，即：404</em>
+				<b>path</b> 		= 	<em>'/index'</em> 			
 								<i>{</i> <u>[</u><em>'/a','/b'</em><u>]</u> <i>}</i> 		<em>// 多个路由名称访问同一个组件</em>
-				<em># 路由匹配的组件</em>			
+				<em># 路由匹配的组件， 有 props</em>			
 				<b>component</b>	= 	<i>{</i> <u>Index</u> <i>}</i>
 								<i>{</i> <u>( ) => import(</u><em>'./pages/index'</em><u>)</u> <i>}</i>
-				<em># 子路由，与 render 类似，</em>
+				<em># 路由匹配的组件，无 props</em>
 				<b>children</b>		= 	<i>{</i> <u>&lt;Page /&gt;</u> <i>}</i>			
-								<i>{</i> <u>( ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
+								<i>{</i> <u>( { <s>match</s>,<s>...rest</s> } ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
 								<i>{</i> <u><em>&lt;div&gt;&lt;/div&gt;</em><i>}</i>
-				
+				<em># 路由匹配的组件，无 props</em>
 				<b>render</b>		= 	<i>{</i> <u>( { <s>match</s> } ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
 								<i>{</i> <u>( <s>location</s> ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
+								<i>{</i> <u>( <s>location</s> ) => <u>&lt;Page /&gt;</u> <i>}</i>
 								
 				<b>location</b>		= 	<i>{</i> <u>{ pathname:</u> <em>'/index'</em> <u>}</u> <i>}</i> 						<em>// 试图将其路径与当前历史位置(通常是当前浏览器URL)匹配</em>
 								
-				<b>exact</b> 							<em>// 只匹配一个路由</em>
+				<b>exact</b> 							<em>// 完全匹配路由，即：只匹配一个路由</em>
 				<b>strict</b> 							<em>// 严格匹配一个路由，即：不能多 / 也不能少 /</em>
 				<b>sensitive</b> 						<em>// 严格匹配大小写路由</em>
-			/&gt;
-				<em># 与 children 相同</em>
+			<q>/&gt;</q>
+			<q>&lt;Route</q>
+				<b>path</b> 		= 	<em>'/index'</em>
+				<b>exact</b>
+				<b>...</b>
+			<q>/&gt;</q>
+				<em># 与 children 相同，无 props</em>
 				<i>{</i> <u>&lt;Page /&gt;</u> <i>}</i>
 				<u>&lt;Page /&gt;</u>
 				<i>{</i> <u>( ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
 				<i>{</i> <u><em>&lt;div&gt;&lt;/div&gt;</em> <i>}</i>
 				<u><em>&lt;div&gt;&lt;/div&gt;</em>
+			<q>&lt;/Route&gt;</q>
 		<em>&lt;/Switch&gt;</em>
 	<em>&lt;/HashRouter&gt;</em>
 )

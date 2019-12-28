@@ -8,11 +8,13 @@ import ToastComponent from '@cpx/toast.component'
 class App extends React.Component{
 	render(){
 		return (
-			<HashRouter>
-				<AppRouter { ...this.props } />
+			<>
+				<HashRouter>
+					<AppRouter />
+				</HashRouter>
 				<ToastComponent/>
 				{/*<DataLoadingComponent/>*/}
-			</HashRouter>
+			</>
 		)
 	}
 }

@@ -3,8 +3,8 @@
 
 <em>export default ( ) =></em> (
 	&lt;<q>HashRouter</q>
-		<b>basename</b> 				= <em>'/myname'</em>				<em>// 所有路由的 base url，如：'/index', 会自动加上 '/myname/index'</em>
-		<b>getUserConfirmation</b>  		= <i>{</i> <u>( msg, callback)=>{ }</u> <i>}</i>
+		<b>basename</b> 				= <em>'/myname'</em>				<em>// 为所有位置添加一个基准URL，所有的基URL位置，有前斜杠，但没有末尾斜杠，如：'/index', 会自动加上 '/myname/index'</em>
+		<b>getUserConfirmation</b>  		= <i>{</i> <u>( msg, callback)=>{ }</u> <i>}</i> 	<em>// 导航到此页面前执行的函数，默认使用 window.confirm</em>
 		
 		<b>hashType</b>				= 	'<u>slash</u>' 				<em>// <u>#/</u> index</em>
 									'<u>noslash</u>' 			<em>// <u>#</u> index</em>

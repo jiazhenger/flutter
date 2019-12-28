@@ -3,10 +3,10 @@
 
 <em>export default ( ) =></em> (
 	&lt;<q>StaticRouter</q>
-		<b>basename</b> 				= <em>'/myname'</em>					<em>// 所有路由的 base url，如：'/index', 会自动加上 '/myname/index'</em>
+		<b>basename</b> 				= <em>'/myname'</em>					<em>// 为所有位置添加一个基准URL，所有的基URL位置，有前斜杠，但没有末尾斜杠，如：'/index', 会自动加上 '/myname/index'</em>
 		
-		<b>location</b>					= <i>{</i> <em>'/index'</em> <i>}</i> 						<em>// 字符串， 一个路由</em>
-		<b>location</b>					= <i>{</i> <u>{ pathname:</u> <em>'/index'</em> <u>}</u> <i>}</i> 						<em>// 对象，一个路由</em>
+		<b>location</b>					= <i>{</i> <em>'/index'</em> <i>}</i> 					<em>// 字符串， 一个路由</em>
+		<b>location</b>					= <i>{</i> <u>{ pathname:</u> <em>'/index'</em> <u>}</u> <i>}</i> 		<em>// 对象，一个路由</em>
 		
 		<b>context</b>					= <i>{</i> <u>{ }</u> <i>}</i> 						<em>// 对象</em>
 		

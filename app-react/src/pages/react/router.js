@@ -1,6 +1,6 @@
 /* ====================================== 模块子路由配置  ====================================== */
 import React from 'react'
-import { Switch, Route, Redirect, withRouter, useRouteMatch } from 'react-router-dom'
+import { Switch, Route, Redirect, useRouteMatch } from 'react-router-dom'
 //import { TransitionGroup, CSSTransition } from 'react-transition-group'
 // ===================================================================== 异步加载
 import { Import } from '@common/bundle'
@@ -48,6 +48,14 @@ const AppRouter = () => {
 				<Switch>
 					<Route path={`${match.url}/Router`} 	component={ Import('react/router/Router') } exact />
 					<Route path={`${match.url}/config`} 	component={ Import('react/router/config') } exact />
+					<Route path={`${match.url}/props` } render={ ({ match }) => (
+						<Switch>
+							<Route path={`${match.url}/history`} 		component={ Import('react/router/props/history') } exact />
+							<Route path={`${match.url}/location`} 		component={ Import('react/router/props/location') } exact />
+							<Route path={`${match.url}/match`} 			component={ Import('react/router/props/match') } exact />
+							<Route path={`${match.url}/staticContext`} 	component={ Import('react/router/props/staticContext') } exact />
+						</Switch>
+					)}/>
 				</Switch>
 			)}/>
 			{/* Hook */}
@@ -69,4 +77,4 @@ const AppRouter = () => {
 	)
 }
 
-export default withRouter(AppRouter)
+export default AppRouter

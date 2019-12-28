@@ -1,0 +1,24 @@
+<em>import React from 'react'</em>
+<em>import {  HashRouter, Switch, Route, <b>withRouter</b> } from 'react-router-dom'</em>
+
+<em>const</em> <u>My</u> = ( <s>props</s> ) => {
+	<em>const</em> { <i>history</i>, <i>match</i>, <i>location</i>, <i>staticContext</i> } = <s>props</s>
+	<em>return &lt;div&gt;&lt;/div&gt;</em>
+}
+
+<em>const</em> <u>Page</u> = <b>withRouter</b>(<u>My</u>)
+
+<em>export default ( ) =></em> (
+	<em>&lt;HashRouter&gt;</em>
+		<em>&lt;Switch&gt;</em>
+			<em>&lt;Route</em>
+				<em># 无 props 一</em>
+				<b>children</b>		= 	<i>{</i> <u>&lt;Page /&gt;</u> <i>}</i>
+				<em># 无 props 二</em>
+				<b>render</b>		= 	<i>{</i> <u>( <s>location</s> ) => <u>&lt;Page /&gt;</u> <i>}</i>
+			<em>/&gt;</em>
+				<em># 无 props 三</em>
+				<u>&lt;Page /&gt;</u>
+		<em>&lt;/Switch&gt;</em>
+	<em>&lt;/HashRouter&gt;</em>
+)
