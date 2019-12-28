@@ -1,0 +1,33 @@
+<em>import React from 'react'</em>
+<em>import {  HashRouter, Switch, Route, <q>Redirect</q> } from 'react-router-dom'</em>
+
+<em># 每个路由组件都有 props </em>	
+<em>const Index</em> = ( <s>props</s> ) => <em>&lt;div&gt;{</em> <s>props.match.params.username</s> <em>}&lt;/div&gt;</em>
+
+<em>export default ( ) =></em> (
+	<em>&lt;HashRouter&gt;</em>
+		<em>&lt;Switch&gt;</em>
+			<em>&lt;Route /&gt;</em>
+			<em>&lt;Route /&gt;</em>
+			&lt;<q>Redirect</q>
+				<em># 被重定向的路由</em>
+				<b>from</b> 	= 	<em>'/index'</em> 
+				<em># 重定向的路由</em>
+				<b>to</b> 		= 	<em>'/'</em> 			
+							<i>{</i> <u>{ pathname</u><em>:'/'</em> <u>}</u> <i>}</i> 		<em>// </em>
+				
+								
+				<b>push</b> 							<em>// 重定向将把一个新的条目推入历史，而不是替换当前的条目</em>				
+				<b>exact</b> 							<em>// 只匹配一个路由</em>
+				<b>strict</b> 							<em>// 严格匹配一个路由，即：不能多 / 也不能少 /</em>
+				<b>sensitive</b> 						<em>// 严格匹配大小写路由</em>
+			/&gt;
+				<em># 与 children 相同</em>
+				<i>{</i> <u>&lt;Page /&gt;</u> <i>}</i>
+				<u>&lt;Page /&gt;</u>
+				<i>{</i> <u>( ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
+				<i>{</i> <u><em>&lt;div&gt;&lt;/div&gt;</em> <i>}</i>
+				<u><em>&lt;div&gt;&lt;/div&gt;</em>
+		<em>&lt;/Switch&gt;</em>
+	<em>&lt;/HashRouter&gt;</em>
+)

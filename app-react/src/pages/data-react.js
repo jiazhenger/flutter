@@ -35,6 +35,13 @@ export default [
 		]
 	},
 	{
+		title: 'Router', 
+		children: [
+			{ title: '路由模式', path:'/react/router/Router' },
+			{ title: '路由配置', path:'/react/router/config' },
+		]
+	},
+	{
 		title: 'ReactDOM', 
 		children: [
 			{ title: '弹窗', path:'/react/ReactDOM/pop' },

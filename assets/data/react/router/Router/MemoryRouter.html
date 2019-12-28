@@ -1,0 +1,21 @@
+<em>import React from 'react'</em>
+<em>import { <q>MemoryRouter</q> } from 'react-router-dom'</em>
+
+<em>export default ( ) =></em> (
+	&lt;<q>MemoryRouter</q>
+		<b>initialEntries</b>  				= <i>{</i> <em>['/a', '/b', { pathname: '/c' }]</em> <i>}</i> 	<em>// 历史堆栈中的位置数组</em>
+		<b>initialIndex</b>				= <i>{</i> <u>1</u> <i>}</i> 						<em>// 初始位置在 initialEntries 数组中的索引</em>
+		
+		<b>getUserConfirmation</b>  		= <i>{</i> <u>( msg, callback)=>{ }</u> <i>}</i>
+		<b>keyLength</b>				= <i>{</i> <u>6</u> <i>}</i> 						<em>// location.key 的长度，默认 6</em>
+		<b>children</b>					= <i>{</i> <u>&lt;AppRouter/&gt;</u> <i>}</i> 			<em>// 放置于 MemoryRouter 开始与结束标签之间的内容 </em>
+	&gt;
+		<em>&lt;div&gt;</em>
+			<em>...</em>
+		<em>&lt;/div&gt;</em>
+	
+		<s>&lt;Switch&gt;</s>
+			<em>...</em>
+		<s>&lt;/Switch&gt;</s>
+	&lt;<q>/MemoryRouter</q>&gt;
+)

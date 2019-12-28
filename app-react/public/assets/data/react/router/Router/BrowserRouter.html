@@ -1,0 +1,20 @@
+<em>import React from 'react'</em>
+<em>import { <q>BrowserRouter</q> } from 'react-router-dom'</em>
+
+<em>export default ( ) =></em> (
+	&lt;<q>BrowserRouter</q>
+		<b>basename</b> 				= <em>'/myname'</em>				<em>// 所有路由的 base url，如：'/index', 会自动加上 '/myname/index'</em>
+		<b>forceRefresh</b>  			= <i>{</i> <u>true</u> <i>}</i> 				<em>// 路由切换都会刷新整个框架，即使用 F5</em>
+		<b>getUserConfirmation</b>  		= <i>{</i> <u>( msg, callback)=>{ }</u> <i>}</i>
+		<b>keyLength</b>				= <i>{</i> <u>6</u> <i>}</i> 					<em>// location.key 的长度，默认 6</em>
+		<b>children</b>					= <i>{</i> <u>&lt;AppRouter/&gt;</u> <i>}</i> 		<em>// 放置于 BrowserRouter 开始与结束标签之间的内容 </em>
+	&gt;
+		<em>&lt;div&gt;</em>
+			<em>...</em>
+		<em>&lt;/div&gt;</em>
+	
+		<s>&lt;Switch&gt;</s>
+			<em>...</em>
+		<s>&lt;/Switch&gt;</s>
+	&lt;<q>/BrowserRouter</q>&gt;
+)

@@ -43,13 +43,20 @@ const AppRouter = () => {
 					)}/>
 				</Switch>
 			)}/>
+			{/* Router */}
+			<Route path={ `${url}/router` } render={ ({ match }) => (
+				<Switch>
+					<Route path={`${match.url}/Router`} 	component={ Import('react/router/Router') } exact />
+					<Route path={`${match.url}/config`} 	component={ Import('react/router/config') } exact />
+				</Switch>
+			)}/>
 			{/* Hook */}
 			<Route path={ `${url}/hook` } render={ ({ match }) => (
 				<Switch>
 					<Route path={`${match.url}/base`} 	component={ Import('react/hook/base') } exact />
 				</Switch>
 			)}/>
-			{/* render */}
+			{/* ReactDOM */}
 			<Route path={ `${url}/ReactDOM` } render={ ({ match }) => (
 				<Switch>
 					<Route path={`${match.url}/pop`} 	component={ Import('react/ReactDOM/pop') } exact />
