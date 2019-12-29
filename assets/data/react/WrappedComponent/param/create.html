@@ -1,0 +1,9 @@
+<em>import React from 'react'</em>
+
+<em>const</em> <s>Wrap</s> = ( <b>WrappedComponent</b>, <b>user</b>, <b>style</b>, <b>onChange</b> ) => {
+	<em>return class</em> <em>extends React.Component</em>{
+		<em>render( )</em>{
+			<em>return</em> <i>&lt;</i><b>WrappedComponent</b> <s>style</s>={<b>style</b>} {...<b>user</b>} <s>onClick</s>={<b>onChange</b>}<i>/&gt;</i>
+		}
+	}
+}

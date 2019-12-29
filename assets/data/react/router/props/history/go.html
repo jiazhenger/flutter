@@ -1,0 +1,11 @@
+<em>import React from 'react'</em>
+
+<em>export default ( <q>props</q> ) =></em> (
+	<em>const <u>onClick</u> = ( ) =></em> {
+		<q>props.history</q>.<b>go</b>	<i>(</i> <u>1</u> <i>)</i> 		<em>// 前进 1 个历史记录 === props.goForward( )</em>
+						<i>(</i> <u>-1</u> <i>)</i> 		<em>// 后退 1 个历史记录 === props.goBack( )</em>
+						<i>(</i> <u>2</u> <i>)</i> 		<em>// 前进 2 个历史记录</em>
+						<i>(</i> <u>-2</u> <i>)</i> 		<em>// 后退 2 个历史记录</em>
+	}
+	<em>return &lt;button onClick={<u>onClick</u>}&gt;click&lt;button&gt;</em>
+)
