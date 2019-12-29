@@ -41,12 +41,14 @@ const AppRouter = () => {
 							<Route path={`${match.url}/ref`} 	component={ Import('react/component/noState/ref') } exact />
 						</Switch>
 					)}/>
+					<Route path={`${match.url}/packaging`} 	component={ Import('react/component/packaging') } exact />
 				</Switch>
 			)}/>
 			{/* WrappedComponent */}
 			<Route path={ `${url}/WrappedComponent` } render={ ({ match }) => (
 				<Switch>
 					<Route path={`${match.url}/base`} 	component={ Import('react/WrappedComponent/base') } exact />
+					<Route path={`${match.url}/param`} 	component={ Import('react/WrappedComponent/param') } exact />
 				</Switch>
 			)}/>
 			{/* Router */}

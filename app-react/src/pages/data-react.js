@@ -32,12 +32,14 @@ export default [
 					{ title: 'ref', path:'/react/component/noState/ref' },
 				]
 			},
+			{ title: '组件封装', path:'/react/component/packaging' }
 		]
 	},
 	{
 		title: 'WrappedComponent', 
 		children: [
 			{ title: '基本格式', path:'/react/WrappedComponent/base' },
+			{ title: '参数传递', path:'/react/WrappedComponent/param' },
 		]
 	},
 	{

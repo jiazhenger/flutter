@@ -1,0 +1,27 @@
+<em>import React from 'react'</em>
+
+<em>class</em> <b>Textarea</b> <em>extends React.Component</em>{
+	<em>render( )</em>{
+		<em>return</em> &lt;<u>textarea</u> <i>readOnly</i>={<s>this.props.readOnly</s>} <i>disabled</i>={<s>this.props.disabled</s>} /&gt;
+	}
+}
+
+<em>class <b>Input</b> extends React.Component</em>{
+	<i>static</i> <b>Textarea</b> = <b>Textarea</b>
+	<i>static</i> <b>Password</b> = ( <s>props</s> ) => &lt;<u>input</u> <em>type</em>='<u>password</u>' <i>readOnly</i>={<s>props.readOnly</s>} <i>disabled</i>={<s>props.disabled</s>}/>
+	
+	<em>render( )</em>{
+		<em>return</em> &lt;<u>input</u> /&gt;
+	}
+}
+<em>export default</em> { <b>Input</b> }
+
+<em># use</em>
+<em>import { <b>Input</b> } from 'Input'</em>
+<em>export default</em> ( ) = (
+	&lt;&gt;
+		&lt;<b>Input</b> <s>disabled</s> <s>readOnly</s> /&gt;
+		&lt;<b>Input.Textarea</b> <s>disabled</s> <s>readOnly</s> /&gt;
+		&lt;<b>Input.Password</b> <s>disabled</s> <s>readOnly</s> /&gt;
+	&lt;/&gt;
+)

@@ -13,7 +13,7 @@ const getText = (url,option)=>{
 		axios.get(opt.api + url + '.html').then(res => {
 			let data = res.data
 			if(data){
-				console.log('source:',opt.api + url + '.html')
+//				console.log('source:',opt.api + url + '.html')
 				resolve(data);
 			} else {
 				reject(data);
