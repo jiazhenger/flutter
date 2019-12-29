@@ -35,6 +35,12 @@ export default [
 		]
 	},
 	{
+		title: 'WrappedComponent', 
+		children: [
+			{ title: '基本格式', path:'/react/WrappedComponent/base' },
+		]
+	},
+	{
 		title: 'Router', 
 		children: [
 			{ title: '路由模式', path:'/react/router/Router' },

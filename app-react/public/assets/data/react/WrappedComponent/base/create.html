@@ -1,0 +1,19 @@
+<em>import React from 'react'</em>
+
+<em># 第 1 种写法</em>
+<em>const</em> <s>Wrap</s> = ( <b>WrappedComponent</b> ) => {
+	<em>return class</em> <s>Wrap</s> <em>extends React.Component</em>{
+		<em>render( )</em>{
+			<em>return</em> <i>&lt;</i><b>WrappedComponent</b> <i>/&gt;</i>
+		}
+	}
+}
+
+<em># 第 2 种写法</em>
+<em>const</em> <s>Wrap</s> = ( <b>WrappedComponent</b> ) => {
+	<em>return class</em> <em>extends React.Component</em>{
+		<em>render( )</em>{
+			<em>return</em> <i>&lt;</i><b>WrappedComponent</b> <i>/&gt;</i>
+		}
+	}
+}

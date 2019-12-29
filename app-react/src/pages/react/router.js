@@ -43,6 +43,12 @@ const AppRouter = () => {
 					)}/>
 				</Switch>
 			)}/>
+			{/* WrappedComponent */}
+			<Route path={ `${url}/WrappedComponent` } render={ ({ match }) => (
+				<Switch>
+					<Route path={`${match.url}/base`} 	component={ Import('react/WrappedComponent/base') } exact />
+				</Switch>
+			)}/>
 			{/* Router */}
 			<Route path={ `${url}/router` } render={ ({ match }) => (
 				<Switch>

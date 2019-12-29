@@ -5,7 +5,7 @@
 	<em>&lt;HashRouter&gt;</em>
 		<em>&lt;Switch&gt;</em>
 			<em>&lt;Route path='/' component={} /&gt;</em>
-			&lt;<q>Redirect</q>
+			<q>&lt;Redirect</q>
 				<em># 被重定向的路由</em>
 				<b>from</b> 	= 	<em>'/index'</em> 
 				<em># 重定向的路由</em>
@@ -17,13 +17,8 @@
 				<b>exact</b> 							<em>// 只匹配一个路由</em>
 				<b>strict</b> 							<em>// 严格匹配一个路由，即：不能多 / 也不能少 /</em>
 				<b>sensitive</b> 						<em>// 严格匹配大小写路由</em>
-			/&gt;
-				<em># 与 children 相同</em>
-				<i>{</i> <u>&lt;Page /&gt;</u> <i>}</i>
-				<u>&lt;Page /&gt;</u>
-				<i>{</i> <u>( ) => <em>&lt;div&gt;&lt;/div&gt;</em><u>)</u> <i>}</i>
-				<i>{</i> <u><em>&lt;div&gt;&lt;/div&gt;</em> <i>}</i>
-				<u><em>&lt;div&gt;&lt;/div&gt;</em>
+			<q>/&gt;</q>
+			<q>&lt;Redirect to='/' /&gt;</q>
 		<em>&lt;/Switch&gt;</em>
 	<em>&lt;/HashRouter&gt;</em>
 )

@@ -3,10 +3,19 @@
 <em>export default class Index extends React.Component</em>{
 	
 	<s>onClick</s> = { 
-		<b>this.refs</b>.<i>myRef</i>.<u>open( )</u>
+		<b>this.refs</b>.<i>myRef</i>.<u>open( )</u> 	<em>// 方法 1</em>
+	}
+	
+	<s>onSearch</s> = { 
+		<b>this</b>.<i>yoRef</i>.<u>open( )</u> 			<em>// 方法 2</em>
 	}
 	
 	<em>render( )</em>{
-		<em>return &lt;PopComponent</em> <b>ref</b>='<i>myRef</i>' <u>onClick</u>={ <s>this.onClick.bind(this)</s> }<em>/&gt;</em>
+		<em>return</em> (
+			&lt;&gt;
+				<em>&lt;PopComponent</em> <b>ref</b>='<i>myRef</i>' <u>onClick</u>={ <s>this.onClick.bind(this)</s> }<em>/&gt;</em>
+				<em>&lt;PopComponent</em> <b>ref</b>={ <b>ref => this.<i>yoRef</i> = ref</b> } <u>onClick</u>={ <s>this.onSearch.bind(this)</s> }<em>/&gt;</em>
+			&lt;/&gt;
+		)
 	}
 }
