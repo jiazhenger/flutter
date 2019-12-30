@@ -41,6 +41,7 @@ const AppRouter = () => {
 							<Route path={`${match.url}/ref`} 	component={ Import('react/component/noState/ref') } exact />
 						</Switch>
 					)}/>
+					<Route path={`${match.url}/context`} 	component={ Import('react/component/context') } exact />
 					<Route path={`${match.url}/packaging`} 	component={ Import('react/component/packaging') } exact />
 				</Switch>
 			)}/>
@@ -64,6 +65,7 @@ const AppRouter = () => {
 							<Route path={`${match.url}/staticContext`} 	component={ Import('react/router/props/staticContext') } exact />
 						</Switch>
 					)}/>
+					<Route path={`${match.url}/hook`} 	component={ Import('react/router/hook') } exact />
 				</Switch>
 			)}/>
 			{/* Hook */}

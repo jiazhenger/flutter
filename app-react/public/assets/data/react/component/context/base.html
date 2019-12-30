@@ -1,0 +1,57 @@
+<em>import React from 'react'</em>
+<em>import <q>PropTypes</q> from 'prop-types'</em>
+
+<em># 有状态组件</em>
+<em>class <s>AComponent</s> extends React.Component</em>{
+	<i>static</i> <b>contextTypes</b> = { 			<em>// 声明Context对象属性，方式 1</em>
+		<u>name</u>: 	<q>PropTypes</q>.<i>string</i>,
+		<u>fn</u>: 		<q>PropTypes</q>.<i>func</i>, 
+	}
+	<i>static</i> <b>defaultProps</b> = { 			<em>//  默认 Prop 值，方式 1</em>
+	    <u>name</u>:  <em>'react'</em> 
+	}
+	<em>render( )</em>{
+		<em>return</em> <em>&lt;div <u>onClick</u></em>={<u>this.context.fn</u>}<em>&gt;</em>{ <u>this.context.name</u> }<em>&lt;/div&gt;</em>
+	}
+}
+<s>AComponent</s>.<b>contextTypes</b> = {  			<em>// 声明Context对象属性，方式 2</em>
+	<u>name</u>: 	<q>PropTypes</q>.<i>string</i>,
+	<u>fn</u>: 		<q>PropTypes</q>.<i>func</i>, 
+}
+<s>AComponent</s>.<b>defaultProps</b> = {  			<em>// 默认 Prop 值，方式 2</em>
+    <u>name</u>:  <em>'react'</em>		
+}
+
+<em># 无状态组件</em>
+<em>const</em> <s>BComponent</s> = ( <em>props</em>, <u>context</u>) => {
+	<em>return</em> <em>&lt;div <u>onClick</u></em>={<u>context.fn</u>}<em>&gt;</em>{ <u>context.name</u> }<em>&lt;/div&gt;</em>
+}
+<s>BComponent</s>.<b>contextTypes</b> = {  			<em>// 声明Context对象属性</em>
+	<u>name</u>: 	<q>PropTypes</q>.<i>string</i>,
+	<u>fn</u>: 		<q>PropTypes</q>.<i>func</i>, 
+}
+
+<em>export default class <s>Index</s> extends React.Component</em>{
+	<em># 声明Context对象属性</em>
+	<i>static</i> <b>childContextTypes</b> = { 
+		<u>name</u>: 	<q>PropTypes</q>.<i>string</i>,
+		<u>fn</u>: 		<q>PropTypes</q>.<i>func</i> 
+	}
+	
+	<em># 返回Context对象</em>
+	<b>getChildContext( )</b>{
+		<em>return</em> { 
+			<u>name</u>: 	<em>'react'</em>,
+			<u>fn</u>: 		<em>( )=>{ }</em>
+		}
+	}
+	
+	<em>render( )</em>{
+		<em>return</em>(
+			&lt;&gt;
+				<s>&lt;AComponent /&gt;</s>
+				<s>&lt;BComponent /&gt;</s>
+			&lt;&gt;
+		)
+	}
+}

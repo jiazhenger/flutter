@@ -1,0 +1,49 @@
+<em>import React from 'react'</em>
+<em>import { <q>useLocation</q> } from 'react-router-dom'</em>
+
+<em>export default ( <q>props</q> ) =></em> (
+	
+	<em>const</em> <s>query</s> = <i>new URLSearchParams</i>(<q>props.location</q>.<b>search</b>) 		<em>// props 获取可选参数</em>
+	<em>const</em> <s>query</s> = <i>new URLSearchParams</i>(<q>useLocation( )</q>.<b>search</b>) 		<em>// hook 获取可选参数</em>
+	 
+	<em>const id</em> = <s>query</s>.<i>get</i>(<em>'id'</em>) 		<em>// </em> <u>?id=10</u>
+	
+	<em>const id</em> =  <s>getQuery</s>(<em>'id'</em>)		<em>// </em> <u>?id=10</u>
+	<em>const { id }</em> =  <s>getQuery</s>( )		<em>// </em> <u>?id=10</u>
+	
+	<em>return null</em>
+)
+
+<em># js 获取可选参数</em>
+<em>const</em> <s>getQuery</s> = <u>id</u> => {
+	<u>let hash = window.location.search</u>
+	<u>let stack = {}</u>
+	<u>if(hash.indexOf('?') !== -1){</u>
+		<u>let search = hash.split('?')</u>
+		<u>search = search[1].split('&')</u>
+		<u>search.forEach(function(v,i){
+			<u>let s = v.split('=')</u>
+			<u>if(s[1]!=='undefined' && s[1]!=='null' && s[1]!==''){</u>
+				<u>stack[s[0]] = s[1]</u>
+			<u>}</u>
+		<u>})</u>
+	<u>}</u>
+	<u>if(id){ return stack[id] }</u>
+	<u>return stack</u>
+}
+
+<em># react 获取可选参数</em>
+<em>const</em> <s>getQuery</s> = (<u>obj</u>,<u>id</u>) => {</u>
+	<u>let rs = null</u>
+	<u>if(this.hasObject(obj.props)){</u>
+		<u>const query = <i>new URLSearchParams</i>( obj.props.location.search )</u>
+		<u>rs = query.get(id)</u>
+	<u>}else{</u>
+		<u>const query =  <i>new URLSearchParams</i>( obj.search )</u>
+		<u>rs = query.get(id)</u>
+	<u>}</u>
+	<u>if(rs === 'undefined' || rs === 'null' || rs === ''){</u>
+		<u>rs = null</u>
+	<u>}</u>
+	<u>return rs</u>
+}

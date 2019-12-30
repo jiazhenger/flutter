@@ -9,7 +9,7 @@
 		<i>isExact</i>		<em>// </em> <u>false</u> 
 	} = <q>props</q>.<b>match</b>
 	
-	<em># 创建一个 match</em>
+	<em># 创建一个 match，如果 url 与 path 路由匹配，则返回 match 对象，反之，返回 null</em>
 	<em>const match</em> = <b>matchPath</b>(<u>'/home/1?id=2'</u>, {
 		<i>path</i>: 	<u>'/home/:id'</u>,
 		<i>exact</i>: 	<u>true</u>,

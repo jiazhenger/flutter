@@ -32,6 +32,7 @@ export default [
 					{ title: 'ref', path:'/react/component/noState/ref' },
 				]
 			},
+			{ title: 'context', path:'/react/component/context' },
 			{ title: '组件封装', path:'/react/component/packaging' }
 		]
 	},
@@ -56,6 +57,7 @@ export default [
 					{ title: 'staticContext', path:'/react/router/props/staticContext' },
 				]
 			},
+			{ title: 'Hook', path:'/react/router/hook' },
 		]
 	},
 	{

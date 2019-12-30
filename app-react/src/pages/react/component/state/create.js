@@ -5,7 +5,8 @@ import ListComponent from '@cpt/list.component'
 const data = {
 	title:'创建组件方式',
 	data:[
-		{ pro:'有状态组件一', code:[ {path:'react/component/state/create/1'} ]},
+		{ pro:'基本组成', code:[ {path:'react/component/state/create/base'} ]},
+		{ pro:'创建形式', code:[ {path:'react/component/state/create/way'} ]},
 	]
 }
 export default class Index extends React.Component{ render(){ return <ListComponent data={data} {...this.props}/> } }
