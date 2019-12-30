@@ -1,6 +1,7 @@
 /* ====================================== http 请求  ====================================== */
 import axios from 'axios'
-const Config = require('@common/config')
+import Config from './config'
+import $fn from './fn'
 // ===================================================== 公共函数
 
 // ===================================================== 分页
@@ -9,6 +10,7 @@ const getText = (url,option)=>{
 		api : (Config.env ? 'http://localhost:3000/' : 'https://jiazhenger.github.io/flutter/') + 'assets/data/',
 		...option
 	}
+	$fn.loading(true)
 	return new Promise((resolve, reject) => {
 		axios.get(opt.api + url + '.html').then(res => {
 			let data = res.data
@@ -18,6 +20,7 @@ const getText = (url,option)=>{
 			} else {
 				reject(data);
 			}
+			$fn.loading(false)
 		})
 	})
 }

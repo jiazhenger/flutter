@@ -59,15 +59,15 @@ export default {
 //	isEmail(v){ return /^([0-9A-Za-z\-_]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g.test(v) },
 //	isInt(v){ return /^[1-9]\d*$/.test(v) }, // 整数
 	// ======================================================================== redux
-//	loading(bool,msg){
-//		let loading = document.querySelector('#ubLoading');
-//		if(bool){
-//			loading.querySelector('.ub-loading-msg').innerHTML = msg || '数据加载中'
-//			loading.style.display = 'block'
-//		}else{
-//			loading.style.display = 'none'
-//		}
-//	},
+	loading(bool,msg){
+		let loading = document.querySelector('#ubLoading');
+		if(bool){
+			loading.querySelector('.ub-loading-msg').innerHTML = msg || '数据加载中'
+			loading.style.display = 'block'
+		}else{
+			loading.style.display = 'none'
+		}
+	},
 	toast(msg,callback){
 		let toast = document.querySelector('#ubToast')
 		toast.style.display = 'block'
