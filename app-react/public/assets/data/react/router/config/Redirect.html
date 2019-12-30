@@ -19,6 +19,11 @@
 				<b>sensitive</b> 						<em>// 严格匹配大小写路由</em>
 			<q>/&gt;</q>
 			<q>&lt;Redirect to='/' /&gt;</q>
+			<q>&lt;Route path='/index' children={&lt;Redirect to='/' /&gt;} exact /&gt;</q>
+			<q>&lt;Route path='/index' render={( )=>&lt;Redirect to='/' /&gt;} exact /&gt;</q>
+			<q>&lt;Route path='/index'&gt; exact</q>
+				<q>&lt;Redirect to='/' /&gt;</q>
+			<q>&lt;/Route&gt;</q>
 		<em>&lt;/Switch&gt;</em>
 	<em>&lt;/HashRouter&gt;</em>
 )
