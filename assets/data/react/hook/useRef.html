@@ -1,0 +1,20 @@
+<em>import React</em>, { <b>useRef</b> } <em>from 'react'</em>;
+
+<em>const</em> Component = ( <s>props</s> ) => {
+	<em># 获取 dom</em>
+	<em>const</em> <u>myRef</u> = <b>useRef( )</b>
+	<em># 获取  props</em>
+	<em>const</em> <u>popRef</u>  = <b>useRef( )</b>
+	
+	React.<i>useEffect</i>(()=>{
+		<u>myRef</u>.<q>current</q>.style.color = 'red' 			<em>// 设置 dom 样式</em>
+		<u>popRef</u>.<q>current</q>.open() 					<em>// 调用组件方法</em>
+	},[ ])
+	
+	return (
+		&lt;&gt;
+			&lt;div <b>ref</b>={ <u>myRef</u> }&gt;&lt;/div>&gt;
+			&lt;Pop <b>ref</b>={ <u>popRef</u> } /&gt;
+		&lt;/&gt;
+	)
+}

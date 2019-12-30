@@ -1,0 +1,19 @@
+<em>import React</em>, { <b>useState</b> } <em>from 'react'</em>;
+
+<em>const</em> Component = ( <s>props</s> ) => {
+	<em># 声明一个新的叫做 'count' 的 state 变量，初始值为 0</em>
+	<em>const</em> <i>[</i> <u>count</u>, <b>set</b><u>Count</u> <i>]</i> = <b>useState</b>( 0 );
+	
+	<em># `惰性初始 state`；传入函数，由函数计算出的值作为 state</em>
+	<em>// 此函数只在初始渲染时被调用</em>
+	<em>const</em> <i>[</i> <u>count</u>, <b>set</b><u>Count</u> <i>]</i> = <b>useState</b>( ( ) => {
+		  return <q>someExpensiveComputation</q>(<s>props</s>)
+	} );
+	<q>someExpensiveComputation</q> = ( props ) => {	}
+	
+	return &lt;&gt;
+		<em>&lt;button</em> onClick={ ( ) => <b>setCount</b>(<u>count</u> + 1) }&gt;<em>Click</em><em>&lt;button/&gt;</em>
+		<em>&lt;button</em> onClick={ ( <u>prevCount</u> ) => <b>setCount</b>(<u>prevCount</u> + 1) }&gt;<em>Click</em><em>&lt;button/&gt;</em>
+		{<u>count</u>}
+	&lt;/&gt;
+}

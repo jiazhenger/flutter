@@ -1,0 +1,33 @@
+<em>import React from 'react'</em>
+
+<em>export default class Index extends React.Component</em>{
+	
+	<b>state</b> = { <u>name</u><em>:'react'</em>, <u>model</u>:{ <u>title</u>:<em>'angular'</em>, <u>age</u>:<em>20</em> } }
+	
+	<s>onClick</s> = ( ) => {
+		<b>this.setState({</b> 
+			<u>name</u>: <em>'flutter'</em>, 
+			<u>model</u>:{<i>...this.state.model</i>, <u>title</u>:<em>'flutter'</em>}
+		<b>})</b>
+	}
+	
+	<s>onSubmit</s> = ( ) => {
+		<b>this.setState({</b> <u>name</u>: <em>'angular'</em> <b>},( )=>{</b>
+			<em>// 改变状态后执行</em>
+		<b>})</b>
+	}
+	
+	<em>render( )</em>{
+		<em>const</em> { <u>name</u>, <u>model</u> } = <b>this.state</b>
+		<em>return </em> (
+			&lt;&gt;
+				<em>&lt;div</em> <em>&gt;</em>{ <u>name</u> }<em>&lt;/div&gt;</em>
+				<em>&lt;div</em> <em>&gt;</em>{ <b>this.state</b>.<u>name</u> }<em>&lt;/div&gt;</em>
+				<em>&lt;div</em> <em>&gt;</em>{ <u>model.title</u> }<em>&lt;/div&gt;</em>
+				<em>&lt;div</em> <em>&gt;</em>{ <b>this.state</b>.<u>model.age</u> }<em>&lt;/div&gt;</em>
+				<em>&lt;button</em> <i>onClick</i>={<s>this.onClick</s>}<em>&gt;click&lt;/button&gt;</em>
+				<em>&lt;button</em> <i>onClick</i>={<s>this.onSubmit</s>}<em>&gt;click&lt;/button&gt;</em>
+			&lt;/&gt;
+		)
+	}
+}

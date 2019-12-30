@@ -1,0 +1,27 @@
+<em>import React from 'react'</em>
+<em>import { <q>matchPath</q> } from 'react-router-dom'</em>
+
+<em>export default ( <q>props</q> ) =></em> (
+	<em>const</em> { 
+		<i>path</i>, 		<em>// </em> <u>'/home'</u>
+		<i>url</i>, 			<em>// </em> <u>'/home'</u>
+		<i>params</i>, 		<em>// </em> <u>{ }</u>
+		<i>isExact</i>		<em>// </em> <u>false</u> 
+	} = <q>props</q>.<b>match</b>
+	
+	<em># 创建一个 match，如果 url 与 path 路由匹配，则返回 match 对象，反之，返回 null</em>
+	<em>const match</em> = <b>matchPath</b>(<u>'/home/1?id=2'</u>, {
+		<i>path</i>: 	<u>'/home/:id'</u>,
+		<i>exact</i>: 	<u>true</u>,
+		<i>strict</i>: 	<u>false</u>
+	})
+	
+	<em>const</em> { 
+		<i>path</i>, 		<em>// </em> <u>'/home/:id'</u>
+		<i>url</i>, 			<em>// </em> <u>'/home/1?id=2'</u>
+		<i>params</i>, 		<em>// </em> <u>{ id:'1?id=2' }</u>
+		<i>isExact</i>		<em>// </em> <u>true</u> 
+	} = <em>match</em>
+	
+	<em>return null</em>
+)

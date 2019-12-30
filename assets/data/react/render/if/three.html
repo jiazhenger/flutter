@@ -1,0 +1,25 @@
+<em>import React from 'react'</em>
+
+<em>class Index extends React.Component</em>{
+	state={
+		<s>show</s>: <em>false</em>
+	}
+	<em>render( )</em>{
+		<em>return</em> (
+			<i>&lt;&gt;</i>
+				<b>{</b>
+					<s>this.state.show</s> <b>?</b> <em>&lt;div&gt;&lt;/div&gt;</em> <b>:</b> <em>&lt;div&gt;&lt;/div&gt;</em>
+				<b>}</b>
+				<b>{</b>
+					<s>this.state.show</s> <b>?</b> <em>&lt;div&gt;&lt;/div&gt;</em> <b>:</b> <i>null</i>
+				<b>}</b>
+				<b>{</b>
+					<s>this.state.show</s> <b>&&</b> <em>&lt;div&gt;&lt;/div&gt;</em> <b>
+				<b>}</b>
+				<b>{</b>
+					<s>this.state.show</s> <b>||</b> <em>&lt;div&gt;&lt;/div&gt;</em> <b>
+				<b>}</b>
+			<i>&lt;/&gt;</i>
+		)
+	}
+}

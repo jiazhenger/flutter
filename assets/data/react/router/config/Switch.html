@@ -1,0 +1,14 @@
+<em>import React from 'react'</em>
+<em>import {  HashRouter, <q>Switch</q>, Route } from 'react-router-dom'</em>
+
+<em>export default ( ) =></em> (
+	<em>&lt;HashRouter&gt;</em>
+		&lt;<q>Switch</q>
+			<b>location</b>		= <i>{</i>  <i>}</i> 					<em>// 用于匹配子元素而不是当前历史位置(通常是当前浏览器URL)的位置对象</em>
+			<b>children</b>		= <i>{</i> <u>&lt;AppRouter/&gt;</u> <i>}</i> 		<em>// 放置于 Switch 开始与结束标签之间的内容 </em>
+		&gt;
+			<em>&lt;Route /&gt;</em>
+			<em>&lt;Redirect /&gt;</em>
+		&lt;<q>Switch</q>&gt;
+	<em>&lt;/HashRouter&gt;</em>
+)

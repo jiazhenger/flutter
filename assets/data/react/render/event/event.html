@@ -1,0 +1,63 @@
+<em>import React from 'react'</em>
+<em>class Index extends React.Component</em>{
+	<s>onStart</s>( <u>event</u> ){  <em>alert(0)</em> }
+	<em>render( )</em>{
+		<em>return</em> (
+			<i>&lt;&gt;</i>
+				<em># 鼠标事件</em>
+				<em>&lt;div</em> <b>onClick</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标点击&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDoubleClick</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标双击&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onMouseDown</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标按下&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onMouseUp</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标松开&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onMouseEnter</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标移入&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onMouseLeave</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标离开&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onMouseOver</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标移入&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onMouseOut</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标离开&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onMouseMove</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标移动&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onContextMenu</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onDrop</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标放下&lt;/div&gt;</em>
+				
+				<em>&lt;div</em> <b>onDrag</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragStart</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动开始&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragEnd</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动结束&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragOver</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动移入&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragLeave</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动离开&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragEnter</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动进入&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onDragExit</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;鼠标拖动退出&lt;/div&gt;</em>
+				
+				<em># 触摸事件</em>
+				<em>&lt;div</em> <b>onTouchStart</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;触摸开始&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onTouchEnd</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;触摸结束lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onTouchMove</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;触摸移动&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onTouchCancel</b> 	= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;触摸取消&lt;/div&gt;</em>
+				
+				<em># 键盘事件</em>
+				<em>&lt;div</em> <b>onKeyDown</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;按下键盘&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onKeyUp</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;松开键盘&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onKeyPress</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;按键盘&lt;/div&gt;</em>
+				
+				<em># 剪切事件</em>
+				<em>&lt;div</em> <b>onCopy</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;复制&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onCut</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;剪切&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onPaste</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;粘贴&lt;/div&gt;</em>
+				
+				<em># 表单事件</em>
+				<em>&lt;input</em> <b>onChange</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;监听改变
+				<em>&lt;input</em> <b>onInput</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;监听输入
+				<em>&lt;input</em> <b>onFocus</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;集中焦点
+				<em>&lt;input</em> <b>onBlur</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>/&gt;失去焦点
+				<em>&lt;form</em> <b>onSubmit</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听提交&lt;/form&gt;</em>
+				
+				<em># 其它事件</em>
+				<em>&lt;div</em> <b>onScroll</b> 			= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听元素滚动&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>onWheel</b> 		= <b>{</b> <em>this.onStart</em> <b>}</b> <em>&gt;监听鼠标滚轮滚动&lt;/div&gt;</em>
+			<i>&lt;/&gt;</i>
+		)
+	}
+}

@@ -1,0 +1,21 @@
+<em>import React from 'react'</em>
+
+<em>export default class Index extends React.Component</em>{
+	
+	<s>onClick</s> = { 
+		<b>this.refs</b>.<i>myRef</i>.<u>style.color</u> = <em>'red'</em> 		<em>// 方法 1</em>
+	}
+	
+	<s>onSearch</s> = { 
+		<b>this</b>.<i>yoRef</i>.<u>style.color</u> = <em>'red'</em>				<em>// 方法 2</em>
+	}
+	
+	<em>render( )</em>{
+		<em>return</em>(
+			&lt;&gt;
+				<em>&lt;div</em> <b>ref</b>='<i>myRef</i>' <u>onClick</u>={ <s>this.onClick.bind(this)</s> }<em>&gt;&lt;/div&gt;</em>
+				<em>&lt;div</em> <b>ref</b>={ <b>ref => this.<i>yoRef</i> = ref</b> } <u>onSearch</u>={ <s>this.onClick.bind(this)</s> }<em>&gt;&lt;/div&gt;</em>
+			&lt;/&gt;
+		)
+	}
+}

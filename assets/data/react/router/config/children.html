@@ -1,0 +1,42 @@
+<em>import React from 'react'</em>
+<em>import {  HashRouter, Switch, Route } from 'react-router-dom'</em>
+
+<em>const Index</em> = ( <s>props</s> ) => <em>&lt;div&gt;{</em> <s>props.match.params.username</s> <em>}&lt;/div&gt;</em>
+
+<em>export default ( ) =></em> (
+	<em>&lt;HashRouter&gt;</em>
+		<em>&lt;Switch&gt;</em>
+			<em># 方式 1</em>
+			<q>&lt;Route</q>
+				<b>path</b> 		=	<em>'/main'</em>
+				<b>render</b>		= 	<i>{</i> <u>({ <s>match</s> }) => (</u> 
+					<u>&lt;Switch&gt;</u>
+						<u>&lt;Route path={`${<s>match.url</s>}/user`} component={ } exact /&gt;</u> 		<em>// main/user</em>
+						<u>&lt;Route path={`${<s>match.url</s>}/user`} render={ } /&gt;</u> 				<em>// main/user</em>
+					<u>&lt;/Switch&gt;</u>
+				<u>)</u><i>}</i>
+			<q>/&gt;</q>
+			<em># 方式 2</em>
+			<q>&lt;Route</q>
+				<b>path</b> 		=	<em>'/main'</em>
+				<b>children</b>		= 	<i>{</i> <u>({ <s>match</s> }) => (</u> 
+					<u>&lt;Switch&gt;</u>
+						<u>&lt;Route path={`${<s>match.url</s>}/user`} component={ } exact /&gt;</u> 		<em>// main/user</em>
+						<u>&lt;Route path={`${<s>match.url</s>}/user`} children={ } /&gt;</u> 				<em>// main/user</em>
+					<u>&lt;/Switch&gt;</u>
+				<u>)</u><i>}</i>
+			<q>/&gt;</q>
+			<em># 方式 3</em>
+			<q>&lt;Route path='/main'&gt;</q>
+				<i>{</i>
+					<u>({ <s>match</s> }) => (</u> 
+						<u>&lt;Switch&gt;</u>
+							<u>&lt;Route path={`${<s>match.url</s>}/user`} component={ } exact /&gt;</u> 		<em>// main/user</em>
+							<u>&lt;Route path={`${<s>match.url</s>}/user`} render={ } /&gt;</u> 				<em>// main/user</em>
+						<u>&lt;/Switch&gt;</u>
+					<u>)</u>
+				<i>}</i>
+			<q>&lt;/Route</q>
+		<em>&lt;/Switch&gt;</em>
+	<em>&lt;/HashRouter&gt;</em>
+)
