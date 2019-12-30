@@ -3,7 +3,7 @@ import React from 'react'
 import { Switch, Route, Redirect, useRouteMatch } from 'react-router-dom'
 //import { TransitionGroup, CSSTransition } from 'react-transition-group'
 // ===================================================================== 异步加载
-import { Import } from '@common/bundle'
+import Import from '@common/bundle'
 // ===================================================================== 二级路由
 const AppRouter = () => {
 	const { url } = useRouteMatch()

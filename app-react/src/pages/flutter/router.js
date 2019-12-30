@@ -1,9 +1,8 @@
 ﻿/* ====================================== 模块子路由配置  ====================================== */
 import React from 'react'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
-//import { TransitionGroup, CSSTransition } from 'react-transition-group'
 // ===================================================================== 异步加载
-import { Import } from '@common/bundle'
+import Import from '@common/bundle'
 // ===================================================================== 异步加载
 import StyleRouter from './routers/styleRouter'
 import AnimationRouter from './routers/animationRouter'

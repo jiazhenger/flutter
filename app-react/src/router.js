@@ -2,7 +2,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 // ===================================================================== 异步加载
-import { Import } from '@common/bundle'
+import Import from '@common/bundle'
 // ===================================================================== 同步路由
 import Css 			from '@pages/css/main'
 import JavaScript 	from '@pages/js/main'

@@ -1,26 +1,17 @@
-/* ====================================== 页面加载效果  ====================================== */
+﻿/* ====================================== 页面加载效果  ====================================== */
 import React from 'react'
-// import { Spin } from 'antd'
-// =====================================================================
-/*
-export default () => (
-	<div className='fxmc fix_lt wh'>
-		<Spin size='large' />
-	</div>
-)
-*/
-/*
+import AddLast from './add-last.component'
+// ===================================================================== 
 export default ()=>(
-	<div className='loading-wraper'>
-    	<div>
-			<dl className='loading-circle'>
-				<dd><i></i><i></i><i></i><i></i></dd>
-				<dd><i></i><i></i><i></i><i></i></dd>
-				<dd><i></i><i></i><i></i><i></i></dd>
-			</dl>
+	<AddLast name='loading-wraper'>
+		<div className='loading-wraper'>
+			<div>
+				<dl className='loading-circle'>
+					<dd><i></i><i></i><i></i><i></i></dd>
+					<dd><i></i><i></i><i></i><i></i></dd>
+					<dd><i></i><i></i><i></i><i></i></dd>
+				</dl>
+			</div>
 		</div>
-    </div>
-)*/
-export default ()=>(
-	<div className='app-loading'></div>
+	</AddLast>
 )
