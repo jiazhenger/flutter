@@ -1,7 +1,7 @@
 <em>import React from 'react'</em>
 <em>import <b>ReactDOM</b> from 'react-dom'</em>
 
-<em>export default class Index extends React.Component</em>{
+<em>export default class <u>AddLast</u> extends React.Component</em>{
 	<em># 挂载时执行</em>
 	<q>componentDidMount</q>( ){
 		<em>if</em>(<b>!this.props.isUpdate</b>){ <s>this.renderSubtree</s>( ) }
@@ -22,8 +22,8 @@
 	<em># 添加节点</em>
 	<i>retContainer</i> = ( ) =>{
 		if(!<u>this.el</u>){
-			<em>const node</em> = <b>document.createElement('div')</b>
-			<em>node.setAttribute(this.props.name,new Date().getTime())</em> 		<em>// 设置节点属性</em>
+			<em>const node</em> = <b>document.createElement</b>(<u>this.props.tag||'div'</u>)
+			<em>node.setAttribute('name',this.props.name)</em> 		<em>// 设置节点属性</em>
 			<u>this.el</u> = <em>node</em>
 			<s>this.getNode( )</s>.<b>appendChild</b>(<u>this.el</u>)
 		}
@@ -43,6 +43,6 @@
 	<b>render( ){ return null }</b>
 }
 <em># 使用</em>
-&lt;Pop&gt;
+<em>&lt;<u>AddLast</u> <s>name</s>='style' <s>tag</s>='style' <s>el</s>='head'&gt;</em>
 	<em>&lt;div&gt;&lt;div&gt;</em>
-&lt;/Pop&gt;
+<em>&lt;/<u>AddLast</u>&gt;</em>

@@ -4,6 +4,7 @@
 //import CC from './cookie'
 //import moment from 'moment'
 export default {
+	c0:'#4da1ff',
 	// ========================================================================  判断数据类型
 //	// 判断数据是否是对象 {}
 	isObject(obj){ return {}.toString.call(obj) === '[object Object]' },

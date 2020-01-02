@@ -1,10 +1,10 @@
 <em>import React from 'react'</em>
 <em>import <b>ReactDOM</b> from 'react-dom'</em>
 
-<em>export default class Index extends React.Component</em>{
-	<q>constructor</q>(<em>...arg</em>){
-		<em>super(...arg)</em>
-		<i>this.el</i> = <b>document.createElement('div')</b> 		<em>// 创建一个 dom</em>
+<em>export default class <u>AddLast</u> extends React.Component</em>{
+	<q>constructor</q>(<em>props</em>){
+		<em>super(props)</em>
+		<i>this.el</i> = <b>document.createElement</b>(<u>this.props.tag||'div'</u>) 		<em>// 创建一个 dom</em>
 	}
 	<em># 获取指定 dom</em>
 	<s>getNode</s> = ( ) => {
@@ -13,6 +13,7 @@
 	}
 	<em># 挂载时执行</em>
 	<q>componentDidMount</q>( ){
+		<em>this.el.setAttribute('name', this.props.name)</em>
 		<s>this.getNode( )</s>.<b>appendChild</b>(<i>this.el</i>)
 	}
 	<em># 将要销毁时执行</em>
@@ -27,6 +28,6 @@
 	}
 }
 <em># 使用</em>
-&lt;Pop&gt;
+<em>&lt;<u>AddLast</u> <s>name</s>='style' <s>tag</s>='style' <s>el</s>='head'&gt;</em>
 	<em>&lt;div&gt;&lt;div&gt;</em>
-&lt;/Pop&gt;
+<em>&lt;/<u>AddLast</u>&gt;</em>

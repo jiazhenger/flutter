@@ -16,7 +16,7 @@
 
 <em># js 获取可选参数</em>
 <em>const</em> <s>getQuery</s> = <u>id</u> => {
-	<u>let hash = window.location.search</u>
+	<u>let hash = window.location.hash || window.location.search</u>
 	<u>let stack = {}</u>
 	<u>if(hash.indexOf('?') !== -1){</u>
 		<u>let search = hash.split('?')</u>

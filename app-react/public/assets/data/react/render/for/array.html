@@ -8,7 +8,21 @@
 		<em>return</em> (
 			<i>&lt;&gt;</i>
 				<b>{</b>
-					<s>this.state.data</s>.<b>map</b>((v,i) => <em>&lt;div</em> <i>key</i>={i} <em>&gt;</em>{v.a}<em>&lt;/div&gt;</em> )
+					<s>this.state.data</s>.<b>map</b>((<u>v,i</u>) => <em>&lt;div</em> <i>key</i>={<u>i</u>} <em>&gt;</em>{<u>v.a</u>}<em>&lt;/div&gt;</em> )
+				<b>}</b>
+				
+				<b>{</b>
+					<s>this.state.data</s>.<b>map</b>((<u>v,i</u>) => <u>v.a === 0</u> ? <em>&lt;div</em> <i>key</i>={<u>i</u>} <em>&gt;</em>{<u>v.a</u>}<em>&lt;/div&gt;</em> : <em>&lt;div</em> <i>key</i>={<u>i</u>} <em>&gt;</em>{<u>v.a</u>}<em>&lt;/div&gt;</em> )
+				<b>}</b>
+				
+				<b>{</b>
+					<s>this.state.data</s>.<b>map</b>((<u>v,i</u>) => (
+						<em>&lt;&gt;</em>
+							<b>{</b>
+								<u>v.a === 0</u> ? <em>&lt;div</em> <i>key</i>={<u>i</u>} <em>&gt;</em>{<u>v.a</u>}<em>&lt;/div&gt;</em> : <em>&lt;div</em> <i>key</i>={<u>i</u>} <em>&gt;</em>{<u>v.a</u>}<em>&lt;/div&gt;</em>
+							<b>}</b>
+						<em>&lt;/&gt;</em>
+					) )
 				<b>}</b>
 			<i>&lt;/&gt;</i>
 		)

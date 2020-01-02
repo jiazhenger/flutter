@@ -6,6 +6,7 @@ const data = {
 	title:'模板样式',
 	data:[
 		{ pro:'style', keyword:'style={{ }}', code:[ {path:'react/render/style/style'} ]},
+		{ pro:'style 内联样式', keyword:'style={{ }}', code:[ {path:'react/render/style/styleHtml'} ]},
 		{ pro:'className', keyword:"className='clearfix'", code:[ {path:'react/render/style/className'} ]},
 	]
 }

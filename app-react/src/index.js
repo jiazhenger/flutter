@@ -14,6 +14,6 @@ import ReactDOM from 'react-dom'
 import App from './App'
 // ======================================================== 启动 react
 ReactDOM.render( <App/>, document.querySelector('#app-root') )
-setTimeout(()=>document.querySelector('#app-loading').style.display = 'none',100)
+setTimeout(()=>document.body.removeChild(document.querySelector('#app-loading')),100)
 // ======================================================== 注册服务
 //serviceWorker.unregister()
