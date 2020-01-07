@@ -34,13 +34,14 @@
 
 <em># react 获取可选参数</em>
 <em>const</em> <s>getQuery</s> = (<u>obj</u>,<u>id</u>) => {</u>
+	<u>const idStr = id || 'id'</u>
 	<u>let rs = null</u>
 	<u>if(this.hasObject(obj.props)){</u>
 		<u>const query = <i>new URLSearchParams</i>( obj.props.location.search )</u>
-		<u>rs = query.get(id)</u>
+		<u>rs = query.get(idStr)</u>
 	<u>}else{</u>
 		<u>const query =  <i>new URLSearchParams</i>( obj.search )</u>
-		<u>rs = query.get(id)</u>
+		<u>rs = query.get(idStr)</u>
 	<u>}</u>
 	<u>if(rs === 'undefined' || rs === 'null' || rs === ''){</u>
 		<u>rs = null</u>

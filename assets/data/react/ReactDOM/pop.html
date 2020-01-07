@@ -9,7 +9,8 @@
 	<em># 获取指定 dom</em>
 	<s>getNode</s> = ( ) => {
 		<em>const</em> { <u>el</u> } = <u>this.props</u>
-		<em>return </em> <u>el</u> ? <em>document.querySelector</em>( <u>el</u> ) : <b>document.body</b>
+		<em>const</em> <u>node</u> = <em>document.querySelector</em>( <u>el</u> )
+		<em>return </em> <u>node</u> ? <u>node</u> : <b>document.body</b>
 	}
 	<em># 更新时执行</em>
 	<q>componentDidUpdate</q>( ){
