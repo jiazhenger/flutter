@@ -1,0 +1,39 @@
+<u># 用法</u>
+<em>直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象</em>
+<u># 语法</u>
+<b>Object.defineProperty( <s>obj</s>, <s>prop</s>, <s>descriptor</s> )</b>
+<u># 参数说明</u>
+<s>obj</s>: <em>要在其上定义属性的对象</em>
+<s>prop</s>: <em>要定义或修改的属性的名称</em>
+<s>descriptor</s>: <em>将被定义或修改的属性描述符</em>
+<u># descriptor 参数说明</u>
+<s>value</s>: <em>必需。属性或方法</em>
+<s>writable</s>: <em>对象是否可写，是否或以为对象添加新属性，默认 false，即不可写</em>
+<s>configurable</s>: <em>表示新创建的对象是否是可配置的，即对象的属性是否可以被删除或修改，默认 false，即 writable, configurable, enumerable 行为无效</em>
+<s>enumerable</s>: <em>对象属性是否可枚举的，即是否可以枚举，默认 false，即不可枚举</em>
+<s>get</s>: <em>对象getter函数，默认undefined，相当于 value 设置属性</em>
+<s>set</s>: <em>对象setter函数，默认undefined</em>
+<u># 返回值</u>
+<em>无</em>
+<u># 示例</u>
+var obj = { }
+<b>Object.defineProperty</b>(
+	<em># 要定义属性的对象</em>
+	obj,
+	<em># 定义或修改对象的属性与方法</em>
+	'name',
+	<em># 将被定义或修改的属性描述符</em>
+	<i>{</i> 						
+		<s>value</s>: <em>10</em>,						<em>// 属性值，与 get set 互斥</em>
+		<s>value</s>: <em>function( ){ }</em>,				<em>// 属性值</em>
+		
+		<s>writable</s>: <em>true</em>, 					<em>// 如果为 false，属性的值就不能被重写</em>
+		<s>configurable</s>: <em>true</em>, 				<em>// 如果为false，则任何尝试删除目标属性或修改属性以下特性（writable, configurable, enumerable）的行为将被无效化</em>
+		<s>enumerable</s>: <em>true</em>					<em>// 是否能在for...in循环中遍历出来或在Object.keys中列举出来</em>
+		<s>get</s> : <em>function( ){ return 100 }</em> 			<em>// 设置属性值，一旦目标属性被访问就会调回此方法，并将此方法的运算结果返回用户</em>
+		<s>set</s> : <em>function( val ){ console.log(val) }</em>	<em>// 一旦目标属性被赋值，就会调回此方法。当重新设置 some 属性时执行, val 为 obj.some 设置的值。</em>
+	<i>}</i>
+)
+<em># 使用创建对象</em>
+var name = obj.<em>name</em> 					<em>// => 10</em>
+obj.<em>name( )</em>							<em>// 使用方法</em>

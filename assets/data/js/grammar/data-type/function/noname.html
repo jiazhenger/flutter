@@ -1,0 +1,51 @@
+<u>#用法</u>
+<em>自动运行，无需调用用，常用于插件，用来隔离作用域</em>
+<em># 1、Function 构造匿名函数</em>
+<b>Function</b>( <em>alert(0)</em> )
+<b>Function</b>( <s>a=0</s>, <s>b=1</s>, <em>alert(a+b)</em>)
+<em># 2</em>
+<i>(</i> <b>function( ){ <em>...</em> }</b> <i>)</i><q>( )</q> 				<em>// 不带参数</em>
+<i>(</i> <b>function( <s>a</s> ){ <em>...</em> }</b> <i>)</i><q>( <s>0</s> )</q> 			<em>// 带参数</em>
+<em># 3</em>
+<i>(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)</i>
+<i>(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<em># 4、eval</em>
+<i>eval(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)</i>
+<i>eval(<i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+var func = <i>eval(</i><em>'(function(){}).prototype.construcor'</em><i>)</i>
+var func = <i>eval(</i><em>'({$:function(){}}).$'</em><i>)</i>
+var func = <i>eval(</i><em>'[function(){}][0]'</em><i>)</i>
+<em># 5</em>
+<i>~</i><b>function( ){ <em>...</em> }</b><q>( )</q>
+<i>+</i><b>function( ){ <em>...</em> }</b><q>( )</q>
+<i>-</i><b>function( ){ <em>...</em> }</b><q>( )</q>
+<i>!</i><b>function( ){ <em>...</em> }</b><q>( )</q>
+<i>void</i> <b>function( ){ <em>...</em> }</b><q>( )</q>
+<em># 6</em>
+<i>~(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<i>+(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<i>-(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<i>!(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<i>void(</i> <b>function( ){ <em>...</em> }</b><q>( )</q> <i>)( )</i>
+<em># 匿名函数的链式调用</em>
+<i>(</i> <u>function( <s>a</s> ) {</u>
+	<em>alert(a)</em>
+	<u>return</u> <b>arguments.callee</b> 		<em>// 表示函数自身</em>
+<u>}</u><q>(<s>0</s>)(<s>1</s>)(<s>2</s>)</q><i>)</i>
+
+<i>(</i> <u>function( <s>a</s> ) {</u>
+	<em>alert(a)</em>
+	<u>return</u> <b>arguments.callee</b> 		<em>// 表示函数自身</em>
+<u>}</u><q>(<s>0</s>)</q><i>)</i><q>(<s>1</s>)(<s>2</s>)</q>
+
+<i>~</i> <u>function( <s>a</s> ) {</u>
+	<em>alert(a)</em>
+	<u>return</u> <b>arguments.callee</b> 		<em>// 表示函数自身</em>
+<u>}</u><q>(<s>0</s>)(<s>1</s>)(<s>2</s>)</q>
+<em># 参数为函数</em>
+<i>(</i><u>function(<s>factory</s>){</u>
+	<s>factory( )</s>			<em>// 执行参数函数</em>
+	<s>factory( ).a</s>			<em>// 调用参数函数返回的对象的属性值</em>
+<u>}</u><q>(</q><s>function( ){</s>
+	<em>return { a:0 }</em>
+<s>}</s><q>)</q><i>)</i>

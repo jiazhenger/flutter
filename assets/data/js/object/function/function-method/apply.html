@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>1、调用一个具有给定this值的函数，以及作为一个数组（或类似数组对象）提供的参数</em>
+<em>2、把 function 的 this 绑定到当前执行函数</em>
+<em>3、与 call( ) 用法一样，区别就是 call( ) 参数为列表，apply()参数为数组</em>
+<u># 语法</u>
+<em>function</em>.<b>call( <s>thisArg</s>, <s>argsArray</s> )</b>
+<u># 参数说明</u>
+<s>thisArg</s>: <em>可选的。在 function 函数运行时使用的 this 值。请注意，this可能不是该方法看到的实际值：如果这个函数处于非严格模式下，则指定为 null 或 undefined 时会自动替换为指向全局对象，原始值会被包装</em>
+<s>argsArray</s>: <em>可选的。一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 func 函数。如果该参数的值为 null 或  undefined，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象</em>
+<u># 返回值</u>
+<em>调用有指定this值和参数的函数的结果</em>

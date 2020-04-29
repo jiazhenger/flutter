@@ -1,0 +1,13 @@
+<u># 用法</u>
+<em>判断一个函数是否是一个生成器</em>
+<u># 语法</u>
+<em>function</em>.<b>isGenerator( )</b>
+<u># 返回值</u>
+<em>Boolean 值</em>
+
+<u># 示例</u>
+<em>function f1( ){ }</em>
+<em>function<b>*</b> f2( ){ <b>yield</b> 42 }</em> 		<em>// 生成器</em>
+
+<em>console.log(f1.<b>isGenerator( )</b>)</em> 			<em>// => false</em>
+<em>console.log(f2.<b>isGenerator( )</b>)</em> 			<em>// => true</em>
