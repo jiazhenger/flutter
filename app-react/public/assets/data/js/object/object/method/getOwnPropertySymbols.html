@@ -1,0 +1,21 @@
+<u># 用法</u>
+<em>返回一个给定对象自身的所有 Symbol 属性的数组</em>
+<u># 语法</u>
+<b>Object.getOwnPropertySymbols( <s>obj</s> )</b>
+<u># 参数说明</u>
+<s>obj</s>: <em>要返回 Symbol 属性的对象</em>
+<u># 返回值</u>
+<em>在给定对象自身上找到的所有 Symbol 属性的数组</em>
+<u># 示例</u>
+var <u>obj</u> = {}
+var a = Symbol('a')
+var b = Symbol.for('b')
+
+<u>obj</u>[a] = 'localSymbol'
+<u>obj</u>[b] = 'globalSymbol'
+
+var objectSymbols = <b>Object.getOwnPropertySymbols<b>(<u>obj</u>)
+
+console.log(objectSymbols.length) 		<em>// 2</em>
+console.log(objectSymbols)         		<em>// [Symbol(a), Symbol(b)]</em>
+console.log(objectSymbols[0])      		<em>// Symbol(a)</em>

@@ -1,0 +1,11 @@
+<u># 用法</u>
+<em>在字符串中抽取从 start 下标开始的指定数目的字符</em>
+<u># 语法</u>
+<em>stringObject</em>.<b>substr</b>(<s>start</s>,<s>length</s>)
+<u># 参数说明</u>
+<s>start</s>: <em>必需。要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推</em>
+<s>length</s>: <em>可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从 stringObject 的开始位置到结尾的字串</em>
+<u># 返回值</u>
+<em>一个新的字符串，包含从 stringObject 的 start（<u>包括 start 所指的字符</u>） 处开始的 length 个字符。如果没有指定 length，那么返回的字符串包含从 start 到 stringObject 的结尾的字符</em>
+<u># 注释</u>
+<em>1、substr() 的参数指定的是子串的开始位置和长度，因此它可以替代 substring( ) 和 slice( ) 来使用</em>

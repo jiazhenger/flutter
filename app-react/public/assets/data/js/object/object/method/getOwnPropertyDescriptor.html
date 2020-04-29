@@ -1,0 +1,12 @@
+<u># 用法</u>
+<em>1、返回指定对象上一个自有属性对应的属性描述符</em>
+<em>2、自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性</em>
+<u># 语法</u>
+<b>Object.getOwnPropertyDescriptor( <s>obj</s>, <i>prop</i> )</b>
+<u># 参数说明</u>
+<s>obj</s>: <em>需要查找的目标对象</em>
+<s>prop</s>: <em>目标对象内属性名称</em>
+<u># 返回值</u>
+<em>如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 undefined</em>
+<u># 示例</u>
+<b>Object.getOwnPropertyDescriptor</b>({ <u>name</u>: 10 }, <u>'name'</u> )

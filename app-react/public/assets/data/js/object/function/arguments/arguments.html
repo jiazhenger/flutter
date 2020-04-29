@@ -1,0 +1,27 @@
+<u># 用法</u>
+<em>一个对应于传递给函数的参数的类数组对象</em>
+<u># 语法</u>
+<b>arguments</b>
+<u># 返回值</u>
+<em>一个类似于数组的数据</em>
+<u># 注释</u>
+<em>1、arguments 对象是所有（非箭头）函数中都可用的局部变量</em>
+<em>2、可以使用arguments对象在函数中引用函数的参数</em>
+<em>3、此对象包含传递给函数的每个参数，第一个参数在索引0处</em>
+<em>4、arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性</em>
+<u># 警告</u>
+<em>在严格模式下，arguments对象已与过往不同。arguments[@@iterator]不再与函数的实际形参之间共享，同时caller属性也被移除</em>
+<u># 示例</u>
+<em>function my( ){</em>
+	<em>var args0</em> = <b>arguments[0]</b> 			<em>// 第 1 个参数 => 1</em>
+	<em>var args1</em> = <b>arguments[1]</b> 			<em>// 第 2 个参数 => 2</em>
+	<em>var args2</em> = <b>arguments[2]</b> 			<em>// 第 3 个参数 => 3</em>
+<em>}</em>
+<em>my(1, 2, 3)</em>
+<u># 将类似数组的对象 转为数组</u>
+<em>var arg</em> = <i>Array.prototype.slice.call<i>( <b>arguments</b> )
+<em>var arg</em> = <i>Array.prototype.slice.apply<i>( <b>arguments</b> )
+<em>var arg</em> = <i>Array.prototype.slice.bind<i>( <b>arguments</b> )<i>( )</i>
+<em>var args</em> = <i>[ ].slice.call</i>( <b>arguments</b> )
+<em>const args</em> = <i>Array.from</i>( <b>arguments</b> )
+<em>const args</em> = <i>[ ...</i><b>arguments</b> <i>]</i>

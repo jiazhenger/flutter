@@ -36,7 +36,7 @@ export default class Index extends React.Component{
 		}
 		// 返回主要模板内容
 		return (
-			<section>
+			<section className='oxys' style={{maxHeight:'400px'}}>
             	{
             		data.length > 0 ? (
             			<div className={`code-list-container ${window.$fn.platform().isPc?'':'mobile'}`}>

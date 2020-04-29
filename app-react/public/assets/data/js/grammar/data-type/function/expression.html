@@ -1,0 +1,40 @@
+<u># 用法</u>
+<em>1、function 关键字可以用来在一个表达式中定义一个函数</em>
+<em>2、函数表达式与函数声明的最主要区别是函数名称（function name），在函数表达式中可省略它</em>
+<em>3、一个函数表达式可以被用作一个IIFE（即时调用的函数表达式），它一旦定义就运行</em>
+<u># 语法</u>
+<b>let</b> <s>function_expression</s> = <b>function</b> <s>name</s>(<s>param1</s>,<s>param2</s>,<s>...</s>) <b>{</b>
+	<s>statements</s>
+<b>}</b>
+<u># 参数说明</u>
+<s>function_expression</s>: <em>函数表达式名称</em>
+<s>name</s>: <em>函数名称。可被省略，此种情况下的函数是匿名函数（anonymous）。 函数名称只是函数体中的一个本地变量</em>
+<s>param1, param2, ...</s>: <em>可选，被传递给函数的一个参数名称。一个函数至多拥有 255 个参数</em>
+<s>statements</s>: <em>可选，构成函数体的语句</em>
+<u># 返回值</u>
+<em>默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 return 语句指定返回值</em>
+
+<u># 函数表达式</u>
+<q>var bar = function( ){ }</q> 				<em>// 常规函数表达式</em>
+<q>var bar = function( ){ }( )</q> 			<em>// 默认执行，伪装函数定义</em>
+<q>var bar = (function( ){ })( )</q> 			<em>// 默认执行，伪装函数定义</em>
+<q>var bar = function <b>fn</b>( ){ }</q> 			<em>// 命名函数表达式</em>
+
+<u># 命名函数表达式</u>
+<em>1、即函数有名字</em>
+<em>2、如果你想在函数体内部引用当前函数，则需要创建一个命名函数表达式。<u>然后函数名称将会（且只会）作为函数体（作用域内）的本地变量</u>。这样也可以避免使用非标准的 arguments.callee 属性</em>
+<em>var bar = function <b>fn<b>( ){</em>
+	<em>return typeof</em> <b>fn</b> 		<em>// 函数的名字只在当前函数作用域内有效  => function</em>
+<em>}</em>
+<em>console.log(<b>fn</b>)</em> 			<em>// => undefined</em>
+<em>bar( )</em> 					<em>// 执行函数</em>
+
+<u># 伪装函数定义</u>
+<em>函数表达式在实际应用中还是很常见的，在web开发中有个常用的模式是基于对某种特性的测试来伪装函数定义，从而达到性能优化的目的，但由于这种方式都是在同一作用域内，所以基本上一定要用函数表达式</em>
+<q>var bar = function( ){ }( )</q> 			<em>// 默认执行，伪装函数定义</em>
+<q>var bar = (function( ){ })( )</q> 			<em>// 默认执行，伪装函数定义</em>
+
+<u># 函数表达式不能提升</u>
+<em>start( )</em> 					<em>// 错误</em>
+<em>var start = function( ){ } </em> 	<em>// 后定义</em>
+<em>start( )</em> 					<em>// 后执行</em>

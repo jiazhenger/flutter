@@ -1,0 +1,64 @@
+<u># 用法</u>
+<em>从ECMAScript 2015开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式</em>
+<u># 语法</u>
+<em>var obj = </em> <i>{</i>
+	<em># 定义属性</em>
+	<s>property</s>: <em>10</em>
+	<s>property</s>: <em>( true ? 1 : 0 )</em>
+	
+	<em># 匿名函数，property 为声明的变量</em>
+	<s>property</s>: <q>function( param... )</q> { }, 			<em>// 定义方法</em>
+	<s>generator</s>: <q>function<b>*</b>( param... )</q> { }, 			<em>// 定义生成器</em>
+	<s>property</s>: <b>async</b> <q>function( param... )</q> { }, 		<em>// 定义异步方法</em>
+	<s>generator</s>: <b>async</b> <q>function<b>*</b>( param... )</q> { } 		<em>// 定义异步成生器</em>
+	<b>get</b> <s>property</s>: <q>function( )</q> { }, 					<em>// getter</em>
+  	<b>set</b> <s>property</s>: <q>function( value )</q> { } 			<em>// setter</em>
+	
+	<em># 命名函数，property 为函数名</em>
+	<s>property</s><q>( param... )</q> { }, 				<em>// 定义方法</em>
+	<b>*</b><s>generator</s><q>( param... )</q> { }, 			<em>// 定义生成器</em>
+	<b>async</b> <s>property</s><q>( param... )</q> { }, 		<em>// 定义异步方法</em>
+	<b>async*</b> <s>generator</s><q>( param... )</q> { } 		<em>// 定义异步成生器</em>
+	<b>get</b> <s>property</s><q>( )</q> { }, 					<em>// getter</em>
+  	<b>set</b> <s>property</s><q>( value )</q> { } 			<em>// setter</em>
+  	
+  	<em># 箭头函数</em>
+  	<s>property</s>: <q>( value ) => </q> { }
+<i>}</i>
+
+<u># 一般方法</u>
+<em>var obj = {</em>
+	<em>g: function( ) { },</em> 			<em>// 完整写法</em>
+	<em>g( ){ }</em> 					<em>// 简写</em>
+<em>}</em>
+
+<u># 生成器方法</u>
+<em>var obj = {</em>
+	<em>g: function<b>*</b>( ) { yield 0 },</em> 		<em>// 完整写法</em>
+	<em><b>*</b>g( ){ yield 0 }</em> 					<em>// 简写</em>
+<em>}</em>
+
+<u># 异步生成器方法</u>
+<em>var obj = {</em>
+	<em>g: <b>async</b> function<b>*</b>( ) { yield 0; yield 1 },</em> 			<em>// 完整写法</em>
+	<em><b>async*</b> g( ){ yield 0; yield 1 }</em> 					<em>// 简写</em>
+<em>}</em>
+
+<u># 异步</u>
+<em>var obj = {</em>
+	<em>g: <b>async</b> function( ) { <b>await</b> some_promise },</em> 		<em>// 完整写法</em>
+	<em><b>async</b> g( ){ <b>await</b> some_promise }</em> 					<em>// 简写</em>
+<em>}</em>
+
+<u># 计算的属性名</u>
+<em>var obj = {</em>
+	<em><b>[</b> 'g'+1 <b>]</b> : 0,</em>
+	<em><b>[</b> 'g'+2 <b>]</b> : function(){ },</em>
+	<em><b>[</b> 'g'+3 <b>]</b>( ){ },</em>
+<em>}</em>
+<em>var a = g1</em>
+<em>g2( )</em>
+<em>g3( )</em>
+
+<u># 方法定义不是构造函数</u>
+<em> var o = new obj.method( )</em> 	<em>// error</em>

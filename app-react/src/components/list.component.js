@@ -5,7 +5,7 @@ import UbContent from '@cpx/ub-content.component'
 import BoxComponent from '@cpt/box.component'
 // ===================================================================== antd
 import { Button  } from 'antd'
-import { ArrowRight } from '@ant-design/icons'
+import { ArrowRightOutlined } from '@ant-design/icons'
 // ===================================================================== 
 const $fn = window.$fn
 export default class Index extends React.Component{
@@ -37,7 +37,7 @@ export default class Index extends React.Component{
 								<h2 className='b f16 mr10' style={{margin:0}}>{data.keyword}</h2>
 								{
 									(data.type && data.keyword) && [
-										<ArrowRight key='arrow' className='ml10' style={{color:'#999',fontSize:'12px'}} />,
+										<ArrowRightOutlined key='arrow' className='ml10' style={{color:'#999',fontSize:'12px'}} />,
 										<span key='type' className='f14 mlr10 c0' style={{color:'pink'}}>{data.type}</span>
 									]
 								}

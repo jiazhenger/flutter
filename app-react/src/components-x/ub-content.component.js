@@ -3,7 +3,7 @@ import React from 'react'
 // ===================================================================== 
 export default class UbContent extends React.Component{
 	componentDidMount(){
-		document.querySelector('.ub-content').addEventListener('touchmove',e=>e.stopPropagation())
+//		document.querySelector('.ub-content').addEventListener('touchmove',e=>e.stopPropagation())
 	}
 	
 	render(){

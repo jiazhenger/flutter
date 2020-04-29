@@ -8,7 +8,7 @@ import MenuIcon from '@cpt/menu.component'
 import IPhone from '@images/iphone.png'
 // ===================================================================== antd component
 import { Menu } from 'antd'
-import { Appstore, Close } from '@ant-design/icons'
+import { AppstoreOutlined, CloseOutlined } from '@ant-design/icons'
 const { SubMenu, Item } = Menu
 // ===================================================================== component
 const $fn = window.$fn
@@ -59,7 +59,7 @@ export default class Index extends React.Component{
 									<Menu className='h' mode='inline' onClick={this.handleClick} selectedKeys={selectedKeys} defaultOpenKeys={defaultOpenKeys} onSelect={this.onSelect}>
 										{
 											$fn.hasArray(data) && data.map((v,i)=>(
-												<SubMenu key={i} title={<><Appstore/><span>{v.title}</span></>}>
+												<SubMenu key={i} title={<><AppstoreOutlined/><span>{v.title}</span></>}>
 													{
 														$fn.hasArray(v.children) ? v.children.map((p,k)=>{
 															return $fn.hasArray(p.children) ? (
@@ -103,7 +103,7 @@ export default class Index extends React.Component{
 						)
 					}
 					{
-						!$fn.platform().isPc && (<div className='abs rpx fxmc' style={{width:'30px',height:'30px',right:'5px',top:'10px',background:'rgba(0,0,0,.3)'}}><Close style={{color:'#fff'}} /></div>)
+						!$fn.platform().isPc && (<div className='abs rpx fxmc' style={{width:'30px',height:'30px',right:'5px',top:'10px',background:'rgba(0,0,0,.3)'}}><CloseOutlined style={{color:'#fff'}} /></div>)
 					}
 				</div>
 			</UbContent>
