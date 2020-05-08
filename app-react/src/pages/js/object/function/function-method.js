@@ -44,7 +44,7 @@ export default class Index extends React.Component{
 						<li>function my( x, y )｛ return x+y ｝</li>
 						<li>var v = my.<b>call</b>(null,10,20) <u>=> {my.call(null,10,20)}</u></li>
 					</CaseJs>
-					<CaseJs title='继承初始化值'>
+					<CaseJs title='继承初始化值' className='mt10'>
 						<li>function Parent( )｛ this.code = 'react' ｝</li>
 						<li>function Child( )｛ Parent.<b>call(this)</b> ｝ <q># 继承 Parent，即将 Parent 的 this 绑定到 Child 函数，不影响 Parent 的 this</q></li>
 						<li>var code = obj.code <u>=> {obj2.code}</u></li>

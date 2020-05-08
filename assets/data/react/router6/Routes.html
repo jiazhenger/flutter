@@ -1,0 +1,22 @@
+<em>import React from 'react'</em>
+<em>import { <q>Routes</q>, <q>Route</q>, } from 'react-router-dom'</em>
+
+<em>const</em> <u>Home</u> 	= <em>( ) => import('@pages/home')</em>
+<em>const</em> <u>NotFound</u> 	= <em>( ) => import('@pages/404')</em>
+
+<em>export default ( ) =></em> (
+	<q>&lt;Routes&gt;</q>
+		<em># 一般路由</em>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>/</s>' 			<b>element</b> = <i>{</i> <u>&lt;Home/&gt;</u> <i>}</i> <q>/&gt;</q>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>/home</s>' 		<b>element</b> = <i>{</i> <u>&lt;Home/&gt;</u> <i>}</i> <q>/&gt;</q>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>home</s>' 		<b>element</b> = <i>{</i> <u>&lt;Home/&gt;</u> <i>}</i> <q>/&gt;</q>
+		<em># 必须参数</em>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>/home/:id</s>' 	<b>element</b> = <i>{</i> <u>&lt;Home/&gt;</u> <i>}</i> <q>/&gt;</q>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>home/:id</s>' 		<b>element</b> = <i>{</i> <u>&lt;Home/&gt;</u> <i>}</i> <q>/&gt;</q>
+		<em># 重定向</em>
+		<q>&lt;Navigate</q> 	<b>path</b> = '<s>/index</s>' 	<b>to</b> = '<s>/</s>' <q>/&gt;</q>
+		<q>&lt;Navigate</q> 	<b>path</b> = '<s>index</s>' 	<b>to</b> = '<s>/</s>' <q>/&gt;</q>
+		<em># 404</em>
+		<q>&lt;Route</q> 	<b>path</b> = '<s>*</s>' 			<b>element</b> = <i>{</i> <u>&lt;NotFound/&gt;</u> <i>}</i> <q>/&gt;</q>
+	<q>&lt;/Routes&gt;</q>
+)

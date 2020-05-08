@@ -30,8 +30,6 @@ export default class Index extends React.Component{
 				<BoxComponent pro='Object 构造函数的方法' link='/js/object/object/method' {...this.props}/>
 				<BoxComponent pro='Object 原型对象的属性' link='/js/object/object/prototype-property' {...this.props}/>
 				<BoxComponent pro='Object 原型对象的方法' link='/js/object/object/prototype-method' {...this.props}/>
-				<BoxComponent pro='Function 对象的属性' link='/js/object/object/function-property' {...this.props}/>
-				<BoxComponent pro='Function 对象的方法' link='/js/object/object/function-method' {...this.props}/>
 			</UbContent>
 		)
 	}

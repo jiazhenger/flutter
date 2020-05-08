@@ -6,6 +6,7 @@ const data = {
 	title:'',
 	data:[
 		{ pro:'环境安装', code:[ {path:'vue/install/npm'} ]},
+		{ pro:'打包优化', code:[ { path:'vue/install/pack' } ]},
 		{ pro:'学习地址', code:[ { path:'vue/install/link' } ]},
 	]
 }

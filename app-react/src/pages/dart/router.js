@@ -106,7 +106,7 @@ class AppRouter extends React.Component{
 				) }/>
 				{/*  */}
 				<Redirect from={url}		to={ `${url}` } 		exact />
-				<Route 	render = { () => <div>404</div> } exact />
+				<Route 	component = { Import('404') } exact />
 			</Switch>
 		)
 	}

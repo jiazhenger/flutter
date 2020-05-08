@@ -1,6 +1,29 @@
-<em># 安装 flutter sdk</em>
+<q>一、安装 java-sdk</q>
+<em>1、<a class='tu b' href='https://www.java.com/zh_CN/' target='_blank'>下载 java</a>
+<em>2、配置环境变量， 在系统变量的path中配置</em>
+D:\<b>java\bin</b>
+
+<q>二、安装 android-sdk</q>
+<em>1、用 android-sdk 工具安装 <b>build-tools、platform-tools</b></em>
+<em>2、 配置环境变量， 在系统变量的path中配置</em>
+D:\<b>android-sdk\build-tools\23.0.1</b>
+D:\<b>android-sdk\platform-tools</b>
+D:\<b>D:\android-sdk\tools</b>
+
+<q>三、安装 Android Studio，并安装 flutter 插件</q>
+
+<q>四、安装 dart-sdk</q>
+<a class='tu b' href='https://storage.googleapis.com/dart-archive/channels/stable/release/2.7.0/sdk/dartsdk-windows-x64-release.zip' target='_blank'>https://storage.googleapis.com/dart-archive/channels/stable/release/2.7.0/sdk/dartsdk-windows-x64-release.zip</a>
+<em>&lt;stable/dev&gt; - 选择稳定/开发版，可选项：stable，dev</em>
+<em>&lt;release&gt; - 版本号，比如：2.0.0, 2.0.0-dev.64.1</em>
+<em>&lt;platform&gt; - 平台，可选项：windows, macos, linux</em>
+<em>&lt;architecture&gt; - 系统架构，32位或64位，可选项：ia32，x64</em>
+<em># 配置环境变量， 在系统变量的path中配置</em>
+D:\<b>dart-sdk\bin</b>
+
+<q>五、安装 flutter-sdk</q>
 <em>// 方法一</em>
-<b><a style='color:red' class='tu' href='https://flutter.dev/docs/development/tools/sdk/releases?tab=windows#windows' target='_blank'>到flutter 官网下载</a></b>
+<a class='tu b' href='https://flutter.dev/docs/development/tools/sdk/releases?tab=windows#windows' target='_blank'>到flutter 官网下载</a>
 <em>// 方法二</em>
 <b>git clone -b stable https://github.com/flutter/flutter.git</b> 
 <em># 配置环境变量， 在系统变量的path中配置</em>
@@ -10,14 +33,3 @@ D:\flutter-sdk\<b>flutter\bin</b>
 <b>PUB_HOSTED_URL</b> ======= <b>https://pub.flutter-io.cn</b>
 <em># npm 命令检测安装依赖，如果没有，则安装；反之，则显示依赖信息</em>
 &gt; <b>flutter doctor</b>
-<em># 运行到移动设备</em>
-&gt; <b>flutter run</b>
-<em># 开启 flutter web 支持</em>
-&gt; <b>flutter config --enable-web</b>
-<em># 为已存在的项目添加 flutter web 支持</em>
-&gt; <b>flutter create .</b>
-&gt; <b>flutter create</b> myApp
-<em># 运行到浏览器</em>
-&gt; <b>flutter run -d chrome</b>
-<em># 打包成 fluuter web</em>
-&gt; <b>flutter build web</b>

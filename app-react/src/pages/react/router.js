@@ -52,7 +52,7 @@ const AppRouter = () => {
 					<Route path={`${match.url}/param`} 	component={ Import('react/WrappedComponent/param') } exact />
 				</Switch>
 			)}/>
-			{/* Router */}
+			{/* Router@v5 */}
 			<Route path={ `${url}/router` } render={ ({ match }) => (
 				<Switch>
 					<Route path={`${match.url}/Router`} 	component={ Import('react/router/Router') } exact />
@@ -65,7 +65,15 @@ const AppRouter = () => {
 							<Route path={`${match.url}/staticContext`} 	component={ Import('react/router/props/staticContext') } exact />
 						</Switch>
 					)}/>
+					<Route path={`${match.url}/link`} 	component={ Import('react/router/link') } exact />
 					<Route path={`${match.url}/hook`} 	component={ Import('react/router/hook') } exact />
+				</Switch>
+			)}/>
+			{/* Router@v6 */}
+			<Route path={ `${url}/router6` } render={ ({ match }) => (
+				<Switch>
+					<Route path={`${match.url}/entrance`} 	component={ Import('react/router6/entrance') } exact />
+					<Route path={`${match.url}/hook`} 	component={ Import('react/router6/hook') } exact />
 				</Switch>
 			)}/>
 			{/* Hook */}
@@ -82,7 +90,7 @@ const AppRouter = () => {
 			)}/>
 			{/*  */}
 			<Redirect from={url}		to={ `${url}` } 		exact />
-			<Route 	render = { () => <div>404</div> } exact />
+			<Route component = { Import('404') }/>
 		</Switch>
 	)
 }

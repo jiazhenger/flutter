@@ -1,0 +1,31 @@
+<em>import React from 'react'</em>
+<em>import {  <q>NavLink</q>} from 'react-router-dom'</em>
+
+<em>export default ( ) =></em> (
+	<em># 简单跳转</em>
+	<q>&lt;NavLink</q> 
+		<b>to</b> = <em>'/index'</em>
+		<b>activeClassName</b> = <em>'active'</em> 		<em>// 设置选中样式，默认值为active</em>
+		<b>activeStyle</b> = <u>{</u> <em>color:red </em><u>}</u> 		<em>// 当元素被选中时，为此元素添加样式</em>
+		<b>isActive</b> = <u>{</u>					<em>// 判断链接是否激活的额外逻辑的功能</em>
+			(<u>match</u>, <u>location</u>) => <u>{</u>
+				<em>if(match) return false</em>
+				<em>const eventID = parseInt(match.params.eventID)</em>
+				<em>return !isNaN(eventID) && eventID % 2 === 1</em>
+			<u>}</u>
+		<u>}</u>
+		<b>exact</b> 						<em>// 为 true 时，只有当导致和完全匹配class和style才会应用，默认 false</em>
+		<b>strict</b> 						<em>// 为 true 时，在确定为位置是否与当前URL匹配时，将考虑位置pathname后的斜线，默认 false</em>
+		<b>replace</b>						<em>// 为 true 时，无历史记录，默认 false</em>
+	<q>&gt;</q><em>index</em><q>&lt;/NavLink&gt;</q>
+	<em># 复杂跳转</em>
+	<q>&lt;NavLink</q> 
+		<b>to</b>=<u>{{</u>
+			<i>pathname</i>: 	<u>'/home'</u>,
+			<i>search</i>: 		<u>'?id=10&&code=20'</u>,
+			<i>hash</i>: 		<u>'#10'</u> 	<em>#/home#10</em>,
+			<i>state</i>:		<u>{ }</u> 
+		<u>}}</u>
+		<b>replace</b>
+	<q>&gt;</q><em>index</em><q>&lt;/NavLink&gt;</q>
+)

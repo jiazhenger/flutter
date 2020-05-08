@@ -8,8 +8,8 @@ export default [
 			{
 				title: '语句',
 				children:[
-					{ title: '循环语句', path:'/dart/statement/circulation' },
-					{ title: '判断语句', path:'/dart/statement/judge' },
+					{ title: '循环语句', path:'/js/statement/circulation' },
+					{ title: '判断语句', path:'/js/statement/judge' },
 				]
 			},
 		]

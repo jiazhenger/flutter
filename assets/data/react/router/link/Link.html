@@ -1,0 +1,20 @@
+<em>import React from 'react'</em>
+<em>import {  <q>Link</q>} from 'react-router-dom'</em>
+
+<em>export default ( ) =></em> (
+	<em># 简单跳转</em>
+	<q>&lt;Link</q> 
+		<b>to</b> = <em>'/index'</em>
+		<b>replace</b>		<em>// 无历史记录，默认 false</em>
+	<q>&gt;</q><em>index</em><q>&lt;/Link&gt;</q>
+	<em># 复杂跳转</em>
+	<q>&lt;Link</q> 
+		<b>to</b>=<u>{{</u>
+			<i>pathname</i>: 	<u>'/home'</u>,
+			<i>search</i>: 		<u>'?id=10&&code=20'</u>,
+			<i>hash</i>: 		<u>'#10'</u> 	<em>#/home#10</em>,
+			<i>state</i>:		<u>{ }</u> 
+		<u>}}</u>
+		<b>replace</b>
+	<q>&gt;</q><em>index</em><q>&lt;/Link&gt;</q>
+)

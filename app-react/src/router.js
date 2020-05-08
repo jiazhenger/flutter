@@ -22,7 +22,7 @@ const AppRouter = () => (
 		<Route 	path='/flutter' component={ Flutter }  />
 		{/*  */}
 		<Redirect from='/index'		to='/' 		exact />
-		<Route render = { () => <div>404</div> } />
+		<Route component = { Import('404') }/>
 	</Switch>
 )
 

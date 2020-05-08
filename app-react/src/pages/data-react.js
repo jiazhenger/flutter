@@ -44,10 +44,11 @@ export default [
 		]
 	},
 	{
-		title: 'Router', 
+		title: 'Router@v5', 
 		children: [
 			{ title: '路由模式', path:'/react/router/Router' },
 			{ title: '路由配置', path:'/react/router/config' },
+			{ title: '路由链接', path:'/react/router/link' },
 			{ 
 				title: '路由 props',
 				children: [
@@ -58,6 +59,13 @@ export default [
 				]
 			},
 			{ title: 'Hook', path:'/react/router/hook' },
+		]
+	},
+	{
+		title: 'Router@v6', 
+		children: [
+			{ title: '路由配置', path:'/react/router6/entrance' },
+			{ title: 'Hook', path:'/react/router6/hook' },
 		]
 	},
 	{
