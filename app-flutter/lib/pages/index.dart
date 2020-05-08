@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 全局配置
 import '../config.dart';
 import 'dart:math' as math;
@@ -20,11 +20,11 @@ class _PageState extends State<IndexPage> {
             body: ListView(
                 padding: EdgeInsets.all(10.0),
                 children: <Widget>[
-                    RaisedButton(child: Text('click'),onPressed: (){
-                        Navigator.pushNamed(context,'/PlaceholderPage');
-                    }),
+                    RaisedButton(child: Text('Button'),onPressed: (){
+                        Navigator.pushNamed(context,'/SweepGradientPage');
+                    })
                 ]
-            ),
+            )
         );
     }
 }

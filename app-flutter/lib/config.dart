@@ -1,5 +1,5 @@
-import 'package:flutter_web/material.dart';
-import 'package:flutter_web/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 // ======================================================================================================== 配置
 class Config {
 	static final mainColor = Colors.blue;
@@ -17,16 +17,10 @@ class Config {
 		return AppBar(
 			title: Text(title, style:TextStyle(fontSize: 13.0)),
 			centerTitle:true,
-			textTheme: TextTheme(
-				display1: TextStyle()
-			),
 //			leading: BackButton(color: Colors.white)
 		);
 	}
 	// 判断平台
 	static bool isIos = defaultTargetPlatform == TargetPlatform.iOS;
 	static bool isAndroid = defaultTargetPlatform == TargetPlatform.android;
-	// 测试图片
-	static String imgUrl = 'https://jiazhenger.github.io/flutter/assets/images/test.png';
-	static String staticUrl = './images/test.png';
 }

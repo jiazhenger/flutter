@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 配置
 final ThemeData iosTheme = ThemeData(
 	primarySwatch: Colors.red,     // 主题颜色

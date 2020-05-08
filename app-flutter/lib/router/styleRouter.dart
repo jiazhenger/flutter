@@ -1,54 +1,44 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 路由
 // ======================================================================================================== color:Colors.red
-import 'package:flutter_web_study.app/pages/flutter/style/colors/Colors.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/colors/color16.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/colors/rgba.dart';
+import 'package:flutter_web/pages/flutter/style/colors/Colors.dart';
+import 'package:flutter_web/pages/flutter/style/colors/color16.dart';
+import 'package:flutter_web/pages/flutter/style/colors/rgba.dart';
 // ======================================================================================================== EdgeInsets 偏移量
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/all.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/only.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/symmetric.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/fromLTRB.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/lerp.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/EdgeInsets/fromWindowPadding.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/all.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/only.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/symmetric.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/fromLTRB.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/lerp.dart';
+import 'package:flutter_web/pages/flutter/style/EdgeInsets/fromWindowPadding.dart';
 // ======================================================================================================== Alignment 对齐方式
-import 'package:flutter_web_study.app/pages/flutter/style/align/Alignment/position.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/align/Alignment/xy.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/align/Alignment/lerp.dart';
+import 'package:flutter_web/pages/flutter/style/align/Alignment/position.dart';
+import 'package:flutter_web/pages/flutter/style/align/Alignment/xy.dart';
+import 'package:flutter_web/pages/flutter/style/align/Alignment/lerp.dart';
 // ======================================================================================================== FractionalOffset 对齐方式
-import 'package:flutter_web_study.app/pages/flutter/style/align/FractionalOffset/position.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/align/FractionalOffset/xy.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/align/FractionalOffset/fromOffsetAndRect.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/align/FractionalOffset/fromOffsetAndSize.dart';
+import 'package:flutter_web/pages/flutter/style/align/FractionalOffset/position.dart';
+import 'package:flutter_web/pages/flutter/style/align/FractionalOffset/xy.dart';
+import 'package:flutter_web/pages/flutter/style/align/FractionalOffset/fromOffsetAndRect.dart';
+import 'package:flutter_web/pages/flutter/style/align/FractionalOffset/fromOffsetAndSize.dart';
 // ======================================================================================================== Border 边样式
-import 'package:flutter_web_study.app/pages/flutter/style/border/Border/all.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/border/Border/BorderOne.dart';
+import 'package:flutter_web/pages/flutter/style/border/Border/all.dart';
+import 'package:flutter_web/pages/flutter/style/border/Border/BorderOne.dart';
 // ======================================================================================================== BorderSide 边样式
-import 'package:flutter_web_study.app/pages/flutter/style/border/BorderSide/BorderSide.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/border/BorderSide/merge.dart';
+import 'package:flutter_web/pages/flutter/style/border/BorderSide/BorderSide.dart';
+import 'package:flutter_web/pages/flutter/style/border/BorderSide/merge.dart';
 // ======================================================================================================== BorderRadius 圆角
-import 'package:flutter_web_study.app/pages/flutter/style/borderRadius/BorderRadius/all.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/borderRadius/BorderRadius/circular.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/borderRadius/BorderRadius/horizontal.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/borderRadius/BorderRadius/vertical.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/borderRadius/BorderRadius/only.dart';
+import 'package:flutter_web/pages/flutter/style/borderRadius/BorderRadius/all.dart';
+import 'package:flutter_web/pages/flutter/style/borderRadius/BorderRadius/circular.dart';
+import 'package:flutter_web/pages/flutter/style/borderRadius/BorderRadius/horizontal.dart';
+import 'package:flutter_web/pages/flutter/style/borderRadius/BorderRadius/vertical.dart';
+import 'package:flutter_web/pages/flutter/style/borderRadius/BorderRadius/only.dart';
 // ======================================================================================================== BoxShadow 阴影
-import 'package:flutter_web_study.app/pages/flutter/style/shadow/BoxShadow.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/shadow/Shadow.dart';
+import 'package:flutter_web/pages/flutter/style/shadow/BoxShadow.dart';
+import 'package:flutter_web/pages/flutter/style/shadow/Shadow.dart';
 // ======================================================================================================== 渐变
-import 'package:flutter_web_study.app/pages/flutter/style/gradient/LinearGradient.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/gradient/RadialGradient.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/gradient/SweepGradient.dart';
-// ======================================================================================================== shape
-import 'package:flutter_web_study.app/pages/flutter/style/shape/BeveledRectangleBorder.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/shape/CircleBorder.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/shape/RoundedRectangleBorder.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/shape/StadiumBorder.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/shape/UnderlineInputBorder.dart';
-// ======================================================================================================== 装饰器
-import 'package:flutter_web_study.app/pages/flutter/style/decoration/BoxDecoration.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/decoration/ShapeDecoration.dart';
-import 'package:flutter_web_study.app/pages/flutter/style/decoration/UnderlineTabIndicator.dart';
+import 'package:flutter_web/pages/flutter/style/gradient/LinearGradient.dart';
+import 'package:flutter_web/pages/flutter/style/gradient/RadialGradient.dart';
+import 'package:flutter_web/pages/flutter/style/gradient/SweepGradient.dart';
 // ======================================================================================================== 路由类
 class StyleRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{
@@ -91,15 +81,5 @@ class StyleRouter{
 		'/LinearGradientPage': (BuildContext context) => LinearGradientPage(title:'LinearGradient()'),
 		'/RadialGradientPage': (BuildContext context) => RadialGradientPage(title:'RadialGradient()'),
 		'/SweepGradientPage': (BuildContext context) => SweepGradientPage(title:'SweepGradient()'),
-		// ======================================================================================================== shape
-		'/BeveledRectangleBorderPage': (BuildContext context) => BeveledRectangleBorderPage(title:'BeveledRectangleBorder()'),
-		'/CircleBorderPage': (BuildContext context) => CircleBorderPage(title:'CircleBorder()'),
-		'/RoundedRectangleBorderPage': (BuildContext context) => RoundedRectangleBorderPage(title:'RoundedRectangleBorder()'),
-		'/StadiumBorderPage': (BuildContext context) => StadiumBorderPage(title:'StadiumBorder()'),
-		'/UnderlineInputBorderPage': (BuildContext context) => UnderlineInputBorderPage(title:'UnderlineInputBorde()'),
-		// ======================================================================================================== 装饰器
-		'/BoxDecorationPage': (BuildContext context) => BoxDecorationPage(title:'BoxDecoration()'),
-		'/ShapeDecorationPage': (BuildContext context) => ShapeDecorationPage(title:'ShapeDecoration()'),
-		'/UnderlineTabIndicatorPage': (BuildContext context) => UnderlineTabIndicatorPage(title:'UnderlineTabIndicator()'),
 	};
 }

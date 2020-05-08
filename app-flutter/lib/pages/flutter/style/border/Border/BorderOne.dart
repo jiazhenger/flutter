@@ -1,6 +1,6 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 全局配置
-import 'package:flutter_web_study.app/config.dart';
+import 'package:flutter_web/config.dart';
 // ======================================================================================================== Widget 控件
 class BorderOne extends StatefulWidget { // 有状态的控件，控件的状态、文字等属性存在变化的可能
     final String title;

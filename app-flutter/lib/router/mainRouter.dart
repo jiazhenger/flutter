@@ -1,12 +1,12 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 路由
-import 'package:flutter_web_study.app/pages/flutter/main/router/router-pushNamed.dart';
-import 'package:flutter_web_study.app/pages/flutter/main/router/router-pushReplacementNamed.dart';
-import 'package:flutter_web_study.app/pages/flutter/main/router/router-push.dart';
-import 'package:flutter_web_study.app/pages/flutter/main/router/router-pop.dart';
-import 'package:flutter_web_study.app/pages/flutter/main/router/router-param.dart';
+import 'package:flutter_web/pages/flutter/main/router/router-pushNamed.dart';
+import 'package:flutter_web/pages/flutter/main/router/router-pushReplacementNamed.dart';
+import 'package:flutter_web/pages/flutter/main/router/router-push.dart';
+import 'package:flutter_web/pages/flutter/main/router/router-pop.dart';
+import 'package:flutter_web/pages/flutter/main/router/router-param.dart';
 // ======================================================================================================== 获取主题 Theme.of(context).x
-import 'package:flutter_web_study.app/pages/flutter/main/theme/get-theme.dart';
+import 'package:flutter_web/pages/flutter/main/theme/get-theme.dart';
 // ======================================================================================================== 路由类
 class MainRouter{
 	final Map<String,WidgetBuilder> router = <String,WidgetBuilder>{

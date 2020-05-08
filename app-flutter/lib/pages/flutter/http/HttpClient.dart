@@ -1,8 +1,8 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'dart:io';
 import 'dart:convert';
 // ======================================================================================================== 全局配置
-import 'package:flutter_web_study.app/config.dart';
+import 'package:flutter_web/config.dart';
 // ======================================================================================================== Widget 控件
 class HttpHttpClient extends StatefulWidget { // 有状态的控件，控件的状态、文字等属性存在变化的可能
     final String title;
@@ -38,7 +38,10 @@ class _PageState extends State<HttpHttpClient> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            appBar: Config.appBar(widget.title),
+            appBar: AppBar(
+                title:Config.appBar(widget.title),
+                centerTitle:true,
+            ),
             body: ListView(
                 padding:EdgeInsets.all(10.0),
                 children: <Widget>[

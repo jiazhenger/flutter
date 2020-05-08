@@ -1,6 +1,6 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 // ======================================================================================================== 全局配置
-import 'package:flutter_web_study.app/config.dart';
+import 'package:flutter_web/config.dart';
 // ======================================================================================================== Widget 控件
 class RouterParam extends StatefulWidget { // 有状态的控件，控件的状态、文字等属性存在变化的可能
     final String title;
@@ -30,11 +30,11 @@ class _PageState extends State<RouterParam> {
                     Text('arguments=${ModalRoute.of(context).settings.arguments}'),
                     Text('settings 其它属性',style: TextStyle(fontWeight: FontWeight.bold)),
                     Text('settings.name=${ModalRoute.of(context).settings.name}'),
-                    Text('settings.isInitialRoute=${ModalRoute.of(context).settings.isInitialRoute}'),
+//                    Text('settings.isInitialRoute=${ModalRoute.of(context).settings.isInitialRoute}'),
                     Text('settings.hashCode=${ModalRoute.of(context).settings.hashCode}'),
                     Text('settings.runtimeType=${ModalRoute.of(context).settings.runtimeType}'),
                     Text('settings.toString( )=${ModalRoute.of(context).settings.toString()}'),
-                    Text('settings.copyWith( )=${ModalRoute.of(context).settings.copyWith(name:'/RouterPop',isInitialRoute:true,arguments:[1,2,3])}'),
+//                    Text('settings.copyWith( )=${ModalRoute.of(context).settings.copyWith(name:'/RouterPop',isInitialRoute:true,arguments:[1,2,3])}'),
                     Divider(),
                     RaisedButton(
                         child: Text('pop 返回'),
