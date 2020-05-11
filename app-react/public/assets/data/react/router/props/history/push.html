@@ -1,6 +1,6 @@
 <em>import React from 'react'</em>
 
-<em>export default ( <q>props</q> ) =></em> (
+<em>export default ( <q>props</q> ) =></em> {
 	<em>const <u>onClick</u> = ( ) =></em> {
 		<q>props.history</q>.<b>push</b>	<i>(</i> <u>'/home'</u> <i>)</i> 			<em>// 无参数跳转</em>
 							<i>(</i> <u>'/home/10/20'</u> <i>)</i> 		<em>// 必选参数跳转</em>
@@ -8,4 +8,4 @@
 							<i>(</i> { <i>pathname</i>:<u>'/home'</u>, <i>state</i>:<u>{id:10}</u>, <i>search</i>:<u>'?id=10&age=20'</u>, <i>hash</i>:<u>'#name'</u> } <i>)</i> 	<em>// 完整路由跳转</em>
 	}
 	<em>return &lt;button onClick={<u>onClick</u>}&gt;click&lt;button&gt;</em>
-)
+}

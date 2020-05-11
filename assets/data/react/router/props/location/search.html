@@ -1,7 +1,7 @@
 <em>import React from 'react'</em>
 <em>import { <q>useLocation</q> } from 'react-router-dom'</em>
 
-<em>export default ( <q>props</q> ) =></em> (
+<em>export default ( <q>props</q> ) =></em> {
 	
 	<em>const</em> <s>query</s> = <i>new URLSearchParams</i>(<q>props.location</q>.<b>search</b>) 		<em>// props 获取可选参数</em>
 	<em>const</em> <s>query</s> = <i>new URLSearchParams</i>(<q>useLocation( )</q>.<b>search</b>) 		<em>// hook 获取可选参数</em>
@@ -12,7 +12,7 @@
 	<em>const { id }</em> =  <s>getQuery</s>( )		<em>// </em> <u>?id=10</u>
 	
 	<em>return null</em>
-)
+}
 
 <em># js 获取可选参数</em>
 <em>const</em> <s>getQuery</s> = <u>id</u> => {
