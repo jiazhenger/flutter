@@ -8,8 +8,8 @@ export default [
 			{
 				title: '语句',
 				children:[
-					{ title: '循环语句', path:'/js/statement/circulation' },
-					{ title: '判断语句', path:'/js/statement/judge' },
+					{ title: '循环语句', path:'/js/grammar/for' },
+					{ title: '判断语句', path:'/js/grammar/if' },
 				]
 			},
 		]
@@ -71,6 +71,13 @@ export default [
 					{ title:'Arguments 对象', path:'/js/object/function/arguments' },
 					{ title:'Function 对象的属性', path:'/js/object/function/function-property' },
 					{ title:'Function 原型对象的方法', path:'/js/object/function/function-method' },
+				]
+			},
+			{
+				title:'Array',
+				children: [
+					{ title:'属性', path:'/js/object/array/property' },
+					{ title:'方法', path:'/js/object/array/method' },
 				]
 			},
 			{

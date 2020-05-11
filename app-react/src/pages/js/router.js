@@ -1,4 +1,4 @@
-﻿/* ====================================== 模块子路由配置  ====================================== */
+/* ====================================== 模块子路由配置  ====================================== */
 import React from 'react'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 //import { TransitionGroup, CSSTransition } from 'react-transition-group'
@@ -14,7 +14,9 @@ class AppRouter extends React.Component{
 				{/* 基础语法 */}
 				<Route path={ `${url}/grammar` } render={ ({ match }) => (
 					<Switch>
-						<Route path={`${match.url}/var`} 	component={ Import('js/grammar/var/var') } exact />
+						<Route path={`${match.url}/var`} 	component={ Import('js/grammar/var') } exact />
+						<Route path={`${match.url}/if`} 	component={ Import('js/grammar/if') } exact />
+						<Route path={`${match.url}/for`} 	component={ Import('js/grammar/for') } exact />
 						<Route path={`${match.url}/data-type`} render={ ({ match }) => (
 							<Switch>
 								<Route path={`${match.url}/number`} 	component={ Import('js/grammar/data-type/number') } exact />
@@ -22,6 +24,7 @@ class AppRouter extends React.Component{
 								<Route path={`${match.url}/boolean`} 	component={ Import('js/grammar/data-type/boolean') } exact />
 								<Route path={`${match.url}/function`} 	component={ Import('js/grammar/data-type/function') } exact />
 								<Route path={`${match.url}/object`} 	component={ Import('js/grammar/data-type/object') } exact />
+								<Route path={`${match.url}/array`} 		component={ Import('js/grammar/data-type/array') } exact />
 								<Route path={`${match.url}/type`} 		component={ Import('js/grammar/type') } exact />
 							</Switch>
 						)} />
@@ -46,6 +49,12 @@ class AppRouter extends React.Component{
 							<Switch>
 								<Route path={`${match.url}/property`} 	component={ Import('js/object/boolean/property') } exact />
 								<Route path={`${match.url}/method`} 	component={ Import('js/object/boolean/method') } exact />
+							</Switch>
+						)} />
+						<Route path={`${match.url}/array`} render={ ({ match }) => (
+							<Switch>
+								<Route path={`${match.url}/property`} 	component={ Import('js/object/array/property') } exact />
+								<Route path={`${match.url}/method`} 	component={ Import('js/object/array/method') } exact />
 							</Switch>
 						)} />
 						<Route path={`${match.url}/function`} render={ ({ match }) => (

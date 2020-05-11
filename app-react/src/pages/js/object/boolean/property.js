@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 // ===================================================================== public component
 import UbContent from '@cpx/ub-content.component'
 import BoxComponent from '@cpt/box.component'

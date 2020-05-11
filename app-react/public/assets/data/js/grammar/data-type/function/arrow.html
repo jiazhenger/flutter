@@ -38,7 +38,7 @@
 <q>)</q>
 
 <u># call( )、apply( )、bind( ) 调用</u>
-<em>由于箭头函数没有自己的this指针，通过 call() 或 apply() 方法调用一个函数时，只能传递参数（不能绑定this---译者注），他们的第一个参数会被忽略</em>
+<em>由于箭头函数没有自己的this指针，通过 call() 或 apply() 方法调用一个函数时，只能传递参数（不能绑定this），他们的第一个参数会被忽略</em>
 <em>this.m = 0</em>
 <em>var foo = x => this.m + 10</em>
 <em>foo.<b>call</b>( { m: 10 }, 10 ) </em> 			<em>// => 10</em>

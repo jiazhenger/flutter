@@ -1,0 +1,19 @@
+<u># 用法</u>
+<em>1、接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值</em>
+<em>2、可以作为一个高阶函数，用于函数的 compose</em>
+<em># 语法</em>
+<em>const num = arr</em>.<b>reduce(</b> <u>function(</u><s>total</s>,<s>value</s>,<s>index</s>,<s>arr</s><u>){</u>
+	<b>return</b> <s>value > 1</s>
+<u>}</u>, <s>initialValue</s><b>)</b>
+<u># 参数</u>
+<s>total</s>：<em>必需。初始值, 或者计算结束后的返回值</em>
+<s>value</s>：<em>必需。当前元素</em>
+<s>index</s>：<em>可选。当前元素的索引值</em>
+<s>arr</s>：<em>可选。当前元素所属的数组对象</em>
+<s>initialValue</s>：<em>可选。传递给函数的初始值</em>
+<u># 返回值</u>
+<em>一个布尔值</em>
+<u># 注释</u>
+<em>对于空数组是不会执行回调函数的</em>
+<u># 常用示例</u>
+<em>const num = arr</em>.<b>every((total, value)=>{  return total + value })</b>

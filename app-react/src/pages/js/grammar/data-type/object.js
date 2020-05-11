@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 // ===================================================================== public component
 import UbContent from '@cpx/ub-content.component'
 import BoxComponent from '@cpt/box.component'
@@ -7,16 +7,18 @@ import BoxComponent from '@cpt/box.component'
 const $fn = window.$fn
 export default class Index extends React.Component{
 	componentDidMount(){
-		$fn.setTitle('字符串类型')
+		$fn.setTitle('对象类型')
 		$fn.hidePhone()
 	}
 	render(){
 		return (
 			<UbContent className='page-content'>
 				<BoxComponent order={1} pro='类型声明' code={[ {path:'js/grammar/data-type/object/base'} ]} />
-				<BoxComponent order={2} pro='对象字面量' code={[ {path:'js/grammar/data-type/object/literal'} ]} />
+				<BoxComponent order={2} pro='设置值' code={[ {path:'js/grammar/data-type/object/set'} ]} />
+				<BoxComponent order={3} pro='获取值' code={[ {path:'js/grammar/data-type/object/get'} ]} />
+				<BoxComponent order={4} pro='对象字面量' code={[ {path:'js/grammar/data-type/object/literal'} ]} />
 				<BoxComponent 
-					order={3}
+					order={5}
 					pro='创建对象的 4 种方式' 
 					code={[ {path:'js/grammar/data-type/object/create'} ]}
 					link={
@@ -34,3 +36,4 @@ export default class Index extends React.Component{
 		)
 	}
 }
+
