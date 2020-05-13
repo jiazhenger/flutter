@@ -26,7 +26,7 @@ export default class Index extends React.Component{
 				<BoxComponent order={2} keyword='map' pro='循环处理元素' code={[ {path:'js/grammar/for/map'} ]} />
 				<BoxComponent order={3} keyword='filter' pro='过滤' code={[ {path:'js/grammar/for/filter'} ]} />
 				<BoxComponent order={4} keyword='every' pro='全真为 true' code={[ {path:'js/grammar/for/every'} ]} />
-				<BoxComponent order={5} keyword='some' pro='一个为真为 true' code={[ {path:'js/grammar/for/some'} ]} />,
+				<BoxComponent order={5} keyword='some' pro='一个为真为 true' code={[ {path:'js/grammar/for/some'} ]} />
 				<BoxComponent order={6} keyword='reduce' pro='计算值' code={[ {path:'js/grammar/for/reduce'} ]} />
 			</UbContent>
 		)
